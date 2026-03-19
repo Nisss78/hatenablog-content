@@ -1,0 +1,335 @@
+---
+Title: コード・マジック 〜異世界で魔法をプログラミング〜 第17章：同期の危機
+Date: 2026-03-19T12:15:00+09:00
+---
+
+<h3>第17章：同期の危機</h3>
+
+<p>カイトは目の前の光景に息を呑んだ。三つの並列世界が、まるでガラスの鏡のように重なり合っている。それぞれの世界で、自分自身が異なる行動をとっていた。</p>
+
+<p>「これが……並列世界の変数？」</p>
+
+<p>左の世界では、カイトがエリナを救うために禁断の魔法を使っていた。右の世界では、リアムと共に古代の遺跡を破壊している。そして中央の世界——今いる世界——では、何も決断できずに立ち尽くしていた。</p>
+
+<blockquote>「カイト、聞こえる！？ こっちは大変なことになってる！」</blockquote>
+
+<p>エリナの声が、三つの世界から同時に響いてきた。まるでステレオサラウンドで、微妙にずれた声が重なり合う。</p>
+
+<blockquote>「どの世界のエリナだ……？」</blockquote>
+
+<p>カイトは頭を抱えた。並列処理の基本概念は理解している。しかし、これを魔法として制御するのは別問題だ。</p>
+
+<p>「世界変数を定義して、スコープを明確にしないと……」</p>
+
+<pre><code>class ParallelWorld {
+  constructor(worldId) {
+    this.worldId = worldId;
+    this.variables = {};
+    this.locked = false;
+  }
+
+  setVariable(name, value) {
+    if (this.locked) {
+      throw new Error("World is locked");
+    }
+    this.variables[name] = value;
+  }
+}</code></pre>
+
+<p>カイトは空中に指でコードを描いた。金色の文字が浮かび上がり、世界の境界線を可視化していく。</p>
+
+<blockquote>「カイト！ 何してるの！？ 早くこっち来て！」</blockquote>
+
+<p>今度はリアムの声だ。しかし、どの世界からの呼びかけなのか判別できない。カイトは集中した。</p>
+
+<p>「まずは世界同士の通信を整理する必要がある……」</p>
+
+<p>並列世界の問題点は、変数の競合だ。ある世界で変更した値が、別の世界に予期せぬ影響を与える。これはプログラミングで言う「レースコンディション」と同じ現象だ。</p>
+
+<blockquote>「レースコンディション……複数のプロセスが同じ変数に同時にアクセスして、予測不能な結果になるバグ」</blockquote>
+
+<p>カイトは独り言をつぶやきながら、解決策を考えた。</p>
+
+<p>「必要なのは、ミューテックス……相互排除の仕組みだ」</p>
+
+<pre><code>class WorldMutex {
+  constructor() {
+    this.queue = [];
+    this.locked = false;
+  }
+
+  async acquire(worldId) {
+    if (!this.locked) {
+      this.locked = true;
+      return true;
+    }
+    return new Promise((resolve) => {
+      this.queue.push({ worldId, resolve });
+    });
+  }
+
+  release() {
+    if (this.queue.length > 0) {
+      const next = this.queue.shift();
+      next.resolve(true);
+    } else {
+      this.locked = false;
+    }
+  }
+}</code></pre>
+
+<p>カイトの周りに、複雑な魔法陣が展開された。これは世界間の排他制御を行うための「同期の結界」だ。</p>
+
+<p>しかし、結界が完成した瞬間、予期せぬ現象が起きた。</p>
+
+<p>ドン！</p>
+
+<p>重い衝撃音とともに、三つの世界が「停止」した。空気が凍りついたように動かない。エリナもリアムも、そしてカイト自身も、指一本動かせなくなった。</p>
+
+<blockquote>「な、なんだこれ……！？」</blockquote>
+
+<p>カイトは必死に動こうとしたが、体が言うことを聞かない。まるでシステム全体がフリーズしたようだ。</p>
+
+<p>「これって……まさか……」</p>
+
+<p>デッドロック。</p>
+
+<p>カイトは理解した。世界Aが世界Bのリソースを待ち、世界Bが世界Aのリソースを待つ——循環待機の状態に陥ったのだ。</p>
+
+<blockquote>「コードで書くなら……こういう状態か」</blockquote>
+
+<pre><code>// World A
+mutexB.acquire();
+// World B
+mutexA.acquire();
+
+// Both worlds are now waiting forever
+// DEADLOCK!</code></pre>
+
+<p>カイトの魔法が強すぎた。厳密すぎる同期制御が、かえって世界全体を停止させてしまったのだ。</p>
+
+<p>絶体絶命。</p>
+
+<p>その時、カイトの脳裏に古代の声が響いた。</p>
+
+<blockquote>「若き魔導師よ。排他制御には、タイムアウトが必要だ」</blockquote>
+
+<p>ヴェリディアンの声だ。古代の賢者が、カイトの精神に直接語りかけている。</p>
+
+<blockquote>「永遠に待つから、デッドロックになる。制限時間を設ければ、解決できる」</blockquote>
+
+<p>カイトはハッとした。そうだ、デッドロックを防ぐには、タイムアウトとリトライの仕組みが必要だ。</p>
+
+<p>「でも、どうやって？ 体が動かないのに……」</p>
+
+<blockquote>「精神だけでいい。内部のコードを書き換えろ」</blockquote>
+
+<p>カイトは目を閉じた。外界は停止しているが、意識の中なら動ける。精神的なコード空間で、魔法を書き換えるのだ。</p>
+
+<pre><code>class TimeoutMutex {
+  constructor(timeout = 5000) {
+    this.timeout = timeout;
+    this.locked = false;
+  }
+
+  async acquire(worldId) {
+    const startTime = Date.now();
+    while (this.locked) {
+      if (Date.now() - startTime > this.timeout) {
+        return false; // Timeout
+      }
+      await sleep(100);
+    }
+    this.locked = true;
+    return true;
+  }
+}</code></pre>
+
+<p>カイトの精神内で、新しいコードが構築されていく。金色の文字が、停止した世界を侵食し始めた。</p>
+
+<p>「世界の同期を……解除する！」</p>
+
+<p>カイトが精神で叫んだ瞬間、タイムアウト機能が発動した。</p>
+
+<p>パキキキキ——</p>
+
+<p>ガラスが割れるような音とともに、停止していた世界が動き出した。空気が流れ、時間が再開する。</p>
+
+<p>カイトは大きく息を吐き、膝をついた。</p>
+
+<blockquote>「カイト！ 大丈夫！？」</blockquote>
+
+<p>エリナが駆け寄ってくる。リアムも、少し遅れて到着した。</p>
+
+<blockquote>「なんだったんだよ、今の……一瞬、世界が止まった気がした」</blockquote>
+
+<p>カイトは苦笑した。</p>
+
+<blockquote>「並列処理の罠だよ。同期を取りすぎると、システム全体が止まっちゃう」</blockquote>
+
+<blockquote>「さっぱりわからんが……解決したんだな？」</blockquote>
+
+<p>リアムが肩を叩く。カイトは頷いた。</p>
+
+<blockquote>「一応ね。でも、これからは気をつけないと。並列世界を扱うには、もっと洗練された設計が必要だ」</blockquote>
+
+<p>カイトは立ち上がり、三つの並列世界を見渡した。左の世界、右の世界、そして今いる世界。</p>
+
+<p>「それぞれの世界は独立しているけど、影響し合っている。変数を共有する部分と、分離する部分を明確にしないと……」</p>
+
+<blockquote>「また止まる、と？」</blockquote>
+
+<p>エリナが心配そうに聞く。</p>
+
+<blockquote>「そう。だから、次は非同期処理を試してみるよ」</blockquote>
+
+<p>カイトは新しい魔法の構想を練り始めた。</p>
+
+<p>同期処理——処理が完了するまで待つ方式。</p>
+
+<p>非同期処理——待たずに次の処理に進む方式。</p>
+
+<p>「世界をブロックせずに、バックグラウンドで処理を回す。それが次のステップだ」</p>
+
+<pre><code>async function processWorld(world) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(world.execute());
+    }, 0);
+  });
+}
+
+// Non-blocking parallel execution
+Promise.all([
+  processWorld(worldA),
+  processWorld(worldB),
+  processWorld(worldC)
+]);</code></pre>
+
+<p>カイトの周りに、新しい魔法陣が浮かび上がった。先ほどの同期結界とは異なり、流動的で柔らかい光を放っている。</p>
+
+<blockquote>「これが……非同期の魔法？」</blockquote>
+
+<p>エリナが興味深そうに覗き込む。</p>
+
+<blockquote>「そう。世界を待たせない、イベント駆動型の魔法だ」</blockquote>
+
+<p>カイトは笑った。プログラミングの知識が、異世界でこんなにも役立つとは思わなかった。</p>
+
+<p>「非同期処理なら、デッドロックの心配も少ない。コールバック地獄には気をつけないといけないけど」</p>
+
+<blockquote>「コールバック地獄？」</blockquote>
+
+<p>リアムが怪訝な顔をする。</p>
+
+<blockquote>「後で説明するよ。今は、まずこの並列世界を安定させないと」</blockquote>
+
+<p>カイトは非同期魔法を展開した。三つの世界が、互いに干渉することなく、独立して動き始める。</p>
+
+<p>左の世界——禁断魔法を使ったカイト——は、その代償に気づき始めていた。力を使いすぎて、魂が摩耗していく感覚。</p>
+
+<p>右の世界——遺跡を破壊したカイト——は、古代の守人アルフレッドと対峙していた。</p>
+
+<p>そして中央の世界——今いるカイト——は、エリナとリアムと共に、新たな道を歩み始める。</p>
+
+<blockquote>「三つの世界が、それぞれの物語を紡いでいく……」</blockquote>
+
+<p>カイトはつぶやいた。</p>
+
+<blockquote>「でも、最終的には収束させる必要がある。並列処理の結果を、一つに統合するんだ」</blockquote>
+
+<blockquote>「それができるの？」</blockquote>
+
+<p>エリナが聞く。カイトは自信なさげに笑った。</p>
+
+<blockquote>「わからない。でも、試すしかない」</blockquote>
+
+<p>カイトは空を見上げた。三重の空が、重なり合いながらも、それぞれの青さを保っている。</p>
+
+<p>「Promise.all —— 全ての約束が果たされた時、物語は一つになる」</p>
+
+<p>その時、カイトの魔法回路に、奇妙なエネルギーが流れ込んできた。</p>
+
+<p>「これは……」</p>
+
+<p>左の世界からのシグナルだ。禁断魔法を使った自分が、何かを発見した。</p>
+
+<blockquote>「カイト、どうしたの？」</blockquote>
+
+<p>エリナが心配そうにカイトの顔を覗き込む。</p>
+
+<blockquote>「向こうの僕が……古代の図書館を見つけたらしい。ヴェリディアンが遺した、最後の魔法書があるって」</blockquote>
+
+<p>カイトの目が輝いた。</p>
+
+<blockquote>「もしそれがあれば、並列世界を完全に制御できるかもしれない」</blockquote>
+
+<blockquote>「じゃあ、その世界に行くの？」</blockquote>
+
+<p>リアムが聞く。カイトは首を振った。</p>
+
+<blockquote>「いいえ。非同期で情報を受け取るよ。向こうの僕が調査を続けて、その結果をこっちに送る」</blockquote>
+
+<p>カイトは空中に指を走らせ、世界間通信のチャネルを開いた。</p>
+
+<pre><code>class WorldChannel {
+  constructor() {
+    this.listeners = {};
+  }
+
+  on(event, callback) {
+    if (!this.listeners[event]) {
+      this.listeners[event] = [];
+    }
+    this.listeners[event].push(callback);
+  }
+
+  emit(event, data) {
+    if (this.listeners[event]) {
+      this.listeners[event].forEach(cb => cb(data));
+    }
+  }
+}
+
+const channel = new WorldChannel();
+channel.on('discovery', (data) => {
+  console.log('Received from parallel world:', data);
+});</code></pre>
+
+<p>カイトと並列世界の自分との間に、不可視の通信路が確立された。</p>
+
+<p>「これで、どの世界で何が起きても、情報を共有できる」</p>
+
+<p>エリナが感心したように頷いた。</p>
+
+<blockquote>「カイトの魔法は、本当に便利ね」</blockquote>
+
+<blockquote>「魔法っていうより、プログラミングだけどね」</blockquote>
+
+<p>カイトは照れくさそうに笑った。</p>
+
+<blockquote>「でも、カイト。一つ聞いていい？」</blockquote>
+
+<p>リアムが真剣な顔で聞く。</p>
+
+<blockquote>「なんだ？」</blockquote>
+
+<blockquote>「その……コールバック地獄って、どれくらい怖いんだ？」</blockquote>
+
+<p>カイトとエリナは顔を見合わせ、それから大笑いした。</p>
+
+<blockquote>「リアム、それはな……」</blockquote>
+
+<p>カイトは説明を始めた。ネストされたコールバック関数の悪夢について。インデントが深すぎて読めないコードについて。そして、async/awaitという救世主について。</p>
+
+<p>空には三つの太陽が輝いていた。並列世界の太陽たちが、それぞれの光を重ね合わせている。</p>
+
+<p>カイトの物語は、まだ始まったばかりだ。</p>
+
+<p>三つの世界、三つの自分、そして三つの道。</p>
+
+<p>それらが収束する時、真の魔法が完成する——</p>
+
+<p><br></p>
+
+<p><strong>（第17章 了）</strong></p>
