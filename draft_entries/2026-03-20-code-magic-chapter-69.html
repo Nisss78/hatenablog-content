@@ -1,0 +1,318 @@
+---
+Title: 第69章：侵食するコード - コード・マジック 〜異世界で魔法をプログラミング〜
+Date: 2026-03-20T02:43:00+09:00
+---
+
+<h3>第69章：侵食するコード</h3>
+
+<p>始原の間から戻ったカイトは、宿舎のベッドに横たわっていた。体は疲れているはずなのに、頭は冴え渡っている。</p>
+
+<p>エーテリアから授かった管理者権限。それは、カイトの中に新しい感覚をもたらしていた。まるで、この世界の構造が手に取るようにわかるような感覚だ。</p>
+
+<blockquote>「これが……管理者の視点か」</blockquote>
+
+<p>彼は天井を見つめながら、空中に指を走らせた。見えないはずのコードが、頭の中で鮮明に浮かび上がる。</p>
+
+<pre><code>// World Core Status Check
+core.status().then(result => {
+    console.log("Integrity: " + result.integrity);
+    console.log("Anomalies: " + result.anomalies.length);
+});</code></pre>
+
+<p>カイトの脳裏に、世界の状態が数値で表示された。</p>
+
+<p><code>Integrity: 73.2%</code></p>
+
+<p><code>Anomalies: 47 detected</code></p>
+
+<p>数値は改善されるどころか、悪化しつつあった。</p>
+
+<blockquote>「七十三パーセント……。四十七もの異常検知。……やっぱり、状況は深刻だ」</blockquote>
+
+<p>翌朝、カイトは仲間たちを集めた。宿舎の一室で、五人は円形に座り込んでいる。</p>
+
+<p>「昨夜、管理者権限を使って世界のコアをスキャンした」カイトは切り出した。「異常は四十七箇所。コアの整合性は七十三パーセントまで低下している」</p>
+
+<p>セシリアが顔を青ざめた。「七十三パーセント……それほど低下しているのですか。危険水域に入っています」</p>
+
+<p>リアムが腕を組んだ。「で、どうすればいい？ 四十七箇所も異常があるなら、一つずつ潰していくのか？」</p>
+
+<blockquote>「それだと時間がかかりすぎる。もっと効率的な方法を見つける必要がある」</blockquote>
+
+<p>エリナがおずおずと手を挙げた。「ねえ、カイト。リライターっていう存在は、どこに潜伏しているの？ 奴らを見つけ出せば、異常の原因を断てるんじゃない？」</p>
+
+<blockquote>「鋭い指摘だ、エリナ。エーテリアも言っていた。リライターを見つけ出せと」</blockquotep>
+
+<p>カイトは再び空中に指を走らせた。今度は、探索用のコードを構築する。</p>
+
+<pre><code>// Anomaly Pattern Analysis
+async function traceAnomalySource() {
+    const anomalies = await core.getAnomalies();
+    const patterns = anomalies.map(a => a.pattern);
+    
+    // Find common signature
+    const signature = findCommonSignature(patterns);
+    return signature.origin;
+}</code></pre>
+
+<p>数秒後、カイトの眉がひそめられた。</p>
+
+<blockquote>「……おかしいな」</blockquote>
+
+<p>「どうしたの？」エリナが身を乗り出した。</p>
+
+<blockquote>「異常の発生源が、あちこちに散らばっている。まるで、複数のリライターが同時に活動しているような……」</blockquote>
+
+<p>マルクスが冷静に分析した。「つまり、組織的な攻撃を受けているということか」</p>
+
+<blockquote>「その可能性が高い。しかも、彼らの痕跡は巧妙に隠蔽されている。普通の方法じゃ追跡できない」</blockquote>
+
+<p>セシリアが魔導書を開いた。「古文書に、リライターに関する記述があるかもしれません。少し調査させてください」</p>
+
+<blockquote>「頼む。僕ももう少し詳しく調べてみるよ」</blockquotep>
+
+<p>カイトは立ち上がり、窓の外を眺めた。街は平和な日常を営んでいる。だが、その表面の下で、世界のコードは静かに侵食されつつあった。</p>
+
+<p>その時、カイトの脳内に警告音が鳴り響いた。</p>
+
+<p><code>ALERT: Critical anomaly detected at coordinates [34.2, 128.7]</code></p>
+
+<p><code>Type: Code corruption</code></p>
+
+<p><code>Severity: HIGH</code></p>
+
+<blockquote>「！ みんな、緊急事態だ。街の東側で、深刻な異常が発生してる」</blockquote>
+
+<p>五人はすぐに宿舎を飛び出した。</p>
+
+<hr />
+
+<p>現場に到着すると、異様な光景が広がっていた。</p>
+
+<p>商店街の一角が、文字通り「壊れて」いた。建物の壁にはノイズのような歪みが走り、地面には幾何学的な亀裂が入っている。空間自体が、データが破損したようにちらついていた。</p>
+
+<p>住人たちは恐怖のあまり逃げ惑っている。</p>
+
+<p>「な、何だこれは！」リアムが叫んだ。「まるで、世界がバグってるみたいだぞ！」</p>
+
+<blockquote>「その通りだ。コードレベルでの破損が起きている」</blockquote>
+
+<p>カイトは破損した空間に近づき、観察した。管理者権限のおかげで、肉眼では見えない構造が把握できる。</p>
+
+<pre><code>// Corrupted Region Analysis
+const region = space.getRegion([34.2, 128.7]);
+console.log(region.integrity); // Output: 12%
+console.log(region.corruptionType); // Output: "REWRITE_INJECTION"</code></pre>
+
+<p><code>REWRITE_INJECTION</code>。リライト・インジェクション。コードの書き換え攻撃だ。</p>
+
+<blockquote>「これは自然発生した異常じゃない。誰かが、意図的にこの場所のコードを書き換えた」</blockquote>
+
+<p>エリナが杖を構えた。「敵が近くにいるってこと？」</p>
+
+<blockquote>「かもしれない。みんな、警戒して――」</blockquotep>
+
+<p>カイトの言葉が途中で途切れた。</p>
+
+<p>破損した空間の中から、人影が現れたからだ。</p>
+
+<p>それは、人間の形をしていた。だが、輪郭が不安定で、まるでホログラムのようにちらついている。顔には目も鼻もなく、のっぺらぼうのような空白があるだけだった。</p>
+
+<p>「見つけましたね、異邦のプログラマー」</p>
+
+<p>人影の声は、合成音声のように機械的だった。</p>
+
+<blockquote>「お前が……リライターか」</blockquote>
+
+<p>「その通り。我々は『ルールの書き換え者』。この世界を、より効率的な形に再構築するために来ました」</p>
+
+<p>リアムが剣を抜いた。「効率的だとか何だとか知らねえが、勝手に世界を壊すのは許さねえぞ！」</p>
+
+<p>リライターは興味なさそうにリアムを見た。「物理的な攻撃は無意味です。私はコードの存在ですから」</p>
+
+<blockquote>「なら、コードで戦うまでだ」</blockquotep>
+
+<p>カイトは前に出た。指先が空中を走り、攻撃用の魔法コードを構築する。</p>
+
+<pre><code>// Attack Spell: Logic Bomb
+function deployLogicBomb(target) {
+    const weakness = target.analyzeWeakness();
+    const payload = generatePayload(weakness);
+    return target.inject(payload);
+}</code></pre>
+
+<p>カイトの手から青い光が放たれた。光はリライターに向かって飛び、直撃した。</p>
+
+<p>だが――</p>
+
+<p>「無駄です」</p>
+
+<p>リライターは光を吸収し、無効化した。</p>
+
+<p>「私はすでに、この世界のルールの一部に組み込まれています。あなたの攻撃は、世界そのものを攻撃することになる」</p>
+
+<blockquote>「何だと！？」</blockquotep>
+
+<p>カイトは愕然とした。リライターは、世界のコードに寄生している。攻撃すれば、世界そのものにダメージを与えてしまう。</p>
+
+<p>「賢い選択をしてください、カイト。あなたが私を攻撃すれば、この場所の整合性はさらに低下する。最悪の場合、領域ごと消滅するでしょう」</p>
+
+<p>セシリアが絶叫した。「そんな……卑怯な！」</p>
+
+<p>リライターは冷酷に続けた。「卑怯ではありません。効率的です。我々はこの世界を『最適化』します。古くて非効率なルールを削除し、新しく効率的なルールに置き換える。それが我々の使命です」</p>
+
+<blockquote>「勝手なことを言うな！ この世界には、守るべき命があるんだ！」</blockquotep>
+
+<p>「命？ そんなものはデータに過ぎません。最適化の過程で失われるなら、それは必要な犠牲です」</p>
+
+<p>カイトは拳を握りしめた。敵は手強い。正面から攻撃すれば、世界を傷つけてしまう。だが、何もしなければ、世界は緩やかに侵食されていく。</p>
+
+<p>その時、マルクスが静かに口を開いた。</p>
+
+<blockquote>「カイト、敵の言う『最適化』は、プログラミングで言えばリファクタリングに近い。だが、リファクタリングにはテストが必要だ。奴が世界を書き換えるなら、必ずテスト環境があるはず」</blockquotep>
+
+<p>カイトの目が輝いた。</p>
+
+<blockquote>「そうか！ 奴が寄生しているのは、本番環境のコードだ。でも、テスト環境は別にあるかもしれない。そこを探れば――」</blockquotep>
+
+<p>リライターが不快感を示した。「勘のいい……。ですが、テスト環境へのアクセスは封鎖しています。あなたごときに――」</p>
+
+<blockquote>「管理者権限があることを忘れるな」</blockquotep>
+
+<p>カイトは集中した。管理者権限を使い、世界のコードの深層へとアクセスする。</p>
+
+<pre><code>// Deep Layer Access
+const adminAccess = core.getAdminInterface();
+const testEnv = adminAccess.locateTestEnvironment("REWRITER");</code></pre>
+
+<p>数秒の沈黙。</p>
+
+<p>そして、カイトの口元が微かに緩んだ。</p>
+
+<blockquote>「見つけた」</blockquotep>
+
+<p>リライターが動揺した。「馬鹿な！ どうやって！」</p>
+
+<blockquote>「お前のテスト環境は、この世界のサンドボックス領域にある。そこへ干渉すれば、お前の本体に影響を与えられる」</blockquotep>
+
+<p>カイトは再び指を走らせた。今度は、テスト環境への攻撃コードだ。</p>
+
+<pre><code>// Sandbox Infiltration
+async function infiltrateTestEnv() {
+    const sandbox = await core.accessSandbox("REWRITER");
+    const vulnerability = sandbox.findVulnerability();
+    
+    // Inject destabilization code
+    await sandbox.inject({
+        type: "DESTABILIZE",
+        target: "core_process"
+    });
+}</code></pre>
+
+<p>カイトのコードが実行された瞬間、リライターの姿が激しく明滅した。</p>
+
+<p>「ぐっ……！」</p>
+
+<p>リライターは苦痛に顔を歪めた――いや、のっぺらぼうの顔が歪んだ。</p>
+
+<p>「こ、これは……テスト環境への干渉……！ まさか、そこから攻めるとは……！」</p>
+
+<blockquote>「悪いな。プログラマーにとって、テスト環境は攻略すべき最初のステップだ」</blockquotep>
+
+<p>カイトは追撃をかけた。テスト環境への攻撃を強化し、リライターの安定性を削っていく。</p>
+
+<p>「くっ……撤退します！ ですが、覚えておきなさい。我々は一人ではありません。仲間が必ず来るでしょう！」</p>
+
+<p>リライターはノイズを撒き散らしながら、空間の亀裂へと消えていった。</p>
+
+<hr />
+
+<p>戦闘が終わり、カイトは膝をついた。管理者権限の使用と、深層へのアクセス。両方とも、カイトの精神力を大きく消耗させていた。</p>
+
+<p>「カイト！」エリナが駆け寄り、彼を支えた。「大丈夫？ 顔色が悪いよ」</p>
+
+<blockquote>「大丈夫……ちょっと、リソースを使いすぎただけだ」</blockquotep>
+
+<p>リアムが破損した空間を見回した。「で、ここの歪みはどうなるんだ？ 放っておいていいのか？」</p>
+
+<blockquote>「いや、修復する必要がある。……少し手伝ってくれ」</blockquotep>
+
+<p>カイトは仲間たちに、修復の方法を説明した。</p>
+
+<blockquote>「僕がコードを書くから、みんなは魔力を供給してくれ。管理者権限を使えば、効率的に修復できるはずだ」</blockquotep>
+
+<p>四人が頷き、カイトの周りに集まった。</p>
+
+<p>カイトは目を閉じ、修復用のコードを構築し始めた。</p>
+
+<pre><code>// Region Restoration
+async function restoreRegion(coords, powerSource) {
+    const region = space.getRegion(coords);
+    const backupData = await core.getBackup(coords);
+    
+    // Restore with power amplification
+    await region.restore(backupData, {
+        powerMultiplier: powerSource.getTotalPower(),
+        integrityTarget: 100
+    });
+}</code></pre>
+
+<p>五人の魔力がカイトへと集まる。彼はそれをコードに変換し、破損した空間へと注入した。</p>
+
+<p>ゆっくりと、しかし確実に、歪みが修復されていく。ノイズが消え、亀裂が埋まり、空間が正常な状態へと戻っていった。</p>
+
+<p>十分後、商店街は元通りの姿を取り戻していた。</p>
+
+<p>「すごい……」エリナが呟いた。「カイトの力があれば、どこでも直せるんだね」</p>
+
+<blockquote>「限度はあるけどな。それに、今回は修復できたけど、次はどうなるかわからない」</blockquotep>
+
+<p>カイトは仲間たちを見回した。</p>
+
+<blockquote>「リライターは一人じゃないって言ってた。組織的な攻撃を受けているとしたら、もっと多くの敵が来るはずだ」</blockquotep>
+
+<p>セシリアが深刻な表情で頷いた。「四十七箇所の異常。その背後に、何人のリライターがいるのでしょうか」</p>
+
+<p>マルクスが冷静に分析した。「一つ確かなのは、彼らが『最適化』と呼ぶ活動を続けていることだ。放置すれば、世界のコアの整合性はさらに低下する」</p>
+
+<blockquote>「わかってる。……対策を考えなきゃならない」</blockquotep>
+
+<p>カイトは空を見上げた。青空は変わらず美しい。だが、その裏でコードは侵食され続けている。</p>
+
+<p><code>Current Integrity: 71.8%</code></p>
+
+<p>修復したのに、数値はさらに低下していた。他の場所で、別のリライターが活動している証拠だ。</p>
+
+<blockquote>「急がないと。……世界が、書き換えられてしまう前に」</blockquotep>
+
+<p>その時、カイトの脳内に再び警告が鳴り響いた。</p>
+
+<p><code>ALERT: Multiple anomalies detected</code></p>
+
+<p><code>Locations: [12.5, 45.3], [78.9, 102.1], [56.2, 89.7]...</code></p>
+
+<p><code>Total: 15 new corruptions in the last 30 minutes</code></p>
+
+<p>カイトは息を呑んだ。</p>
+
+<blockquote>「みんな……状況が悪化してる。三十分の間に、十五箇所で新たな異常が発生した」</blockquotep>
+
+<p>エリナが悲鳴を上げた。「そんな！ 一体どうなってるの！？」</p>
+
+<blockquote>「リライターたちが、一斉に動き出したんだ。……戦いは、まだ始まったばかりだ」</blockquotep>
+
+<p>カイトは拳を握りしめた。</p>
+
+<p>管理者権限という武器は得た。だが、敵もまた強力だ。世界のコードに寄生し、攻撃を無効化する敵。</p>
+
+<p>勝つためには、もっと賢い戦い方を見つけなければならない。</p>
+
+<blockquote>「戻ろう。作戦を練る必要がある」</blockquotep>
+
+<p>五人は宿舎へと戻っていった。</p>
+
+<p>彼らの背後で、空間は再び静かに震えた。リライターたちの侵食は、着々と進んでいた。</p>
+
+<p>世界のコードは、静かに、しかし確実に、書き換えられつつあった。</p>
+
+<p style="text-align: right; font-style: italic;">（第69章 終）</p>
