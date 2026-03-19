@@ -1,0 +1,440 @@
+---
+Title: コード・マジック 〜異世界で魔法をプログラミング〜 第18章：イベントループの迷宮
+Date: 2026-03-19T12:35:00+09:00
+---
+
+<h3>第18章：イベントループの迷宮</h3>
+
+<p>夜が更けても、カイトの脳内は休まることを知らなかった。並列世界からの情報が、絶えず流れ込んでくるからだ。</p>
+
+<blockquote>「カイト、眠れないの？」</blockquote>
+
+<p>エリナが隣のベッドから声をかけた。彼女も眠れずにいたらしい。月光が窓から差し込み、彼女の銀髪を淡く照らしている。</p>
+
+<blockquote>「うん。世界間通信のチャネルが、ずっとアクティブなんだ」</blockquote>
+
+<p>カイトは空中に指を走らせ、目に見えない情報の流れを可視化した。</p>
+
+<pre><code>class EventLoop {
+  constructor() {
+    this.queue = [];
+    this.running = false;
+  }
+
+  addTask(task) {
+    this.queue.push(task);
+    if (!this.running) {
+      this.process();
+    }
+  }
+
+  async process() {
+    this.running = true;
+    while (this.queue.length > 0) {
+      const task = this.queue.shift();
+      await task();
+    }
+    this.running = false;
+  }
+}</code></pre>
+
+<p>「左の世界——禁断魔法を使った僕——からの報告が、次々と届いてる。古代の図書館の探索が進んでるみたい」</p>
+
+<p>カイトは空中に浮かぶ情報ウィンドウを指差した。半透明の画面に、遠い世界の光景が映し出されている。</p>
+
+<h4>左の世界：古代の図書館</h4>
+
+<p>画面の中のカイトは、崩れかけた石造りの建物の中にいた。壁には古代の文字が刻まれ、床には埃と瓦礫が積もっている。</p>
+
+<blockquote>「ここが……ヴェリディアンが遺した図書館か」</blockquote>
+
+<p>左の世界のカイトが呟いた。彼の声は、本来なら聞こえるはずがない。しかし、世界間通信のチャネルを通じて、こちらの世界にも届いている。</p>
+
+<blockquote>「カイト、気をつけて。魔力の反応が複雑よ」</blockquote>
+
+<p>左の世界のエリナが警告した。彼女も禁断魔法の影響を受けているようで、顔色が少し悪い。</p>
+
+<p>左のカイトは慎重に歩を進めた。本棚の残骸を乗り越え、奥の部屋へと向かう。そこには、一冊の巨大な本が台座に置かれていた。</p>
+
+<p>「これが……最後の魔法書」</p>
+
+<p>本の表紙には、複雑な幾何学模様が描かれている。カイトが手を伸ばそうとした瞬間——</p>
+
+<p><strong>警告：アクセス権限が不足しています</strong></p>
+
+<p>空中に赤い文字が浮かび上がった。魔法によるセキュリティシステムだ。</p>
+
+<pre><code>class AncientGrimoire {
+  private content: Spell[];
+  private accessLevel: number = 100;
+
+  canAccess(user: MagicUser): boolean {
+    return user.soulIntegrity >= this.accessLevel;
+  }
+
+  read(user: MagicUser): Spell[] {
+    if (!this.canAccess(user)) {
+      throw new AccessDeniedError(
+        "魂の完全性が不足しています"
+      );
+    }
+    return this.content;
+  }
+}</code></pre>
+
+<p>「魂の完全性……」</p>
+
+<p>左のカイトは理解した。禁断魔法を使った代償。魂が摩耗し、本来の力を発揮できなくなっているのだ。</p>
+
+<blockquote>「くそっ……この世界で禁断魔法を使ったせいで、アクセスできなくなったのか」</blockquote>
+
+<p>左のカイトは拳を握りしめた。力を手に入れるために禁断魔法を使ったのに、そのせいでさらに大きな力を手に入れられないという皮肉。</p>
+
+<h4>中央の世界：分析と対策</h4>
+
+<p>カイトは情報ウィンドウを見つめながら、考え込んだ。</p>
+
+<blockquote>「向こうの僕は、禁断魔法の代償で魂を削ってる。だから古代の魔法書にアクセスできない」</blockquote>
+
+<blockquote>「じゃあ、どうするの？」</blockquote>
+
+<p>エリナが身を起こして聞いた。</p>
+
+<blockquote>「二つの選択肢がある」</blockquote>
+
+<p>カイトは指を立てた。</p>
+
+<ul>
+<li><strong>選択肢A</strong>：左の世界の僕に魂を転送して、一時的にアクセス権限を付与する</li>
+<li><strong>選択肢B</strong>：古代の魔法書をこちらの世界にコピーして、こっちで読む</li>
+</ul>
+
+<blockquote>「どっちが安全？」</blockquote>
+
+<p>エリナが尋ねた。</p>
+
+<blockquote>「どっちもリスクがある。Aは魂を分割することになるから、こっちの僕も弱くなるかもしれない。Bは大量のデータを転送するから、チャネルが過負荷になる」</blockquote>
+
+<p>カイトは迷った。どちらの選択も、代償を伴う。</p>
+
+<p>その時、リアムが目を覚ました。</p>
+
+<blockquote>「おい、何か起きてるのか？ 空気が変だ」</blockquote>
+
+<p>カイトとエリナは顔を見合わせた。確かに、空気が重い。何かが近づいている感覚。</p>
+
+<h4>右の世界：守人との対峙</h4>
+
+<p>情報ウィンドウが自動的に切り替わった。右の世界——遺跡を破壊したカイト——の光景が映し出される。</p>
+
+<p>そこは廃墟となった神殿のような場所。右のカイトは、巨大な石像と対峙していた。石像は古代の守人アルフレッドが憑依したものだ。</p>
+
+<blockquote>「愚かなる侵入者よ……」</blockquote>
+
+<p>石像の口が動き、重低音の声が響いた。</p>
+
+<blockquote>「この遺跡は、並列世界の楔となっておった。破壊したことにより、世界同士の境界が曖昧になりつつある」</blockquote>
+
+<p>右のカイトは剣を構えた。しかし、アルフレッドの言葉に動揺した様子だ。</p>
+
+<blockquote>「どういうことだ？ 遺跡を破壊したのは、君たちを止めるためだぞ」</blockquote>
+
+<blockquote>「止める？ いや、君は世界を繋げてしまったのだ」</blockquote>
+
+<p>アルフレッドが石の腕を振り上げた。</p>
+
+<pre><code>class WorldAnchor {
+  private worldId: string;
+  private stability: number;
+
+  destroy(): void {
+    // 遺跡の破壊 = 世界の楔の破壊
+    // これにより世界同士の境界が消失
+    this.stability = 0;
+    WorldBoundary.dissolve(this.worldId);
+  }
+}</code></pre>
+
+<blockquote>「警告：世界境界の整合性が低下しています」</blockquote>
+
+<p>カイトの脳内に、右の世界からのアラートが鳴り響いた。</p>
+
+<h4>三つの危機</h4>
+
+<p>カイトは状況を整理した。</p>
+
+<ul>
+<li><strong>左の世界</strong>：古代の魔法書にアクセスできない。魂の完全性が不足</li>
+<li><strong>右の世界</strong>：遺跡破壊により世界境界が消失中</li>
+<li><strong>中央の世界</strong>：二つの世界からの負荷でイベントループが過熱</li>
+</ul>
+
+<blockquote>「これ、全部同時に解決しないと」</blockquote>
+
+<p>カイトは額に汗を滲ませた。並列処理の難しさは、複数の問題が同時に発生することだ。一つを直している間に、他が悪化する。</p>
+
+<blockquote>「カイト、顔色が悪いわ」</blockquote>
+
+<p>エリナがカイトの肩に手を置いた。</p>
+
+<blockquote>「大丈夫。ただ、情報が多すぎて処理が追いついてないだけ」</blockquote>
+
+<blockquote>「無理しないで」</blockquote>
+
+<p>エリナの紫の瞳が、心配そうにカイトを見つめる。</p>
+
+<blockquote>「ありがとう。でも、やらないといけないんだ」</blockquote>
+
+<p>カイトは深呼吸をして、精神を落ち着かせた。プログラミングの原則を思い出す。</p>
+
+<blockquote>「複雑な問題は、小さな部分に分割して解決する。それがデバッグの基本だ」</blockquote>
+
+<h4>タスク分割</h4>
+
+<p>カイトは空中に指でコードを描いた。三つの世界の問題を、独立したタスクとして分割していく。</p>
+
+<pre><code>async function resolveWorldCrises() {
+  // タスクを分割して並列実行
+  const tasks = [
+    handleLeftWorld(),   // 魂の完全性を回復
+    handleRightWorld(),  // 世界境界を修復
+    handleCenterWorld()  // イベントループを最適化
+  ];
+
+  // 全てのタスクが完了するのを待つ
+  const results = await Promise.allSettled(tasks);
+  
+  return analyzeResults(results);
+}</code></pre>
+
+<blockquote>「まずは右の世界の境界を一時的に安定させる。次に左の世界で魂を回復する。そして最後に、こっちのイベントループを整理する」</blockquote>
+
+<p>カイトは行動を開始した。</p>
+
+<h4>境界の修復</h4>
+
+<p>カイトは右の世界へ精神を飛ばした。アルフレッドと対峙する自分自身——右のカイト——の意識にリンクする。</p>
+
+<blockquote>「こっちの僕、聞こえる？」</blockquote>
+
+<p>右のカイトは驚いた顔をした。</p>
+
+<blockquote>「え？ どこの誰？」</blockquote>
+
+<blockquote>「中央の世界の僕だ。今から世界境界を修復する魔法を送るから、それを使ってアルフレッドを落ち着かせてくれ」</blockquote>
+
+<p>カイトは修復コードを転送した。</p>
+
+<pre><code>function repairWorldBoundary(anchor: WorldAnchor) {
+  // 境界を一時的に再構築
+  const temporaryWall = createMagicalBarrier({
+    type: "TEMPORARY",
+    strength: 50,
+    duration: "24h"
+  });
+
+  anchor.applyBarrier(temporaryWall);
+  
+  // 安定性を部分的に回復
+  anchor.stability = 50;
+}</code></pre>
+
+<p>右のカイトは、転送されてきた魔法を受け取った。金色の光が彼の手に集まり、複雑な魔法陣を形成していく。</p>
+
+<blockquote>「アルフレッド、待ってくれ！ 境界を修復する！」</blockquote>
+
+<p>右のカイトは魔法を発動した。光の壁が広がり、崩れかけていた世界の境界を補強していく。</p>
+
+<blockquote>「ほう……一時的とはいえ、境界を再構築するか」</blockquote>
+
+<p>アルフレッドの敵意が、わずかに和らいだ。</p>
+
+<blockquote>「君、なかなかやるな。しかし、根本的な解決にはならんぞ」</blockquote>
+
+<blockquote>「わかってる。今は時間を稼ぐだけだ」</blockquote>
+
+<p>右の世界の危機は、ひとまず先送りされた。</p>
+
+<h4>魂の回復</h4>
+
+<p>次に、カイトは左の世界へ意識を向けた。古代の魔法書の前で立ち尽ぐ自分自身に呼びかける。</p>
+
+<blockquote>「こっちの僕、魂の完全性を回復する方法がある」</blockquote>
+
+<blockquote>「どうやって？ 禁断魔法を使った代償は、簡単には戻らないぞ」</blockquote>
+
+<p>左のカイトの声は絶望的だった。</p>
+
+<blockquote>「エリナがいるだろ？ 彼女とリンクして、魂を共有するんだ」</blockquote>
+
+<p>カイトは説明した。魂を完全に回復するのではなく、一時的に他人の魂と同期して、アクセス権限を借用する方法だ。</p>
+
+<pre><code>class SoulLink {
+  constructor(user: MagicUser, partner: MagicUser) {
+    this.user = user;
+    this.partner = partner;
+    this.linkStrength = 0;
+  }
+
+  async establish(): Promise&lt;boolean&gt; {
+    // 相互の信頼度を確認
+    const trust = this.calculateTrust();
+    if (trust < 0.5) {
+      return false;
+    }
+
+    // 魂のリンクを確立
+    this.linkStrength = trust;
+    return true;
+  }
+
+  borrowIntegrity(): number {
+    // パートナーの魂の完全性を一時的に借用
+    return this.partner.soulIntegrity * this.linkStrength;
+  }
+}</code></pre>
+
+<blockquote>「エリナ、聞こえるか？」</blockquote>
+
+<p>左のカイトは、隣にいるエリナに向かって言った。</p>
+
+<blockquote>「ええ。何をするの？」</blockquote>
+
+<blockquote>「僕の魂を、君とリンクさせたいんだ。そうすれば、一時的に君の魂の完全性を借りられる」</blockquote>
+
+<p>左のエリナは少し躊躇ったが、やがて頷いた。</p>
+
+<blockquote>「わかった。カイトを信じてる」</blockquote>
+
+<p>二人は手を取り合った。淡い光が二人を包み込み、魂のリンクが確立されていく。</p>
+
+<blockquote>「アクセス……成功！」</blockquote>
+
+<p>左のカイトは古代の魔法書に手を伸ばした。今度は警告が出ない。本が音もなく開き、中から無数の光の文字が溢れ出した。</p>
+
+<blockquote>「これが……ヴェリディアンの最後の魔法……」</blockquote>
+
+<h4>最後の魔法書</h4>
+
+<p>カイトは中央の世界から、左の世界の光景を見守っていた。情報ウィンドウに映る古代の魔法書の内容が、自動的に転送されてくる。</p>
+
+<pre><code>/**
+ * ヴェリディアンの最後の魔法
+ * 並列世界統合プロトコル
+ */
+
+class WorldUnificationProtocol {
+  /**
+   * 並列世界を一つに統合する
+   * 注意：実行には条件がある
+   */
+  async unify(worlds: ParallelWorld[]): Promise&lt;UnifiedWorld&gt; {
+    // 条件1：全ての世界が安定していること
+    if (!worlds.every(w => w.isStable())) {
+      throw new Error("世界が不安定です");
+    }
+
+    // 条件2：統合する意思があること
+    if (!worlds.every(w => w.wantsUnification())) {
+      throw new Error("統合の合意がありません");
+    }
+
+    // 条件3：統合者が「適格者」であること
+    if (!this.executor.isEligible()) {
+      throw new Error("適格者ではありません");
+    }
+
+    // 統合実行
+    return this.execute(worlds);
+  }
+}</code></pre>
+
+<blockquote>「並列世界統合プロトコル……」</blockquote>
+
+<p>カイトは息を呑んだ。三つの世界を一つにまとめる魔法。これがヴェリディアンが遺した最後の魔法だ。</p>
+
+<blockquote>「でも、条件がある。全ての世界が安定、統合の合意、そして適格者……」</blockquote>
+
+<p>カイトは考え込んだ。適格者——この言葉は、以前も侵入者から聞いた。</p>
+
+<blockquote>「『適格者』って何なんだ？」</blockquote>
+
+<h4>夜明け</h4>
+
+<p>窓の外が白み始めた。長い夜が明ける。</p>
+
+<blockquote>「カイト、朝だよ」</blockquote>
+
+<p>エリナが窓の外を指差した。三つの太陽が、重なり合いながら昇っていく。</p>
+
+<blockquote>「今夜は大変だったな」</blockquote>
+
+<p>リアムがあくびをしながら起き上がった。</p>
+
+<blockquote>「ああ。でも、色々分かった」</blockquote>
+
+<p>カイトは情報ウィンドウを閉じた。</p>
+
+<blockquote>「ヴェリディアンが遺した魔法書には、並列世界を統合する方法が書かれていた。ただし、条件をクリアしないと使えない」</blockquote>
+
+<blockquote>「その条件って？」</blockquote>
+
+<p>リアムが聞く。</p>
+
+<ul>
+<li>三つの世界全てが安定していること</li>
+<li>それぞれの世界の僕が統合を望むこと</li>
+<li>僕が「適格者」であること</li>
+</ul>
+
+<blockquote>「三つ目の条件、『適格者』って何？」</blockquote>
+
+<p>エリナが尋ねた。</p>
+
+<blockquote>「まだ分からない。でも、調べる方法はある」</blockquote>
+
+<p>カイトは立ち上がった。</p>
+
+<blockquote>「王立魔法図書館へ行こう。セシリアさんなら、何か知ってるかもしれない」</blockquote>
+
+<h4>新しい一日</h4>
+
+<p>三人は宿を出て、図書館へ向かった。朝の光が街を照らし、人々が活動を始めている。</p>
+
+<p>しかし、カイトの心は重かった。三つの世界の危機、適格者の謎、そして統合プロトコル。</p>
+
+<blockquote>「世界を一つにする……それが本当に正しい選択なのか」</blockquote>
+
+<p>カイトは独り言をつぶやいた。</p>
+
+<p>左の世界では禁断魔法を使い、代償を払った自分がいる。右の世界では遺跡を破壊し、守人と対立した自分がいる。</p>
+
+<p>それら全てを統合するということは、全ての記憶と罪を受け入れるということだ。</p>
+
+<blockquote>「カイト？」</blockquote>
+
+<p>エリナが不思議そうにカイトを見た。</p>
+
+<blockquote>「何でもない。行こう」</blockquote>
+
+<p>カイトは歩き出した。三つの太陽の下、物語は次の章へと進んでいく。</p>
+
+<p>イベントループは回り続ける。タスクは積み上がり、解決されていく。</p>
+
+<p>そして、いつか——</p>
+
+<p>全ての約束が果たされる時が来る。</p>
+
+<p><br></p>
+
+<p><strong>（第18章 了）</strong></p>
+
+<hr />
+
+<p><strong>【第18章 あらすじ】</strong></p>
+
+<p>並列世界からの情報の洪水に苦しむカイト。左の世界では禁断魔法の代償で魂を削った自分が古代の魔法書にアクセスできず、右の世界では遺跡破壊により世界境界が消失しつつあった。カイトは三つの危機を同時に解決すべく、タスクを分割して対処。右の世界では境界を一時修復し、左の世界ではエリナとの魂リンクで権限を獲得。ヴェリディアンの遺した「並列世界統合プロトコル」を発見するが、実行には「適格者」であることが条件だった。</p>
+
+<p><strong>【次章予告】</strong></p>
+
+<p>第19章「適格者の条件」。セシリアの口から語られる「適格者」の真実。そして、三つの世界のカイトがそれぞれの試練に直面する時——</p>
