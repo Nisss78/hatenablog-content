@@ -1,0 +1,1005 @@
+---
+Title: 第132章：海賊王の亡霊
+Date: 2026-03-20T14:10:00+09:00
+---
+
+<h3>第132章：海賊王の亡霊</h3>
+
+<p>B2F——通路。</p>
+
+<p>湿気——増した。</p>
+
+<p>壁——苔。</p>
+
+<p>足音——響く。</p>
+
+<hr>
+
+<p>カイト——スキャン。</p>
+
+<pre><code>// Floor Analysis
+const b2f = scanFloor({ level: 2 });
+
+console.log(`Depth: ${b2f.depth}m`);
+console.log(`Enemies: ${b2f.enemyCount}`);
+console.log(`Boss: None`);
+
+// Output:
+// Depth: 50m
+// Enemies: 18
+// Types: Sea Zombie, Drowned, Water Spirit</code></pre>
+
+<p>敵——18体。</p>
+
+<p>前階——より多い。</p>
+
+<hr>
+
+<p>水音——聞こえた。</p>
+
+<p>奥——広間。</p>
+
+<p>地下湖——。</p>
+
+<p>水——青く光る。</p>
+
+<hr>
+
+<p>影——水面から。</p>
+
+<p>ドロウンド——五体。</p>
+
+<p>濡れた——死体。</p>
+
+<p>目——白い。</p>
+
+<hr>
+
+<p>リアム——構えた。</p>
+
+<blockquote>「水系——嫌い」</blockquote>
+
+<blockquote>「ヌルヌル——」</blockquote>
+
+<p>エリナ——支援。</p>
+
+<pre><code>// Water Resistance Buff
+const buff = castSpell({
+  element: "nature",
+  type: "buff",
+  targets: "party",
+  stat: "water_resist",
+  value: 50
+});</code></pre>
+
+<p>葉——光る。</p>
+
+<p>四人——守られた。</p>
+
+<hr>
+
+<p>ドロウンド——襲撃。</p>
+
+<p>速い——水中。</p>
+
+<p>爪——鋭い。</p>
+
+<hr>
+
+<p>カイト——対応。</p>
+
+<pre><code>// Freeze Lock
+const freeze = castSpell({
+  element: "ice",
+  targets: ["drowned_1", "drowned_2"],
+  duration: 10
+});
+
+// Water enemies weak to ice!
+// Enemies frozen!</code></pre>
+
+<p>氷——拘束。</p>
+
+<p>二体——動けない。</p>
+
+<hr>
+
+<p>リアム——粉砕。</p>
+
+<pre><code>// Shattering Fist
+const smash = combatArt({
+  user: "liam",
+  targets: ["drowned_1", "drowned_2"],
+  damage: 800,
+  type: "ice_break"
+});
+
+// Critical! Frozen enemies take 2x damage!
+// Enemies defeated!</code></pre>
+
+<p>氷——砕ける。</p>
+
+<p>肉片——散る。</p>
+
+<hr>
+
+<p>残り——三体。</p>
+
+<p>セシリア——光魔法。</p>
+
+<pre><code>// Holy Lance
+const lance = castSpell({
+  element: "light",
+  type: "projectile",
+  targets: ["drowned_3", "drowned_4", "drowned_5"],
+  damage: 600
+});</code></pre>
+
+<p>光槍——貫く。</p>
+
+<p>アンデッド——浄化。</p>
+
+<hr>
+
+<p><strong>BATTLE END</strong></p>
+
+<pre><code>// Exp Gain
+party.forEach(member => {
+  member.exp += 2800;
+});
+
+console.log("Progress to Level 43: 65%");</code></pre>
+
+<hr>
+
+<p>エリナ——息をついた。</p>
+
+<blockquote>「水——苦手」</blockquote>
+
+<blockquote>「でも——慣れた」</blockquote>
+
+<p>カイト——頷いた。</p>
+
+<blockquote>「水の神殿——似た敵」</blockquote>
+
+<blockquote>「いい練習——」</blockquote>
+
+<hr>
+
+<p>奥——通路。</p>
+
+<p>B3F——階段。</p>
+
+<p>下る——暗い。</p>
+
+<hr>
+
+<p><strong>B3F - 海賊の隠し財宝</strong></p>
+
+<hr>
+
+<p>広い——空間。</p>
+
+<p>宝箱——散乱。</p>
+
+<p>でも——罠。</p>
+
+<hr>
+
+<p>カイト——警戒。</p>
+
+<pre><code>// Trap Detection
+const traps = scanTraps({ range: 100 });
+
+console.log(`Traps found: ${traps.length}`);
+traps.forEach(t => console.log(`- ${t.type} at ${t.location}`));
+
+// Output:
+// Traps found: 7
+// - poison_dart at chest_1
+// - explosion at chest_3
+// - summon at chest_5</code></pre>
+
+<p>七つ——罠。</p>
+
+<p>開けては——いけない。</p>
+
+<hr>
+
+<p>セシリア——提案。</p>
+
+<blockquote>「安全な——宝箱」</blockquote>
+
+<blockquote>「三つ——あります」</blockquote>
+
+<blockquote>「開けましょう」</blockquote>
+
+<p>カイト——指差した。</p>
+
+<blockquote>「あれ——とあれ——とあれ」</blockquote>
+
+<hr>
+
+<p>宝箱——開けた。</p>
+
+<p>中身——</p>
+
+<ul>
+<li>金貨 5000枚</li>
+<li>水属性アクセサリ</li>
+<li>スキルブック「アクアブースト」</li>
+</ul>
+
+<hr>
+
+<p>カイト——本を読んだ。</p>
+
+<pre><code>// Skill Acquired: Aqua Boost
+const skill = {
+  name: "aqua_boost",
+  type: "passive",
+  effect: "Water damage +30%",
+  cost: 0
+};
+
+skills.add(skill);</code></pre>
+
+<p>水魔法——強化。</p>
+
+<p>次の神殿——役立つ。</p>
+
+<hr>
+
+<p>エリナ——アクセサリ。</p>
+
+<blockquote>「これ——水耐性」</blockquote>
+
+<blockquote>「私——装備」</blockquote>
+
+<blockquote>「回復——水属性」</blockquote>
+
+<blockquote>「相性——いい」</blockquote>
+
+<hr>
+
+<p>リアム——金貨。</p>
+
+<blockquote>「5000——すごい」</blockquote>
+
+<blockquote>「いい稼ぎ——」</blockquote>
+
+<p>カイト——笑った。</p>
+
+<blockquote>「分配——後で」</blockquote>
+
+<blockquote>「先——進む」</blockquote>
+
+<hr>
+
+<p><strong>B4F - 海賊の処刑場</strong></p>
+
+<hr>
+
+<p>不気味——空間。</p>
+
+<p>鎖——天井。</p>
+
+<p>骨——床。</p>
+
+<p>悲鳴——幻聴。</p>
+
+<hr>
+
+<p>敵——シーゾンビ。</p>
+
+<p>十体——徘徊。</p>
+
+<p>腐った——水兵。</p>
+
+<p>錆びた——剣。</p>
+
+<hr>
+
+<p>リアム——眉をひそめた。</p>
+
+<blockquote>「臭い——」</blockquote>
+
+<blockquote>「腐敗臭」</blockquote>
+
+<p>セシリア——浄化魔法。</p>
+
+<pre><code>// Air Purify
+const purify = castSpell({
+  element: "light",
+  type: "area_effect",
+  effect: "remove_debuff",
+  targets: "party"
+});</code></pre>
+
+<p>空気——綺麗に。</p>
+
+<p>臭い——消えた。</p>
+
+<hr>
+
+<p>シーゾンビ——気づいた。</p>
+
+<p>一斉——襲撃。</p>
+
+<p>数——多い。</p>
+
+<hr>
+
+<p>カイト——範囲魔法。</p>
+
+<pre><code>// Inferno Storm
+const inferno = castSpell({
+  element: "fire",
+  orb: "ignis",
+  type: "area",
+  targets: "all_enemies",
+  damage: 900
+});
+
+// Orb boost!
+// Fire damage +50%
+// Total damage: 1350 per enemy</code></pre>
+
+<p>炎——渦。</p>
+
+<p>シーゾンビ——燃える。</p>
+
+<p>十体——一撃。</p>
+
+<hr>
+
+<p><strong>LEVEL UP!</strong></p>
+
+<pre><code>// Kaito Level Up
+kaito.level = 43;
+kaito.stats.int += 15;
+kaito.stats.mp += 30;
+kaito.exp = 0;
+
+console.log("Kaito is now Level 43!");
+console.log("INT increased to: " + kaito.stats.int);</code></pre>
+
+<hr>
+
+<p>カイト——力を感じた。</p>
+
+<p>魔法——さらに強く。</p>
+
+<p>炎——熱い。</p>
+
+<hr>
+
+<p>エリナ——回復。</p>
+
+<blockquote>「MP——消費激しい」</blockquote>
+
+<blockquote>「休憩——必要」</blockquote>
+
+<p>カイト——頷いた。</p>
+
+<blockquote>「一時間——休憩」</blockquote>
+
+<blockquote>「B5F——ボス」</blockquote>
+
+<blockquote>「万全で——挑む」</blockquote>
+
+<hr>
+
+<p>四人——座った。</p>
+
+<p>食料——摂取。</p>
+
+<p>水——飲む。</p>
+
+<p>MP——自然回復。</p>
+
+<hr>
+
+<p>リアム——聞いた。</p>
+
+<blockquote>「ボス——何？」</blockquote>
+
+<p>カイト——スキャン。</p>
+
+<pre><code>// Boss Info
+const boss = scanBoss({ floor: 5 });
+
+console.log(`Name: ${boss.name}`);
+console.log(`Level: ${boss.level}`);
+console.log(`HP: ${boss.hp}`);
+console.log(`Type: ${boss.type}`);
+
+// Output:
+// Name: Captain Bloodhook
+// Level: 55
+// HP: 25000
+// Type: Undead / Water</code></pre>
+
+<hr>
+
+<p>セシリア——分析。</p>
+
+<blockquote>「レベル55——ボス」</blockquote>
+
+<blockquote>「HP——25000」</blockquote>
+
+<blockquote>「アンデッド——浄化有効」</blockquote>
+
+<blockquote>「水属性——雷弱点」</blockquote>
+
+<p>カイト——雷魔法——ない。</p>
+
+<p>でも——方法はある。</p>
+
+<hr>
+
+<p>彼——考える。</p>
+
+<blockquote>「俺——雷——できない」</blockquote>
+
+<blockquote>「でも——コードで——再現可能」</blockquote>
+
+<pre><code>// Lightning Simulation
+const lightning = {
+  element: "simulated_thunder",
+  damage: 1500,
+  cost: 200,
+  code: `
+    function simulateLightning(target) {
+      const voltage = 1000000; // 1 million volts
+      const duration = 0.01; // seconds
+      return voltage * duration * target.conductivity;
+    }
+  `
+};</code></pre>
+
+<p>コード——魔法になる。</p>
+
+<p>それが——カイトの能力。</p>
+
+<hr>
+
+<p>一時間——経過。</p>
+
+<p>MP——全回復。</p>
+
+<p>四人——立ち上がった。</p>
+
+<hr>
+
+<p>B5F——階段。</p>
+
+<p>最深部——。</p>
+
+<p>冷気——漂う。</p>
+
+<p>ボスの気配——。</p>
+
+<hr>
+
+<p><strong>B5F - 海賊王の墓室</strong></p>
+
+<hr>
+
+<p>巨大——空間。</p>
+
+<p>玉座——ある。</p>
+
+<p>骸骨——座っている。</p>
+
+<p>王冠——被っている。</p>
+
+<hr>
+
+<p>カイト——近づいた。</p>
+
+<p>骸骨——目を開けた。</p>
+
+<p>青い——瞳。</p>
+
+<p>冷たい——殺意。</p>
+
+<hr>
+
+<p>声——響いた。</p>
+
+<blockquote>「誰が——我が墓を——荒らす」</blockquote>
+
+<p>骸骨——立ち上がった。</p>
+
+<p>巨大——ホネ。</p>
+
+<p>錨——武器。</p>
+
+<p><strong>BOSS APPEARS: Captain Bloodhook</strong></p>
+
+<hr>
+
+<p>カイト——構えた。</p>
+
+<blockquote>「海賊王——ブラッドフック」</blockquote>
+
+<blockquote>「倒す——」</blockquote>
+
+<blockquote>「みんな——行くぞ」</blockquote>
+
+<hr>
+
+<p><strong>BOSS BATTLE START</strong></p>
+
+<hr>
+
+<p>ブラッドフック——攻撃。</p>
+
+<pre><code>// Boss Attack: Anchor Crush
+const attack = enemyAttack({
+  user: "bloodhook",
+  skill: "anchor_crush",
+  target: "liam",
+  damage: 1200
+});
+
+// Liam takes 1200 damage!
+// HP: 2800 -> 1600</code></pre>
+
+<p>リアム——吹き飛ぶ。</p>
+
+<blockquote>「重い——」</blockquote>
+
+<blockquote>「一撃——」</blockquote>
+
+<hr>
+
+<p>エリナ——回復。</p>
+
+<pre><code>// High Heal
+const heal = castSpell({
+  element: "nature",
+  type: "heal",
+  target: "liam",
+  value: 2000
+});</code></pre>
+
+<p>緑光——包む。</p>
+
+<p>リアム——立ち上がった。</p>
+
+<hr>
+
+<p>セシリア——弱体化。</p>
+
+<pre><code>// Holy Debilitate
+const debuff = castSpell({
+  element: "light",
+  type: "debuff",
+  target: "bloodhook",
+  effects: ["defense_down", "speed_down"],
+  duration: 30
+});</code></pre>
+
+<p>光——骸骨を包む。</p>
+
+<p>ブラッドフック——遅くなる。</p>
+
+<hr>
+
+<p>カイト——コード。</p>
+
+<pre><code>// Lightning Simulation: Execute
+const thunder = executeCode({
+  code: `
+    const target = getEnemy("bloodhook");
+    const damage = simulateLightning(target);
+    applyDamage(target, damage * 1.5); // Weakness bonus
+  `,
+  mp_cost: 200
+});
+
+// Damage: 2250!
+// Critical! Water weakness!</code></pre>
+
+<p>雷——閃く。</p>
+
+<p>ブラッドフック——怯む。</p>
+
+<blockquote>「雷——」</blockquote>
+
+<blockquote>「嫌い——」</blockquote>
+
+<hr>
+
+<p>リアム——連撃。</p>
+
+<pre><code>// Combo: Fist Barrage
+const combo = combatArt({
+  user: "liam",
+  name: "fist_barrage",
+  hits: 5,
+  damage_per_hit: 300
+});
+
+// Total: 1500 damage!</code></pre>
+
+<p>拳——連打。</p>
+
+<p>骸骨——ひび割れる。</p>
+
+<hr>
+
+<p>ブラッドフック——怒り。</p>
+
+<pre><code>// Boss Special: Tsunami Call
+const special = enemyAttack({
+  user: "bloodhook",
+  skill: "tsunami_call",
+  target: "all",
+  damage: 800
+});
+
+// Party takes 800 damage each!</code></pre>
+
+<p>波——現れた。</p>
+
+<p>四人——押し流される。</p>
+
+<hr>
+
+<p>エリナ——耐えた。</p>
+
+<blockquote>「全員——生きてる！」</blockquote>
+
+<blockquote>「続けて——」</blockquote>
+
+<hr>
+
+<p>カイト——決めた。</p>
+
+<blockquote>「これ——決める」</blockquote>
+
+<blockquote>「全員——支援」</blockquote>
+
+<hr>
+
+<p>セシリア——魔力注ぐ。</p>
+
+<pre><code>// Magic Amplify
+const amp = castSpell({
+  element: "light",
+  type: "buff",
+  target: "kaito",
+  stat: "magic_damage",
+  multiplier: 2.0
+});</code></pre>
+
+<p>カイト——光る。</p>
+
+<hr>
+
+<p>エリナ——回復。</p>
+
+<pre><code>// Full Restore
+const restore = castSpell({
+  element: "nature",
+  type: "heal",
+  target: "kaito",
+  value: "full"
+});</code></pre>
+
+<p>MP——全回復。</p>
+
+<hr>
+
+<p>リアム——挑発。</p>
+
+<pre><code>// Provoke
+const provoke = combatArt({
+  user: "liam",
+  name: "provoke",
+  effect: "draw_aggression"
+});</code></pre>
+
+<p>ブラッドフック——リアムを見る。</p>
+
+<p>カイト——隙。</p>
+
+<hr>
+
+<p>彼——最後のコード。</p>
+
+<pre><code>// Ultimate: Code Burst - Lightning God
+const ultimate = executeCode({
+  code: `
+    const target = getEnemy("bloodhook");
+    
+    // Stack multipliers
+    let damage = 3000; // Base
+    damage *= 1.5;     // Water weakness
+    damage *= 2.0;     // Amplify buff
+    damage *= 1.3;     // Orb resonance
+    
+    // Critical hit
+    if (Math.random() < 0.3) {
+      damage *= 2.0;
+    }
+    
+    applyDamage(target, damage);
+    
+    return {
+      damage: damage,
+      critical: true
+    };
+  `,
+  mp_cost: 500
+});
+
+// DAMAGE: 11,700!!
+// CRITICAL HIT!</code></pre>
+
+<hr>
+
+<p>雷——巨大化。</p>
+
+<p>神の——一撃。</p>
+
+<p>ブラッドフック——貫かれる。</p>
+
+<hr>
+
+<p><strong>BOSS DEFEATED</strong></p>
+
+<hr>
+
+<p>骸骨——砕ける。</p>
+
+<p>王冠——落ちる。</p>
+
+<p>光——浄化。</p>
+
+<p>海賊王——消えた。</p>
+
+<hr>
+
+<p><strong>MASSIVE EXP GAIN</strong></p>
+
+<pre><code>// Experience Distribution
+const expGain = {
+  base: 15000,
+  bonus: 5000,
+  total: 20000
+};
+
+// Level Ups!
+kaito.level = 43 -> 46;
+liam.level = 41 -> 44;
+erina.level = 40 -> 43;
+cecilia.level = 40 -> 43;
+
+console.log("Everyone leveled up 3 times!");</code></pre>
+
+<hr>
+
+<p>カイト——座り込んだ。</p>
+
+<p>疲れた——。</p>
+
+<p>でも——達成感。</p>
+
+<hr>
+
+<p>リアム——笑った。</p>
+
+<blockquote>「レベル46——」</blockquote>
+
+<blockquote>「すげえ——」</blockquote>
+
+<p>エリナ——回復。</p>
+
+<blockquote>「全員——回復」</blockquote>
+
+<blockquote>「怪我——ない」</blockquote>
+
+<p>セシリア——報告。</p>
+
+<blockquote>「ボス——ドロップ」</blockquote>
+
+<blockquote>「確認——」</blockquote>
+
+<hr>
+
+<p>ドロップ——</p>
+
+<ul>
+<li>海賊王の錨（両手槌・攻撃力200）</li>
+<li>アクアオーブの欠片</li>
+<li>金貨 20000枚</li>
+<li>スキルブック「キャプテンの威圧」</li>
+</ul>
+
+<hr>
+
+<p>カイト——欠片を見た。</p>
+
+<p>青い——輝き。</p>
+
+<p>水の——力。</p>
+
+<blockquote>「オーブの——欠片」</blockquote>
+
+<blockquote>「神殿——近い証拠」</blockquote>
+
+<hr>
+
+<p>リアム——錨。</p>
+
+<blockquote>「これ——重い」</blockquote>
+
+<blockquote>「でも——強い」</blockquote>
+
+<blockquote>「装備——する」</blockquote>
+
+<hr>
+
+<p>セシリア——スキル。</p>
+
+<blockquote>「威圧——敵の弱体」</blockquote>
+
+<blockquote>「有用——」</blockquote>
+
+<blockquote>「カイト——どう？」</blockquote>
+
+<p>彼——頷いた。</p>
+
+<blockquote>「俺——覚える」</blockquote>
+
+<hr>
+
+<p>洞窟——出た。</p>
+
+<p>夜——だった。</p>
+
+<p>月——明るい。</p>
+
+<p>港——静か。</p>
+
+<hr>
+
+<p>エリナ——提案。</p>
+
+<blockquote>「宿——戻りましょう」</blockquote>
+
+<blockquote>「明日——最終日」</blockquote>
+
+<blockquote>「明後日——船」</blockquote>
+
+<p>カイト——同意。</p>
+
+<blockquote>「明日——ダンジョン再突入」</blockquote>
+
+<blockquote>「レベル50——目指す」</blockquote>
+
+<blockquote>「後——4」</blockquote>
+
+<hr>
+
+<p>宿——戻った。</p>
+
+<p>夕食——摂る。</p>
+
+<p>疲れ——心地よい。</p>
+
+<hr>
+
+<p>カイト——ステータス確認。</p>
+
+<pre><code>// Status Update
+const kaito = {
+  level: 46,
+  hp: 4500,
+  mp: 3800,
+  stats: {
+    str: 180,
+    int: 320,
+    vit: 200,
+    agi: 150
+  },
+  skills: [
+    "code_magic",
+    "flame_burst",
+    "freeze_lock",
+    "lightning_simulation",
+    "aqua_boost",
+    "captain_intimidation"
+  ],
+  orbs: ["ignis"],
+  orb_fragments: ["terra", "aqua"]
+};
+
+console.log("Progress: Level 46/50 target");
+console.log("Remaining: 4 levels in 2 days");</code></pre>
+
+<hr>
+
+<p>リアム——笑った。</p>
+
+<blockquote>「4レベル——いける」</blockquote>
+
+<blockquote>「明日——徹夜」</blockquote>
+
+<p>エリナ——ため息。</p>
+
+<blockquote>「また——無茶」</blockquote>
+
+<p>セシリア——計算。</p>
+
+<blockquote>「効率——考えると」</blockquote>
+
+<blockquote>「可能——ですわ」</blockquote>
+
+<blockquote>「最下層——経験値高い」</blockquote>
+
+<hr>
+
+<p>カイト——決めた。</p>
+
+<blockquote>「明日——B5F周回」</blockquote>
+
+<blockquote>「ボス——再戦」</blockquote>
+
+<blockquote>「レベル50——絶対」</blockquote>
+
+<blockquote>「ミスト——倒す」</blockquote>
+
+<hr>
+
+<p>四人——寝た。</p>
+
+<p>明日——激動。</p>
+
+<p>船——明後日。</p>
+
+<p>水の神殿——待っている。</p>
+
+<hr>
+
+<p>カイト——夢。</p>
+
+<p>水——広がる。</p>
+
+<p>青い——オーブ。</p>
+
+<p>少女——待っている。</p>
+
+<p><em>「待ってる——」</em></p>
+
+<p><em>「カイト——」</em></p>
+
+<hr>
+
+<p>夢——消えた。</p>
+
+<p>朝——来る。</p>
+
+<p>最後の——準備。</p>
+
+<hr>
+
+<p><strong>〜 次章予告 〜</strong></p>
+
+<p>最後の日——訓練。</p>
+
+<p>レベル50——到達。</p>
+
+<p>船——出港。</p>
+
+<p>水の神殿——旅立ち。</p>
+
+<p><em>次章——最後の準備</em></p>
+
+<hr>
+
+<p><em>（第132章 終わり）</em></p>
