@@ -1,0 +1,1282 @@
+---
+Title: 第372章：地下の迷宮
+Date: 2026-03-22T05:39:00+09:00
+---
+
+<h3>第372章：地下の迷宮</h3>
+
+<p>朝が来る——</p>
+
+<hr>
+
+<p>港町の朝市が始まる。</p>
+<p>商人の声が響く。</p>
+
+<hr>
+
+<p>カイトが目を覚ます。</p>
+
+<hr>
+
+<p>窓の外——</p>
+<p>青い空。</p>
+<p>白い雲。</p>
+
+<hr>
+
+<p>カイトが情報を整理する。</p>
+
+<pre><code>
+// Mission Status - Port Marina
+// 任務状況
+
+interface MissionStatus {
+    location: string;
+    objective: string;
+    threats: string[];
+   失踪者: number;
+    status: string;
+}
+
+const mission: MissionStatus = {
+    location: "Port Marina - Underground",
+    objective: "Rescue missing persons",
+    threats: ["Bug Shade", "Unknown Entity", "Shadow Realm"],
+    失踪者: 5,    // 3 civilians + 2 adventurers
+    status: "INVESTIGATION_PENDING"
+};
+
+console.log("=== Mission Brief ===");
+console.log(`Objective: ${mission.objective}`);
+console.log(`Missing persons: ${mission.失踪者}`);
+console.log(`Primary entrance: Old Town underground`);
+console.log(`Destination: Possible Shadow Realm portal`);
+</code></pre>
+
+<hr>
+
+<p>カイトが身支度を整える。</p>
+
+<hr>
+
+<p>階下に降りる。</p>
+
+<hr>
+
+<p>すでに仲間たちが待っていた。</p>
+
+<hr>
+
+<p>エリナが地図を広げている。</p>
+<p>リアムが装備を点検している。</p>
+<p>セシリアが魔法の準備。</p>
+<p>ヒナタが刀を手入れ。</p>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<blockquote>「おはよう」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<blockquote>「おはよう」</blockquote>
+<blockquote>「準備万端？」</blockquote>
+
+<hr>
+
+<p>リアムが頷く。</p>
+
+<blockquote>「装備は整った」</blockquote>
+
+<hr>
+
+<p>セシリアが付け加える。</p>
+
+<blockquote>「回復魔法の薬も</blockquote>
+<blockquote>補充したわ」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を鞘に納める。</p>
+
+<blockquote>「いつでも行ける」</blockquote>
+
+<hr>
+
+<p>カイトが提案する。</p>
+
+<blockquote>「朝食を済ませてから</blockquote>
+<blockquote>出発しよう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>宿の食堂で朝食。</p>
+
+<hr>
+
+<p>温かいスープ。</p>
+<p>焼きたてのパン。</p>
+<p>果物。</p>
+
+<hr>
+
+<p>カイトが仲間たちに作戦を説明する。</p>
+
+<hr>
+
+<blockquote>「地下の調査が最優先」</blockquote>
+<blockquote>「でも無茶はしない」</blockquote>
+
+<hr>
+
+<p>エリナが尋ねる。</p>
+
+<blockquote>「影の領域に</blockquote>
+<blockquote>入る可能性は？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「高いと思う」</blockquote>
+<blockquote>「失踪者たちは</blockquote>
+<blockquote>そこにいる」</blockquote>
+
+<hr>
+
+<p>リアムが質問する。</p>
+
+<blockquote>「影の領域とは？</blockquote>
+<blockquote>詳しく教えてくれ」</blockquote>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<hr>
+
+<blockquote>「この世界と重なる</blockquote>
+<blockquote>平行次元——」</blockquote>
+
+<blockquote>「光が届かない場所」</blockquote>
+<blockquote>影の生物が棲む」</blockquote>
+
+<hr>
+
+<p>セシリアが補足する。</p>
+
+<blockquote>「古代の魔法使いが</blockquote>
+<blockquote>移動に使ったと聞くわ」</blockquote>
+
+<hr>
+
+<p>カイトが続ける。</p>
+
+<blockquote>「入口があれば</blockquote>
+<blockquote>出口もある」</blockquote>
+<blockquote>「失踪者たちを</blockquote>
+<blockquote>連れ帰れるはず」</blockquote>
+
+<hr>
+
+<p>ヒナタが問う。</p>
+
+<blockquote>「危険度は？」</blockquote>
+
+<hr>
+
+<p>カイトが正直に答える。</p>
+
+<blockquote>「高い」</blockquote>
+<blockquote>「でも準備すれば</blockquote>
+<blockquote>勝機はある」</blockquote>
+
+<hr>
+
+<p>仲間たちが頷く。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>朝食を終える。</p>
+
+<hr>
+
+<p>宿を出る。</p>
+
+<hr>
+
+<p>旧市街に向かう。</p>
+
+<hr>
+
+<p>昼前の町は賑やかだ。</p>
+
+<hr>
+
+<p>カイトが昨夜の入口に到着する。</p>
+
+<hr>
+
+<p>地下への階段——</p>
+<p>昼間でも暗い。</p>
+
+<hr>
+
+<p>カイトが感知魔法を使う。</p>
+
+<pre><code>
+// Entrance Re-scan
+// 入口再スキャン
+
+const scan = magic.scan({
+    target: "UNDERGROUND_ENTRANCE",
+    depth: 100,
+    types: ["LIFE", "MAGIC", "TRAP", "ANOMALY"]
+});
+
+console.log("=== Entrance Status ===");
+console.log("Living beings: 0");
+console.log("Traps detected: 3");
+console.log("Magic barriers: 1");
+console.log("Anomaly intensity: INCREASED");
+console.log("Shadow Realm connection: ACTIVE");
+</code></pre>
+
+<hr>
+
+<p>カイトが警告する。</p>
+
+<hr>
+
+<blockquote>「罠がある」</blockquote>
+<blockquote>「三つ——」</blockquote>
+
+<hr>
+
+<p>リアムが尋ねる。</p>
+
+<blockquote>「解除できるか？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「やる」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>地下に降りる。</p>
+
+<hr>
+
+<p>石段が続く。</p>
+<p>湿った空気。</p>
+
+<hr>
+
+<p>カイトが光を灯す。</p>
+
+<pre><code>
+// Light Orb
+// 光球
+
+magic.createLight({
+    type: "ORBITAL",
+    brightness: 80,
+    color: "WARM_WHITE",
+    radius: 15,
+    duration: "INFINITE"
+});
+</code></pre>
+
+<hr>
+
+<p>柔らかな光が周囲を照らす。</p>
+
+<hr>
+
+<p>石造りの通路。</p>
+<p>壁には古代の文字。</p>
+
+<hr>
+
+<p>セシリアが壁を見る。</p>
+
+<blockquote>「古代語——」</blockquote>
+<blockquote>「二百年以上前の」</blockquote>
+
+<hr>
+
+<p>カイトが文字を解読する。</p>
+
+<pre><code>
+// Ancient Text Translation
+// 古代語翻訳
+
+const text = ancientTranslate({
+    source: "WALL_INSCRIPTION",
+    era: "PRE_CALENDAR",
+    partial: true
+});
+
+console.log("=== Translation ===");
+console.log("...Shadow Gate...");
+console.log("...passage to realm of eternal night...");
+console.log("...only the worthy may pass...");
+console.log("...toll must be paid...");
+</code></pre>
+
+<hr>
+
+<p>カイトが呟く。</p>
+
+<hr>
+
+<blockquote>「影の門——」</blockquote>
+<blockquote>「永遠の夜の領域への通路」</blockquote>
+
+<hr>
+
+<p>エリナが顔をしかめる。</p>
+
+<blockquote>「対価を支払え——？」</blockquote>
+
+<hr>
+
+<p>カイトが先を進む。</p>
+
+<hr>
+
+<blockquote>「わからない」</blockquote>
+<blockquote>「進んで確認しよう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>通路を進む。</p>
+
+<hr>
+
+<p>最初の罠。</p>
+
+<hr>
+
+<p>カイトが感知する。</p>
+
+<hr>
+
+<blockquote>「床の罠——」</blockquote>
+<blockquote>「圧力感知式」</blockquote>
+
+<hr>
+
+<p>解除魔法を唱える。</p>
+
+<pre><code>
+// Trap Disarm
+// 罠解除
+
+magic.disarm({
+    target: "PRESSURE_TRAP_01",
+    method: "NEUTRALIZE",
+    silent: true
+});
+
+console.log("Trap 01: DISARMED");
+</code></pre>
+
+<hr>
+
+<p>カイトが足を踏み出す。</p>
+
+<hr>
+
+<p>何も起きない。</p>
+
+<hr>
+
+<p>仲間たちが続く。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>さらに進む。</p>
+
+<hr>
+
+<p>広い空間に出る。</p>
+
+<hr>
+
+<p>地下の広場。</p>
+<p>天井は高く——</p>
+<p>柱が並ぶ。</p>
+
+<hr>
+
+<p>リアムが見上げる。</p>
+
+<blockquote>「古代の神殿——」</blockquote>
+<blockquote>「か？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「そうみたい」</blockquote>
+
+<hr>
+
+<p>セシリアが感じる。</p>
+
+<blockquote>「魔力が濃い——」</blockquote>
+<blockquote>「何かが眠っている」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>二つ目の罠。</p>
+
+<hr>
+
+<p>カイトが警告する。</p>
+
+<hr>
+
+<blockquote>「止まって」</blockquote>
+
+<hr>
+
+<p>仲間たちが足を止める。</p>
+
+<hr>
+
+<p>カイトが指差す。</p>
+
+<hr>
+
+<blockquote>「柱の魔法陣」</blockquote>
+<blockquote>「触れると起動する」</blockquote>
+
+<hr>
+
+<p>ヒナタが見る。</p>
+
+<blockquote>「何が起きる？」</blockquote>
+
+<hr>
+
+<p>カイトが解析する。</p>
+
+<pre><code>
+// Magic Circle Analysis
+// 魔法陣解析
+
+interface TrapAnalysis {
+    type: string;
+    trigger: string;
+    effect: string;
+    power: number;
+}
+
+const analysis: TrapAnalysis = {
+    type: "SUMMONING_TRAP",
+    trigger: "PROXIMITY",
+    effect: "SHADOW_CREATURE_SUMMON",
+    power: 75
+};
+
+console.log("=== Trap Analysis ===");
+console.log(`Type: ${analysis.type}`);
+console.log(`Trigger: ${analysis.trigger}`);
+console.log(`Effect: ${analysis.effect}`);
+console.log(`Power Level: ${analysis.power}`);
+</code></pre>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<hr>
+
+<blockquote>「影の生物を召喚する」</blockquote>
+<blockquote>「迂回しよう」</blockquote>
+
+<hr>
+
+<p>カイトが安全なルートを示す。</p>
+
+<hr>
+
+<p>柱を避けて進む。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>神殿の奥。</p>
+
+<hr>
+
+<p>巨大な扉。</p>
+
+<hr>
+
+<p>黒い金属でできている。</p>
+<p>表面に複雑な紋様。</p>
+
+<hr>
+
+<p>カイトが近づく。</p>
+
+<hr>
+
+<blockquote>「これが——」</blockquote>
+<blockquote>「影の門」</blockquote>
+
+<hr>
+
+<p>エリナが尋ねる。</p>
+
+<blockquote>「開けられる？」</blockquote>
+
+<hr>
+
+<p>カイトが扉を調べる。</p>
+
+<pre><code>
+// Shadow Gate Analysis
+// 影の門解析
+
+const gate = magic.analyze({
+    target: "SHADOW_GATE",
+    properties: ["LOCK", "MAGIC", "DIMENSION"]
+});
+
+console.log("=== Shadow Gate ===");
+console.log("Status: SEALED");
+console.log("Lock type: BLOOD_KEY");
+console.log("Dimension link: SHADOW_REALM");
+console.log("Passage fee: LIFE_ESSENCE");
+console.log("Warning: DANGEROUS - Proceed with caution");
+</code></pre>
+
+<hr>
+
+<p>カイトが顔をしかめる。</p>
+
+<hr>
+
+<blockquote>「血の鍵——」</blockquote>
+<blockquote>「生命エネルギーが必要」</blockquote>
+
+<hr>
+
+<p>セシリアが震える。</p>
+
+<blockquote>「誰かが犠牲に——」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<blockquote>「いや</blockquote>
+<blockquote>少量でいいはず」</blockquote>
+
+<hr>
+
+<p>リアムが問う。</p>
+
+<blockquote>「開けるのか？」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<blockquote>「失踪者たちは</blockquote>
+<blockquote>この向こうにいる」</blockquote>
+
+<blockquote>「救うなら</blockquote>
+<blockquote>開けないといけない」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀に手をかける。</p>
+
+<blockquote>「準備はできている」</blockquote>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<blockquote>「あなたが決めて」</blockquote>
+
+<hr>
+
+<p>カイトが決断する。</p>
+
+<hr>
+
+<blockquote>「開ける」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが魔法を唱える。</p>
+
+<pre><code>
+// Shadow Gate - Partial Key
+// 影の門 - 部分鍵
+
+magic.activate({
+    target: "SHADOW_GATE",
+    key: "MINIMAL_LIFE_ESSENCE",
+    source: "KAITO",
+    amount: 0.05,          // 5% - Safe threshold
+    duration: "TEMPORARY"
+});
+
+console.log("=== Gate Activation ===");
+console.log("Key provided: 5% life essence");
+console.log("Gate status: OPENING");
+console.log("Passage duration: 30 minutes");
+console.log("Warning: Shadow creatures may emerge");
+</code></pre>
+
+<hr>
+
+<p>扉が軋む。</p>
+
+<hr>
+
+<p>黒い光が漏れる。</p>
+
+<hr>
+
+<p>扉が開く——</p>
+
+<hr>
+
+<p>向こう側——</p>
+
+<p>影の領域。</p>
+
+<hr>
+
+<p>永遠の闇。</p>
+<p>紫色の空。</p>
+<p>歪んだ風景。</p>
+
+<hr>
+
+<p>エリナが息を呑む。</p>
+
+<blockquote>「これが——」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「影の領域」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>影の領域に足を踏み入れる。</p>
+
+<hr>
+
+<p>重力が違う。</p>
+<p>空気が重い。</p>
+
+<hr>
+
+<p>セシリアが感じる。</p>
+
+<blockquote>「生命の反応——」</blockquote>
+<blockquote>「複数」</blockquote>
+
+<hr>
+
+<p>カイトが感知する。</p>
+
+<pre><code>
+// Shadow Realm - Life Scan
+// 影の領域 - 生命スキャン
+
+const lifeScan = magic.scan({
+    dimension: "SHADOW_REALM",
+    radius: 500,
+    types: ["LIFE"]
+});
+
+console.log("=== Life Signs Detected ===");
+console.log("Count: 5");
+console.log("Status: UNCONSCIOUS");
+console.log("Location: 200m northwest");
+console.log("Threats nearby: 3 SHADOW_WALKERS");
+</code></pre>
+
+<hr>
+
+<p>カイトが報告する。</p>
+
+<hr>
+
+<blockquote>「五人の生命反応」</blockquote>
+<blockquote>「北西二百メートル」</blockquote>
+<blockquote>「意識はないけど</blockquote>
+<blockquote>生きている」</blockquote>
+
+<hr>
+
+<p>リアムが安堵する。</p>
+
+<blockquote>「見つかったか」</blockquote>
+
+<hr>
+
+<p>カイトが警告する。</p>
+
+<blockquote>「でも警備がいる」</blockquote>
+<blockquote>「影の歩行者——三体」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を抜く。</p>
+
+<blockquote>「倒せばいい」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「行こう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>影の領域を進む。</p>
+
+<hr>
+
+<p>歪んだ木々。</p>
+<p>紫色の霧。</p>
+
+<hr>
+
+<p>カイトが感知を続ける。</p>
+
+<hr>
+
+<p>生命反応に近づく。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>広場に出る。</p>
+
+<hr>
+
+<p>五人が横たわっている。</p>
+
+<hr>
+
+<p>商人。</p>
+<p>給仕の女性。</p>
+<p>衛兵。</p>
+<p>冒険者二人。</p>
+
+<hr>
+
+<p>全員——無意識。</p>
+
+<hr>
+
+<p>影の歩行者が三体。</p>
+<p>警備している。</p>
+
+<hr>
+
+<p>カイトが合図する。</p>
+
+<hr>
+
+<blockquote>「同時攻撃」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>戦闘開始。</p>
+
+<hr>
+
+<p>カイトが魔法を放つ。</p>
+
+<pre><code>
+// Shadow Walker - Neutralize
+// 影の歩行者 - 無力化
+
+magic.attack({
+    target: "SHADOW_WALKER_01",
+    type: "LIGHT_BURST",
+    power: 60,
+    radius: 5
+});
+
+console.log("Shadow Walker 01: STUNNED");
+</code></pre>
+
+<hr>
+
+<p>光の爆発。</p>
+<p>一体が怯む。</p>
+
+<hr>
+
+<p>ヒナタが斬る。</p>
+
+<blockquote>「迅雷斬！」</blockquote>
+
+<hr>
+
+<p>雷を纏った刀。</p>
+<p>一体を消滅させる。</p>
+
+<hr>
+
+<p>エリナが氷を放つ。</p>
+
+<blockquote>「氷結波！」</blockquote>
+
+<hr>
+
+<p>冷気の波。</p>
+<p>残り二体を凍結。</p>
+
+<hr>
+
+<p>リアムが剣で突く。</p>
+
+<hr>
+
+<p>セシリアが光を放つ。</p>
+
+<blockquote>「浄化！」</blockquote>
+
+<hr>
+
+<p>全ての影を消滅させる。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが五人に駆け寄る。</p>
+
+<hr>
+
+<p>全員——意識はない。</p>
+<p>でも呼吸はある。</p>
+
+<hr>
+
+<p>セシリアが診察する。</p>
+
+<hr>
+
+<blockquote>「生命力が</blockquote>
+<blockquote>少し奪われている」</blockquote>
+
+<blockquote>「でも回復できる」</blockquote>
+
+<hr>
+
+<p>セシリアが治療魔法を唱える。</p>
+
+<pre><code>
+// Mass Healing
+// 範囲治療
+
+magic.heal({
+    targets: ["MISSING_PERSONS_01_05"],
+    type: "LIFE_RESTORE",
+    power: 40,
+    radius: 10
+});
+
+console.log("=== Healing Applied ===");
+console.log("Life essence: RESTORED");
+console.log("Consciousness: RETURNING");
+</code></pre>
+
+<hr>
+
+<p>五人が目を覚ます。</p>
+
+<hr>
+
+<p>商人が呟く。</p>
+
+<blockquote>「ここは——」</blockquote>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<blockquote>「助けに来ました」</blockquote>
+<blockquote>「港町に戻ります」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが門の方を見る。</p>
+
+<hr>
+
+<p>三十分以内に戻らないと——</p>
+<p>門が閉じる。</p>
+
+<hr>
+
+<p>カイトが言う。</p>
+
+<blockquote>「急ごう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>五人を支えて戻る。</p>
+
+<hr>
+
+<p>影の領域を出る。</p>
+
+<hr>
+
+<p>門をくぐる。</p>
+
+<hr>
+
+<p>全員が戻る。</p>
+
+<hr>
+
+<p>門が閉まる。</p>
+
+<hr>
+
+<p>カイトが安堵する。</p>
+
+<blockquote>「間に合った——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>地下神殿。</p>
+
+<hr>
+
+<p>五人が座り込む。</p>
+
+<hr>
+
+<p>衛兵がカイトを見る。</p>
+
+<blockquote>「君たちは——」</blockquote>
+<blockquote>「冒険者か？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「そうです」</blockquote>
+<blockquote>「今は休んでください」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>地上に戻る。</p>
+
+<hr>
+
+<p>昼の光。</p>
+
+<hr>
+
+<p>五人が目を細める。</p>
+
+<hr>
+
+<p>商人が言う。</p>
+
+<blockquote>「ありがとう——」</blockquote>
+<blockquote>「恩に着る」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<blockquote>「無事でよかった」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>ギルドに報告する。</p>
+
+<hr>
+
+<p>受付の女性が驚く。</p>
+
+<blockquote>「五人全員——」</blockquote>
+<blockquote>「無事？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「影の領域に</blockquote>
+<blockquote>連れ去られていました」</blockquote>
+
+<hr>
+
+<p>女性が感謝する。</p>
+
+<blockquote>「これは</blockquote>
+<blockquote>大きな功績です」</blockquote>
+
+<hr>
+
+<p>カイトが尋ねる。</p>
+
+<blockquote>「犯人は？」</blockquote>
+
+<hr>
+
+<p>女性が首を振る。</p>
+
+<blockquote>「調査が必要です」</blockquote>
+<blockquote>「影の領域を使う</blockquote>
+<blockquote>魔法使い——」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<p>また新たな謎——</p>
+
+<hr>
+
+<p>——</p>
+
+<p>宿に戻る。</p>
+
+<hr>
+
+<p>夕暮れ。</p>
+
+<hr>
+
+<p>カイトが窓の外を見る。</p>
+
+<hr>
+
+<p>港の夕陽。</p>
+<p>オレンジ色の空。</p>
+
+<hr>
+
+<p>エリナが隣に来る。</p>
+
+<blockquote>「五人救えたわ」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「でも</blockquote>
+<blockquote>根本的な解決じゃない」</blockquote>
+
+<hr>
+
+<p>エリナが問う。</p>
+
+<blockquote>「犯人は？」</blockquote>
+
+<hr>
+
+<p>カイトが呟く。</p>
+
+<blockquote>「影の領域を使う</blockquote>
+<blockquote>魔法使い——」</blockquote>
+
+<blockquote>「誰かが</blockquote>
+<blockquote>意図的に拉致していた」</blockquote>
+
+<hr>
+
+<p>エリナが顔をしかめる。</p>
+
+<blockquote>「目的は？」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<blockquote>「わからない」</blockquote>
+<blockquote>「でも</blockquote>
+<blockquote>調べないと」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>リアムが部屋に入る。</p>
+
+<blockquote>「ギルドから</blockquote>
+<blockquote>情報が入った」</blockquote>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<hr>
+
+<blockquote>「何？」</blockquote>
+
+<hr>
+
+<p>リアムが報告する。</p>
+
+<blockquote>「似た事件が</blockquote>
+<blockquote>他の港町でも起きている」</blockquote>
+
+<hr>
+
+<p>カイトが目を見開く。</p>
+
+<blockquote>「他の港町？」</blockquote>
+
+<hr>
+
+<p>リアムが頷く。</p>
+
+<blockquote>「三つの港で</blockquote>
+<blockquote>失踪事件」</blockquote>
+<blockquote>「全て影の領域への</blockquote>
+<blockquote>拉致」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<pre><code>
+// Pattern Analysis - Multi-Location
+// パターン分析 - 複数場所
+
+interface IncidentPattern {
+    locations: string[];
+    timeline: string[];
+    victims: number;
+    method: string;
+    purpose: string;
+}
+
+const pattern: IncidentPattern = {
+    locations: ["Port Marina", "Port Azure", "Port Crescent", "Port Stella"],
+    timeline: ["Last 3 months"],
+    victims: 17,
+    method: "SHADOW_REALM_ABDUCTION",
+    purpose: "UNKNOWN - UNDER_INVESTIGATION"
+};
+
+console.log("=== Incident Pattern ===");
+console.log(`Locations: ${pattern.locations.length} ports`);
+console.log(`Total victims: ${pattern.victims}`);
+console.log(`Method: ${pattern.method}`);
+console.log(`Purpose: ${pattern.purpose}`);
+console.log("Assessment: ORGANIZED OPERATION");
+</code></pre>
+
+<hr>
+
+<p>カイトが呟く。</p>
+
+<hr>
+
+<blockquote>「組織的な犯行——」</blockquote>
+<blockquote>「十七人を拉致して</blockquote>
+<blockquote>何をしている？」</blockquote>
+
+<hr>
+
+<p>エリナが問う。</p>
+
+<blockquote>「次はどうする？」</blockquote>
+
+<hr>
+
+<p>カイトが決める。</p>
+
+<hr>
+
+<blockquote>「調査を続ける」</blockquote>
+<blockquote>「この事件の背後に</blockquote>
+<blockquote>何があるか——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>夜が来る。</p>
+
+<hr>
+
+<p>ポート・マリーナの夜。</p>
+
+<hr>
+
+<p>五人が救われた。</p>
+<p>でも謎は深まる——</p>
+
+<hr>
+
+<p>影の領域を使う何者か。</p>
+<p>複数の港町での拉致。</p>
+
+<hr>
+
+<p>カイトの旅は——</p>
+<p>まだ終わらない。</p>
+
+<hr>
+
+<p style="text-align: center;">——第372章　終——</p>
