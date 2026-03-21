@@ -1,0 +1,1231 @@
+---
+Title: 第356章：時空の神殿へ
+Date: 2026-03-22T02:51:00+09:00
+---
+
+<h3>第356章：時空の神殿へ</h3>
+
+<p>光と闇の聖域——</p>
+
+<hr>
+
+<p>出発の朝——</p>
+
+<hr>
+
+<p>カイトたちが黄昏の館を出る。</p>
+<p>今日から時空の神殿へ向かう。</p>
+
+<hr>
+
+<p>イグニスとライラが見送る。</p>
+
+<hr>
+
+<p><blockquote>「いよいよだな」</blockquote>
+
+<hr>
+
+<p>イグニスが言う。</p>
+
+<hr>
+
+<p><blockquote>「時空の神殿——」</blockquote>
+<blockquote>「俺たちも行ったことがない」</blockquote>
+
+<hr>
+
+<p>ライラが続ける。</p>
+
+<hr>
+
+<p><blockquote>「四人の賢者でも——」</blockquote>
+<blockquote>「入れない場所がある」</blockquote>
+
+<hr>
+
+<p>カイトが緊張する。</p>
+
+<hr>
+
+<p><blockquote>「それほどの場所...」</blockquote>
+
+<hr>
+
+<p>イグニスが笑う。</p>
+
+<hr>
+
+<p><blockquote>「でも、お前なら大丈夫」</blockquote>
+<blockquote>「全ての耐性を持った存在」</blockquote>
+
+<hr>
+
+<p>ライラが頷く。</p>
+
+<hr>
+
+<p><blockquote>「フローズナから話を聞いてる」</blockquote>
+<blockquote>「可能性の上限がない」</blockquote>
+
+<hr>
+
+<p><pre><code>
+// Journey to Space-Time Temple
+// 時空の神殿への旅
+
+const journeyPlan = {
+  departure: {
+    location: "光と闇の聖域",
+    date: "Day 20"
+  },
+  destination: {
+    location: "時空の神殿",
+    coordinates: { x: 0, y: 0, z: "unknown" },
+    access: "耐性を持つ者のみ"
+  },
+  method: "時空転移",
+  risk: "極",
+  estimatedTime: "不定期"
+};
+
+console.log("時空の神殿への旅を開始");
+</code></pre></p>
+
+<hr>
+
+<p>エリナがカイトの手を握る。</p>
+
+<hr>
+
+<p><blockquote>「行こう」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<p><blockquote>「ああ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>出発——</p>
+
+<hr>
+
+<p>リリアナが転移陣を展開する。</p>
+
+<hr>
+
+<p><blockquote>「時空の神殿への座標——」</blockquote>
+<blockquote>「固定できない」</blockquote>
+
+<hr>
+
+<p>カイトが聞く。</p>
+
+<hr>
+
+<p><blockquote>「どういうこと？」</blockquote>
+
+<hr>
+
+<p>リリアナが説明する。</p>
+
+<hr>
+
+<p><blockquote>「時空の神殿は——」</blockquote>
+<blockquote>「固定された場所に存在しない」</blockquote>
+<blockquote>「時空の狭間を漂っている」</blockquote>
+
+<hr>
+
+<p>ヒナタが眉をひそめる。</p>
+
+<hr>
+
+<p><blockquote>「どうやって行くんだ？」</blockquote>
+
+<hr>
+
+<p>リリアナが水晶を取り出す。</p>
+
+<hr>
+
+<p><blockquote>「道標がある」</blockquote>
+<blockquote>「これが導いてくれる」</blockquote>
+
+<hr>
+
+<p><pre><code>
+// Space-Time Compass
+// 時空の羅針盤
+
+interface SpaceTimeCompass {
+  name: string;
+  type: "artifact";
+  function: "時空の神殿への道標";
+  requirements: string[];
+}
+
+const compass: SpaceTimeCompass = {
+  name: "時空の羅針盤",
+  type: "artifact",
+  function: "時空の神殿への道標",
+  requirements: [
+    "時空耐性",
+    "光耐性",
+    "闇耐性",
+    "氷耐性"
+  ]
+};
+
+console.log(`${compass.name}を起動`);
+</code></pre></p>
+
+<hr>
+
+<p>リリアナが水晶をカイトに渡す。</p>
+
+<hr>
+
+<p><blockquote>「これを持って」</blockquote>
+<blockquote>「意識を集中すると——」</blockquote>
+<blockquote>「神殿への道が見える」</blockquote>
+
+<hr>
+
+<p>カイトが水晶を受け取る。</p>
+
+<hr>
+
+<p>冷たい感触。</p>
+<p>中に星が渦巻いている。</p>
+
+<hr>
+
+<p>カイトが目を閉じる。</p>
+
+<hr>
+
+<p><pre><code>
+// Activate Compass
+// 羅針盤起動
+
+function activateCompass(compass: SpaceTimeCompass, user: User): Path | null {
+  // Check requirements
+  const requirements = compass.requirements;
+  const userResistances = user.resistances;
+  
+  const hasAllResistances = requirements.every(req => 
+    userResistances.includes(req)
+  );
+  
+  if (!hasAllResistances) {
+    console.log("耐性が不足しています");
+    return null;
+  }
+  
+  // Find path
+  const path: Path = {
+    destination: "時空の神殿",
+    steps: [],
+    estimatedTime: "不明"
+  };
+  
+  // The path reveals itself through meditation
+  console.log("道が開かれました");
+  return path;
+}
+
+const path = activateCompass(compass, kaito);
+</code></pre></p>
+
+<hr>
+
+<p>カイトの意識に——</p>
+<p>道が浮かぶ。</p>
+
+<hr>
+
+<p><blockquote>「見えた...」</blockquote>
+
+<hr>
+
+<p>リリアナが聞く。</p>
+
+<hr>
+
+<p><blockquote>「何が見えた？」</blockquote>
+
+<hr>
+
+<p>カイトが目を開ける。</p>
+
+<hr>
+
+<p><blockquote>「時空の裂け目——」</blockquote>
+<blockquote>「そこから入る」</blockquote>
+
+<hr>
+
+<p>リアムが聞く。</p>
+
+<hr>
+
+<p><blockquote>「裂け目ってどこにある？」</blockquote>
+
+<hr>
+
+<p>カイトが指をさす。</p>
+
+<hr>
+
+<p><blockquote>「ここじゃない場所——」</blockquote>
+<blockquote>「でも、どこでもない場所」</blockquote>
+
+<hr>
+
+<p>ルナが首を傾げる。</p>
+
+<hr>
+
+<p><blockquote>「どういうこと？」</blockquote>
+
+<hr>
+
+<p>カイトが苦笑する。</p>
+
+<hr>
+
+<p><blockquote>「説明が難しい」</blockquote>
+<blockquote>「行けばわかる」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>時空の裂け目へ——</p>
+
+<hr>
+
+<p>カイトたちが移動する。</p>
+
+<hr>
+
+<p>羅針盤が導くままに。</p>
+
+<hr>
+
+<p>光と闇の境界線を超える。</p>
+<p>さらに進む。</p>
+
+<hr>
+
+<p>次第に景色が歪む。</p>
+
+<hr>
+
+<p>エリナが言う。</p>
+
+<hr>
+
+<p><blockquote>「空が...」</blockquote>
+
+<hr>
+
+<p>空が二つに割れている。</p>
+<p>片方は昼。</p>
+<p>片方は夜。</p>
+
+<hr>
+
+<p>ヒナタが刀に手をかける。</p>
+
+<hr>
+
+<p><blockquote>「何だこれ」</blockquote>
+
+<hr>
+
+<p>リアムが剣を構える。</p>
+
+<hr>
+
+<p><blockquote>「時空が不安定化してる」</blockquote>
+
+<hr>
+
+<p>カイトが羅針盤を見る。</p>
+
+<hr>
+
+<p><pre><code>
+// Space-Time Rift Detected
+// 時空の裂け目検出
+
+const riftDetection = {
+  location: { x: "undefined", y: "undefined" },
+  stability: 0.3,
+  size: "variable",
+  danger: "high",
+  effects: [
+    "時間の歪み",
+    "空間の分裂",
+    "因果の乱れ"
+  ]
+};
+
+console.log(`裂け目安定度: ${riftDetection.stability * 100}%`);
+console.log("警告: 時空耐性がないと危険");
+</code></pre></p>
+
+<hr>
+
+<p>カイトが言う。</p>
+
+<hr>
+
+<p><blockquote>「ここだ」</blockquote>
+
+<hr>
+
+<p>目の前に——</p>
+<p>時空の裂け目が口を開いている。</p>
+
+<hr>
+
+<p>紫色の光が漏れる。</p>
+<p>中から星が見える。</p>
+
+<hr>
+
+<p>ルナが後ずさる。</p>
+
+<hr>
+
+<p><blockquote>「入るの...？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<p><blockquote>「これが唯一の道」</blockquote>
+
+<hr>
+
+<p>エリナがカイトの手を握る。</p>
+
+<hr>
+
+<p><blockquote>「一緒に」</blockquote>
+
+<hr>
+
+<p>カイトが笑う。</p>
+
+<hr>
+
+<p><blockquote>「もちろんだ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>裂け目へ——</p>
+
+<hr>
+
+<p>カイトたちが一歩踏み出す。</p>
+
+<hr>
+
+<p>感覚が消える。</p>
+<p>上が下。</p>
+<p>過去と未来が混ざる。</p>
+
+<hr>
+
+<p><pre><code>
+// Enter the Rift
+// 裂け目突入
+
+const riftEntry = new SpaceTimeMagic({
+  type: "passage",
+  target: "party",
+  effects: {
+    spacetimeNavigation: true,
+    partyProtection: "complete",
+    perceptionFilter: "on"
+  }
+});
+
+await riftEntry.cast();
+console.log("時空の裂け目に入った");
+</code></pre></p>
+
+<hr>
+
+<p>カイトが耐える。</p>
+
+<hr>
+
+<p><blockquote>「くっ...」</blockquote>
+
+<hr>
+
+<p>時空耐性が働く。</p>
+<p>意識を保てる。</p>
+
+<hr>
+
+<p>エリナも耐える。</p>
+
+<hr>
+
+<p><blockquote>「大丈夫...」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を握りしめる。</p>
+
+<hr>
+
+<p><blockquote>「これは...」</blockquote>
+<blockquote>「耐えられない」</blockquote>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<hr>
+
+<p><blockquote>「ヒナタ」</blockquote>
+<blockquote>「深呼吸」</blockquote>
+<blockquote>「流れに逆らわないで」</blockquote>
+
+<hr>
+
+<p>ヒナタが従う。</p>
+
+<hr>
+
+<p><blockquote>「はあ...はあ...」</blockquote>
+
+<hr>
+
+<p>リアムも苦しむ。</p>
+
+<hr>
+
+<p><blockquote>「時間が...」</blockquote>
+<blockquote>「逆流してる」</blockquote>
+
+<hr>
+
+<p>ルナが膝をつく。</p>
+
+<hr>
+
+<p><blockquote>「無理...」</blockquote>
+
+<hr>
+
+<p>カイトが手を伸ばす。</p>
+
+<hr>
+
+<p><pre><code>
+// Party Protection
+// パーティ保護
+
+function protectParty(leader: User, party: User[]): void {
+  for (const member of party) {
+    if (member.resistanceLevel < "master") {
+      // Provide temporary protection
+      const shield = new MagicSpell({
+        name: "時空保護",
+        type: "buff",
+        target: member,
+        duration: "temporary"
+      });
+      
+      shield.cast();
+      console.log(`${member.name}を保護`);
+    }
+  }
+}
+
+protectParty(kaito, [erina, hinata, liam, luna]);
+</code></pre></p>
+
+<hr>
+
+<p>カイトの魔法が仲間を包む。</p>
+
+<hr>
+
+<p>ヒナタが顔を上げる。</p>
+
+<hr>
+
+<p><blockquote>「楽になった...」</blockquote>
+
+<hr>
+
+<p>リアムも立ち上がる。</p>
+
+<hr>
+
+<p><blockquote>「ありがとう」</blockquote>
+
+<hr>
+
+<p>ルナが涙を拭う。</p>
+
+<hr>
+
+<p><blockquote>「すみません...」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<hr>
+
+<p><blockquote>「気にしないで」</blockquote>
+<blockquote>「仲間だ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>裂け目の中——</p>
+
+<hr>
+
+<p>不思議な空間。</p>
+
+<hr>
+
+<p>どこまでも続く闇。</p>
+<p>星々が瞬く。</p>
+<p>時間の流れが見える。</p>
+
+<hr>
+
+<p>エリナが言う。</p>
+
+<hr>
+
+<p><blockquote>「きれい...」</blockquote>
+
+<hr>
+
+<p>カイトも見とれる。</p>
+
+<hr>
+
+<p><blockquote>「時空の深淵...」</blockquote>
+
+<hr>
+
+<p>羅針盤が光る。</p>
+
+<hr>
+
+<p><blockquote>「こっちだ」</blockquote>
+
+<hr>
+
+<p>カイトたちが進む。</p>
+
+<hr>
+
+<p>時空の流れを避けながら。</p>
+<p>時には待ち。</p>
+<p>時には急ぐ。</p>
+
+<hr>
+
+<p><pre><code>
+// Navigate Space-Time
+// 時空の航行
+
+interface SpaceTimeNavigation {
+  currentLocation: string;
+  destination: string;
+  hazards: string[];
+  timeRemaining: string;
+}
+
+const navigation: SpaceTimeNavigation = {
+  currentLocation: "時空の裂け目",
+  destination: "時空の神殿",
+  hazards: [
+    "時間の渦",
+    "因果の断絶",
+    "空間の断裂"
+  ],
+  timeRemaining: "不明（時空のため）"
+};
+
+console.log("神殿に接近中...");
+</code></pre></p>
+
+<hr>
+
+<p>数時間後——</p>
+<p>（時空の中では数秒かもしれない）</p>
+
+<hr>
+
+<p>カイトが足を止める。</p>
+
+<hr>
+
+<p><blockquote>「見えた」</blockquote>
+
+<hr>
+
+<p>前方に——</p>
+<p>巨大な建物が浮いている。</p>
+
+<hr>
+
+<p>時空の神殿——</p>
+
+<hr>
+
+<p>銀色の壁。</p>
+<p>光と闇が巡る。</p>
+<p>時の文字が刻まれている。</p>
+
+<hr>
+
+<p>ルナが息を呑む。</p>
+
+<hr>
+
+<p><blockquote>「すごい...」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀から手を離す。</p>
+
+<hr>
+
+<p><blockquote>「これが時空の神殿...」</blockquote>
+
+<hr>
+
+<p>リアムが剣を下ろす。</p>
+
+<hr>
+
+<p><blockquote>「神話の通りだ」</blockquote>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<hr>
+
+<p><blockquote>「カイト」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<p><blockquote>「ああ」</blockquote>
+<blockquote>「行こう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>神殿の入り口——</p>
+
+<hr>
+
+<p>巨大な扉。</p>
+<p>四人の賢者の像が飾られている。</p>
+
+<hr>
+
+<p>フローズナ——氷の賢者。</p>
+<p>リリアナ——時空の賢者。</p>
+<p>イグニス——火の賢者。</p>
+<p>ライラ——雷の賢者。</p>
+
+<hr>
+
+<p>カイトが像を見る。</p>
+
+<hr>
+
+<p><blockquote>「四人の賢者...」</blockquote>
+<blockquote>「創設者たち」</blockquote>
+
+<hr>
+
+<p>扉に文字が浮かぶ。</p>
+
+<hr>
+
+<p><blockquote>『耐性を持つ者のみ入れ』</blockquote>
+
+<hr>
+
+<p><pre><code>
+// Temple Access Check
+// 神殿アクセス確認
+
+interface AccessCheck {
+  user: string;
+  resistances: string[];
+  accessGranted: boolean;
+}
+
+function checkTempleAccess(user: User): AccessCheck {
+  const requiredResistances = [
+    "ice",
+    "spacetime", 
+    "light",
+    "darkness"
+  ];
+  
+  const userResistances = user.resistances;
+  const hasAllResistances = requiredResistances.every(
+    res => userResistances.includes(res)
+  );
+  
+  return {
+    user: user.name,
+    resistances: userResistances,
+    accessGranted: hasAllResistances
+  };
+}
+
+const kaitoAccess = checkTempleAccess(kaito);
+console.log(`アクセス許可: ${kaitoAccess.accessGranted}`);
+</code></pre></p>
+
+<hr>
+
+<p>カイトが扉に手を置く。</p>
+
+<hr>
+
+<p>冷たい感触。</p>
+<p>次いで熱。</p>
+<p>光と闇が交互に走る。</p>
+
+<hr>
+
+<p>扉が開く。</p>
+
+<hr>
+
+<p><blockquote>「通れた」</blockquote>
+
+<hr>
+
+<p>エリナも手を置く。</p>
+
+<hr>
+
+<p><blockquote>「私も」</blockquote>
+
+<hr>
+
+<p>ヒナタ、リアム、ルナも続く。</p>
+
+<hr>
+
+<p>全員が通過。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>神殿の中——</p>
+
+<hr>
+
+<p>広大なホール。</p>
+
+<hr>
+
+<p>天井が見えない。</p>
+<p>壁に時空の絵が描かれている。</p>
+<p>床に魔法陣が浮かんでいる。</p>
+
+<hr>
+
+<p>カイトが見回す。</p>
+
+<hr>
+
+<p><blockquote>「ここが...」</blockquote>
+<blockquote>「時空の神殿」</blockquote>
+
+<hr>
+
+<p>中央に祭壇がある。</p>
+
+<hr>
+
+<p>その上に——</p>
+<p>光り輝く球体。</p>
+
+<hr>
+
+<p>ルナが近づく。</p>
+
+<hr>
+
+<p><blockquote>「あれは...」</blockquote>
+
+<hr>
+
+<p>カイトが止める。</p>
+
+<hr>
+
+<p><blockquote>「待て」</blockquote>
+<blockquote>「罠かもしれない」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を構える。</p>
+
+<hr>
+
+<p><blockquote>「警戒」</blockquote>
+
+<hr>
+
+<p>リアムも剣を構える。</p>
+
+<hr>
+
+<p><blockquote>「警戒」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>その時——</p>
+
+<hr>
+
+<p>球体が光る。</p>
+
+<hr>
+
+<p>声が響く。</p>
+
+<hr>
+
+<p><blockquote>『ようこそ——』</blockquote>
+<blockquote>『耐性を超えし者たちよ』</blockquote>
+
+<hr>
+
+<p>カイトが身構える。</p>
+
+<hr>
+
+<p><blockquote>「誰だ」</blockquote>
+
+<hr>
+
+<p>球体から——</p>
+<p>影が現れる。</p>
+
+<hr>
+
+<p>老人の姿。</p>
+<p>でも実体がない。</p>
+<p>投影だ。</p>
+
+<hr>
+
+<p>老人が笑う。</p>
+
+<hr>
+
+<p><blockquote>『私は——』</blockquote>
+<blockquote>『時空の神殿の守護者』</blockquote>
+<blockquote>『シルヴァと呼んでくれ』</blockquote>
+
+<hr>
+
+<p>カイトが目を見開く。</p>
+
+<hr>
+
+<p><blockquote>「シルヴァ...」</blockquote>
+<blockquote>「リリアナが言ってた」</blockquote>
+
+<hr>
+
+<p>シルヴァが頷く。</p>
+
+<hr>
+
+<p><blockquote>『リリアナ...』</blockquote>
+<blockquote>『懐かしい名だ』</blockquote>
+<blockquote>『彼女は元気か？』</blockquote>
+
+<hr>
+
+<p>カイトが答える。</p>
+
+<hr>
+
+<p><blockquote>「はい」</blockquote>
+<blockquote>「僕たちに耐性を与えてくれました」</blockquote>
+
+<hr>
+
+<p>シルヴァが笑う。</p>
+
+<hr>
+
+<p><blockquote>『さすがだ』</blockquote>
+<blockquote>『彼女は優秀だった』</blockquote>
+
+<hr>
+
+<p>エリナが聞く。</p>
+
+<hr>
+
+<p><blockquote>「シルヴァさんは——」</blockquote>
+<blockquote>「何者なんですか？」</blockquote>
+
+<hr>
+
+<p>シルヴァが答える。</p>
+
+<hr>
+
+<p><blockquote>『私は——』</blockquote>
+<blockquote>『かつて時空を支配した者』</blockquote>
+<blockquote>『今はただの影』</blockquote>
+
+<hr>
+
+<p>カイトが首を傾げる。</p>
+
+<hr>
+
+<p><blockquote>「時空を支配...」</blockquote>
+
+<hr>
+
+<p><pre><code>
+// Guardian Silva
+// 守護者シルヴァ
+
+const silvaProfile = {
+  name: "シルヴァ",
+  title: "時空の守護者",
+  status: "projection",
+  abilities: [
+    "時空魔法の全て",
+    "未来予知",
+    "過去改変（封印中）"
+  ],
+  currentRole: "時空の神殿の守護者",
+  history: "リリアナの師匠"
+};
+
+console.log(`守護者: ${silvaProfile.name}`);
+console.log(`役割: ${silvaProfile.currentRole}`);
+</code></pre></p>
+
+<hr>
+
+<p>シルヴァが言う。</p>
+
+<hr>
+
+<p><blockquote>『君たちがここに来た理由——』</blockquote>
+<blockquote>『知っている』</blockquote>
+
+<hr>
+
+<p>カイトが聞く。</p>
+
+<hr>
+
+<p><blockquote>「理由...」</blockquote>
+
+<hr>
+
+<p>シルヴァが続ける。</p>
+
+<hr>
+
+<p><blockquote>『時空の崩壊』</blockquote>
+<blockquote>『それを食い止める』</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<p><blockquote>「そうです」</blockquote>
+
+<hr>
+
+<p>シルヴァが微笑む。</p>
+
+<hr>
+
+<p><blockquote>『ならば——』</blockquote>
+<blockquote>『試練を受けてもらおう』</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を握る。</p>
+
+<hr>
+
+<p><blockquote>「また試練...」</blockquote>
+
+<hr>
+
+<p>シルヴァが笑う。</p>
+
+<hr>
+
+<p><blockquote>『心配ない』</blockquote>
+<blockquote>『耐性を持つ君たちなら』</blockquote>
+<blockquote>『乗り越えられる』</blockquote>
+
+<hr>
+
+<p>カイトが前へ出る。</p>
+
+<hr>
+
+<p><blockquote>「内容は？」</blockquote>
+
+<hr>
+
+<p>シルヴァが球体を指す。</p>
+
+<hr>
+
+<p><blockquote>『時空の試練』</blockquote>
+<blockquote>『過去、現在、未来——』</blockquote>
+<blockquote>『全てを理解する』</blockquote>
+
+<hr>
+
+<p>カイトが球体を見る。</p>
+
+<hr>
+
+<p><blockquote>「過去、現在、未来...」</blockquote>
+
+<hr>
+
+<p>シルヴァが頷く。</p>
+
+<hr>
+
+<p><blockquote>『準備はいいか？』</blockquote>
+
+<hr>
+
+<p>カイトが仲間を見る。</p>
+
+<hr>
+
+<p>エリナが頷く。</p>
+<p>ヒナタが刀を構える。</p>
+<p>リアムが剣を掲げる。</p>
+<p>ルナが小さく頷く。</p>
+
+<hr>
+
+<p>カイトがシルヴァを見る。</p>
+
+<hr>
+
+<p><blockquote>「いつでも」</blockquote>
+
+<hr>
+
+<p>シルヴァが笑う。</p>
+
+<hr>
+
+<p><blockquote>『いい答えだ』</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>試練の始まり——</p>
+
+<hr>
+
+<p>球体が輝きを増す。</p>
+
+<hr>
+
+<p><pre><code>
+// Trial Initialization
+// 試練初期化
+
+const trialConfig = {
+  name: "時空の試練",
+  phases: [
+    { name: "過去の理解", danger: "中" },
+    { name: "現在の把握", danger: "低" },
+    { name: "未来の予知", danger: "極" }
+  ],
+  reward: "時空の神の祝福",
+  failureRisk: "時空に囚われる"
+};
+
+console.log("試練を開始します");
+console.log(`報酬: ${trialConfig.reward}`);
+console.log(`警告: 失敗すると${trialConfig.failureRisk}`);
+</code></pre></p>
+
+<hr>
+
+<p>カイトたちが光に包まれる。</p>
+
+<hr>
+
+<p><blockquote>「行くぞ——」</blockquote>
+
+<hr>
+
+<p>光が視界を覆う。</p>
+
+<hr>
+
+<p>時空の神殿——</p>
+<p>その深淵で——</p>
+<p>新たな試練が始まる。</p>
+
+<hr>
+
+<p><strong>——第356章了——</strong></p>
