@@ -1,0 +1,1245 @@
+---
+Title: 第375章：増幅される力
+Date: 2026-03-22T06:30:00+09:00
+---
+
+<h3>第375章：増幅される力</h3>
+
+<p>戦いが始まる——</p>
+
+<hr>
+
+<p>エコーの洞窟。</p>
+<p>魔力が二倍に増幅される場所。</p>
+
+<hr>
+
+<p>モルガスが手を掲げる。</p>
+
+<hr>
+
+<pre><code>
+// Morgas - Shadow Nova
+// モルガス - 影の新星
+
+const morgasAttack = {
+    caster: "MORGAS",
+    spell: "SHADOW_NOVA",
+    basePower: 1000,
+    echoAmplification: 2.0,
+    finalPower: 2000,
+    targetArea: "ALL_ENEMIES"
+};
+
+console.log("=== Shadow Nova ===");
+console.log(`Base power: ${morgasAttack.basePower}`);
+console.log(`Echo amp: x${morgasAttack.echoAmplification}`);
+console.log(`Final power: ${morgasAttack.finalPower}`);
+console.log("Impact: DEVASTATING");
+</code></pre>
+
+<hr>
+
+<p>黒い波動が広がる。</p>
+
+<hr>
+
+<p>カイトが即座に反応。</p>
+
+<hr>
+
+<pre><code>
+// Kaito - Barrier Protocol
+// カイト - バリアプロトコル
+
+magic.cast({
+    type: "LIGHT_BARRIER",
+    targets: ["PARTY_ALL"],
+    power: 1500,
+    properties: ["ANTI_SHADOW"],
+    echoBoost: true
+});
+
+console.log("Barrier: DEPLOYED");
+console.log("Shadow resistance: ACTIVE");
+console.log("Damage mitigated: 70%");
+</code></pre>
+
+<hr>
+
+<p>光の壁が現れる。</p>
+<p>影の波動と衝突。</p>
+
+<hr>
+
+<p>衝撃波。</p>
+
+<hr>
+
+<blockquote>「くっ——」</blockquote>
+
+<hr>
+
+<p>カイトが膝をつく。</p>
+
+<hr>
+
+<p>エリナが支える。</p>
+
+<hr>
+
+<blockquote>「カイト！」</blockquote>
+
+<hr>
+
+<p>カイトが立ち上がる。</p>
+
+<hr>
+
+<blockquote>「大丈夫」</blockquote>
+<blockquote>「防御は成功した」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>モルガスが微笑む。</p>
+
+<hr>
+
+<blockquote>「ここでは</blockquote>
+<blockquote>誰もわしに勝てん」</blockquote>
+
+<hr>
+
+<p>リヴァイアが動く。</p>
+
+<hr>
+
+<pre><code>
+// Livia - Shadow Step
+// リヴァイア - 影歩き
+
+const liviaMove = {
+    action: "SHADOW_STEP",
+    user: "LIVIA",
+    destination: "BEhind_ENEMY_LINES",
+    stealthLevel: "MAXIMUM"
+};
+
+console.log("Livia position: RELOCATED");
+console.log("Threat: FLANKING");
+</code></pre>
+
+<hr>
+
+<p>リヴァイアが消える。</p>
+<p>影の中へ。</p>
+
+<hr>
+
+<p>ヒナタが気配を感じる。</p>
+
+<hr>
+
+<blockquote>「後ろ！」</blockquote>
+
+<hr>
+
+<p>刀を抜く。</p>
+
+<hr>
+
+<p>リヴァイアの刃と交差。</p>
+
+<hr>
+
+<pre><code>
+// Hinata vs Livia - Blade Clash
+// ヒナタ vs リヴァイア - 刃の交錯
+
+const clash = {
+    hinata: {
+        weapon: "WIND_BLADE",
+        speed: 95,
+        technique: "GALE_STRIKE"
+    },
+    livia: {
+        weapon: "SHADOW_DAGGER",
+        speed: 90,
+        technique: "VOID_SLASH"
+    },
+    result: "EVEN"
+};
+
+console.log("=== Blade Clash ===");
+console.log("Hinata speed: " + clash.hinata.speed);
+console.log("Livia speed: " + clash.livia.speed);
+console.log("Result: STALEMATE");
+</code></pre>
+
+<hr>
+
+<p>火花が散る。</p>
+
+<hr>
+
+<p>リヴァイアが笑う。</p>
+
+<hr>
+
+<blockquote>「いい反応」</blockquote>
+<blockquote>「でも——」</blockquote>
+
+<hr>
+
+<p>リヴァイアが影の中に戻る。</p>
+
+<hr>
+
+<blockquote>「捕まえられるかな？」</blockquote>
+
+<hr>
+
+<p>ヒナタが舌打ち。</p>
+
+<hr>
+
+<blockquote>「逃げ足だけは速い」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>影の獣が三体。</p>
+<p>同時に襲いかかる。</p>
+
+<hr>
+
+<pre><code>
+// Shadow Beast Assault
+// 影の獣の襲撃
+
+const beastAttack = {
+    units: 3,
+    targets: ["LIAM", "CECILIA", "ELINA"],
+    attackType: "COORDINATED",
+    powerEach: 800
+};
+
+console.log("=== Beast Assault ===");
+beastAttack.targets.forEach((t, i) => {
+    console.log(`Beast ${i+1} → ${t}`);
+});
+</code></pre>
+
+<hr>
+
+<p>リアムが剣を構える。</p>
+
+<hr>
+
+<pre><code>
+// Liam - Shield Bash
+// リアム - シールドバッシュ
+
+const liamDefense = {
+    action: "SHIELD_BASH",
+    power: 600,
+    effect: "STUN"
+};
+
+console.log("Liam: BLOCKING Beast 1");
+</code></pre>
+
+<hr>
+
+<p>盾で受け止める。</p>
+
+<hr>
+
+<blockquote>「重い——！」</blockquote>
+
+<hr>
+
+<p>セシリアが魔法を詠唱。</p>
+
+<hr>
+
+<pre><code>
+// Cecilia - Purification Light
+// セシリア - 浄化の光
+
+magic.cast({
+    type: "PURIFICATION_LIGHT",
+    target: "SHADOW_BEAST_2",
+    power: 900,
+    echoBoost: true
+});
+
+console.log("Beast 2: DAMAGED");
+console.log("Shadow energy: PARTIALLY_PURGED");
+</code></pre>
+
+<hr>
+
+<p>光が影の獣を焼く。</p>
+
+<hr>
+
+<p>獣が悲鳴を上げる。</p>
+
+<hr>
+
+<blockquote>「効果がある！」</blockquote>
+
+<hr>
+
+<p>エリナが狙う。</p>
+
+<hr>
+
+<pre><code>
+// Elina - Piercing Arrow
+// エリナ - 貫通の矢
+
+const elinaAttack = {
+    weapon: "ENCHANTED_BOW",
+    arrow: "LIGHT_ARROW",
+    target: "SHADOW_BEAST_3",
+    accuracy: 98,
+    criticalHit: true
+};
+
+console.log("=== Arrow Impact ===");
+console.log(`Target: ${elinaAttack.target}`);
+console.log(`Accuracy: ${elinaAttack.accuracy}%`);
+console.log("Critical: YES");
+console.log("Beast 3: NEUTRALIZED");
+</code></pre>
+
+<hr>
+
+<p>矢が影の獣の核を貫く。</p>
+
+<hr>
+
+<p>獣が霧散。</p>
+
+<hr>
+
+<p>エリナが言う。</p>
+
+<hr>
+
+<blockquote>「一体倒した！」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトがモルガスに向かう。</p>
+
+<hr>
+
+<pre><code>
+// Kaito - Assault Mode
+// カイト - 突撃モード
+
+const kaitoAssault = {
+    primarySpell: "LIGHT_LANCE",
+    secondarySpell: "QUICK_STEP",
+    strategy: "AGGRESSIVE"
+};
+
+console.log("Kaito: ENGAGING MORGAS");
+</code></pre>
+
+<hr>
+
+<p>光の槍を召喚。</p>
+
+<hr>
+
+<blockquote>「モルガス！」</blockquote>
+
+<hr>
+
+<p>突進。</p>
+
+<hr>
+
+<p>モルガスが手を振る。</p>
+
+<hr>
+
+<pre><code>
+// Morgas - Shadow Wall
+// モルガス - 影の壁
+
+const morgasDefense = {
+    spell: "SHADOW_WALL",
+    power: 1800,
+    echoBoost: true,
+    durability: "HIGH"
+};
+
+console.log("Shadow Wall: DEPLOYED");
+console.log("Kaito attack: BLOCKED");
+</code></pre>
+
+<hr>
+
+<p>影の壁が現れる。</p>
+<p>光の槍が弾かれる。</p>
+
+<hr>
+
+<p>モルガスが言う。</p>
+
+<hr>
+
+<blockquote>「無駄だ」</blockquote>
+<blockquote>「ここでは</blockquote>
+<blockquote>わしは無敵だ」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<pre><code>
+// Tactical Analysis
+// 戦術分析
+
+const analysis = {
+    enemy: {
+        morgas: {
+            power: 2000,
+            weakness: "NONE_IDENTIFIED",
+            position: "CENTER"
+        },
+        livia: {
+            power: 1200,
+            status: "ELUSIVE",
+            threat: "FLANKING"
+        },
+        beasts: {
+            remaining: 2,
+            weakness: "LIGHT_MAGIC"
+        }
+    },
+    environment: {
+        echoAmplification: 2.0,
+        appliesTo: "BOTH_SIDES",
+        duration: "PERMANENT"
+    }
+};
+
+console.log("=== Analysis Result ===");
+console.log("Morgas: HIGH_PRIORITY_TARGET");
+console.log("Echo: AFFECTS_ALL_MAGIC");
+console.log("Insight: OUR_LIGHT_SPELLS_ALSO_BOOSTED");
+</code></pre>
+
+<hr>
+
+<p>カイトが悟る。</p>
+
+<hr>
+
+<blockquote>「待てよ——」</blockquote>
+<blockquote>「ここでは</blockquote>
+<blockquote>俺たちの魔法も強化される」</blockquote>
+
+<hr>
+
+<p>カイトが仲間に叫ぶ。</p>
+
+<hr>
+
+<blockquote>「全員——</blockquote>
+<blockquote>全力で行くぞ！」</blockquote>
+
+<hr>
+
+<p>エリナが応じる。</p>
+
+<hr>
+
+<blockquote>「わかった！」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが新しい魔法を構築。</p>
+
+<hr>
+
+<pre><code>
+// Kaito - Combined Spell Protocol
+// カイト - 複合魔法プロトコル
+
+const combinedSpell = {
+    base: "LIGHT_SURGE",
+    modifiers: ["ANTI_SHADOW", "ECHO_RESONANCE"],
+    targeting: "AREA",
+    partySynergy: true
+};
+
+console.log("=== Combined Spell ===");
+console.log("Type: LIGHT_SURGE");
+console.log("Echo resonance: ACTIVE");
+console.log("Party sync: ENABLED");
+console.log("Estimated power: 2500+");
+</code></pre>
+
+<hr>
+
+<p>カイトが仲間たちに指示。</p>
+
+<hr>
+
+<blockquote>「俺が合図したら</blockquote>
+<blockquote>全員で光魔法を放て」</blockquote>
+
+<hr>
+
+<p>セシリアが頷く。</p>
+
+<hr>
+
+<blockquote>「浄化の光——</blockquote>
+<blockquote>最大出力で」</blockquote>
+
+<hr>
+
+<p>エリナが矢に魔力を込める。</p>
+
+<hr>
+
+<blockquote>「聖なる矢——</blockquote>
+<blockquote>準備完了」</blockquote>
+
+<hr>
+
+<p>リアムが盾に光を纏わせる。</p>
+
+<hr>
+
+<blockquote>「光の盾——</blockquote>
+<blockquote>いける」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀に風と光を宿す。</p>
+
+<hr>
+
+<blockquote>「風光剣——</blockquote>
+<blockquote>構え完了」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが魔法を完成させる。</p>
+
+<hr>
+
+<pre><code>
+// Ultimate Light - Resonance Burst
+// 究極の光 - 共鳴バースト
+
+const ultimateLight = {
+    contributors: ["KAITO", "ELINA", "LIAM", "CECILIA", "HINATA"],
+    spell: "RESONANCE_BURST",
+    totalPower: 0,
+    echoMultiplier: 2.5
+};
+
+// Calculate combined power
+ultimateLight.contributors.forEach(c => {
+    ultimateLight.totalPower += 500; // Base contribution
+});
+ultimateLight.totalPower *= ultimateLight.echoMultiplier;
+
+console.log("=== Resonance Burst ===");
+console.log(`Contributors: ${ultimateLight.contributors.length}`);
+console.log(`Base power: ${ultimateLight.totalPower / ultimateLight.echoMultiplier}`);
+console.log(`Echo multiplier: x${ultimateLight.echoMultiplier}`);
+console.log(`Final power: ${ultimateLight.totalPower}`);
+console.log("Target: ALL_ENEMIES");
+</code></pre>
+
+<hr>
+
+<p>カイトが叫ぶ。</p>
+
+<hr>
+
+<blockquote>「今だ！」</blockquote>
+
+<hr>
+
+<p>五つの光が交わる。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>共鳴。</p>
+
+<hr>
+
+<p>光の爆発。</p>
+
+<hr>
+
+<pre><code>
+// Impact Result
+// 着弾結果
+
+const impact = {
+    targets: {
+        morgas: { damage: 1000, status: "HEAVILY_DAMAGED" },
+        livia: { damage: 800, status: "WOUNDED" },
+        beast1: { damage: 1500, status: "DESTROYED" },
+        beast2: { damage: 1500, status: "DESTROYED" }
+    },
+    echoAftermath: "TEMPORARY_DISRUPTION"
+};
+
+console.log("=== Impact Report ===");
+console.log("Morgas: HEAVILY DAMAGED");
+console.log("Livia: WOUNDED - RETREATED TO SHADOW");
+console.log("Beasts: ALL DESTROYED");
+console.log("Echo field: TEMPORARILY DISRUPTED");
+</code></pre>
+
+<hr>
+
+<p>光が洞窟を満たす。</p>
+
+<hr>
+
+<p>影の獣が消滅。</p>
+
+<hr>
+
+<p>モルガスが膝をつく。</p>
+
+<hr>
+
+<blockquote>「ぐっ——」</blockquote>
+
+<hr>
+
+<p>リヴァイアが影の中に逃げる。</p>
+
+<hr>
+
+<blockquote>「モルガス！」</blockquote>
+
+<hr>
+
+<p>モルガスが立ち上がる。</p>
+
+<hr>
+
+<blockquote>「まだだ——」</blockquote>
+<blockquote>「まだ終わっておらん」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>モルガスが祭壇へ。</p>
+
+<hr>
+
+<p>魔法陣の上。</p>
+
+<hr>
+
+<pre><code>
+// Morgas - Desperate Ritual
+// モルガス - 絶望的な儀式
+
+const desperateRitual = {
+    action: "EMERGENCY_GATE_ACCELERATION",
+    sacrifice: "SELF",
+    remainingEnergy: "ALL",
+    risk: "CATASTROPHIC"
+};
+
+console.log("=== WARNING ===");
+console.log("Morgas initiating: EMERGENCY_RITUAL");
+console.log("Method: SELF_SACRIFICE");
+console.log("Potential outcome: UNCONTROLLED_GATE_OPENING");
+</code></pre>
+
+<hr>
+
+<p>モルガスが叫ぶ。</p>
+
+<hr>
+
+<blockquote>「門を開く——」</blockquote>
+<blockquote>「命を代償に！」</blockquote>
+
+<hr>
+
+<p>カイトが動く。</p>
+
+<hr>
+
+<blockquote>「止めるんだ！」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>リヴァイアが現れる。</p>
+
+<hr>
+
+<p>モルガスの前に。</p>
+
+<hr>
+
+<blockquote>「待て」</blockquote>
+
+<hr>
+
+<p>モルガスが驚く。</p>
+
+<hr>
+
+<blockquote>「リヴァイア——？」</blockquote>
+
+<hr>
+
+<p>リヴァイアが冷たく言う。</p>
+
+<hr>
+
+<blockquote>「あなたの計画には</blockquote>
+<blockquote>興味がない」</blockquote>
+
+<hr>
+
+<p>モルガスが問う。</p>
+
+<hr>
+
+<blockquote>「何？」</blockquote>
+
+<hr>
+
+<p>リヴァイアが刀を向ける。</p>
+
+<hr>
+
+<blockquote>「私は復讐がしたい」</blockquote>
+<blockquote>「光の魔術師への復讐が」</blockquote>
+
+<blockquote>「影の領域の力は</blockquote>
+<blockquote>そのためのもの」</blockquote>
+
+<hr>
+
+<p>モルガスが笑う。</p>
+
+<hr>
+
+<blockquote>「裏切るか——」</blockquote>
+<blockquote>「わしの弟子が」</blockquote>
+
+<hr>
+
+<p>リヴァイアが言う。</p>
+
+<hr>
+
+<blockquote>「最初から</blockquote>
+<blockquote>利用していただけ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが状況を見る。</p>
+
+<hr>
+
+<pre><code>
+// Situation Update
+// 状況更新
+
+const situation = {
+    morgas: { hp: 30, status: "CRITICAL", threat: "RITUAL" },
+    livia: { hp: 60, status: "HOSTILE_TO_ALL", threat: "UNKNOWN" },
+    party: { hp: 70, status: "COMBAT_READY", advantage: "ECH0_DISRUPTED" }
+};
+
+console.log("=== Current Status ===");
+console.log("Morgas: CRITICAL");
+console.log("Livia: TURNCOAT - ENEMY_OF_BOTH");
+console.log("Opportunity: CHAOS_IN_ENEMY_RANKS");
+</code></pre>
+
+<hr>
+
+<p>エリナがカイトに囁く。</p>
+
+<hr>
+
+<blockquote>「どうする？」</blockquote>
+
+<hr>
+
+<p>カイトが決断。</p>
+
+<hr>
+
+<blockquote>「二人を同時に</blockquote>
+<blockquote>無力化する」</blockquote>
+
+<hr>
+
+<p>カイトが新しい魔法を準備。</p>
+
+<hr>
+
+<pre><code>
+// Dual Seal Protocol
+// 二重封印プロトコル
+
+const dualSeal = {
+    target1: {
+        entity: "MORGAS",
+        method: "SHADOW_SUPPRESSION",
+        duration: "TEMPORARY"
+    },
+    target2: {
+        entity: "LIVIA",
+        method: "MOVEMENT_LOCK",
+        duration: "TEMPORARY"
+    },
+    powerRequirement: 1800,
+    currentEnergy: 1500,
+    status: "INSUFFICIENT"
+};
+
+console.log("=== Seal Analysis ===");
+console.log("Required: " + dualSeal.powerRequirement);
+console.log("Available: " + dualSeal.currentEnergy);
+console.log("Deficit: " + (dualSeal.powerRequirement - dualSeal.currentEnergy));
+console.log("Solution: PARTY_ENERGY_TRANSFER");
+</code></pre>
+
+<hr>
+
+<p>カイトが仲間に叫ぶ。</p>
+
+<hr>
+
+<blockquote>「みんな——</blockquote>
+<blockquote>魔力を俺に！」</blockquote>
+
+<hr>
+
+<p>セシリアが理解する。</p>
+
+<hr>
+
+<blockquote>「転送するわ」</blockquote>
+
+<hr>
+
+<pre><code>
+// Energy Transfer
+// エネルギー転送
+
+const energyTransfer = {
+    kaito: 500,
+    elina: 400,
+    liam: 300,
+    cecilia: 400,
+    hinata: 350,
+    total: 1950
+};
+
+console.log("=== Energy Pool ===");
+console.log(`Total: ${energyTransfer.total}`);
+console.log("Requirement: 1800");
+console.log("Status: SUFFICIENT");
+</code></pre>
+
+<hr>
+
+<p>五人の魔力がカイトへ集まる。</p>
+
+<hr>
+
+<p>カイトが魔法を放つ。</p>
+
+<hr>
+
+<pre><code>
+// Dual Seal - Execute
+// 二重封印 - 実行
+
+magic.cast({
+    type: "DUAL_SEAL",
+    targets: ["MORGAS", "LIVIA"],
+    sealType: "TEMPORARY_SUPPRESSION",
+    duration: "5_MINUTES",
+    power: 1900
+});
+
+console.log("=== Seal Result ===");
+console.log("Morgas: SEALED - Shadow magic suppressed");
+console.log("Livia: BOUND - Movement restricted");
+console.log("Duration: 5 minutes");
+</code></pre>
+
+<hr>
+
+<p>二つの封印が発動。</p>
+
+<hr>
+
+<p>モルガスが動けなくなる。</p>
+
+<hr>
+
+<blockquote>「な——」</blockquote>
+
+<hr>
+
+<p>リヴァイアも拘束される。</p>
+
+<hr>
+
+<blockquote>「しまった——」</blockquote>
+
+<hr>
+
+<p>カイトが息を吐く。</p>
+
+<hr>
+
+<blockquote>「成功——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>しかし。</p>
+
+<hr>
+
+<p>祭壇の魔法陣が光り出す。</p>
+
+<hr>
+
+<pre><code>
+// Unintended Activation
+// 意図せぬ起動
+
+const gateStatus = {
+    status: "AUTO_ACTIVATING",
+    cause: "RITUAL_ENERGY_REMNANT",
+    progress: 75,
+    dangerLevel: "CRITICAL"
+};
+
+console.log("=== GATE ALERT ===");
+console.log("Shadow Realm Gate: ACTIVATING");
+console.log("Cause: Residual ritual energy");
+console.log("Progress: 75%");
+console.log("Est. completion: 3_MINUTES");
+</code></pre>
+
+<hr>
+
+<p>セシリアが叫ぶ。</p>
+
+<hr>
+
+<blockquote>「門が——</blockquote>
+<blockquote>開こうとしている！」</blockquote>
+
+<hr>
+
+<p>カイトが祭壇へ駆ける。</p>
+
+<hr>
+
+<blockquote>「閉じるんだ——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>魔法陣を分析。</p>
+
+<hr>
+
+<pre><code>
+// Gate Analysis
+// 門の分析
+
+const gateAnalysis = magic.analyze({
+    target: "SHADOW_REALM_GATE",
+    depth: "MAXIMUM"
+});
+
+console.log("=== Gate Structure ===");
+console.log("Type: ANCIENT_PORTAL");
+console.log("Energy source: RITUAL_REMNANT");
+console.log("Key runes: 12");
+console.log("Deactivation method: REVERSE_INSCRIPTION");
+console.log("Time required: 2_MINUTES");
+console.log("Time remaining: 2_MINUTES_30_SECONDS");
+console.log("Feasibility: BARELY_POSSIBLE");
+</code></pre>
+
+<hr>
+
+<p>カイトが魔法陣に手を置く。</p>
+
+<hr>
+
+<blockquote>「逆向けに</blockquote>
+<blockquote>書き換える——」</blockquote>
+
+<hr>
+
+<p>エリナが支える。</p>
+
+<hr>
+
+<blockquote>「手伝う」</blockquote>
+
+<hr>
+
+<p>セシリアも。</p>
+
+<hr>
+
+<blockquote>「私も」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>三人で魔法陣を書き換える。</p>
+
+<hr>
+
+<pre><code>
+// Gate Reversal Process
+// 門の反転プロセス
+
+let progress = 0;
+const target = 100;
+const rate = 2; // per second
+
+while (progress < target) {
+    progress += rate;
+    console.log(`Progress: ${progress}%`);
+    if (progress >= 100) break;
+}
+
+console.log("=== Gate Status ===");
+console.log("Reversal: COMPLETE");
+console.log("Shadow Realm connection: CLOSING");
+console.log("Gate stability: FAILING");
+console.log("Result: PERMANENT_SEAL");
+</code></pre>
+
+<hr>
+
+<p>魔法陣が逆回転。</p>
+
+<hr>
+
+<p>光が影を飲み込む。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>門が閉じる。</p>
+
+<hr>
+
+<p>完全に。</p>
+
+<hr>
+
+<p>祭壇が静まり返る。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが息を吐く。</p>
+
+<hr>
+
+<blockquote>「終わった——」</blockquote>
+
+<hr>
+
+<p>エリナが微笑む。</p>
+
+<hr>
+
+<blockquote>「やったわね」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>しかし。</p>
+
+<hr>
+
+<p>モルガスが笑う。</p>
+
+<hr>
+
+<blockquote>「門を閉じたか——」</blockquote>
+<blockquote>「だが</blockquote>
+<blockquote>わしはまだ生きている」</blockquote>
+
+<hr>
+
+<p>封印が解け始める。</p>
+
+<hr>
+
+<pre><code>
+// Seal Deterioration
+// 封印の劣化
+
+const sealStatus = {
+    morgasSeal: { remaining: "2_MINUTES", weakening: true },
+    liviaSeal: { remaining: "1_MINUTE", weakening: true },
+    partyEnergy: { remaining: "10%", status: "CRITICAL" }
+};
+
+console.log("=== Warning ===");
+console.log("Seals weakening");
+console.log("Party exhausted");
+console.log("Combat capability: MINIMAL");
+</code></pre>
+
+<hr>
+
+<p>カイトが判断する。</p>
+
+<hr>
+
+<blockquote>「撤退だ」</blockquote>
+
+<hr>
+
+<p>ヒナタが頷く。</p>
+
+<hr>
+
+<blockquote>「賛成」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>五人が洞窟から脱出。</p>
+
+<hr>
+
+<p>背後で。</p>
+
+<hr>
+
+<p>モルガスの叫び。</p>
+
+<hr>
+
+<blockquote>「逃がさない——！」</blockquote>
+
+<hr>
+
+<p>しかし。</p>
+<p>封印が動きを止める。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>山道を下る。</p>
+
+<hr>
+
+<p>夜が明けていた。</p>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<hr>
+
+<blockquote>「門は閉じた——」</blockquote>
+<blockquote>「でも</blockquote>
+<blockquote>モルガスは生きてる」</blockquote>
+
+<hr>
+
+<p>エリナが言う。</p>
+
+<hr>
+
+<blockquote>「次は</blockquote>
+<blockquote>完全に倒す」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「ああ——」</blockquote>
+<blockquote>「まだ終わってない」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>山を下りる五人。</p>
+
+<hr>
+
+<p>影の領域への門は閉じた。</p>
+<p>しかし——</p>
+<p>脅威は残っている。</p>
+
+<hr>
+
+<p>モルガス。</p>
+<p>リヴァイア。</p>
+<p>そして——</p>
+
+<hr>
+
+<p>まだ見えない真の敵。</p>
+
+<hr>
+
+<p style="text-align: center;">——第375章　終——</p>
