@@ -1,525 +1,481 @@
 ---
-Title: 第282章：北の山道
-Date: 2026-03-21T15:20:00+09:00
+Title: 第282章：北の航路
+Date: 2026-03-21T15:05:00+09:00
 ---
 
-<h3>第282章：北の山道</h3>
+<h3>第282章：北の航路</h3>
 
-<p>フォルテンの宿。</p>
+<p>船は静かに進む。</p>
 
-<p>暖炉の火が揺れる。</p>
+<p>アルヴァレスの港を出て——</p>
+<p>北へ向かう航路。</p>
 
-<p>カイトたちは——</p>
-<p>翌日の準備をしていた。</p>
+<p>カイトは甲板に立っていた。</p>
 
-<blockquote>「山越えには——装備が必要だ」</blockquote>
+<p>海風が頬を撫でる。</p>
 
-<p>カイトがリストを見る。</p>
-
-<blockquote>「防寒具——食料——ロープ」</blockquote>
-
-<blockquote>「あと——薬も」</blockquote>
-
-<p>エリナが荷物を整理する。</p>
-
-<blockquote>「回復薬——二十本」</blockquote>
-
-<blockquote>「魔力回復薬——十本」</blockquote>
-
-<blockquote>「解毒薬——五本」</blockquote>
-
-<p>リアムが地図を広げる。</p>
-
-<blockquote>「山道は——二つある」</blockquote>
-
-<blockquote>「安全な回り道と——危険な近道」</blockquote>
-
-<p>セシリアが覗き込む。</p>
-
-<blockquote>「どちらが——おすすめ？」</blockquote>
-
-<blockquote>「安全な道は——一週間」</blockquote>
-
-<blockquote>「近道は——三日」</blockquote>
-
-<blockquote>「でも——魔物の生息地」</blockquote>
-
-<p>ヒナタが手を挙げる。</p>
-
-<blockquote>「近道がいい」</blockquote>
-
-<blockquote>「私たちなら——大丈夫」</blockquote>
-
-<p>カイトが考える。</p>
-
-<p>虚無の動きは不明。</p>
-
-<p>一刻も早く——リリアナに会いたい。</p>
-
-<blockquote>「近道で行こう」</blockquote>
-
-<p>カイトが決断する。</p>
-
-<blockquote>「でも——警戒を怠らない」</blockquote>
+<p>王冠の力が——</p>
+<p>体の中で静かに脈打つ。</p>
 
 <pre><code>
-// ルート選択
-const routeChoice = {
-    selected: "近道（北嶺の峠）",
-    duration: "三日",
-    risks: ["魔物の出現", "雪崩", "寒さ"],
-    reason: "時間短縮",
-    backupPlan: "危険なら引き返す"
+// 船の状況
+const shipStatus = {
+    name: "白鯨号",
+    captain: "ヴィクトル船長",
+    destination: "北の港町ノルデン",
+    eta: "五日",
+    passengers: ["カイト", "エリナ", "リアム", "セシリア", "ヒナタ"]
 };
 </code></pre>
 
 <hr>
 
-<p>翌朝。</p>
+<p>エリナがやってくる。</p>
 
-<p>五人は出発した。</p>
+<p>二つのカップを持って。</p>
 
-<p>厚い外套。</p>
+<blockquote>「温かい飲み物——どう？」</blockquote>
 
-<p>防寒のブーツ。</p>
+<p>カイトが振り返る。</p>
 
-<p>背中には——</p>
-<p>大きな荷物。</p>
+<blockquote>「ありがとう」</blockquote>
 
-<blockquote>「寒い〜」</blockquote>
+<p>二人是並んで船首に立つ。</p>
 
-<p>ヒナタが身震いする。</p>
+<p>水平線が広がる。</p>
 
-<blockquote>「北は——冬が長いからな」</blockquote>
-
-<p>リアムが苦笑する。</p>
-
-<blockquote>「故郷を思い出す」</blockquote>
-
-<blockquote>「リアムの故郷——北だったよね」</blockquote>
+<blockquote>「北の港町って——どんなところ？」</blockquote>
 
 <p>エリナが尋ねる。</p>
 
-<blockquote>「ああ——もっと北だ」</blockquote>
+<p>カイトが記憶を辿る。</p>
 
-<blockquote>「ここより——寒い」</blockquote>
+<blockquote>「シルヴァさんから聞いたことがある」</blockquote>
 
-<p>カイトが山を見上げる。</p>
+<blockquote>「雪が多い——寒い場所」</blockquote>
 
-<p>白い峰々。</p>
+<blockquote>「でも——人が温かい」</blockquote>
 
-<p>雪雲がかかっている。</p>
+<p>エリナがカップを両手で包む。</p>
 
-<blockquote>「あそこを越えるのか」</blockquote>
+<blockquote>「寒いのは——苦手かも」</blockquote>
 
-<blockquote>「厳しそうだな」</blockquote>
+<blockquote>「火魔法得意だから——平気だよ」</blockquote>
 
-<p>セシリアが微笑む。</p>
+<p>カイトが笑う。</p>
 
-<blockquote>「でも——綺麗」</blockquote>
+<blockquote>「頼もしいな」</blockquote>
 
-<blockquote>「雪景色——素敵です」</blockquote>
+<blockquote>「寒くなったら——暖めてもらおう」</blockquote>
 
-<hr>
+<p>エリナの頬が少し赤くなる。</p>
 
-<p>山道を登る。</p>
-
-<p>雪が降り始めた。</p>
-
-<blockquote>「視界が悪くなってきた」</blockquote>
-
-<p>カイトが前を見る。</p>
-
-<p>白い世界。</p>
-
-<p>道が見えにくい。</p>
-
-<blockquote>「王冠——道を示せるか？」</blockquote>
-
-<p>カイトが王冠に尋ねる。</p>
-
-<p>王冠が淡く光る。</p>
-
-<blockquote>（北へ——一直線）</blockquote>
-
-<p>方角はわかる。</p>
-
-<p>でも——</p>
-
-<p>道の状態はわからない。</p>
-
-<pre><code>
-// 王冠のナビゲーション
-const crownNavigation = {
-    function: "方角指示",
-    limitation: "地形情報なし",
-    currentStatus: "北へ進行中",
-    weather: "雪・視界不良"
-};
-</code></pre>
-
-<blockquote>「カイト——足跡」</blockquote>
-
-<p>エリナが雪を指す。</p>
-
-<p>大きな足跡。</p>
-
-<p>人のものではない。</p>
-
-<blockquote>「魔物か」</blockquote>
-
-<p>リアムが剣に手をかける。</p>
-
-<blockquote>「新鮮だ——まだ近くにいる」</blockquote>
-
-<p>五人が警戒して進む。</p>
-
-<p>雪の中——</p>
-<p>気配を感じる。</p>
+<blockquote>「もう——からかわないでよ」</blockquote>
 
 <hr>
 
-<p><b>ガアアア！</b></p>
+<p>船室の中。</p>
 
-<p>咆哮。</p>
+<p>リアムが地図を広げていた。</p>
 
-<p>雪が舞う。</p>
+<p>セシリアとヒナタも集まる。</p>
 
-<p>現れたのは——</p>
+<blockquote>「北の港町ノルデンから——山を越える」</blockquote>
 
-<p>白い狼。</p>
+<p>リアムが指で線を辿る。</p>
 
-<p>いや——</p>
+<blockquote>「ここに——峠道がある」</blockquote>
 
-<p>狼ではない。</p>
+<blockquote>「通常は——商人が使うルート」</blockquote>
 
-<p>氷狼（アイスウルフ）。</p>
+<p>ヒナタが首を傾げる。</p>
 
-<p>体長二メートル。</p>
+<blockquote>「危険はないの？」</blockquote>
 
-<p>氷のような毛皮。</p>
+<blockquote>「魔獣は——いる」</blockquote>
 
-<p>青く光る瞳。</p>
+<p>リアムが答える。</p>
 
-<p>五匹。</p>
+<blockquote>「でも——私たちの敵じゃない」</blockquote>
 
-<p>群れだ。</p>
+<p>セシリアが冷静に補足する。</p>
 
-<blockquote>「氷狼——しかも群れ」</blockquote>
+<blockquote>「冬の終わり頃なので——雪は少ないはず」</blockquote>
 
-<p>リアムが構える。</p>
+<blockquote>「装備は——支部長が用意してくれました」</blockquote>
 
-<blockquote>「連携がいい——気をつけて」</blockquote>
+<p>ヒナタが安心する。</p>
 
-<pre><code>
-// 氷狼のデータ
-const iceWolf = {
-    name: "氷狼",
-    type: "氷雪魔物",
-    level: 35,
-    size: "二メートル",
-    count: 5,
-    abilities: ["氷の息", "群れの連携"],
-    weakness: "炎"
-};
-</code></pre>
+<blockquote>「よかった——寒いのは苦手だけど」</blockquote>
 
-<p>氷狼たちが囲む。</p>
-
-<p>一匹が飛びかかる。</p>
-
-<p>カイトが剣で受ける。</p>
-
-<blockquote>「<code>CrownSlash!</code>」</blockquote>
-
-<p>王冠の力を乗せた一撃。</p>
-
-<p>氷狼を弾く。</p>
-
-<p><b>ガウッ！</b></p>
-
-<p>でも——</p>
-
-<p>倒せない。</p>
-
-<p>氷狼の毛皮が——</p>
-<p>衝撃を吸収する。</p>
-
-<blockquote>「硬い」</blockquote>
-
-<p>カイトが舌打ちする。</p>
-
-<blockquote>「エリナ——炎！」</blockquote>
-
-<blockquote>「わかった」</blockquote>
-
-<p>エリナが魔法を唱える。</p>
-
-<blockquote>「<code>Fireball!</code>」</blockquote>
-
-<p>炎の球が氷狼を襲う。</p>
-
-<p><b>ボッ！</b></p>
-
-<p>直撃。</p>
-
-<p>氷狼が悲鳴を上げる。</p>
-
-<blockquote>「効いてる！」</blockquote>
-
-<p>セシリアが補助魔法。</p>
-
-<blockquote>「<code>FlameWeapon!</code>」</blockquote>
-
-<p>全員の武器に炎のエンチャント。</p>
-
-<p>ヒナタが風を操る。</p>
-
-<blockquote>「<code>FireStorm!</code>」</blockquote>
-
-<p>風と炎のコンビネーション。</p>
-
-<p>氷狼たちが逃げ惑う。</p>
-
-<hr>
-
-<p>戦闘終了。</p>
-
-<p>五匹の氷狼を倒した。</p>
-
-<blockquote>「ふぅ——やった」</blockquote>
-
-<p>ヒナタが息を整える。</p>
-
-<blockquote>「炎が効くって——知っててよかった」</blockquote>
-
-<p>リアムが氷狼の素材を回収する。</p>
-
-<blockquote>「氷狼の毛皮——高く売れる」</blockquote>
-
-<blockquote>「防寒具に使える」</blockquote>
-
-<p>エリナが雪を払う。</p>
-
-<blockquote>「これからも——出るかも」</blockquote>
-
-<blockquote>「警戒して進もう」</blockquote>
+<blockquote>「剣術なら——任せて」</blockquote>
 
 <pre><code>
-// 戦闘結果
-const battleResult = {
-    outcome: "勝利",
-    enemies: "氷狼五匹",
-    keyFactor: "炎属性",
-    loot: "氷狼の毛皮",
-    damage: "軽微"
+// 旅行ルート
+const travelRoute = {
+    current: "アルヴァレス港",
+    destination: "時空の塔",
+    stops: [
+        "ノルデン港（北の港町）",
+        "雪山の峠",
+        "北の集落",
+        "時空の塔"
+    ],
+    dangers: ["魔獣", "雪崩", "寒さ"],
+    estimatedDays: 14
 };
 </code></pre>
 
 <hr>
 
-<p>さらに登る。</p>
+<p>二日目の夜。</p>
 
-<p>日が傾いてきた。</p>
+<p>船は順調に進んでいる。</p>
 
-<blockquote>「そろそろ——野営の時間」</blockquote>
+<p>カイトたちは食堂に集まった。</p>
 
-<p>カイトが言う。</p>
+<p>船員たちも親切で——</p>
+<p>温かいシチューを振る舞ってくれた。</p>
 
-<blockquote>「安全な場所を探そう」</blockquote>
+<blockquote>「いい船だね」</blockquote>
 
-<p>岩陰を見つける。</p>
+<p>ヒナタが言う。</p>
 
-<p>風を遮れる。</p>
+<blockquote>「乗組員も——優しいし」</blockquote>
 
-<blockquote>「ここにする」</blockquote>
+<p>ヴィクトル船長が通りかかる。</p>
 
-<p>五人が荷を下ろす。</p>
+<p>五十代の屈強な男。</p>
 
-<p>焚き火を囲む。</p>
+<p>白い髭が特徴的。</p>
 
-<blockquote>「寒い夜になりそう」</blockquote>
+<blockquote>「お客さんたち——冒険者か？」</blockquote>
 
-<p>セシリアが火を見る。</p>
+<p>カイトが頷く。</p>
 
-<blockquote>「温かい飲み物——作ります」</blockquote>
+<blockquote>「はい——北へ向かってます」</blockquote>
 
-<p>セシリアが鍋を取り出す。</p>
+<p>船長が興味深そうに見る。</p>
 
-<p>スープを作り始める。</p>
+<blockquote>「この時期に北へ——珍しいな」</blockquote>
 
-<blockquote>「セシリア——料理上手だな」</blockquote>
+<blockquote>「何か用事か？」</blockquote>
 
-<p>リアムが笑う。</p>
+<p>エリナが答える。</p>
 
-<blockquote>「いつも——助かってる」</blockquote>
+<blockquote>「時空の塔へ——行きたいんです」</blockquote>
 
-<blockquote>「ふふ——ありがとうございます」</blockquote>
+<p>船長の表情が変わる。</p>
 
-<p>エリナがカイトの隣に座る。</p>
+<p>少し——</p>
+<p>懐かしむような顔。</p>
 
-<blockquote>「カイト——疲れた？」</blockquote>
+<blockquote>「時空の塔か——」</blockquote>
 
-<blockquote>「少しな」</blockquote>
+<blockquote>「若い頃——遠くから見たことがある」</blockquote>
 
-<p>カイトが王冠に触れる。</p>
+<blockquote>「神秘的な場所だ」</blockquote>
 
-<blockquote>「海での戦い——王冠の力を使いすぎた」</blockquote>
+<p>カイトが尋ねる。</p>
 
-<blockquote>「まだ——完全には回復してない」</blockquote>
+<blockquote>「船長は——行ったことは？」</blockquote>
 
-<p>エリナが心配そうに見る。</p>
+<blockquote>「いや——近づけない」</blockquote>
 
-<blockquote>「無理しないで」</blockquote>
+<p>船長が首を振る。</p>
 
-<blockquote>「私たち——いるから」</blockquote>
+<blockquote>「塔の周りは——結界がある」</blockquote>
 
-<p>カイトが微笑む。</p>
+<blockquote>「選ばれた者しか——入れない」</blockquote>
 
-<blockquote>「ありがとう」</blockquote>
+<p>リアムが問う。</p>
+
+<blockquote>「選ばれた者——？」</blockquote>
+
+<blockquote>「さあな——噂だ」</blockquote>
+
+<p>船長が肩をすくめる。</p>
+
+<blockquote>「でも——真実かもしれん」</blockquote>
+
+<blockquote>「時空の賢者は——伝説だからな」</blockquote>
+
+<hr>
+
+<p>三日目の朝。</p>
+
+<p>海の色が変わった。</p>
+
+<p>青から——</p>
+<p>深い紺色へ。</p>
+
+<p>水温が下がっている証拠。</p>
+
+<p>カイトが甲板で気づく。</p>
+
+<blockquote>「北に近づいてる」</blockquote>
+
+<p>ミラベルからもらった通信水晶を取り出す。</p>
+
+<p>淡い光を放つ。</p>
+
+<blockquote>「ミラベルさん——聞こえますか？」</blockquote>
+
+<p>水晶が反応する。</p>
+
+<p>ミラベルの声が聞こえる。</p>
+
+<blockquote>「カイト——聞こえるわ」</blockquote>
+
+<blockquote>「順調？」</blockquote>
+
+<p>カイトが答える。</p>
+
+<blockquote>「はい——三日目です」</blockquote>
+
+<blockquote>「問題なく進んでます」</blockquote>
+
+<p>ミラベルの声が少し笑う。</p>
+
+<blockquote>「よかった」</blockquote>
+
+<blockquote>「仲間たちは——元気？」</blockquote>
+
+<blockquote>「全員——元気です」</blockquote>
+
+<p>通信を切る。</p>
+
+<p>カイトは空を見上げる。</p>
+
+<p>雲が多くなってきた。</p>
+
+<p>北の空——</p>
+<p>天気が変わりやすい。</p>
+
+<pre><code>
+// 通信記録
+const communication = {
+    from: "カイト",
+    to: "ミラベル",
+    method: "対の通信水晶",
+    status: "良好",
+    distance: "約300km",
+    note: "三日ごとの連絡を約束"
+};
+</code></pre>
+
+<hr>
+
+<p>四日目。</p>
+
+<p>海が荒れた。</p>
+
+<p>嵐が近づいている。</p>
+
+<p>船員たちが忙しく動く。</p>
+
+<blockquote>「帆を畳め——」</blockquote>
+
+<blockquote>「荷物を固定しろ——」</blockquote>
+
+<p>ヴィクトル船長の指示が飛ぶ。</p>
+
+<p>カイトたちも手伝う。</p>
+
+<p>エリナが魔法で——</p>
+<p>濡れた甲板を乾かす。</p>
+
+<blockquote>「<code>FireWarm!</code>」</blockquote>
+
+<p>温かい空気が広がる。</p>
+
+<p>船員たちが感心する。</p>
+
+<blockquote>「魔法使いか——助かる」</blockquote>
+
+<p>リアムが重い荷物を一人で運ぶ。</p>
+
+<p>セシリアが船員の怪我を癒やす。</p>
+
+<p>ヒナタがロープを素早く結ぶ。</p>
+
+<p>カイトは——</p>
+<p>船長の隣で舵を支える。</p>
+
+<blockquote>「手伝います」</blockquote>
+
+<p>船長が頷く。</p>
+
+<blockquote>「頼む——嵐は三時間程度だ」</blockquote>
+
+<blockquote>「耐えれば——晴れる」</blockquote>
+
+<hr>
+
+<p>雨が降り始めた。</p>
+
+<p>風が唸る。</p>
+
+<p>船が大きく揺れる。</p>
+
+<p>カイトは舵を握り続ける。</p>
+
+<p>王冠の力で——</p>
+<p>体を安定させる。</p>
+
+<pre><code>
+// 嵐の状況
+const stormStatus = {
+    type: "春の嵐",
+    duration: "三時間",
+    waveHeight: "5m",
+    windSpeed: "25m/s",
+    danger: "中程度",
+    countermeasures: "船員の経験と魔法"
+};
+</code></pre>
+
+<p>エリナが近くに来る。</p>
+
+<p>魔法で温かい風を作りながら。</p>
+
+<blockquote>「カイト——大丈夫？」</blockquote>
+
+<blockquote>「うん——なんとか」</blockquote>
+
+<p>二人で舵を握る。</p>
+
+<p>互いの体温が伝わる。</p>
+
+<blockquote>「一緒なら——乗り越えられる」</blockquote>
+
+<p>エリナが言う。</p>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「うん——一緒に」</blockquote>
+
+<hr>
+
+<p>三時間後。</p>
+
+<p>嵐が去った。</p>
+
+<p>空が晴れる。</p>
+
+<p>水平線に——</p>
+<p>陸地が見えた。</p>
+
+<blockquote>「ノルデンだ——」</blockquote>
+
+<p>船長が告げる。</p>
+
+<blockquote>「北の港町」</blockquote>
+
+<p>カイトたちが甲板に集まる。</p>
+
+<p>白い建物が並ぶ港町。</p>
+
+<p>遠くに——</p>
+<p>雪山が見える。</p>
+
+<blockquote>「着いた——」</blockquote>
+
+<p>ヒナタが息を呑む。</p>
+
+<blockquote>「きれい——」</blockquote>
+
+<p>セシリアが冷静に告げる。</p>
+
+<blockquote>「到着は——明日の朝になります」</blockquote>
+
+<blockquote>「今夜は——船でゆっくり休みましょう」</blockquote>
+
+<p>リアムが頷く。</p>
+
+<blockquote>「嵐を乗り越えた——皆疲れてる」</blockquote>
+
+<p>カイトは町を見つめる。</p>
+
+<p>時空の塔への一歩。</p>
+
+<p>リリアナとの再会。</p>
+
+<p>そして——</p>
+
+<p>虚無への答え。</p>
+
+<blockquote>「明日から——また新しい道だ」</blockquote>
+
+<p>カイトが呟く。</p>
+
+<p>エリナが隣に立つ。</p>
+
+<blockquote>「一緒に行こう——どこまでも」</blockquote>
+
+<p>カイトが笑う。</p>
+
+<blockquote>「うん——頼りにしてる」</blockquote>
+
+<pre><code>
+// 次回予告
+const nextEpisode = {
+    location: "北の港町ノルデン",
+    events: [
+        "上陸",
+        "準備",
+        "雪山への出発"
+    ],
+    chapter: 283,
+    title: "雪の街ノルデン"
+};
+</code></pre>
 
 <hr>
 
 <p>夜。</p>
 
-<p>焚き火が小さくなる。</p>
+<p>船は港の沖に停泊した。</p>
 
-<p>見張りは——</p>
-<p>二時間ごとの交代。</p>
+<p>明日の朝——入港する。</p>
 
-<p>最初はリアム。</p>
+<p>カイトは船室で休んでいた。</p>
 
-<p>静かな夜。</p>
+<p>夢を見る。</p>
 
-<p>雪が静かに降る。</p>
+<p>白い塔の夢。</p>
 
-<p>リアムは剣を抱いて——</p>
-<p>空を見上げる。</p>
+<p>頂上に——</p>
+<p>誰かが立っている。</p>
 
-<blockquote>（北の空——変わらない）</blockquote>
+<p>銀髪の女性。</p>
 
-<p>故郷のことを考える。</p>
+<p>リリアナ。</p>
 
-<p>帰っていない。</p>
+<p>彼女が微笑む。</p>
 
-<p>もう三年。</p>
+<blockquote>「待っているわ——カイト」</blockquote>
 
-<blockquote>（家族——元気かな）</blockquote>
+<blockquote>「王冠の継承者」</blockquote>
 
-<p>リアムは首を振る。</p>
+<p>カイトが答えようとする——</p>
 
-<blockquote>（今は——仲間だ）</blockquote>
+<p>でも声が出ない。</p>
 
-<blockquote>（カイトたちと——進む）</blockquote>
+<p>リリアナが続ける。</p>
 
-<hr>
+<blockquote>「準備はいい？」</blockquote>
 
-<p>深夜。</p>
+<blockquote>「真実を——知る覚悟は」</blockquote>
 
-<p>カイトの番。</p>
+<p>カイトが頷く。</p>
 
-<p>焚き火に薪をくべる。</p>
+<p>その時——</p>
+<p>夢から覚める。</p>
 
-<p>王冠が光る。</p>
+<p>朝が来た。</p>
 
-<blockquote>（どうした？）</blockquote>
-
-<p>王冠からの感覚。</p>
-
-<blockquote>（北へ——呼んでる）</blockquote>
-
-<p>リリアナだ。</p>
-
-<p>時空の賢者が——</p>
-<p>カイトを呼んでいる。</p>
-
-<blockquote>「会える——もうすぐ」</blockquote>
-
-<p>カイトが呟く。</p>
-
-<p>夜空を見上げる。</p>
-
-<p>星が綺麗だ。</p>
-
-<p>北極星が——</p>
-<p>道を示している。</p>
-
-<pre><code>
-// リリアナの呼びかけ
-const lilianaCall = {
-    source: "時空の賢者リリアナ",
-    method: "王冠を通じた思念",
-    message: "待っている",
-    location: "時空の塔",
-    distance: "残り二日"
-};
-</code></pre>
-
-<hr>
-
-<p>二日目の朝。</p>
-
-<p>出発。</p>
-
-<p>峠に近づく。</p>
-
-<blockquote>「あそこを越えれば——もう少し楽になる」</blockquote>
-
-<p>リアムが指す。</p>
-
-<p>峠が見える。</p>
-
-<p>でも——</p>
-
-<blockquote>「何か——ある」</blockquote>
-
-<p>ヒナタが目を細める。</p>
-
-<blockquote>「人？」</blockquote>
-
-<p>峠に——</p>
-<p>誰かが立っていた。</p>
-
-<p>白いローブ。</p>
-
-<p>長い銀髪。</p>
-
-<p>女性だ。</p>
-
-<blockquote>「リリアナ——？」</blockquote>
-
-<p>カイトが目を見開く。</p>
-
-<p>女性が微笑む。</p>
-
-<blockquote>「久しぶりね——継承者」</blockquote>
-
-<blockquote>「迎えに来たわ」</blockquote>
-
-<p>時空の賢者——リリアナ。</p>
-
-<p>彼女が——</p>
-<p>峠で待っていた。</p>
-
-<p>カイトが駆け寄る。</p>
-
-<blockquote>「どうして——ここに？」</blockquote>
-
-<blockquote>「時空の塔じゃ——？」</blockquote>
-
-<p>リリアナが笑う。</p>
-
-<blockquote>「あなたの到着を——予知したの」</blockquote>
-
-<blockquote>「迎えに来たほうが——早いと思って」</blockquote>
-
-<blockquote>「さあ——行きましょう」</blockquote>
-
-<blockquote>「塔で——話すことがある」</blockquote>
-
-<p>リリアナが北を指す。</p>
-
-<p>その先に——</p>
-<p>高くそびえる塔が見えた。</p>
+<p>ノルデンの港が——</p>
+<p>目の前に広がっていた。</p>
 
 <p><strong>——第282章了——</strong></p>
