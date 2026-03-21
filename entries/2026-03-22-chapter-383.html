@@ -1,0 +1,1259 @@
+---
+Title: 第383章：影獣の群れ
+Date: 2026-03-22T07:40:00+09:00
+---
+
+<h3>第383章：影獣の群れ</h3>
+
+<p>影の領域。</p>
+
+<hr>
+
+<p>カイトが魔法を展開する。</p>
+
+<hr>
+
+<blockquote>「<code>Shadow Shield, Activate!</code>」</blockquote>
+
+<hr>
+
+<p>黄昏色の障壁が</p>
+<p>みんなを囲む。</p>
+
+<hr>
+
+<p>影獣たちが</p>
+<p>一斉に襲いかかる。</p>
+
+<hr>
+
+<pre><code>
+// Combat System Initialize
+// 戦闘システム初期化
+
+const combatSystem = {
+    status: "ACTIVE",
+    enemies: {
+        type: "影獣",
+        count: 12,
+        threatLevel: "MODERATE",
+        weakness: "光属性攻撃"
+    },
+    partyFormation: {
+        frontline: ["リアム", "ヒナタ"],
+        midline: ["カイト"],
+        backline: ["エリナ", "セシリア"]
+    },
+    terrain: "黒い岩地",
+    visibility: "低"
+};
+
+console.log("=== Combat Start ===");
+console.log("Enemies: 12 Shadow Beasts");
+console.log("Formation: Defensive");
+console.log("Advantage: Twilight powers active");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>リアムが前に出る。</p>
+
+<hr>
+
+<blockquote>「先手を取る！」</blockquote>
+
+<hr>
+
+<p>剣を振るう。</p>
+
+<hr>
+
+<p>影獣の一体が</p>
+<p>切り裂かれる。</p>
+
+<p>だが——</p>
+
+<p>すぐに再生する。</p>
+
+<hr>
+
+<blockquote>「再生能力か——」</blockquote>
+<blockquote>「厄介だな」</blockquote>
+
+<hr>
+
+<p>ヒナタが</p>
+<p>冷静に分析。</p>
+
+<hr>
+
+<blockquote>「光が必要」</blockquote>
+<blockquote>「影を消すには——」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「セシリア——」</blockquote>
+<blockquote>「光魔法を！」</blockquote>
+
+<hr>
+
+<p>セシリアが</p>
+<p>詠唱を始める。</p>
+
+<hr>
+
+<blockquote>「<code>Light of Purification, Shine!</code>」</blockquote>
+
+<hr>
+
+<p>眩い光が</p>
+<p>周囲を照らす。</p>
+
+<hr>
+
+<p>影獣たちが</p>
+<p>悲鳴を上げる。</p>
+
+<hr>
+
+<p>再生していた傷が</p>
+<p>癒えなくなる。</p>
+
+<hr>
+
+<p>リアムが</p>
+<p>再び攻撃。</p>
+
+<hr>
+
+<blockquote>「今だ！」</blockquote>
+
+<hr>
+
+<p>剣が影獣を断つ。</p>
+
+<p>今度は</p>
+<p>再生しない。</p>
+
+<hr>
+
+<p>ヒナタが</p>
+<p>続けて攻撃。</p>
+
+<hr>
+
+<p>風のように</p>
+<p>動く。</p>
+
+<hr>
+
+<p>影獣が</p>
+<p>次々と倒れる。</p>
+
+<hr>
+
+<pre><code>
+// Combat Log
+// 戦闘ログ
+
+const combatLog = [
+    { turn: 1, action: "リアム攻撃", result: "命中", damage: 80 },
+    { turn: 1, action: "影獣再生", result: "成功", heal: 80 },
+    { turn: 2, action: "セシリア光魔法", result: "成功", effect: "再生阻害" },
+    { turn: 2, action: "リアム攻撃", result: "命中", damage: 85 },
+    { turn: 2, action: "影獣撃破", result: "SUCCESS" },
+    { turn: 3, action: "ヒナタ攻撃", result: "命中", damage: 90 },
+    { turn: 3, action: "影獣撃破", result: "SUCCESS" }
+];
+
+console.log("=== Combat Progress ===");
+console.log("Enemies defeated: 2/12");
+console.log("Party status: No damage");
+console.log("Tactical advantage: Light magic effective");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>エリナが</p>
+<p>カイトの背中で</p>
+<p>支援魔法を詠唱。</p>
+
+<hr>
+
+<blockquote>「<code>Speed Boost, Grant!</code>」</blockquote>
+
+<hr>
+
+<p>カイトたちの</p>
+<p>動きが速くなる。</p>
+
+<hr>
+
+<p>カイトが</p>
+<p>黄昏の結晶を使う。</p>
+
+<hr>
+
+<blockquote>「<code>Twilight Beam, Fire!</code>」</blockquote>
+
+<hr>
+
+<p>黄昏色の光線が</p>
+<p>影獣を貫く。</p>
+
+<hr>
+
+<p>三体が</p>
+<p>同時に倒れる。</p>
+
+<hr>
+
+<blockquote>「効果的だ」</blockquote>
+
+<hr>
+
+<p>カイトが</p>
+<p>続けて攻撃。</p>
+
+<hr>
+
+<blockquote>「<code>Twilight Nova!</code>」</blockquote>
+
+<hr>
+
+<p>結晶から</p>
+<p>衝撃波が放たれる。</p>
+
+<hr>
+
+<p>周囲の影獣が</p>
+<p>吹き飛ばされる。</p>
+
+<hr>
+
+<p>セシリアが</p>
+<p>感嘆する。</p>
+
+<hr>
+
+<blockquote>「黄昏の力——」</blockquote>
+<blockquote>「影に対して</blockquote>
+<blockquote>絶大ね」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「光と影の</blockquote>
+<blockquote>境界線だから——」</blockquote>
+<blockquote>「どちらにも</blockquote>
+<blockquote>対抗できる」</blockquote>
+
+<hr>
+
+<pre><code>
+// Twilight Power Analysis
+// 黄昏の力分析
+
+const twilightAnalysis = {
+    source: "黄昏の結晶",
+    properties: [
+        "光属性への親和性",
+        "影属性への対抗",
+        "境界領域の操作"
+    ],
+    combatEffectiveness: {
+        vsLight: "STANDARD",
+        vsShadow: "SUPER EFFECTIVE",
+        vsNeutral: "STANDARD"
+    },
+    currentCharge: "78%",
+    consumption: "ACTIVE"
+};
+
+console.log("=== Twilight Status ===");
+console.log("Charge: 78%");
+console.log("Effectiveness vs Shadows: 200%");
+console.log("Recommendation: Primary damage dealer");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>戦闘が続く。</p>
+
+<hr>
+
+<p>影獣たちは</p>
+<p>諦めない。</p>
+
+<hr>
+
+<p>群れを成して</p>
+<p>包囲しようとする。</p>
+
+<hr>
+
+<p>リアムが気づく。</p>
+
+<hr>
+
+<blockquote>「囲まれるぞ」</blockquote>
+<blockquote>「陣形を変えろ」</blockquote>
+
+<hr>
+
+<p>カイトが指示。</p>
+
+<hr>
+
+<blockquote>「円陣を組む！」</blockquote>
+<blockquote>「背中を合わせて——」</blockquote>
+<blockquote>「死角をなくす」</blockquote>
+
+<hr>
+
+<p>みんなが</p>
+<p>素早く動く。</p>
+
+<hr>
+
+<p>円陣を組む。</p>
+
+<hr>
+
+<p>影獣が</p>
+<p>四方から襲いかかる。</p>
+
+<hr>
+
+<p>だが——</p>
+
+<p>突破できない。</p>
+
+<hr>
+
+<p>リアムとヒナタが</p>
+<p>前方を守る。</p>
+
+<hr>
+
+<p>カイトとセシリアが</p>
+<p>魔法で支援。</p>
+
+<hr>
+
+<p>エリナが</p>
+<p>回復と強化。</p>
+
+<hr>
+
+<p>完璧な連携。</p>
+
+<hr>
+
+<blockquote>「このまま押し切る！」</blockquote>
+
+<hr>
+
+<p>カイトが叫ぶ。</p>
+
+<hr>
+
+<p>影獣が</p>
+<p>次々と倒れる。</p>
+
+<hr>
+
+<p>数が減っていく。</p>
+
+<hr>
+
+<p>最後の一体が</p>
+<p>逃げようとする。</p>
+
+<hr>
+
+<p>ヒナタが追う。</p>
+
+<hr>
+
+<blockquote>「逃がさない」</blockquote>
+
+<hr>
+
+<p>瞬速の踏み込み。</p>
+
+<hr>
+
+<p>一撃。</p>
+
+<hr>
+
+<p>影獣が消滅。</p>
+
+<hr>
+
+<p>戦闘終了。</p>
+
+<hr>
+
+<pre><code>
+// Combat Result
+// 戦闘結果
+
+const combatResult = {
+    status: "VICTORY",
+    enemiesDefeated: 12,
+    partyDamage: {
+        kite: 0,
+        elina: 0,
+        liam: 5,
+        cecilia: 0,
+        hinata: 3
+    },
+    mpConsumed: {
+        kite: "25%",
+        elina: "15%",
+        liam: "10%",
+        cecilia: "20%",
+        hinata: "5%"
+    },
+    itemsUsed: "なし",
+    duration: "約5分",
+    evaluation: "完勝"
+};
+
+console.log("=== Combat Complete ===");
+console.log("Result: Total Victory");
+console.log("Party HP: 99% average");
+console.log("Party MP: 85% average");
+console.log("Tactics: Excellent coordination");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが</p>
+<p>息を整える。</p>
+
+<hr>
+
+<blockquote>「みんな——」</blockquote>
+<blockquote>「無事か？」</blockquote>
+
+<hr>
+
+<p>リアムが剣を収める。</p>
+
+<hr>
+
+<blockquote>「問題ない」</blockquote>
+<blockquote>「軽い傷だ」</blockquote>
+
+<hr>
+
+<p>エリナが</p>
+<p>回復魔法を使う。</p>
+
+<hr>
+
+<blockquote>「<code>Minor Heal, Restore!</code>」</blockquote>
+
+<hr>
+
+<p>リアムとヒナタの</p>
+<p>傷が癒える。</p>
+
+<hr>
+
+<p>セシリアが</p>
+<p>周囲を調査。</p>
+
+<hr>
+
+<blockquote>「影獣の死体——」</blockquote>
+<blockquote>「消えていくわ」</blockquote>
+
+<hr>
+
+<p>カイトが見る。</p>
+
+<hr>
+
+<p>倒した影獣が</p>
+<p>霧のように</p>
+<p>消えていく。</p>
+
+<hr>
+
+<blockquote>「この領域では——」</blockquote>
+<blockquote>「死さえも</blockquote>
+<blockquote>概念が違うのか」</blockquote>
+
+<hr>
+
+<p>ヒナタが静かに。</p>
+
+<hr>
+
+<blockquote>「先へ進もう」</blockquote>
+<blockquote>「長居は無用だ」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「そうだな」</blockquote>
+<blockquote>「影の領域の奥——」</blockquote>
+<blockquote>「深淵が待っている」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>移動開始。</p>
+
+<hr>
+
+<p>黒い岩の道を</p>
+<p>進んでいく。</p>
+
+<hr>
+
+<p>空には月だけ。</p>
+
+<p>景色が変わらない。</p>
+
+<hr>
+
+<p>エリナが</p>
+<p>カイトに聞く。</p>
+
+<hr>
+
+<blockquote>「ねえ——」</blockquote>
+<blockquote>「深淵って——」</blockquote>
+<blockquote>何なの？」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<blockquote>「忘却の亡霊が言ってた」</blockquote>
+<blockquote>「全てを飲み込む</blockquote>
+<blockquote>虚無の存在——」</blockquote>
+
+<hr>
+
+<p>セシリアが</p>
+<p>資料を確認。</p>
+
+<hr>
+
+<blockquote>「古代文献にも</blockquote>
+<blockquote>記述があるわ」</blockquote>
+
+<hr>
+
+<p>読み上げる。</p>
+
+<hr>
+
+<blockquote>「深淵は——」</blockquote>
+<blockquote>「影の領域の深層に</blockquote>
+<blockquote>存在する」</blockquote>
+
+<hr>
+
+<p>続ける。</p>
+
+<hr>
+
+<blockquote>「万物の影を</blockquote>
+<blockquote>統べる存在——」</blockquote>
+<blockquote>「光と対をなす</blockquote>
+<blockquote>究極の闇」</blockquote>
+
+<hr>
+
+<p>リアムが眉をひそめる。</p>
+
+<hr>
+
+<blockquote>「随分な</blockquote>
+<blockquote>相手だな」</blockquote>
+
+<hr>
+
+<p>カイトが結晶を見る。</p>
+
+<hr>
+
+<blockquote>「でも——」</blockquote>
+<blockquote>「黄昏の力がある」</blockquote>
+
+<hr>
+
+<p>仲間を見る。</p>
+
+<hr>
+
+<blockquote>「それに——」</blockquote>
+<blockquote>「みんながいる」</blockquote>
+
+<hr>
+
+<p>エリナが</p>
+<p>カイトの手を握る。</p>
+
+<hr>
+
+<blockquote>「そうだよ——」</blockquote>
+<blockquote>「一人じゃない」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<hr>
+
+<blockquote>「ありがとう」</blockquote>
+
+<hr>
+
+<pre><code>
+// Morale Check
+// 士気確認
+
+const moraleStatus = {
+    kite: { level: "HIGH", note: "決意新た" },
+    elina: { level: "STEADY", note: "カイトを支える" },
+    liam: { level: "HIGH", note: "戦意旺盛" },
+    cecilia: { level: "ANALYTICAL", note: "情報収集中" },
+    hinata: { level: "CALM", note: "静かな覚悟" }
+};
+
+console.log("=== Party Morale ===");
+console.log("Overall: HIGH");
+console.log("Bonds: Strong");
+console.log("Determination: Unwavering");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>道が開ける。</p>
+
+<hr>
+
+<p>広い空間。</p>
+
+<hr>
+
+<p>中央に——</p>
+
+<p>奇妙な建造物。</p>
+
+<hr>
+
+<p>黒い石でできた</p>
+<p>祭壇。</p>
+
+<hr>
+
+<p>周囲には</p>
+<p>古代の文字。</p>
+
+<hr>
+
+<p>セシリアが</p>
+<p>近づく。</p>
+
+<hr>
+
+<blockquote>「これは——」</blockquote>
+
+<hr>
+
+<p>文字を解読。</p>
+
+<hr>
+
+<blockquote>「封印の祭壇」</blockquote>
+<blockquote>「かつて——」</blockquote>
+
+<hr>
+
+<p>顔を上げる。</p>
+
+<hr>
+
+<blockquote>「深淵を封じた場所よ」</blockquote>
+
+<hr>
+
+<p>カイトが祭壇を見る。</p>
+
+<hr>
+
+<blockquote>「封印が——」</blockquote>
+<blockquote>「解けている？」</blockquote>
+
+<hr>
+
+<p>セシリアが頷く。</p>
+
+<hr>
+
+<blockquote>「ええ——」</blockquote>
+<blockquote>「最近解かれた</blockquote>
+<blockquote>痕跡がある」</blockquote>
+
+<hr>
+
+<p>リアムが警戒。</p>
+
+<hr>
+
+<blockquote>「誰が解いた？」</blockquote>
+
+<hr>
+
+<p>セシリアが調べる。</p>
+
+<hr>
+
+<blockquote>「魔力の残滓——」</blockquote>
+<blockquote>「特定できない」</blockquote>
+
+<hr>
+
+<p>ヒナタが</p>
+<p>祭壇の裏を見る。</p>
+
+<hr>
+
+<blockquote>「何かある」</blockquote>
+
+<hr>
+
+<p>みんなが近づく。</p>
+
+<hr>
+
+<p>祭壇の裏に——</p>
+
+<p>穴がある。</p>
+
+<hr>
+
+<p>地下へ続く</p>
+<p>階段。</p>
+
+<hr>
+
+<p>深い闇。</p>
+
+<hr>
+
+<p>カイトが決断。</p>
+
+<hr>
+
+<blockquote>「これが——」</blockquote>
+<blockquote>「深淵への道か」</blockquote>
+
+<hr>
+
+<p>エリナが震える。</p>
+
+<hr>
+
+<blockquote>「カイト——」</blockquote>
+
+<hr>
+
+<p>カイトが</p>
+<p>エリナを見る。</p>
+
+<hr>
+
+<blockquote>「大丈夫」</blockquote>
+<blockquote>「一緒に行こう」</blockquote>
+
+<hr>
+
+<p>エリナが頷く。</p>
+
+<hr>
+
+<blockquote>「……うん」</blockquote>
+
+<hr>
+
+<pre><code>
+// Location Update
+// 場所更新
+
+const locationUpdate = {
+    currentArea: "封印の祭壇",
+    discovered: [
+        "祭壇の遺構",
+        "古代の封印文字",
+        "地下への入り口"
+    ],
+    sealStatus: "破壊済み",
+    culprit: "不明",
+    nextDestination: "地下深層"
+};
+
+console.log("=== Area Explored ===");
+console.log("Location: Altar of Sealing");
+console.log("Status: Seal broken");
+console.log("Next: Underground passage");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが</p>
+<p>黄昏の結晶を光らせる。</p>
+
+<hr>
+
+<blockquote>「明かりにする」</blockquote>
+
+<hr>
+
+<p>結晶が淡く光る。</p>
+
+<hr>
+
+<p>階段を</p>
+<p>照らす。</p>
+
+<hr>
+
+<p>カイトが</p>
+<p>先頭で歩き出す。</p>
+
+<hr>
+
+<blockquote>「行くぞ」</blockquote>
+
+<hr>
+
+<p>みんなが続く。</p>
+
+<hr>
+
+<p>地下への階段。</p>
+
+<hr>
+
+<p>一歩ずつ</p>
+<p>降りていく。</p>
+
+<hr>
+
+<p>空気が</p>
+<p>冷たくなる。</p>
+
+<hr>
+
+<p>静寂。</p>
+
+<hr>
+
+<p>自分たちの足音だけ。</p>
+
+<hr>
+
+<p>エリナが小声で。</p>
+
+<hr>
+
+<blockquote>「……怖い」</blockquote>
+
+<hr>
+
+<p>カイトが</p>
+<p>エリナの手を握る。</p>
+
+<hr>
+
+<blockquote>「僕がいる」</blockquote>
+
+<hr>
+
+<p>エリナが</p>
+<p>少しだけ</p>
+<p>落ち着く。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>階段が終わる。</p>
+
+<hr>
+
+<p>地下空間。</p>
+
+<hr>
+
+<p>広大な</p>
+<p>洞窟。</p>
+
+<hr>
+
+<p>天井は</p>
+<p>見えない。</p>
+
+<hr>
+
+<p>壁には</p>
+<p>発光する苔。</p>
+
+<hr>
+
+<p>淡い青い光。</p>
+
+<hr>
+
+<p>セシリアが驚く。</p>
+
+<hr>
+
+<blockquote>「この苔——」</blockquote>
+<blockquote>「魔力を発光に</blockquote>
+<blockquote>変換してる」</blockquote>
+
+<hr>
+
+<p>リアムが見回す。</p>
+
+<hr>
+
+<blockquote>「自然の</blockquote>
+<blockquote>適応か」</blockquote>
+
+<hr>
+
+<p>カイトが先を促す。</p>
+
+<hr>
+
+<blockquote>「進もう」</blockquote>
+
+<hr>
+
+<p>洞窟の奥へ。</p>
+
+<hr>
+
+<p>道が分かれる。</p>
+
+<hr>
+
+<p>三つの分岐。</p>
+
+<hr>
+
+<p>左——</p>
+<p>風の音。</p>
+
+<hr>
+
+<p>中央——</p>
+<p>静寂。</p>
+
+<hr>
+
+<p>右——</p>
+<p>水の音。</p>
+
+<hr>
+
+<p>カイトが迷う。</p>
+
+<hr>
+
+<blockquote>「どっちへ——」</blockquote>
+
+<hr>
+
+<p>ヒナタが耳を澄ます。</p>
+
+<hr>
+
+<blockquote>「中央——」</blockquote>
+<blockquote>「一番深い」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「中央だ」</blockquote>
+
+<hr>
+
+<pre><code>
+// Path Selection
+// 経路選択
+
+const pathSelection = {
+    options: [
+        { path: "左", sound: "風", depth: "浅" },
+        { path: "中央", sound: "静寂", depth: "深" },
+        { path: "右", sound: "水", depth: "中" }
+    ],
+    choice: "中央",
+    reason: "最深部への道",
+    riskLevel: "HIGH"
+};
+
+console.log("=== Path Chosen ===");
+console.log("Direction: Center");
+console.log("Rationale: Deepest path");
+console.log("Expected: Abyss location");
+</code></pre>
+
+<hr>
+
+<p>——</p>
+
+<p>中央の道。</p>
+
+<hr>
+
+<p>進んでいく。</p>
+
+<hr>
+
+<p>静かすぎる。</p>
+
+<hr>
+
+<p>何も聞こえない。</p>
+
+<hr>
+
+<p>カイトが</p>
+<p>違和感を覚える。</p>
+
+<hr>
+
+<blockquote>「何か——」</blockquote>
+<blockquote>「おかしい」</blockquote>
+
+<hr>
+
+<p>セシリアが</p>
+<p>測定器を見る。</p>
+
+<hr>
+
+<blockquote>「空間の歪み——」</blockquote>
+<blockquote>「検出」</blockquote>
+
+<hr>
+
+<p>リアムが剣に手をかける。</p>
+
+<hr>
+
+<blockquote>「罠か？」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<hr>
+
+<blockquote>「違う——」</blockquote>
+<blockquote>「もっと——」</blockquote>
+
+<hr>
+
+<p>言葉を探す。</p>
+
+<hr>
+
+<blockquote>「根本的に</blockquote>
+<blockquote>何かが違う」</blockquote>
+
+<hr>
+
+<p>その時。</p>
+
+<hr>
+
+<p>前方から——</p>
+
+<p>声が聞こえる。</p>
+
+<hr>
+
+<blockquote>「ようやく——」</blockquote>
+<blockquote>「来たか」</blockquote>
+
+<hr>
+
+<p>みんなが警戒。</p>
+
+<hr>
+
+<p>闇の中から——</p>
+
+<p>人影が現れる。</p>
+
+<hr>
+
+<p>黒いローブ。</p>
+<p>顔は見えない。</p>
+
+<hr>
+
+<p>カイトが問う。</p>
+
+<hr>
+
+<blockquote>「君は——」</blockquote>
+<blockquote>「誰？」</blockquote>
+
+<hr>
+
+<p>人影が笑う。</p>
+
+<hr>
+
+<blockquote>「深淵の——」</blockquote>
+<blockquote>「代弁者だ」</blockquote>
+
+<hr>
+
+<p>カイトが構える。</p>
+
+<hr>
+
+<blockquote>「深淵の——」</blockquote>
+
+<hr>
+
+<p>人影が続ける。</p>
+
+<hr>
+
+<blockquote>「戦う必要はない」</blockquote>
+<blockquote>「お前たちが求めるもの——」</blockquote>
+
+<hr>
+
+<p>カイトを見る。</p>
+
+<hr>
+
+<blockquote>「ここにある」</blockquote>
+
+<hr>
+
+<p>カイトが眉をひそめる。</p>
+
+<hr>
+
+<blockquote>「どういうこと？」</blockquote>
+
+<hr>
+
+<p>人影が手を差し出す。</p>
+
+<hr>
+
+<blockquote>「来い——」</blockquote>
+<blockquote>「深淵が待っている」</blockquote>
+
+<hr>
+
+<p>エリナが</p>
+<p>カイトの服を掴む。</p>
+
+<hr>
+
+<blockquote>「カイト——」</blockquote>
+<blockquote>「罠かも」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<p>選択の分かれ道。</p>
+
+<hr>
+
+<p>深淵の代弁者——</p>
+<p>敵か、味方か。</p>
+
+<hr>
+
+<p>カイトが決断する。</p>
+
+<hr>
+
+<blockquote>「……行こう」</blockquote>
+
+<hr>
+
+<p>仲間を見る。</p>
+
+<hr>
+
+<blockquote>「みんな——」</blockquote>
+<blockquote>「覚悟はいい？」</blockquote>
+
+<hr>
+
+<p>リアムが頷く。</p>
+
+<hr>
+
+<blockquote>「いつでも」</blockquote>
+
+<hr>
+
+<p>カイトが</p>
+<p>一歩踏み出す。</p>
+
+<hr>
+
+<p>深淵への道——</p>
+
+<p>いよいよ</p>
+<p>核心に迫る。</p>
+
+<hr>
+
+<p style="text-align: center;">——第383章　終——</p>
