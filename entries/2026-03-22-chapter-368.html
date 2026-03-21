@@ -1,0 +1,1139 @@
+---
+Title: 第368章：遺産の解析
+Date: 2026-03-22T04:56:00+09:00
+---
+
+<h3>第368章：遺産の解析</h3>
+
+<p>朝。</p>
+
+<hr>
+
+<p>船上。</p>
+
+<hr>
+
+<p>カイトが目を覚ます。</p>
+
+<hr>
+
+<p>甲板に出る。</p>
+
+<p>朝日が海を金色に染めている。</p>
+
+<hr>
+
+<p>カイトがクリスタルを取り出す。</p>
+
+<p><i>（カイの遺産——）</i></p>
+<p><i>（昨夜受け取ったコード——）</i></p>
+
+<hr>
+
+<p>カイトが空中に指を走らせる。</p>
+
+<hr>
+
+<p>青い光の文字が浮かぶ。</p>
+
+<p>カイの遺産コードだ。</p>
+
+<hr>
+
+<p>カイトが読み進める。</p>
+
+<pre><code>
+// Kai's Legacy - Full Analysis
+// カイの遺産 - 完全解析
+
+class TemporalCore {
+    private anchorPoints: Map&lt;string, TemporalAnchor&gt;;
+    private stabilityThreshold: number = 0.85;
+    
+    constructor() {
+        this.anchorPoints = new Map();
+    }
+    
+    // Create temporal anchor for stability
+    createAnchor(id: string): TemporalAnchor {
+        const anchor: TemporalAnchor = {
+            id: id,
+            timestamp: Date.now(),
+            stability: 1.0,
+            location: this.getCurrentLocation()
+        };
+        
+        this.anchorPoints.set(id, anchor);
+        return anchor;
+    }
+    
+    // Access specific time point
+    async accessTime(anchorId: string, mode: "read" | "write"): Promise&lt;TemporalData&gt; {
+        const anchor = this.anchorPoints.get(anchorId);
+        if (!anchor) throw new Error("Anchor not found");
+        
+        if (mode === "write" && anchor.stability < this.stabilityThreshold) {
+            throw new Error("Anchor too unstable for modification");
+        }
+        
+        return await this.retrieveData(anchor);
+    }
+    
+    // WARNING: Use only in emergencies
+    async emergencyRewind(anchorId: string): Promise&lt;void&gt; {
+        console.log("CAUTION: Initiating temporal rewind...");
+        // Implementation sealed by Kai
+        // Requires specific authorization
+    }
+}
+
+// Note: This core connects to the Temple of Time
+// All temporal operations must flow through Mio
+</code></pre>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<p><i>（アンカーポイント——）</i></p>
+<p><i>（時間の安定性——）</i></p>
+<p><i>（緊急巻き戻し——）</i></p>
+
+<hr>
+
+<p>リアムが甲板に来る。</p>
+
+<blockquote>「早起きだな」</blockquote>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<blockquote>「リアムも」</blockquote>
+
+<hr>
+
+<p>リアムがカイトの隣に来る。</p>
+
+<blockquote>「解析してたのか？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイの遺産」</blockquote>
+<blockquote>「時空魔法の基盤コードだ」</blockquote>
+
+<hr>
+
+<p>リアムが眼鏡を押し上げる。</p>
+
+<blockquote>「見せてもらえるか？」</blockquote>
+
+<hr>
+
+<p>カイトがコードを見せる。</p>
+
+<hr>
+
+<p>リアムが読む。</p>
+
+<hr>
+
+<p>沈黙。</p>
+
+<hr>
+
+<p>リアムが息を吐く。</p>
+
+<blockquote>「驚異的な設計だ」</blockquote>
+
+<blockquote>「時空魔法を</blockquote>
+<blockquote>「システムとして構築している」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「僕と同じ発想」</blockquote>
+<blockquote>「魔法をコードで表現する」</blockquote>
+
+<hr>
+
+<p>リアムが考える。</p>
+
+<blockquote>「だが</blockquote>
+<blockquote>「一部が封印されている」</blockquote>
+
+<hr>
+
+<p>カイトが首を傾げる。</p>
+
+<blockquote>「封印？」</blockquote>
+
+<hr>
+
+<p>リアムが指す。</p>
+
+<blockquote>「ここだ」</blockquote>
+<blockquote>「emergencyRewind関数」</blockquote>
+
+<blockquote>「実装が封印されている」</blockquote>
+
+<hr>
+
+<p>カイトが見る。</p>
+
+<pre><code>
+// WARNING: Use only in emergencies
+async emergencyRewind(anchorId: string): Promise&lt;void&gt; {
+    console.log("CAUTION: Initiating temporal rewind...");
+    // Implementation sealed by Kai
+    // Requires specific authorization
+}
+</code></pre>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<blockquote>「わざと封印した——」</blockquote>
+
+<hr>
+
+<p>リアムが頷く。</p>
+
+<blockquote>「危険すぎるからだろう」</blockquote>
+
+<blockquote>「時間を巻き戻す機能」</blockquote>
+<blockquote>「乱用すれば</blockquote>
+<blockquote>「世界が壊れる」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「ミオも言ってた」</blockquote>
+<blockquote>「因果の崩壊」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>ヒナタが来る。</p>
+
+<blockquote>「何の話？」</blockquote>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<blockquote>「カイの遺産を解析してる」</blockquote>
+
+<hr>
+
+<p>ヒナタが腕を組む。</p>
+
+<blockquote>「役に立ちそうか？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「ああ」</blockquote>
+<blockquote>「時空魔法の基礎が</blockquote>
+<blockquote>「わかってきた」</blockquote>
+
+<hr>
+
+<p>ヒナタが興味を持つ。</p>
+
+<blockquote>「何ができる？」</blockquote>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<blockquote>「過去の記憶にアクセスできる」</blockquote>
+<blockquote>「アンカーポイントを作れる」</blockquote>
+<blockquote>「時を一時的に止められる」</blockquote>
+
+<hr>
+
+<p>ヒナタが頷く。</p>
+
+<blockquote>「便利だな」</blockquote>
+
+<hr>
+
+<p>カイトが続ける。</p>
+
+<blockquote>「でも</blockquote>
+<blockquote>「カイが封印した機能もある」</blockquote>
+
+<blockquote>「時間を巻き戻す機能」</blockquote>
+<blockquote>「危険すぎるから」</blockquote>
+
+<hr>
+
+<p>ヒナタが首を傾げる。</p>
+
+<blockquote>「カイトは</blockquote>
+<blockquote>「巻き戻せないのか？」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<blockquote>「コードはある」</blockquote>
+<blockquote>「でも実装が封印されてる」</blockquote>
+
+<blockquote>「自分で書けば</blockquote>
+<blockquote>「できるかもしれない」</blockquote>
+
+<blockquote>「でも——</blockquote>
+<blockquote>「カイが封印した理由がある」</blockquote>
+
+<hr>
+
+<p>ヒナタが頷く。</p>
+
+<blockquote>「慎重にな」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>ルナが来る。</p>
+
+<hr>
+
+<p>ルナが欠伸をする。</p>
+
+<blockquote>「みんな早起きだね」</blockquote>
+
+<hr>
+
+<p>カイトが笑う。</p>
+
+<blockquote>「ルナは</blockquote>
+<blockquote>「神殿で修行？」</blockquote>
+
+<hr>
+
+<p>ルナが頷く。</p>
+
+<blockquote>「うん」</blockquote>
+<blockquote>「ミオさんが</blockquote>
+<blockquote>「教えてくれるって」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<blockquote>「頑張って」</blockquote>
+
+<hr>
+
+<p>ルナが拳を握る。</p>
+
+<blockquote>「うん！」</blockquote>
+<blockquote>「もっと強くなる」</blockquote>
+<blockquote>「カイトたちの役に立ちたい」</blockquote>
+
+<hr>
+
+<p>ヒナタが頭を撫でる。</p>
+
+<blockquote>「期待してるぞ」</blockquote>
+
+<hr>
+
+<p>ルナが照れる。</p>
+
+<blockquote>「ヒナタさん......」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>朝食。</p>
+
+<hr>
+
+<p>ヴィクトル船長が来る。</p>
+
+<blockquote>「次は</blockquote>
+<blockquote>「どこへ？」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<blockquote>「アビス海の南」</blockquote>
+<blockquote>「時空魔法の源流がある</blockquote>
+<blockquote>「ミオが教えてくれた」</blockquote>
+
+<hr>
+
+<p>ヴィクトルが頷く。</p>
+
+<blockquote>「わかった」</blockquote>
+<blockquote>「航海の準備をする」</blockquote>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<blockquote>「バグの手がかり？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイの遺産に</blockquote>
+<blockquote>「ヒントがあった」</blockquote>
+
+<hr>
+
+<p>カイトがコードを表示する。</p>
+
+<pre><code>
+// Bug Location Hypothesis
+// バグ位置仮説
+
+interface BugHypothesis {
+    symptoms: string[];
+    possibleSources: string[];
+    kaiNotes: string;
+}
+
+const hypothesis: BugHypothesis = {
+    symptoms: [
+        "Dimensional instability",
+        "Temporal fluctuations",
+        "Magic flow corruption"
+    ],
+    possibleSources: [
+        "Abyssal Sea - Southern region",
+        "World core interface",
+        "Causality junction points"
+    ],
+    kaiNotes: "The bug is not a simple error. It is a fundamental crack in reality. Fixing it requires understanding the world's architecture."
+};
+
+console.log("=== Hypothesis Summary ===");
+console.log("Bug exists at fundamental level.");
+console.log("Location: Abyssal Sea, Southern region.");
+console.log("Fixing requires deep understanding.");
+</code></pre>
+
+<hr>
+
+<p>リアムが眼鏡を拭く。</p>
+
+<blockquote>「根本的な亀裂——」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイは</blockquote>
+<blockquote>「特定できなかった」</blockquote>
+
+<blockquote>「でも</blockquote>
+<blockquote>「場所はわかってる」</blockquote>
+<blockquote>「アビス海の南」</blockquote>
+
+<hr>
+
+<p>ヒナタが腕を組む。</p>
+
+<blockquote>「なら</blockquote>
+<blockquote>「行くしかないな」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「うん」</blockquote>
+
+<hr>
+
+<p>エリナがカイトの手を握る。</p>
+
+<blockquote>「一緒に行こう」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<blockquote>「うん」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>神殿へ。</p>
+
+<hr>
+
+<p>カイトたちがミオに挨拶する。</p>
+
+<hr>
+
+<p>ミオが微笑む。</p>
+
+<blockquote>「もう行くの？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイの遺産を解析した」</blockquote>
+<blockquote>「アビス海の南へ行く必要がある」</blockquote>
+
+<hr>
+
+<p>ミオが真剣な顔になる。</p>
+
+<blockquote>「バグを探すのね」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「うん」</blockquote>
+<blockquote>「カイが見つけられなかった」</blockquote>
+<blockquote>「僕が見つける」</blockquote>
+
+<hr>
+
+<p>ミオが微笑む。</p>
+
+<blockquote>「カイトなら</blockquote>
+<blockquote>「できる」</blockquote>
+
+<hr>
+
+<p>ミオが何かを取り出す。</p>
+
+<hr>
+
+<p>小さな石。</p>
+<p>青い光を発している。</p>
+
+<hr>
+
+<p>ミオがカイトに渡す。</p>
+
+<blockquote>「これを」</blockquote>
+
+<hr>
+
+<p>カイトが受け取る。</p>
+
+<blockquote>「何？」</blockquote>
+
+<hr>
+
+<p>ミオが説明する。</p>
+
+<blockquote>「『時の欠片』」</blockquote>
+
+<blockquote>「神殿と繋がっている」</blockquote>
+<blockquote>「いつでも呼べる」</blockquote>
+
+<hr>
+
+<p>カイトが驚く。</p>
+
+<blockquote>「連絡手段？」</blockquote>
+
+<hr>
+
+<p>ミオが頷く。</p>
+
+<blockquote>「そう」</blockquote>
+<blockquote>「困った時は</blockquote>
+<blockquote>「いつでも」</blockquote>
+
+<hr>
+
+<p>カイトが握る。</p>
+
+<blockquote>「ありがとう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>ルナがミオに向き合う。</p>
+
+<blockquote>「ミオさん」</blockquote>
+
+<hr>
+
+<p>ミオが微笑む。</p>
+
+<blockquote>「ルナちゃん」</blockquote>
+<blockquote>「修行、頑張ってね」</blockquote>
+
+<hr>
+
+<p>ルナが頷く。</p>
+
+<blockquote>「うん！」</blockquote>
+<blockquote>「また来る」</blockquote>
+
+<hr>
+
+<p>ミオが頷く。</p>
+
+<blockquote>「待ってる」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>船に戻る。</p>
+
+<hr>
+
+<p>出航。</p>
+
+<hr>
+
+<p>神殿が遠ざかる。</p>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<p><i>（また来る——）</i></p>
+<p><i>（バグを特定したら——）</i></p>
+
+<hr>
+
+<p>エリナが隣に来る。</p>
+
+<blockquote>「考えてる？」</blockquote>
+
+<hr>
+
+<p>カイトが顔を上げる。</p>
+
+<blockquote>「カイのこと」</blockquote>
+
+<hr>
+
+<p>エリナが首を傾げる。</p>
+
+<blockquote>「カイトは</blockquote>
+<blockquote>「どう思う？」</blockquote>
+
+<hr>
+
+<p>カイトが海を見る。</p>
+
+<blockquote>「カイは</blockquote>
+<blockquote>「僕と同じ道を歩いた」</blockquote>
+
+<blockquote>「異世界から来て</blockquote>
+<blockquote>「魔法をコードで書いて</blockquote>
+<blockquote>「世界を救おうとした」</blockquote>
+
+<hr>
+
+<p>エリナが頷く。</p>
+
+<blockquote>「でも</blockquote>
+<blockquote>「バグは見つからなかった」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<blockquote>「わからない」</blockquote>
+<blockquote>「見つけたけど</blockquote>
+<blockquote>「修正できなかったのかもしれない」</blockquote>
+
+<hr>
+
+<p>エリナが考える。</p>
+
+<blockquote>「じゃあ</blockquote>
+<blockquote>「カイトが引き継ぐの？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「そうだと思う」</blockquote>
+
+<blockquote>「カイは</blockquote>
+<blockquote>「僕に託した」</blockquote>
+<blockquote>「バグを修正する力を」</blockquote>
+
+<hr>
+
+<p>エリナがカイトの手を握る。</p>
+
+<blockquote>「カイトなら</blockquote>
+<blockquote>「できるよ」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<blockquote>「......うん」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>航海。</p>
+
+<hr>
+
+<p>三日目。</p>
+
+<hr>
+
+<p>カイトが甲板で練習する。</p>
+
+<hr>
+
+<p>カイトがコードを書く。</p>
+
+<pre><code>
+// Time-Space Magic Training
+// 時空魔法訓練
+
+const temporal = new TimeSpaceMagic();
+
+// Practice 1: Create anchor
+console.log("Creating temporal anchor...");
+const anchor = temporal.createAnchor("training-point-1");
+console.log(`Anchor created: ${anchor.id}`);
+console.log(`Stability: ${anchor.stability}`);
+
+// Practice 2: Pause time briefly
+console.log("\nPracticing time pause...");
+await temporal.pauseTime(1000); // 1 second
+console.log("Time resumed.");
+
+// Practice 3: View recent past
+console.log("\nViewing recent memory...");
+const memory = await temporal.viewPast(anchor.timestamp);
+console.log(`Memory retrieved: ${memory.description}`);
+</code></pre>
+
+<hr>
+
+<p>青い光が弾ける。</p>
+
+<hr>
+
+<p>カイトが息を吐く。</p>
+
+<p><i>（できる——）</i></p>
+<p><i>（基礎は使える——）</i></p>
+
+<hr>
+
+<p>ルナが見ている。</p>
+
+<blockquote>「すごい......」</blockquote>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<blockquote>「ルナ」</blockquote>
+
+<hr>
+
+<p>ルナが駆け寄る。</p>
+
+<blockquote>「時空魔法？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイの遺産」</blockquote>
+<blockquote>「練習してる」</blockquote>
+
+<hr>
+
+<p>ルナが興味を持つ。</p>
+
+<blockquote>「わたしも</blockquote>
+<blockquote>「時空魔法</blockquote>
+<blockquote>「使えるかな」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<blockquote>「わからない」</blockquote>
+<blockquote>「でも</blockquote>
+<blockquote>「基礎なら教えられる」</blockquote>
+
+<hr>
+
+<p>ルナが目を輝かせる。</p>
+
+<blockquote>「本当？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「うん」</blockquote>
+<blockquote>「見てて」</blockquote>
+
+<hr>
+
+<p>カイトがコードを書く。</p>
+
+<pre><code>
+// Teaching Time-Space Basics
+// 時空魔法基礎指導
+
+class TimeSpaceBasics {
+    // First lesson: Sensing time flow
+    static senseTimeFlow(): void {
+        console.log("Close your eyes.");
+        console.log("Feel the moment.");
+        console.log("Time flows like a river.");
+        console.log("You are a stone in the stream.");
+    }
+    
+    // Second lesson: Creating simple anchor
+    static createSimpleAnchor(): TemporalAnchor {
+        console.log("Focus on 'now'.");
+        console.log("Mark this moment.");
+        console.log("Hold it in your mind.");
+        
+        return {
+            id: "first-anchor",
+            timestamp: Date.now(),
+            stability: 1.0
+        };
+    }
+}
+
+// Start lesson
+TimeSpaceBasics.senseTimeFlow();
+</code></pre>
+
+<hr>
+
+<p>ルナが目を閉じる。</p>
+
+<hr>
+
+<p>静寂。</p>
+
+<hr>
+
+<p>ルナが目を開ける。</p>
+
+<blockquote>「......なんか</blockquote>
+<blockquote>「わかったかも」</blockquote>
+
+<hr>
+
+<p>カイトが微笑む。</p>
+
+<blockquote>「いい感じ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>夕方。</p>
+
+<hr>
+
+<p>ヒナタが甲板で刀の手入れをしている。</p>
+
+<hr>
+
+<p>カイトが近づく。</p>
+
+<blockquote>「ヒナタ」</blockquote>
+
+<hr>
+
+<p>ヒナタが顔を上げる。</p>
+
+<blockquote>「何だ？」</blockquote>
+
+<hr>
+
+<p>カイトが聞く。</p>
+
+<blockquote>「バグについて</blockquote>
+<blockquote>「どう思う？」</blockquote>
+
+<hr>
+
+<p>ヒナタが刀を拭く。</p>
+
+<blockquote>「俺は</blockquote>
+<blockquote>「詳しくない」</blockquote>
+
+<blockquote>「だが——</blockquote>
+<blockquote>「カイトが言うなら</blockquote>
+<blockquote>「本当なんだろう」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「カイが見つけた」</blockquote>
+<blockquote>「世界の亀裂」</blockquote>
+
+<hr>
+
+<p>ヒナタが続ける。</p>
+
+<blockquote>「で</blockquote>
+<blockquote>「どうやって直す？」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<blockquote>「コードで</blockquote>
+<blockquote>「パッチを当てる」</blockquote>
+
+<blockquote>「バグを特定して</blockquote>
+<blockquote>「修正コードを書く」</blockquote>
+
+<hr>
+
+<p>ヒナタが笑う。</p>
+
+<blockquote>「俺には</blockquote>
+<blockquote>「わからんが」</blockquote>
+
+<blockquote>「カイトなら</blockquote>
+<blockquote>「できるだろ」</blockquote>
+
+<hr>
+
+<p>カイトが笑う。</p>
+
+<blockquote>「......ありがと」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>夜。</p>
+
+<hr>
+
+<p>カイトが一人で甲板にいる。</p>
+
+<hr>
+
+<p>星空を見る。</p>
+
+<hr>
+
+<p>カイトがコードを書く。</p>
+
+<pre><code>
+// Night Reflection
+// 夜の振り返り
+
+interface NightThoughts {
+    currentProgress: string;
+    remainingQuestions: string[];
+    determination: string;
+}
+
+const thoughts: NightThoughts = {
+    currentProgress: "Inherited Kai's legacy. Basic time-space magic usable.",
+    remainingQuestions: [
+        "What is the bug exactly?",
+        "Where in the Abyssal Sea?",
+        "Can I really fix it?",
+        "What happened to Kai?"
+    ],
+    determination: "I will find the bug. I will fix it. For this world. For everyone."
+};
+
+console.log("=== Night Thoughts ===");
+console.log(`Progress: ${thoughts.currentProgress}`);
+console.log("\nQuestions:");
+thoughts.remainingQuestions.forEach(q => console.log(`  ? ${q}`));
+console.log(`\nDetermination: ${thoughts.determination}`);
+
+console.log("\n---");
+console.log("Kai walked this path before me.");
+console.log("He couldn't finish.");
+console.log("But he left the tools.");
+console.log("I will finish what he started.");
+console.log("---");
+</code></pre>
+
+<hr>
+
+<p>カイトが空を見る。</p>
+
+<p><i>（カイ——）</i></p>
+<p><i>（僕はあなたの遺産を受け取った——）</i></p>
+<p><i>（必ず——）</i></p>
+<p><i>（バグを見つけて修正する——）</i></p>
+
+<hr>
+
+<p>エリナが来る。</p>
+
+<blockquote>「寝ないの？」</blockquote>
+
+<hr>
+
+<p>カイトが振り返る。</p>
+
+<blockquote>「もう寝る」</blockquote>
+
+<hr>
+
+<p>エリナが隣に来る。</p>
+
+<blockquote>「考えてた？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<blockquote>「うん」</blockquote>
+<blockquote>「カイのこと</blockquote>
+<blockquote>「バグのこと」</blockquote>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<blockquote>「カイト」</blockquote>
+
+<hr>
+
+<p>カイトがエリナを見る。</p>
+
+<blockquote>「何？」</blockquote>
+
+<hr>
+
+<p>エリナが微笑む。</p>
+
+<blockquote>「無理しないでね」</blockquote>
+
+<hr>
+
+<p>カイトが笑う。</p>
+
+<blockquote>「......うん」</blockquote>
+
+<hr>
+
+<p>エリナが続ける。</p>
+
+<blockquote>「カイトは</blockquote>
+<blockquote>「カイじゃない」</blockquote>
+
+<blockquote>「カイトは</blockquote>
+<blockquote>「カイト」</blockquote>
+
+<hr>
+
+<p>カイトがエリナを見る。</p>
+
+<blockquote>「......うん」</blockquote>
+
+<hr>
+
+<p>エリナが手を握る。</p>
+
+<blockquote>「私は</blockquote>
+<blockquote>「カイトが好き」</blockquote>
+
+<blockquote>「カイじゃなくて</blockquote>
+<blockquote>「カイトが」</blockquote>
+
+<hr>
+
+<p>カイトが照れる。</p>
+
+<blockquote>「エリナ——」</blockquote>
+
+<hr>
+
+<p>エリナが笑う。</p>
+
+<blockquote>「だから</blockquote>
+<blockquote>「無理しないで」</blockquote>
+
+<hr>
+
+<p>カイトが笑う。</p>
+
+<blockquote>「......わかった」</blockquote>
+
+<hr>
+
+<p>二人で星空を見る。</p>
+
+<hr>
+
+<p>カイトがコードを書く。</p>
+
+<pre><code>
+// Important Note
+// 大切なこと
+
+const truth = {
+    iAmNotKai: true,
+    iAmKaito: true,
+    erinaLovesMe: true,
+    iLoveErina: true
+};
+
+console.log("I am me.");
+console.log("I will walk my own path.");
+console.log("With the ones who love me.");
+console.log("That is enough.");
+</code></pre>
+
+<hr>
+
+<p>夜風が吹く。</p>
+
+<hr>
+
+<p>船は南へ——</p>
+<p>アビス海の奥へと進む。</p>
+
+<hr>
+
+<p>カイトの決意は固い。</p>
+
+<p>カイの遺産を継ぎ——</p>
+<p>バグを特定し——</p>
+<p>世界を救う。</p>
+
+<hr>
+
+<p>新たな旅が——</p>
+<p>始まろうとしていた。</p>
+
+<hr>
+
+<p><strong>——第368章了——</strong></p>
