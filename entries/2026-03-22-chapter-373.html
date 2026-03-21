@@ -1,0 +1,1304 @@
+---
+Title: 第373章：影の首謀者
+Date: 2026-03-22T05:49:00+09:00
+---
+
+<h3>第373章：影の首謀者</h3>
+
+<p>夜が深まる——</p>
+
+<hr>
+
+<p>ポート・マリーナの闇。</p>
+<p>波の音だけが響く。</p>
+
+<hr>
+
+<p>カイトが寝付けない。</p>
+
+<hr>
+
+<p>窓の外を見る。</p>
+<p>月が雲に隠れている。</p>
+
+<hr>
+
+<p>思考が巡る。</p>
+
+<hr>
+
+<pre><code>
+// Investigation Status - Port Abductions
+// 調査状況 - 港町誘拐事件
+
+interface InvestigationStatus {
+    solved: string;
+    rescued: number;
+    remainingVictims: number;
+    suspects: string[];
+    lead: string;
+}
+
+const investigation: InvestigationStatus = {
+    solved: "PARTIAL",
+    rescued: 5,
+    remainingVictims: 12,
+    suspects: ["UNKNOWN_SHADOW_MAGE"],
+    lead: "MULTI_PORT_PATTERN"
+};
+
+console.log("=== Investigation Summary ===");
+console.log(`Rescued: ${investigation.rescued}`);
+console.log(`Still missing: ${investigation.remainingVictims}`);
+console.log(`Pattern: 4 ports affected`);
+console.log(`Next step: Identify the mastermind`);
+</code></pre>
+
+<hr>
+
+<p>カイトがベッドから起き上がる。</p>
+
+<hr>
+
+<p>机に座る。</p>
+<p>地図を広げる。</p>
+
+<hr>
+
+<p>四つの港町——</p>
+
+<ul>
+<li>ポート・マリーナ</li>
+<li>ポート・アズール</li>
+<li>ポート・クレセント</li>
+<li>ポート・ステラ</li>
+</ul>
+
+<hr>
+
+<p>カイトが位置を確認する。</p>
+
+<hr>
+
+<pre><code>
+// Geographic Analysis
+// 地理的分析
+
+const ports = [
+    { name: "Port Marina", position: "NORTH", incidents: 5 },
+    { name: "Port Azure", position: "EAST", incidents: 4 },
+    { name: "Port Crescent", position: "SOUTH", incidents: 3 },
+    { name: "Port Stella", position: "WEST", incidents: 5 }
+];
+
+console.log("=== Port Distribution ===");
+console.log("Pattern: CIRCULAR");
+console.log("Center point: Ancient Ruins - Shadow Sanctum");
+console.log("Distance from center: 200km each");
+console.log("Hypothesis: RITUAL CIRCLE FORMATION");
+</code></pre>
+
+<hr>
+
+<p>カイトが目を見開く。</p>
+
+<hr>
+
+<blockquote>「儀式の円——」</blockquote>
+
+<hr>
+
+<p>四つの港町が円形に配置されている。</p>
+<p>その中心に——</p>
+<p>古代遺跡「シャドウ・サンクタム」</p>
+
+<hr>
+
+<p>カイトが更に調べる。</p>
+
+<hr>
+
+<pre><code>
+// Shadow Sanctum Research
+// シャドウ・サンクタム調査
+
+const sanctum = {
+    name: "Shadow Sanctum",
+    type: "ANCIENT_RUINS",
+    era: "PRE_CALENDAR",
+    purpose: "SHADOW_MAGIC_RESEARCH",
+    status: "ABANDONED",
+    danger: "EXTREME"
+};
+
+console.log("=== Shadow Sanctum ===");
+console.log(`Type: ${sanctum.type}`);
+console.log(`Original purpose: ${sanctum.purpose}`);
+console.log(`Current status: ${sanctum.status}`);
+console.log(`Danger level: ${sanctum.danger}`);
+console.log("Note: Said to contain portal to Shadow Realm core");
+</code></pre>
+
+<hr>
+
+<p>カイトが息を呑む。</p>
+
+<hr>
+
+<blockquote>「影の領域の核への門——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>翌朝。</p>
+
+<hr>
+
+<p>カイトが仲間たちを集める。</p>
+
+<hr>
+
+<p>宿の食堂。</p>
+<p>早朝の日差し。</p>
+
+<hr>
+
+<p>カイトが地図を広げる。</p>
+
+<hr>
+
+<blockquote>「昨夜</blockquote>
+<blockquote>気づいたことがある」</blockquote>
+
+<hr>
+
+<p>四つの港町を指差す。</p>
+
+<hr>
+
+<blockquote>「これらは円形に配置されている」</blockquote>
+<blockquote>「中心には古代遺跡がある」</blockquote>
+
+<hr>
+
+<p>エリナが地図を見る。</p>
+
+<blockquote>「シャドウ・サンクタム——」</blockquote>
+<blockquote>「聞いたことがあるわ」</blockquote>
+
+<hr>
+
+<p>リアムが尋ねる。</p>
+
+<blockquote>「どんな場所だ？」</blockquote>
+
+<hr>
+
+<p>エリナが説明する。</p>
+
+<hr>
+
+<blockquote>「古代の影の魔法使いが</blockquote>
+<blockquote>研究施設として作った——」</blockquote>
+
+<blockquote>「今は廃墟だけど</blockquote>
+<blockquote>危険な場所として知られている」</blockquote>
+
+<hr>
+
+<p>セシリアが付け加える。</p>
+
+<blockquote>「影の領域への</blockquote>
+<blockquote>強力な門があると聞いたわ」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「犯人は四つの港で人を拉致して</blockquote>
+<blockquote>シャドウ・サンクタムに集めている」</blockquote>
+
+<hr>
+
+<p>ヒナタが問う。</p>
+
+<blockquote>「目的は？」</blockquote>
+
+<hr>
+
+<p>カイトが推測する。</p>
+
+<hr>
+
+<blockquote>「おそらく——」</blockquote>
+<blockquote>「大規模な儀式」</blockquote>
+
+<hr>
+
+<p>全員が沈黙する。</p>
+
+<hr>
+
+<blockquote>「十二人の失踪者</blockquote>
+<blockquote>まだ捕らわれている」</blockquote>
+
+<blockquote>「急がないと——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>ギルドに向かう。</p>
+
+<hr>
+
+<p>支部長テオドールに報告する。</p>
+
+<hr>
+
+<p>カイトが地図を見せる。</p>
+
+<hr>
+
+<blockquote>「シャドウ・サンクタムへの</blockquote>
+<blockquote>移動許可が欲しい」</blockquote>
+
+<hr>
+
+<p>テオドールが眉をひそめる。</p>
+
+<blockquote>「シャドウ・サンクタム——」</blockquote>
+<blockquote>「あそこは危険だ」</blockquote>
+
+<hr>
+
+<p>カイトが説明する。</p>
+
+<hr>
+
+<blockquote>「犯人の拠点だと思います」</blockquote>
+<blockquote>「十二人が捕らわれている」</blockquote>
+
+<hr>
+
+<p>テオドールが考える。</p>
+
+<hr>
+
+<blockquote>「……わかった」</blockquote>
+<blockquote>「許可する」</blockquote>
+
+<hr>
+
+<p>テオドールが地図を取り出す。</p>
+
+<hr>
+
+<blockquote>「ただし</blockquote>
+<blockquote>準備が必要だ」</blockquote>
+
+<blockquote>「シャドウ・サンクタムは</blockquote>
+<blockquote>二百年間</blockquote>
+<blockquote>封印されている」</blockquote>
+
+<hr>
+
+<p>カイトが尋ねる。</p>
+
+<blockquote>「封印？」</blockquote>
+
+<hr>
+
+<p>テオドールが説明する。</p>
+
+<hr>
+
+<blockquote>「古代の賢者たちが</blockquote>
+<blockquote>門を閉じた——」</blockquote>
+
+<blockquote>「影の生物が</blockquote>
+<blockquote>溢れ出したからだ」</blockquote>
+
+<hr>
+
+<p>カイトが理解する。</p>
+
+<hr>
+
+<blockquote>「誰かが封印を破った」</blockquote>
+
+<hr>
+
+<p>テオドールが頷く。</p>
+
+<hr>
+
+<blockquote>「おそらく</blockquote>
+<blockquote>数ヶ月前に」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>準備を整える。</p>
+
+<hr>
+
+<p>カイトが物資を確認する。</p>
+
+<hr>
+
+<pre><code>
+// Equipment Check - Shadow Sanctum Expedition
+// 装備確認 - シャドウ・サンクタム遠征
+
+const equipment = {
+    lightSources: 5,
+    healingPotions: 10,
+    antidotes: 5,
+    rations: "7 days",
+    specialItems: ["SHADOW_RESIST_AMULET", "REALM_ANCHOR"]
+};
+
+console.log("=== Equipment Status ===");
+console.log(`Light sources: ${equipment.lightSources}`);
+console.log(`Healing potions: ${equipment.healingPotions}`);
+console.log(`Rations: ${equipment.rations}`);
+console.log(`Special: ${equipment.specialItems.join(", ")}`);
+console.log("Status: READY");
+</code></pre>
+
+<hr>
+
+<p>リアムが馬を用意する。</p>
+
+<hr>
+
+<p>セシリアが魔道具を準備。</p>
+
+<hr>
+
+<p>ヒナタが刀を点検。</p>
+
+<hr>
+
+<p>エリナが氷魔法の杖を手に取る。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>出発。</p>
+
+<hr>
+
+<p>ポート・マリーナを出る。</p>
+
+<hr>
+
+<p>北西へ——</p>
+<p>シャドウ・サンクタムへ向かう。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>二日間の旅。</p>
+
+<hr>
+
+<p>森を抜ける。</p>
+<p>山を越える。</p>
+
+<hr>
+
+<p>三日目の夕暮れ——</p>
+
+<hr>
+
+<p>シャドウ・サンクタムが見える。</p>
+
+<hr>
+
+<p>黒い石でできた巨大な遺跡。</p>
+<p>影のような霧が立ち込める。</p>
+
+<hr>
+
+<p>エリナが震える。</p>
+
+<blockquote>「ここが——」</blockquote>
+
+<hr>
+
+<p>カイトが感知する。</p>
+
+<hr>
+
+<pre><code>
+// Shadow Sanctum Initial Scan
+// シャドウ・サンクタム初期スキャン
+
+const scan = magic.scan({
+    target: "SHADOW_SANCTUM",
+    radius: 500,
+    types: ["LIFE", "MAGIC", "ANOMALY"]
+});
+
+console.log("=== Sanctum Scan ===");
+console.log("Life signs: 14 detected");
+console.log("  - Conscious: 2");
+console.log("  - Unconscious: 12");
+console.log("Magic intensity: EXTREME");
+console.log("Shadow Realm connection: OPEN");
+console.log("Guardians detected: 7");
+console.log("WARNING: High danger level");
+</code></pre>
+
+<hr>
+
+<p>カイトが報告する。</p>
+
+<hr>
+
+<blockquote>「十四人の生命反応」</blockquote>
+<blockquote>「意識があるのは二人——」</blockquote>
+<blockquote>「無意識が十二人」</blockquote>
+
+<hr>
+
+<p>リアムが問う。</p>
+
+<blockquote>「十二人は</blockquote>
+<blockquote>失踪者たちか？」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「おそらく」</blockquote>
+
+<hr>
+
+<p>セシリアが感じる。</p>
+
+<blockquote>「魔力が凄い——」</blockquote>
+<blockquote>「儀式が進行している」</blockquote>
+
+<hr>
+
+<p>カイトが顔をしかめる。</p>
+
+<hr>
+
+<blockquote>「急ごう」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>遺跡に近づく。</p>
+
+<hr>
+
+<p>巨大な門。</p>
+<p>開いている。</p>
+
+<hr>
+
+<p>カイトが警告する。</p>
+
+<hr>
+
+<blockquote>「罠があるかも」</blockquote>
+<blockquote>「慎重に」</blockquote>
+
+<hr>
+
+<p>中に入る。</p>
+
+<hr>
+
+<p>黒い石の通路。</p>
+<p>壁に古代の文字。</p>
+
+<hr>
+
+<p>カイトが解読する。</p>
+
+<hr>
+
+<pre><code>
+// Ancient Inscription Translation
+// 古代碑文翻訳
+
+const text = ancientTranslate({
+    source: "WALL_INSCRIPTION",
+    era: "PRE_CALENDAR"
+});
+
+console.log("=== Translation ===");
+console.log("Here lies the Gate of Eternal Shadow");
+console.log("Through which flows the power of darkness");
+console.log("Sacrifice twelve souls to open the path");
+console.log("To the Shadow Realm's heart");
+console.log("Where ultimate power awaits");
+</code></pre>
+
+<hr>
+
+<p>カイトが息を呑む。</p>
+
+<hr>
+
+<blockquote>「十二人の魂を犠牲に——」</blockquote>
+<blockquote>「影の領域の核への道を開く」</blockquote>
+
+<hr>
+
+<p>エリナが問う。</p>
+
+<blockquote>「究極の力とは？」</blockquote>
+
+<hr>
+
+<p>カイトが首を振る。</p>
+
+<hr>
+
+<blockquote>「わからない」</blockquote>
+<blockquote>「でも止めないと」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>通路を進む。</p>
+
+<hr>
+
+<p>広い空間に出る。</p>
+
+<hr>
+
+<p>中央に祭壇。</p>
+<p>十二人が横たわっている。</p>
+
+<hr>
+
+<p>失踪者たち——</p>
+
+<hr>
+
+<p>二人の人物が立っている。</p>
+
+<hr>
+
+<p>一人は老人——</p>
+<p>黒いローブ。</p>
+
+<p>もう一人は女性——</p>
+<p>紫の髪。</p>
+
+<hr>
+
+<p>老人がカイトを見る。</p>
+
+<hr>
+
+<blockquote>「来たか</blockquote>
+<blockquote>邪魔者が」</blockquote>
+
+<hr>
+
+<p>カイトが問う。</p>
+
+<hr>
+
+<blockquote>「あなたが</blockquote>
+<blockquote>首謀者か？」</blockquote>
+
+<hr>
+
+<p>老人が笑う。</p>
+
+<hr>
+
+<blockquote>「わしはモルガス」</blockquote>
+<blockquote>「影の魔術師だ」</blockquote>
+
+<hr>
+
+<p>女性が自己紹介する。</p>
+
+<hr>
+
+<blockquote>「リヴァイア</blockquote>
+<blockquote>モルガス様の弟子よ」</blockquote>
+
+<hr>
+
+<p>カイトが警告する。</p>
+
+<hr>
+
+<blockquote>「儀式を止めろ」</blockquote>
+<blockquote>「無辜の人々を</blockquote>
+<blockquote>犠牲にするな」</blockquote>
+
+<hr>
+
+<p>モルガスが首を振る。</p>
+
+<hr>
+
+<blockquote>「断る」</blockquote>
+<blockquote>「わしは二百年</blockquote>
+<blockquote>この時を待った」</blockquote>
+
+<hr>
+
+<p>カイトが目を見開く。</p>
+
+<hr>
+
+<blockquote>「二百年——」</blockquote>
+<blockquote>「生きているのか？」</blockquote>
+
+<hr>
+
+<p>モルガスが説明する。</p>
+
+<hr>
+
+<blockquote>「影の領域に身を置けば</blockquote>
+<blockquote>時は流れない」</blockquote>
+
+<blockquote>「封印された後</blockquote>
+<blockquote>わしは影の中で待った」</blockquote>
+
+<blockquote>「再び門を開く時を」</blockquote>
+
+<hr>
+
+<p>カイトが悟る。</p>
+
+<hr>
+
+<blockquote>「封印を破ったのは</blockquote>
+<blockquote>あなたか」</blockquote>
+
+<hr>
+
+<p>モルガスが頷く。</p>
+
+<hr>
+
+<blockquote>「そうだ」</blockquote>
+<blockquote>「三ヶ月前に</blockquote>
+<blockquote>脱出した」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが構える。</p>
+
+<hr>
+
+<blockquote>「戦うつもりか？」</blockquote>
+
+<hr>
+
+<p>モルガスが笑う。</p>
+
+<hr>
+
+<blockquote>「リヴァイア</blockquote>
+<blockquote>相手をしてやれ」</blockquote>
+
+<hr>
+
+<p>リヴァイアが前に出る。</p>
+
+<hr>
+
+<p>紫の魔法を纏う。</p>
+
+<hr>
+
+<blockquote>「楽しみね」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>戦闘開始。</p>
+
+<hr>
+
+<p>リヴァイアが影を操る。</p>
+
+<hr>
+
+<blockquote>「影縛り！」</blockquote>
+
+<hr>
+
+<p>影がカイトを捕らえようとする。</p>
+
+<hr>
+
+<p>カイトが解除する。</p>
+
+<hr>
+
+<pre><code>
+// Shadow Bind - Counter
+// 影縛り - 対抗
+
+magic.counter({
+    incoming: "SHADOW_BIND",
+    type: "LIGHT_DISPEL",
+    power: 60
+});
+
+console.log("Shadow Bind: DISPELLED");
+</code></pre>
+
+<hr>
+
+<p>光が影を消す。</p>
+
+<hr>
+
+<p>カイトが反撃する。</p>
+
+<hr>
+
+<pre><code>
+// Light Arrow
+// 光の矢
+
+magic.attack({
+    target: "LIVIA",
+    type: "LIGHT_ARROW",
+    power: 50,
+    count: 3
+});
+
+console.log("Light Arrows: FIRED");
+</code></pre>
+
+<hr>
+
+<p>三本の光の矢。</p>
+
+<hr>
+
+<p>リヴァイアが影の盾で防ぐ。</p>
+
+<hr>
+
+<blockquote>「面白い」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>エリナが氷魔法を放つ。</p>
+
+<hr>
+
+<blockquote>「氷結槍！」</blockquote>
+
+<hr>
+
+<p>氷の槍が飛ぶ。</p>
+
+<hr>
+
+<p>リヴァイアが避ける。</p>
+
+<hr>
+
+<p>リアムが斬りかかる。</p>
+
+<hr>
+
+<p>リヴァイアが影に潜る。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが分析する。</p>
+
+<hr>
+
+<pre><code>
+// Enemy Analysis - Livia
+// 敵分析 - リヴァイア
+
+const livia = {
+    type: "SHADOW_MAGE",
+    abilities: ["SHADOW_TRAVEL", "SHADOW_BIND", "DARK_BOLT"],
+    weakness: "LIGHT",
+    threat: 70
+};
+
+console.log("=== Livia Analysis ===");
+console.log(`Type: ${livia.type}`);
+console.log(`Weakness: ${livia.weakness}`);
+console.log(`Threat level: ${livia.threat}`);
+console.log("Strategy: COORDINATED_LIGHT_ATTACK");
+</code></pre>
+
+<hr>
+
+<p>カイトが指示を出す。</p>
+
+<hr>
+
+<blockquote>「セシリア</blockquote>
+<blockquote>光魔法を！」</blockquote>
+
+<hr>
+
+<p>セシリアが頷く。</p>
+
+<hr>
+
+<blockquote>「聖なる光！」</blockquote>
+
+<hr>
+
+<p>光が広がる。</p>
+
+<hr>
+
+<p>リヴァイアが悲鳴を上げる。</p>
+
+<hr>
+
+<blockquote>「くっ——」</blockquote>
+
+<hr>
+
+<p>ヒナタが斬る。</p>
+
+<hr>
+
+<blockquote>「風神斬！」</blockquote>
+
+<hr>
+
+<p>風を纏った刀。</p>
+
+<p>リヴァイアの肩を斬る。</p>
+
+<hr>
+
+<p>リヴァイアが後退する。</p>
+
+<hr>
+
+<blockquote>「モルガス様——」</blockquote>
+
+<hr>
+
+<p>モルガスが手を上げる。</p>
+
+<hr>
+
+<blockquote>「下がれ</blockquote>
+<blockquote>リヴァイア」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>モルガスが前に出る。</p>
+
+<hr>
+
+<p>圧倒的な魔力。</p>
+
+<hr>
+
+<p>カイトが感じる。</p>
+
+<hr>
+
+<blockquote>「これが——」</blockquote>
+<blockquote>「二百年の</blockquote>
+<blockquote>蓄積か」</blockquote>
+
+<hr>
+
+<p>モルガスが言う。</p>
+
+<hr>
+
+<blockquote>「わしと戦うか？」</blockquote>
+<blockquote>「愚かな」</blockquote>
+
+<hr>
+
+<p>カイトが覚悟を決める。</p>
+
+<hr>
+
+<blockquote>「止める」</blockquote>
+<blockquote>「あなたの儀式を」</blockquote>
+
+<hr>
+
+<p>モルガスが笑う。</p>
+
+<hr>
+
+<blockquote>「いいだろう」</blockquote>
+<blockquote>「相手してやる」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>モルガスが魔法を放つ。</p>
+
+<hr>
+
+<blockquote>「影の波動！」</blockquote>
+
+<hr>
+
+<p>闇の波が押し寄せる。</p>
+
+<hr>
+
+<p>カイトが防御する。</p>
+
+<hr>
+
+<pre><code>
+// Shadow Wave - Defense
+// 影の波動 - 防御
+
+magic.defend({
+    type: "LIGHT_BARRIER",
+    power: 80,
+    radius: 10
+});
+
+console.log("Shadow Wave: BLOCKED");
+console.log("Barrier integrity: 60%");
+</code></pre>
+
+<hr>
+
+<p>光の結界が波を止める。</p>
+
+<hr>
+
+<p>でも——</p>
+<p>結界がひび割れる。</p>
+
+<hr>
+
+<p>カイトが悟る。</p>
+
+<hr>
+
+<blockquote>「強い——」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが仲間たちを見る。</p>
+
+<hr>
+
+<blockquote>「協力して</blockquote>
+<blockquote>攻めるぞ」</blockquote>
+
+<hr>
+
+<p>全員が頷く。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>五人の攻撃。</p>
+
+<hr>
+
+<p>エリナの氷。</p>
+<p>リアムの剣。</p>
+<p>セシリアの光。</p>
+<p>ヒナタの風。</p>
+<p>カイトの魔法。</p>
+
+<hr>
+
+<p>モルガスが全てを防ぐ。</p>
+
+<hr>
+
+<blockquote>「無駄だ」</blockquote>
+
+<hr>
+
+<p>カイトが考える。</p>
+
+<hr>
+
+<pre><code>
+// Combat Analysis - Morgas
+// 戦闘分析 - モルガス
+
+const morgas = {
+    power: 95,
+    defense: 90,
+    weakness: "REALM_ANCHOR",
+    status: "CHANNELING_RITUAL"
+};
+
+console.log("=== Morgas Analysis ===");
+console.log(`Power: ${morgas.power}`);
+console.log(`Defense: ${morgas.defense}`);
+console.log(`Weakness: ${morgas.weakness}`);
+console.log(`Status: ${morgas.status}`);
+console.log("Key insight: RITUAL INTERRUPTION");
+</code></pre>
+
+<hr>
+
+<p>カイトが気づく。</p>
+
+<hr>
+
+<blockquote>「儀式に集中している」</blockquote>
+<blockquote>「その隙を突く」</blockquote>
+
+<hr>
+
+<p>カイトが指示を出す。</p>
+
+<hr>
+
+<blockquote>「儀式を中断させろ」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが祭壇に向かう。</p>
+
+<hr>
+
+<p>モルガスが気づく。</p>
+
+<hr>
+
+<blockquote>「させるか！」</blockquote>
+
+<hr>
+
+<p>影がカイトを襲う。</p>
+
+<hr>
+
+<p>ヒナタが遮る。</p>
+
+<hr>
+
+<blockquote>「カイト</blockquote>
+<blockquote>行け！」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが祭壇に到達する。</p>
+
+<hr>
+
+<p>十二人の失踪者。</p>
+
+<hr>
+
+<p>魔法陣が光っている。</p>
+
+<hr>
+
+<p>カイトが解除を試みる。</p>
+
+<hr>
+
+<pre><code>
+// Ritual Interruption
+// 儀式中断
+
+magic.dispel({
+    target: "RITUAL_CIRCLE",
+    type: "FORCED_SHUTDOWN",
+    power: 90
+});
+
+console.log("=== Ritual Status ===");
+console.log("Interruption: SUCCESS");
+console.log("Magic circle: DESTABILIZED");
+console.log("Hostages: RELEASING");
+console.log("Warning: BACKLASH IMMINENT");
+</code></pre>
+
+<hr>
+
+<p>魔法陣が砕ける。</p>
+
+<hr>
+
+<p>爆発的な魔力。</p>
+
+<hr>
+
+<p>カイトが吹き飛ばされる。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>モルガスが叫ぶ。</p>
+
+<hr>
+
+<blockquote>「なぜ——」</blockquote>
+<blockquote>「なぜ邪魔をする！」</blockquote>
+
+<hr>
+
+<p>カイトが立ち上がる。</p>
+
+<hr>
+
+<blockquote>「無実の人を</blockquote>
+<blockquote>犠牲にするのが</blockquote>
+<blockquote>間違いだからだ」</blockquote>
+
+<hr>
+
+<p>モルガスが怒る。</p>
+
+<hr>
+
+<blockquote>「わしは二百年待った——」</blockquote>
+<blockquote>「必ずやり直す」</blockquote>
+
+<hr>
+
+<p>モルガスが影に溶ける。</p>
+
+<hr>
+
+<p>リヴァイアも続く。</p>
+
+<hr>
+
+<p>——</p>
+
+<p>静寂。</p>
+
+<hr>
+
+<p>カイトが十二人を確認する。</p>
+
+<hr>
+
+<p>全員——意識が戻り始める。</p>
+
+<hr>
+
+<p>セシリアが治療する。</p>
+
+<hr>
+
+<blockquote>「生命力が</blockquote>
+<blockquote>少し奪われてる」</blockquote>
+<blockquote>「でも回復できる」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>カイトが呟く。</p>
+
+<hr>
+
+<blockquote>「逃げた——」</blockquote>
+<blockquote>「でも</blockquote>
+<blockquote>儀式は止めた」</blockquote>
+
+<hr>
+
+<p>エリナがカイトを見る。</p>
+
+<blockquote>「また来るわ」</blockquote>
+
+<hr>
+
+<p>カイトが頷く。</p>
+
+<hr>
+
+<blockquote>「わかってる」</blockquote>
+<blockquote>「次は</blockquote>
+<blockquote>決着をつける」</blockquote>
+
+<hr>
+
+<p>——</p>
+
+<p>夕暮れ。</p>
+
+<hr>
+
+<p>シャドウ・サンクタムの外。</p>
+
+<hr>
+
+<p>十二人が救われた。</p>
+
+<hr>
+
+<p>カイトが空を見る。</p>
+
+<hr>
+
+<p>橙色の夕陽。</p>
+
+<hr>
+
+<p>影の魔術師モルガス——</p>
+<p>まだ脅威は続く。</p>
+
+<hr>
+
+<p>でも今日——</p>
+<p>多くの命を救った。</p>
+
+<hr>
+
+<p>カイトの旅は——</p>
+<p>まだ終わらない。</p>
+
+<hr>
+
+<p style="text-align: center;">——第373章　終——</p>
