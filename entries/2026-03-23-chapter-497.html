@@ -1,0 +1,666 @@
+---
+Title: 第497章：テラドンの試練
+Date: 2026-03-23T07:20:00+09:00
+---
+
+<h3>第497章：テラドンの試練</h3>
+
+<p>虚無の広間——戦いの後。</p>
+
+<p>カイトたち——勝利の余韻に浸っていた。</p>
+
+<p>テラドン——崩れた祭壇の前に座り込んでいた。</p>
+
+<p>地の賢者——疲労の色が濃い。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>ミーナ——テラドンに駆け寄った。</p>
+
+<blockquote>「テラドンさん——大丈夫？」</blockquote>
+
+<p>ミーナ——心配そうに尋ねた。</p>
+
+<blockquote>「ああ——少しな。魔力を使いすぎた」</blockquote>
+
+<p>テラドン——弱々しく笑った。</p>
+
+<blockquote>「水晶の破壊——思ったより手強かった」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「回復魔法——かけます」</blockquote>
+
+<p>ミーナ——手をかざした。</p>
+
+<blockquote>「Healing Stream——癒やしの水流」</blockquote>
+
+<p>青い光——テラドンを包んだ。</p>
+
+<blockquote>「すまない——ミーナ。ミズリアの娘とは思えないほど——上手だ」</blockquote>
+
+<p>テラドン——感心した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Recovery Phase
+class PostBattleRecovery {
+    constructor(party) {
+        this.party = party;
+        this.status = {
+            kaito: { hp: 85, mp: 60, status: "normal" },
+            riamu: { hp: 70, mp: 90, status: "軽傷" },
+            erina: { hp: 90, mp: 75, status: "normal" },
+            mina: { hp: 95, mp: 40, status: "魔力枯渇" },
+            cecilia: { hp: 100, mp: 85, status: "normal" },
+            teradon: { hp: 40, mp: 20, status: "疲労" }
+        };
+    }
+    
+    healAll() {
+        Object.keys(this.status).forEach(member => {
+            this.status[member].hp = 100;
+            this.status[member].mp = 100;
+            this.status[member].status = "normal";
+        });
+        return {
+            result: "全員回復完了",
+            duration: "約10分"
+        };
+    }
+}
+
+const recovery = new PostBattleRecovery(party);
+recovery.healAll();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>パーティ——回復を終えた。</p>
+
+<p>テラドン——立ち上がった。</p>
+
+<p>巨体——元の力強さを取り戻していた。</p>
+
+<blockquote>「カイト——話がある」</blockquote>
+
+<p>テラドン——真剣な顔で言った。</p>
+
+<blockquote>「お前たちに——渡したいものがある」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「渡したいもの——？」</blockquote>
+
+<p>カイト——首を傾げた。</p>
+
+<blockquote>「地の賢者の継承——だ」</blockquote>
+
+<p>テラドン——重い言葉を口にした。</p>
+
+<blockquote>「お前——カイト。地魔法の才能がある」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——驚いた。</p>
+
+<blockquote>「継承——でも、俺は元々プログラミング魔法で——」</blockquote>
+
+<blockquote>「だからこそだ」</blockquote>
+
+<p>テラドン——遮った。</p>
+
+<blockquote>「プログラミング魔法——地魔法と相性がいい。土・岩・重力——全て法則で動いている」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「法則——」</blockquote>
+
+<p>カイト——考えた。</p>
+
+<blockquote>「確かに——重力も地質も、数式で表現できる」</blockquote>
+
+<blockquote>「そうだ。お前なら——地の賢者の力を新しい形で継承できる」</blockquote>
+
+<p>テラドン——期待を込めた。</p>
+
+<blockquote>「だが——試練が必要だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「試練——？」</blockquote>
+
+<p>リアム——身構えた。</p>
+
+<blockquote>「安心しろ。戦う試練ではない」</blockquote>
+
+<p>テラドン——言った。</p>
+
+<blockquote>「魂の試練だ——お前の地魔法への理解を試す」</blockquote>
+
+<blockquote>「やってやる——」</blockquote>
+
+<p>カイト——覚悟を決めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Earth Sage Trial System
+class EarthSageTrial {
+    constructor() {
+        this.trialName = "地の賢者の試練";
+        this.stages = [
+            {
+                name: "第一の試練：大地の記憶",
+                objective: "地の歴史を理解する",
+                method: "テラドンと精神リンク",
+                difficulty: "精神"
+            },
+            {
+                name: "第二の試練：重力の制御",
+                objective: "重力魔法を完全に操る",
+                method: "実践テスト",
+                difficulty: "技術"
+            },
+            {
+                name: "第三の試練：守護の意志",
+                objective: "守るべきものを見つける",
+                method: "内なる対話",
+                difficulty: "魂"
+            }
+        ];
+        this.reward = {
+            title: "地の賢者（継承者）",
+            abilities: ["Gaea's Protection", "Earth Pulse", "Gravity Mastery"],
+            statBoost: { defense: 50, earthAffinity: 100 }
+        };
+    }
+    
+    beginTrials(candidate) {
+        return {
+            status: "trial_started",
+            firstStage: this.stages[0],
+            warning: "精神に直接働きかける試練。準備はいいか？"
+        };
+    }
+}
+
+const trial = new EarthSageTrial();
+trial.beginTrials(kaito);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テラドン——地面に手を置いた。</p>
+
+<blockquote>「Earth Link——地の結び」</blockquote>
+
+<p>地面——淡い茶色の光を放った。</p>
+
+<blockquote>「カイト——俺の手を取れ」</blockquote>
+
+<p>カイト——テラドンの手を握った。</p>
+
+<p>温かい——大地の熱を感じた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>視界——暗転した。</p>
+
+<p>カイト——意識がどこかへ飛んだ。</p>
+
+<p>そこは——荒野だった。</p>
+
+<p>何もない——茶色の大地が続く。</p>
+
+<blockquote>「ここは——俺の記憶の中だ」</blockquote>
+
+<p>テラドン——現れた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「第一の試練——大地の記憶」</blockquote>
+
+<p>テラドン——説明した。</p>
+
+<blockquote>「この世界が生まれた時から——地は在った」</blockquote>
+
+<p>風景——動き出した。</p>
+
+<p>火山——噴火した。</p>
+
+<p>溶岩——冷えて岩になった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——大地が生まれる瞬間を見た。</p>
+
+<p>億万年——一瞬で過ぎていく。</p>
+
+<blockquote>「地は——全ての基盤だ」</blockquote>
+
+<p>テラドン——語った。</p>
+
+<blockquote>「命を育み、命を受け入れる。破壊と創造——全てのサイクルを支える」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「プログラミングで言えば——OSのカーネル」</blockquote>
+
+<p>カイト——理解した。</p>
+
+<blockquote>「全ての処理を支える——基盤層」</blockquote>
+
+<blockquote>「いい例えだ。お前は——理解している」</blockquote>
+
+<p>テラドン——満足そうに頷いた。</p>
+
+<blockquote>「第一の試練——合格だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>風景——変わった。</p>
+
+<p>今度は——洞窟の中。</p>
+
+<blockquote>「第二の試練——重力の制御」</blockquote>
+
+<p>テラドン——岩を指した。</p>
+
+<blockquote>「あの岩を——浮かせろ。プログラミング魔法で」</blockquote>
+
+<p>カイト——岩を見た。巨大な岩——二トンはある。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Gravity Manipulation Code
+class GravityManipulation {
+    constructor(target) {
+        this.target = target;
+        this.mass = target.mass; // kg
+        this.currentGravity = 9.8; // m/s²
+        this.manipulatedGravity = 0;
+    }
+    
+    reduceGravity(factor) {
+        this.manipulatedGravity = this.currentGravity / factor;
+        return {
+            newGravity: this.manipulatedGravity,
+            forceReduction: `${(1 - 1/factor) * 100}%`
+        };
+    }
+    
+    levitate() {
+        this.manipulatedGravity = 0;
+        return {
+            status: "levitating",
+            requiredControl: "constant_mp_flow",
+            strain: "high"
+        };
+    }
+    
+    control(direction, force) {
+        return {
+            action: "move",
+            direction: direction,
+            appliedForce: force,
+            mpCost: force * 2
+        };
+    }
+}
+
+const gravity = new GravityManipulation(boulder);
+gravity.reduceGravity(10);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——魔法を構築した。</p>
+
+<blockquote>「Gravity Shift——重力シフト」</blockquote>
+
+<p>岩——ふわりと浮いた。</p>
+
+<blockquote>「いいぞ——だが、それだけじゃない」</blockquote>
+
+<p>テラドン——更に要求した。</p>
+
+<blockquote>「岩を——球体に変形させろ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「変形——？ 重力魔法で？」</blockquote>
+
+<p>カイト——戸惑った。</p>
+
+<blockquote>「重力は——形を変えない。形を変えるのは——土魔法だ」</blockquote>
+
+<p>テラドン——微笑んだ。</p>
+
+<blockquote>「二つの魔法を——融合させろ。それが賢者の力だ」</blockquote>
+
+<p>カイト——深く考えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「重力で——原子の結合を緩める」</blockquote>
+
+<p>カイト——独り言のように言った。</p>
+
+<blockquote>「土魔法で——形を操作する。重力で——再固定」</blockquote>
+
+<p>カイト——イメージを形にした。</p>
+
+<blockquote>「Gravitational Earth Mold——重力土成型」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>岩——赤い光を帯びた。</p>
+
+<p>形——歪み始めた。</p>
+
+<p>ゆっくりと——球体になっていく。</p>
+
+<blockquote>「できた——」</blockquote>
+
+<p>カイト——息を吐いた。</p>
+
+<p>完璧な球体——空中に浮いていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「素晴らしい——」</blockquote>
+
+<p>テラドン——感嘆した。</p>
+
+<blockquote>「初見で——重力と土の融合魔法。お前は——天才だ」</blockquote>
+
+<blockquote>「第二の試練——合格」</blockquote>
+
+<p>テラドン——深く頷いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>風景——再び変わった。</p>
+
+<p>今度は——森の中。</p>
+
+<p>村が見える——小さな集落。</p>
+
+<blockquote>「第三の試練——守護の意志」</blockquote>
+
+<p>テラドン——村を指した。</p>
+
+<blockquote>「お前が——何を守りたいか。それを見つける試練だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——村を見た。</p>
+
+<p>人々——平和に暮らしている。</p>
+
+<p>子供たち——走り回る。</p>
+
+<p>老人——木陰で休む。</p>
+
+<blockquote>「この村を——守れと言うのか？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「違う。問うているのは——お前自身だ」</blockquote>
+
+<p>テラドン——答えた。</p>
+
+<blockquote>「お前が——誰を、何を守りたいのか。地の賢者は——守護者だからな」</blockquote>
+
+<p>カイト——考えた。</p>
+
+<p>守りたいもの——何だろう。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトの心に——顔が浮かんだ。</p>
+
+<p>エリナ——明るい笑顔。</p>
+
+<p>リアム——頼れる相棒。</p>
+
+<p>セシリア——冷静な分析。</p>
+
+<p>ミーナ——健気な姿。</p>
+
+<p>そして——沢山の人々。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Guardian's Will Analysis
+class GuardianWill {
+    constructor() {
+        this.protected = [];
+        this.willStrength = 0;
+    }
+    
+    analyzeHeart(hero) {
+        const feelings = hero.hearth.feelings;
+        const important = feelings.filter(f => f.type === "protection");
+        
+        important.forEach(person => {
+            this.protected.push({
+                name: person.name,
+                bondStrength: person.bond,
+                reason: person.reason
+            });
+        });
+        
+        this.willStrength = this.calculateWill();
+        return {
+            protectedCount: this.protected.length,
+            willType: this.determineWillType(),
+            strength: this.willStrength
+        };
+    }
+    
+    determineWillType() {
+        if (this.willStrength > 80) return "絶対の守護";
+        if (this.willStrength > 50) return "強き守護";
+        return "萌芽の守護";
+    }
+    
+    calculateWill() {
+        let total = 0;
+        this.protected.forEach(p => {
+            total += p.bondStrength;
+        });
+        return Math.min(100, total);
+    }
+}
+
+const will = new GuardianWill();
+const result = will.analyzeHeart(kaito);
+// result: { protectedCount: 50+, willType: "絶対の守護", strength: 95 }</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「俺が守りたいのは——」</blockquote>
+
+<p>カイト——口を開いた。</p>
+
+<blockquote>「仲間たち——そして、この世界の人々全員」</blockquote>
+
+<p>カイト——村を見つめた。</p>
+
+<blockquote>「虚無教団から——守る。全員を」</blockquote>
+
+<p>カイトの言葉——重みがあった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「それが——お前の守護の意志か」</blockquote>
+
+<p>テラドン——満足そうに言った。</p>
+
+<blockquote>「広い——あまりに広い範囲だ。だが——お前ならできるかもしれない」</blockquote>
+
+<blockquote>「第三の試練——合格」</blockquote>
+
+<p>テラドン——カイトの肩に手を置いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>視界——元に戻った。</p>
+
+<p>虚無の広間——テラドンがいた。</p>
+
+<blockquote>「カイト——お前は合格した」</blockquote>
+
+<p>テラドン——厳かに宣言した。</p>
+
+<blockquote>「地の賢者の継承者として——認める」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テラドン——胸元から石を取り出した。</p>
+
+<p>琥珀色——美しい宝石。</p>
+
+<blockquote>「これは——地の賢者の証、Gaea's Heart」</blockquote>
+
+<p>テラドン——カイトに手渡した。</p>
+
+<blockquote>「受け取れ——お前のものだ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Gaea's Heart Artifact
+class GaeasHeart {
+    constructor() {
+        this.name = "Gaea's Heart";
+        this.type = "賢者の証";
+        this.element = "earth";
+        this.rank = "legendary";
+        this.effects = {
+            earthAffinity: 100,
+            defenseBoost: 50,
+            gravityMastery: true,
+            earthPulse: true, // 地脈感知
+            gaeaProtection: true // 大地の守り
+        };
+        this.abilities = [
+            {
+                name: "Earth Pulse",
+                description: "周囲の地脈を感知、地形把握",
+                passive: true
+            },
+            {
+                name: "Gaea's Protection",
+                description: "HP30%以下で自動防御バフ",
+                trigger: "passive"
+            },
+            {
+                name: "Gravity Mastery",
+                description: "重力魔法の消費MP半減",
+                passive: true
+            }
+        ];
+        this.inheritance = {
+            from: "テラドン",
+            to: "カイト",
+            date: "継承歴0012年3月23日"
+        };
+    }
+    
+    equip(wearer) {
+        wearer.equipment.accessory = this;
+        wearer.stats.defense += this.effects.defenseBoost;
+        wearer.earthAffinity += this.effects.earthAffinity;
+        return {
+            status: "equipped",
+            newAbilities: this.abilities
+        };
+    }
+}
+
+const gaeasHeart = new GaeasHeart();
+gaeasHeart.equip(kaito);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——宝石を受け取った。</p>
+
+<p>温かい——大地の温もり。</p>
+
+<blockquote>「これが——地の賢者の力」</blockquote>
+
+<p>カイト——宝石を見つめた。</p>
+
+<blockquote>「重い——責任の重さだ」</blockquote>
+
+<blockquote>「受け入れるよ——テラドン」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「いい返事だ」</blockquote>
+
+<p>テラドン——嬉しそうに笑った。</p>
+
+<blockquote>「だが——俺はまだ死なんぞ。継承しただけで——引退じゃない」</blockquote>
+
+<blockquote>「テラドン——これからどうする？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「地の封印——守り続ける。それが——俺の役目だ」</blockquote>
+
+<p>テラドン——言った。</p>
+
+<blockquote>「お前は——旅を続けろ。七つの封印——全てを救うんだ」</blockquote>
+
+<blockquote>「分かった——必ず戻る」</blockquote>
+
+<p>カイト——約束した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>パーティ——地下道を抜けた。</p>
+
+<p>湖——水面から顔を出す。</p>
+
+<p>太陽——眩しかった。</p>
+
+<blockquote>「外——まだ明るい」</blockquote>
+
+<p>エリナ——空を見た。</p>
+
+<blockquote>「夕方——そろそろ出発した方がいい」</blockquote>
+
+<p>セシリア——提案した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「中央大陸——次の封印へ」</blockquote>
+
+<p>カイト——決意を新たにした。</p>
+
+<blockquote>「テラドン——また会おう」</blockquote>
+
+<p>テラドン——大きく頷いた。</p>
+
+<blockquote>「行って来い——予言の者にして、地の賢者よ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトたち——テラドンと別れた。</p>
+
+<p>地の封印——守られた。</p>
+
+<p>地の賢者の力——継承された。</p>
+
+<p>カイト——新しい力を手に入れた。</p>
+
+<p>旅——続く。</p>
+
+<p>中央大陸へ——次の封印へ。</p>
+
+<p>七つの封印——あと六つ。</p>
+
+<p>戦い——まだ終わらない。</p>
