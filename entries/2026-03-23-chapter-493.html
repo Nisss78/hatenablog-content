@@ -1,0 +1,857 @@
+---
+Title: 第493章：洞窟の戦い
+Date: 2026-03-23T03:06:00+09:00
+---
+
+<h3>第493章：洞窟の戦い</h3>
+
+<p>洞窟の中——敵が一斉に動いた。</p>
+
+<p>数十人の黒いローブ——武器を手にカイトたちを包囲する。</p>
+
+<p>仮面の男——冷静に号令を下した。</p>
+
+<blockquote>「邪魔者を排除しろ——ヨハンは殺すな」</blockquote>
+
+<blockquote>「了解——」</blockquote>
+
+<p>敵たち——一斉に襲い掛かった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——即座にコードを展開した。</p>
+
+<pre><code>// 戦闘システム初期化
+class CombatSystem {
+    constructor() {
+        this.enemies = [];
+        this.allies = [];
+        this.terrain = "cave";
+        this.lighting = "dim";
+    }
+    
+    analyzeSituation() {
+        return {
+            enemyCount: this.enemies.length,
+            advantage: "surprise_attack",
+            recommendedStrategy: "area_control",
+            dangerZones: ["narrow_passages", "stalactites"]
+        };
+    }
+    
+    createBarrier() {
+        return {
+            type: "energy_shield",
+            radius: 5,
+            duration: 60,
+            strength: "medium"
+        };
+    }
+}
+
+const combat = new CombatSystem();
+combat.enemies = enemies;
+combat.allies = party;
+const barrier = combat.createBarrier();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「エリナ——右！ リアム——左！ セシリア——後衛！」</blockquote>
+
+<p>カイト——指示を飛ばした。</p>
+
+<blockquote>「ミーナ——僕と一緒に前へ！」</blockquote>
+
+<blockquote>「了解——！」</blockquote>
+
+<p>五人——散開して戦闘態勢をとった。</p>
+
+<p>エリナ——風の刃を放った。</p>
+
+<blockquote>「Wind Slash——！」</blockquote>
+
+<p>三体の敵——吹き飛ばされた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>リアム——剣を振るった。</p>
+
+<p>重い一撃——敵の防御を砕く。</p>
+
+<blockquote>「数は多いが——雑魚だ」</blockquote>
+
+<p>リアム——冷静に敵を倒していく。</p>
+
+<p>でも——敵の数は多かった。</p>
+
+<p>一体倒しても——二体、三体と補充される。</p>
+
+<blockquote>「きりがない——！」</blockquote>
+
+<p>リアム——舌打ちした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>セシリア——後衛から援護射撃をした。</p>
+
+<p>光の矢——正確に敵を狙う。</p>
+
+<blockquote>「カイト——村長の確保を優先して」</blockquote>
+
+<p>セシリア——冷静に指示した。</p>
+
+<blockquote>「私たちで時間を稼ぐ」</blockquote>
+
+<blockquote>「頼む——！」</blockquote>
+
+<p>カイト——ミーナと共に村長の方へ駆けた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>村長のヨハン——鎖に繋がれたまま、カイトを見た。</p>
+
+<blockquote>「君たちは——誰だ？」</blockquote>
+
+<blockquote>「助けに来ました——ガストンさんから話を聞いて」</blockquote>
+
+<p>カイト——鎖に手を触れた。</p>
+
+<pre><code>// 鎖解除
+class ChainBreaker {
+    analyze(chain) {
+        return {
+            material: "magic_reinforced_steel",
+            lockType: "rune_seal",
+            strength: "high"
+        };
+    }
+    
+    break(chain) {
+        // 魔法封印を解析
+        const sealAnalysis = this.decodeSeal(chain);
+        
+        // 対象の鎖を破壊
+        chain.integrity = 0;
+        
+        return {
+            success: true,
+            method: "code_override"
+        };
+    }
+}
+
+const breaker = new ChainBreaker();
+breaker.break(chains);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——指を動かした。</p>
+
+<p>鎖——光り輝き、砕け散った。</p>
+
+<blockquote>「魔法——いや、何だこれは？」</blockquote>
+
+<p>ヨハン——驚いた表情で見た。</p>
+
+<blockquote>「説明は後で——今は逃げます」</blockquote>
+
+<p>カイト——ヨハンを支えた。</p>
+
+<p>ミーナ——二人を守るように立った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「待て——逃がすと思うか？」</blockquote>
+
+<p>仮面の男——前に立ちはだかった。</p>
+
+<p>他の敵——戦いながらも、包囲を狭めてくる。</p>
+
+<blockquote>「お前——リーダーか」</blockquote>
+
+<p>カイト——仮面の男を睨んだ。</p>
+
+<blockquote>「名を名乗れ」</blockquote>
+
+<blockquote>「名乗る必要はない——お前は死ぬのだから」</blockquote>
+
+<p>仮面の男——手をかざした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>黒い光——仮面の男の手から放たれた。</p>
+
+<p>純粋な虚無のエネルギー——。</p>
+
+<p>カイト——防御魔法を展開した。</p>
+
+<pre><code>// 虚無防御
+class VoidShield {
+    constructor() {
+        this.type = "anti_void";
+        this.layers = 5;
+    }
+    
+    activate() {
+        return {
+            protectionType: "negation",
+            effectiveness: 0.85,
+            sideEffects: ["mana_drain"]
+        };
+    }
+}
+
+const voidShield = new VoidShield();
+voidShield.activate();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>黒い光——カイトの盾に当たって弾けた。</p>
+
+<blockquote>「ほう——虚無を防ぐか」</blockquote>
+
+<p>仮面の男——少し驚いた。</p>
+
+<blockquote>「貴様——管理者か？」</blockquote>
+
+<blockquote>「違う——ただのプログラマーだ」</blockquote>
+
+<p>カイト——答えた。</p>
+
+<p>仮面の男——仮面の奥で笑った気がした。</p>
+
+<blockquote>「プログラマー——？ 興味深い」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>その時——</p>
+
+<p>洞窟の奥から——轟音が響いた。</p>
+
+<blockquote>「何——！？」</blockquote>
+
+<p>仮面の男——振り返った。</p>
+
+<p>天井——亀裂が入っていた。</p>
+
+<blockquote>「カイト——今だ！」</blockquote>
+
+<p>エリナ——叫んだ。</p>
+
+<blockquote>「風で洞窟を崩す——出口へ走って！」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「エリナ——危ない！」</blockquote>
+
+<p>カイト——叫んだ。</p>
+
+<blockquote>「大丈夫——やるから」</blockquote>
+
+<p>エリナ——両手を天井にかざした。</p>
+
+<blockquote>「Wind Burst——MAXIMUM——！」</blockquote>
+
+<p>巨大な風——天井を突き破った。</p>
+
+<p>岩——崩れ落ちる。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>洞窟——崩壊が始まった。</p>
+
+<blockquote>「撤退——！」</blockquote>
+
+<p>仮面の男——叫んだ。</p>
+
+<blockquote>「全員——外へ！」</blockquote>
+
+<p>敵たち——一斉に逃げ出した。</p>
+
+<p>カイト——この隙を逃さなかった。</p>
+
+<blockquote>「みんな——出口へ！ 急げ！」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——ヨハンを背負った。</p>
+
+<p>ミーナ——先行して道を確保する。</p>
+
+<p>リアムとセシリア——しんがりを務めた。</p>
+
+<p>エリナ——最後に風で岩を押し留めてから、走った。</p>
+
+<blockquote>「カイト——早く！」</blockquote>
+
+<p>出口——見えてきた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>外——新鮮な空気。</p>
+
+<p>全員——洞窟から脱出した。</p>
+
+<p>背後——洞窟が完全に崩落した。</p>
+
+<blockquote>「はあ——はあ——」</blockquote>
+
+<p>エリナ——膝をついた。</p>
+
+<blockquote>「やった——」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——ヨハンを地面に下ろした。</p>
+
+<blockquote>「大丈夫ですか？」</blockquote>
+
+<blockquote>「ああ——助かった。ありがとう」</blockquote>
+
+<p>ヨハン——カイトの手を握った。</p>
+
+<blockquote>「君が——カイトか。噂は聞いている」</blockquote>
+
+<blockquote>「噂——？」</blockquote>
+
+<blockquote>「水の封印を守った——異世界の魔法使い」</blockquote>
+
+<p>ヨハン——優しい目で見た。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「兄のルミナスから——連絡があった」</blockquote>
+
+<p>ヨハン——語り始めた。</p>
+
+<blockquote>「『奇妙な力を持つ冒険者が来る——彼を信じろ』と」</blockquote>
+
+<blockquote>「ルミナス——生きてるんですね」</blockquote>
+
+<p>カイト——安堵した。</p>
+
+<blockquote>「ああ——封印を守るために、山頂に留まっている」</blockquote>
+
+<blockquote>「会えますか？」</blockquote>
+
+<blockquote>「もちろんだ——案内しよう」</blockquote>
+
+<p>ヨハン——立ち上がった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「待て——敵はどうなった？」</blockquote>
+
+<p>リアム——警戒した。</p>
+
+<blockquote>「洞窟が崩れた——全滅したか？」</blockquote>
+
+<blockquote>「いや——あのリーダーは生きてる」</blockquote>
+
+<p>カイト——洞窟の方を見た。</p>
+
+<p>瓦礫の山——でも、仮面の男の気配は消えていない。</p>
+
+<blockquote>「虚無の力——簡易的な不死身性がある」</blockquote>
+
+<p>カイト——分析した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 敵戦力分析
+class EnemyAnalysis {
+    assessLeader(enemy) {
+        return {
+            type: "void_cult_leader",
+            abilities: [
+                "void_manipulation",
+                "shadow_step",
+                "minor_regeneration"
+            ],
+            threatLevel: "high",
+            survivedCaveIn: true
+        };
+    }
+}
+
+const analysis = new EnemyAnalysis();
+analysis.assessLeader(maskedLeader);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「また来る——必ず」</blockquote>
+
+<p>カイト——覚悟を決めた。</p>
+
+<blockquote>「その前に——ルミナスと会おう」</blockquote>
+
+<blockquote>「封印を強化するんだ」</blockquote>
+
+<p>ヨハン——頷いた。</p>
+
+<blockquote>「こっちだ——山道を登るぞ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山道——険しくなった。</p>
+
+<p>高度が上がるにつれて——空気が薄くなる。</p>
+
+<blockquote>「大丈夫——ミーナ？」</blockquote>
+
+<p>カイト——ミーナを気遣った。</p>
+
+<blockquote>「うん——平気。水の魔法で酸素を補給できる」</blockquote>
+
+<p>ミーナ——笑った。</p>
+
+<blockquote>「母の——遺伝かな」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——ミーナの強さに感心した。</p>
+
+<p>母ミズリア——水の賢者。</p>
+
+<p>その娘——確かに、水の親和性が高い。</p>
+
+<blockquote>「ミーナ——頼りにしてる」</blockquote>
+
+<blockquote>「うん——カイトもね」</blockquote>
+
+<p>二人——顔を見合わせて笑った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山頂——近づいてきた。</p>
+
+<p>光——溢れていた。</p>
+
+<p>封印の力——純粋な光が放たれている。</p>
+
+<blockquote>「すごい——」</blockquote>
+
+<p>エリナ——息を呑んだ。</p>
+
+<blockquote>「これが——光の封印」</blockquote>
+
+<p>セシリア——記録を取った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山頂の広場——一人の人物が立っていた。</p>
+
+<p>長い銀髪——白いローブ。</p>
+
+<p>光に包まれた——神々しい存在。</p>
+
+<blockquote>「兄さん——！」</blockquote>
+
+<p>ヨハン——駆け寄った。</p>
+
+<blockquote>「ヨハン——無事だったか」</blockquote>
+
+<p>ルミナス——振り返った。</p>
+
+<p>その顔——慈愛に満ちていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「君が——カイトだね」</blockquote>
+
+<p>ルミナス——カイトに近づいた。</p>
+
+<blockquote>「はい——水の封印を守った者です」</blockquote>
+
+<blockquote>「知っている——ミズリアから連絡があった」</blockquote>
+
+<p>ルミナス——微笑んだ。</p>
+
+<blockquote>「彼女は——君を高く評価している」</blockquote>
+
+<blockquote>「光栄です」</blockquote>
+
+<p>カイト——頭を下げた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「封印の状態は——？」</blockquote>
+
+<p>カイト——本題に入った。</p>
+
+<blockquote>「不安定だ——敵の干渉を受けている」</blockquote>
+
+<p>ルミナス——真剣な顔になった。</p>
+
+<blockquote>「ヨハンを捕らえたのは——封印を開くため」</blockquote>
+
+<blockquote>「血脈が必要——ですよね」</blockquote>
+
+<blockquote>「その通り——私とヨハンの血があれば、封印を開けることができる」</blockquote>
+
+<p>ルミナス——説明した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「でも——ヨハンを救出した今、封印は守られますよね？」</blockquote>
+
+<p>カイト——確認した。</p>
+
+<blockquote>「そう——だが、敵は諦めない」</blockquote>
+
+<p>ルミナス——封印の方を見た。</p>
+
+<blockquote>「あのリーダー——名をネブラと言う」</blockquote>
+
+<blockquote>「ネブラ——」</blockquote>
+
+<blockquote>「虚無教団の幹部だ——執念深い」</blockquote>
+
+<p>ルミナス——警告した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「虚無教団——」</blockquote>
+
+<p>カイト——名前を記憶した。</p>
+
+<blockquote>「彼らの目的は——七つの封印を開くこと？」</blockquote>
+
+<blockquote>「そう——そして、虚無の本体を召喚する」</blockquote>
+
+<p>ルミナス——深刻に言った。</p>
+
+<blockquote>「虚無の本体——この世界を飲み込む存在」</blockquote>
+
+<blockquote>「止めないと——」</blockquote>
+
+<p>カイト——拳を握った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「封印を強化できますか？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<blockquote>「可能だ——協力が必要だが」</blockquote>
+
+<p>ルミナス——カイトを見た。</p>
+
+<blockquote>「君のコード魔法——封印と共鳴するかもしれない」</blockquote>
+
+<blockquote>「共鳴——？」</blockquote>
+
+<blockquote>「封印は——一種のプログラムだ。古の賢者たちが作った」</blockquote>
+
+<p>ルミナス——興味深いことを言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——驚いた。</p>
+
+<blockquote>「封印が——プログラム？」</blockquote>
+
+<blockquote>「そう——魔力で書かれたコード。君なら——理解できるかもしれない」</blockquote>
+
+<p>ルミナス——封印に手をかざした。</p>
+
+<blockquote>「見てみろ——封印の構造を」</blockquote>
+
+<p>カイト——封印を見つめた。</p>
+
+<p>そして——見えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>光の中に——文字が浮かんでいた。</p>
+
+<p>古代文字——でも、カイトには読めた。</p>
+
+<pre><code>// 封印の構造（解読）
+class LightSeal {
+    constructor() {
+        this.type = "elemental_seal";
+        this.element = "light";
+        this.creators = ["primordial_sage", "luminos_ancestor"];
+        this.integrity = 0.72;
+    }
+    
+    getStructure() {
+        return {
+            core: "light_essence",
+            layers: 7,
+            defenseMechanisms: [
+                "purification_field",
+                "void_repulsion",
+                "soul_binding"
+            ],
+            vulnerabilities: [
+                "blood_ritual",
+                "concentrated_void_attack"
+            ]
+        };
+    }
+}</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「これが——封印のコード」</blockquote>
+
+<p>カイト——呟いた。</p>
+
+<blockquote>「七層構造——防御機構が三つ。脆弱性が二つ」</blockquote>
+
+<blockquote>「読めるのか——すごい」</blockquote>
+
+<p>ルミナス——感心した。</p>
+
+<blockquote>「通常は——賢者の血脈しか見えない」</blockquote>
+
+<blockquote>「僕は——プログラマーだから」</blockquote>
+
+<p>カイト——少し笑った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「封印を強化しましょう」</blockquote>
+
+<p>カイト——提案した。</p>
+
+<blockquote>「僕のコードで——脆弱性をパッチできる」</blockquote>
+
+<blockquote>「やってみてくれ」</blockquote>
+
+<p>ルミナス——許可した。</p>
+
+<p>カイト——封印に近づいた。</p>
+
+<p>手をかざして——コードを書き始めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 封印強化パッチ
+class SealReinforcement {
+    apply(seal) {
+        // 脆弱性パッチ
+        seal.patch("blood_ritual", {
+            countermeasure: "soul_verification",
+            strength: "maximum"
+        });
+        
+        seal.patch("concentrated_void_attack", {
+            countermeasure: "light_reflection",
+            strength: "high"
+        });
+        
+        // 追加防御層
+        seal.addLayer({
+            type: "code_barrier",
+            author: "kaito",
+            strength: 0.9
+        });
+        
+        return {
+            newIntegrity: 0.95,
+            status: "reinforced"
+        };
+    }
+}
+
+const reinforcement = new SealReinforcement();
+reinforcement.apply(lightSeal);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——コードを流し込んだ。</p>
+
+<p>光の封印——一層輝きを増した。</p>
+
+<blockquote>「強化——完了」</blockquote>
+
+<p>カイト——息を吐いた。</p>
+
+<blockquote>「完全じゃない——でも、敵が開けるのは難しくなった」</blockquote>
+
+<blockquote>「ありがとう——カイト」</blockquote>
+
+<p>ルミナス——深く頭を下げた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「これで——光の封印は守られた」</blockquote>
+
+<p>セシリア——記録を更新した。</p>
+
+<blockquote>「残り——三つ」</blockquote>
+
+<ul>
+<li>地の封印</li>
+<li>雷の封印</li>
+<li>炎の封印</li>
+</ul>
+
+<blockquote>「次は——どこへ？」</blockquote>
+
+<p>エリナ——尋ねた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「地の封印——テラドンが守っている」</blockquote>
+
+<p>ルミナス——地図を指した。</p>
+
+<blockquote>「中央大陸——大地の裂け目にある」</blockquote>
+
+<blockquote>「テラドン——地の賢者」</blockquote>
+
+<p>カイト——確認した。</p>
+
+<blockquote>「ああ——堅実な男だ。君たちを歓迎するだろう」</blockquote>
+
+<p>ルミナス——言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「一つ——忠告しておく」</blockquote>
+
+<p>ルミナス——真剣な顔になった。</p>
+
+<blockquote>「虚無教団——幹部は四人いる。ネブラはその一人」</blockquote>
+
+<blockquote>「残り三人——？」</blockquote>
+
+<blockquote>「アビス——深淵を操る。ノクス——闇そのもの。そして——」</blockquote>
+
+<p>ルミナス——言葉を詰まらせた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「そして——？」</blockquote>
+
+<p>カイト——促した。</p>
+
+<blockquote>「ヴォイド——虚無の化身。教団の頂点に立つ存在」</blockquote>
+
+<p>ルミナス——低い声で言った。</p>
+
+<blockquote>「彼に会ったら——逃げろ。勝てる保証がない」</blockquote>
+
+<blockquote>「分かりました——覚えておきます」</blockquote>
+
+<p>カイト——真剣に頷いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山を降りる準備——。</p>
+
+<p>ヨハン——カイトに近づいた。</p>
+
+<blockquote>「カイト——礼を言う」</blockquote>
+
+<blockquote>「無事でよかったです」</blockquote>
+
+<blockquote>「君のような若者——頼もしい。これからの世界は——君たちが作る」</blockquote>
+
+<p>ヨハン——カイトの肩を叩いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイト——」</blockquote>
+
+<p>ミーナ——カイトの隣に来た。</p>
+
+<blockquote>「次——地の封印だね」</blockquote>
+
+<blockquote>「ああ——テラドンに会いに行こう」</blockquote>
+
+<p>カイト——ミーナを見た。</p>
+
+<blockquote>「ミーナ——疲れてない？」</blockquote>
+
+<blockquote>「大丈夫——カイトと一緒だから」</blockquote>
+
+<p>ミーナ——微笑んだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山道——麓へ続く。</p>
+
+<p>光見の村——復興が始まっていた。</p>
+
+<blockquote>「カイトさん——！」</blockquote>
+
+<p>トオル——駆け寄ってきた。</p>
+
+<blockquote>「ヨハンおじいちゃん——！」</blockquote>
+
+<blockquote>「トオル——無事だったか」</blockquote>
+
+<p>ヨハン——トオルを抱きしめた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイトさん——ありがとう」</blockquote>
+
+<p>トオル——カイトを見上げた。</p>
+
+<blockquote>「約束——守ってくれた」</blockquote>
+
+<blockquote>「ああ——約束は約束だから」</blockquote>
+
+<p>カイト——トオルの頭を撫でた。</p>
+
+<blockquote>「君も——強くなれ。村を守れるくらいに」</blockquote>
+
+<blockquote>「うん——絶対になる」</blockquote>
+
+<p>トオル——目を輝かせた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>出発の時——。</p>
+
+<p>村人たち——見送りに来た。</p>
+
+<blockquote>「カイト殿——ご武運を」</blockquote>
+
+<p>ガストン——頭を下げた。</p>
+
+<blockquote>「世界を——お願いします」</blockquote>
+
+<blockquote>「任せてください」</blockquote>
+
+<p>カイト——力強く答えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトたち——村を出た。</p>
+
+<p>目指すは——中央大陸。</p>
+
+<p>地の封印——テラドンの待つ場所。</p>
+
+<p>旅は続く——。</p>
+
+<p>仲間と共に——。</p>
+
+<p>希望を胸に——。</p>
+
+<p>カイトの冒険——まだ終わらない。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>その頃——。</p>
+
+<p>洞窟の瓦礫の中——。</p>
+
+<p>仮面の男——ネブラが立ち上がった。</p>
+
+<blockquote>「カイト——覚えていろ」</blockquote>
+
+<p>仮面の奥——冷たい瞳が光った。</p>
+
+<blockquote>「これは——始まりに過ぎない」</blockquote>
+
+<p>ネブラ——闇に消えた。</p>
+
+<p>虚無教団の影——まだ終わらない。</p>
