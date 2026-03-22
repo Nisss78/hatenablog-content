@@ -1,0 +1,879 @@
+---
+Title: 第500章：中央大陸への到達
+Date: 2026-03-23T13:00:00+09:00
+---
+
+<h3>第500章：中央大陸への到達</h3>
+
+<p>湖の向こう——中央大陸の沿岸が迫っていた。</p>
+
+<p>カイトたちの乗った漁船——低速で進む。</p>
+
+<p>太陽——西に傾き始めていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「見えてきた——西の港だ」</blockquote>
+
+<p>老漁師——前方を指差した。</p>
+
+<p>港湾施設——遠くに霞んで見えた。</p>
+
+<blockquote>「大きいな——」</blockquote>
+
+<p>ミーナ——目を丸くした。</p>
+
+<blockquote>「リンド大陸の港とは——規模が違う」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>中央大陸——巨大な山脈を背にした港。</p>
+
+<p>船——数十隻が停泊している。</p>
+
+<p>物流の中心——世界中から物資が集まる。</p>
+
+<blockquote>「あれが——中央大陸の玄関口」</blockquote>
+
+<p>セシリア——説明した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Central Continent Port Data
+class CentralPort {
+    constructor() {
+        this.name = "ウェストポート";
+        this.location = "中央大陸西岸";
+        this.facilities = {
+            docks: 24,
+            warehouses: 50,
+            inns: 15,
+            markets: 8
+        };
+        this.population = "約3万人";
+        this.governance = "五大陸連合の直轄";
+        this.security = "高";
+        this.magicBarrier = true;
+    }
+    
+    assessArrival(ship) {
+        return {
+            dockingAvailable: true,
+            inspectionRequired: true,
+            customsCheck: "厳格",
+            estimatedWait: "30分"
+        };
+    }
+    
+    getNotableLocations() {
+        return [
+            "冒険者ギルド支部",
+            "魔法研究所",
+            "大陸交通局",
+            "市場通り",
+            "賢者評議会の支所"
+        ];
+    }
+}
+
+const port = new CentralPort();
+port.assessArrival("漁船");
+port.getNotableLocations();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>船——港に近づいた。</p>
+
+<p>港湾労働者——忙しそうに動いていた。</p>
+
+<p>商人——商品を並べている。</p>
+
+<blockquote>「賑やかだな——」</blockquote>
+
+<p>リアム——感心した。</p>
+
+<blockquote>「リンド大陸の支部周辺より——人が多い」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「当たり前だ——ここは世界の中心だからな」</blockquote>
+
+<p>セシリア——誇らしげに言った。</p>
+
+<blockquote>「五大陸の中で——最も発展してる」</blockquote>
+
+<blockquote>「へえ——すごいね」</blockquote>
+
+<p>ミーナ——好奇心旺盛に見回した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>船——桟橋に接岸した。</p>
+
+<p>老漁師——船を固定した。</p>
+
+<blockquote>「ここまでだ——以上の修理は港でできる」</blockquote>
+
+<p>老漁師——カイトたちを見た。</p>
+
+<blockquote>「無事でよかった——頑張れよ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ありがとうございました——おかげで助かりました」</blockquote>
+
+<p>カイト——深く頭を下げた。</p>
+
+<p>仲間——続いて礼を言った。</p>
+
+<blockquote>「礼を言うのは——こっちだ。いい刺激になった」</blockquote>
+
+<p>老漁師——笑って手を振った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトたち——桟橋に降りた。</p>
+
+<p>石畳——しっかりと整備されている。</p>
+
+<p>人々——様々な服装で行き交う。</p>
+
+<blockquote>「空気が違う——」</blockquote>
+
+<p>エリナ——呟いた。</p>
+
+<blockquote>「魔力が——濃い気がする」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「中央大陸は——地脈の交差点だからな」</blockquote>
+
+<p>カイト——Gaea's Heartを感じていた。</p>
+
+<blockquote>「地脈が——ここで渦巻いてる」</blockquote>
+
+<blockquote>「封印の場所——近いの？」</blockquote>
+
+<p>ミーナ——尋ねた。</p>
+
+<blockquote>「まだ遠い——でも、存在は感じる」</blockquote>
+
+<p>カイト——山脈の方を眺めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Central Continent Leyline Map
+class CentralLeyline {
+    constructor() {
+        this.nexusPoint = "中央山脈最深部";
+        this.branches = 7;
+        this.density = "極めて高";
+        this.sealLocation = {
+            name: "原初の座",
+            coordinates: "中央山脈・北東",
+            depth: "地下推定500m",
+            guardian: "不明"
+        };
+    }
+    
+    calculateDistance(currentLocation) {
+        return {
+            straightLine: "約200km",
+            estimatedTravel: "徒歩で約10日",
+            obstacles: ["山脈", "魔物領域", "環境的危険"]
+        };
+    }
+    
+    detectSealSignature() {
+        return {
+            presence: true,
+            intensity: "微弱",
+            direction: "北東",
+            warning: "封印の歪みを検知"
+        };
+    }
+}
+
+const leylines = new CentralLeyline();
+leylines.calculateDistance("ウェストポート");
+leylines.detectSealSignature();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「まずは——情報収集だ」</blockquote>
+
+<p>カイト——提案した。</p>
+
+<blockquote>「冒険者ギルドに行こう——何か分かるかも」</blockquote>
+
+<blockquote>「いい考えだ——私が案内する」</blockquote>
+
+<p>セシリア——先頭に立った。</p>
+
+<blockquote>「ここのギルドは——大規模だから迷わないで」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>一行——港を抜けて街へ入った。</p>
+
+<p>建物——石とレンガで作られている。</p>
+
+<p>道幅——広く、整備されている。</p>
+
+<p>露店——様々な商品を並べていた。</p>
+
+<blockquote>「すごい——何でも売ってる」</blockquote>
+
+<p>ミーナ——露店を覗いた。</p>
+
+<blockquote>「後で見よう——まずはギルド」</blockquote>
+
+<p>エリナ——ミーナを促した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「待って——あれ」</blockquote>
+
+<p>リアム——掲示板を指差した。</p>
+
+<blockquote>「何？」</blockquote>
+
+<p>カイト——近づいた。</p>
+
+<p>掲示板——手配書が貼られていた。</p>
+
+<p>顔写真——見覚えがあった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「これ——俺？」</blockquote>
+
+<p>カイト——驚いた。</p>
+
+<p>手配書——カイトの似顔絵。</p>
+
+<p>罪名——「虚無教団協力者」。</p>
+
+<p>報奨金——「金貨100枚」。</p>
+
+<blockquote>「何これ——嘘でしょ！？」</blockquote>
+
+<p>エリナ——声を上げた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Wanted Notice Analysis
+class WantedPoster {
+    constructor() {
+        this.target = {
+            name: "カイト（海藤翔太）",
+            alias: "地の賢者継承者",
+            charges: ["虚無教団協力", "危険魔法使用", "国家転覆計画関与"],
+            reward: 100, // 金貨
+            issuer: "五大陸連合・治安維持局",
+            credibility: "虚偽"
+        };
+        this.propagandaPattern = {
+            source: "虚無教団の工作",
+            purpose: "カイトの評判低下・移動制限",
+            spreadRange: "中央大陸全域"
+        };
+    }
+    
+    verifyAuthenticity() {
+        return {
+            officialSeal: "偽造",
+            signature: "一致せず",
+            conclusion: "虚無教団による偽の手配書"
+        };
+    }
+    
+    assessRisk() {
+        return {
+            dangerLevel: "中",
+            publicReaction: "警戒される可能性",
+            recommendedAction: "正規ルートで情報を訂正"
+        };
+    }
+}
+
+const poster = new WantedPoster();
+poster.verifyAuthenticity();
+poster.assessRisk();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「罠だ——虚無教団の差し金」</blockquote>
+
+<p>セシリア——冷静に分析した。</p>
+
+<blockquote>「カイトの動きを封じるため——偽の手配書をばら撒いた」</blockquote>
+
+<blockquote>「くそ——卑怯な」</blockquote>
+
+<p>リアム——舌打ちした。</p>
+
+<blockquote>「顔が知られてる——移動が難しくなる」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「どうする——カイト」</blockquote>
+
+<p>エリナ——心配そうに聞いた。</p>
+
+<p>カイト——考えた。</p>
+
+<p>逃げる——選択肢ではない。</p>
+
+<p>堂々と進む——リスクがある。</p>
+
+<blockquote>「変装しよう——顔を隠せば何とかなる」</blockquote>
+
+<p>カイト——決めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「まずは——帽子とフードだな」</blockquote>
+
+<p>リアム——近くの店を指差した。</p>
+
+<blockquote>「私が買ってくる——みんなは待ってて」</blockquote>
+
+<p>ミーナ——手を上げた。</p>
+
+<blockquote>「ミーナ——頼む」</blockquote>
+
+<p>カイト——金貨を渡した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>ミーナ——店へ走った。</p>
+
+<p>カイト——周囲を警戒した。</p>
+
+<p>人々——手配書を見ていた。</p>
+
+<p>誰かが——カイトの方を見た。</p>
+
+<blockquote>「あれ——手配書の人に似てる...」</blockquote>
+
+<p>市民——疑わしげに。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「まずい——見つかった」</blockquote>
+
+<p>セシリア——声を潜めた。</p>
+
+<blockquote>「移動しよう——路地へ」</blockquote>
+
+<p>一行——素早く移動した。</p>
+
+<p>裏路地——人の目が少ない。</p>
+
+<p>ミーナ——戻ってきた。</p>
+
+<blockquote>「これ——！」</blockquote>
+
+<p>ミーナ——大きなフード付きのマントを渡した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ありがとう——」</blockquote>
+
+<p>カイト——マントを羽織った。</p>
+
+<p>フード——顔を隠した。</p>
+
+<blockquote>「これで——分からないはず」</blockquote>
+
+<p>カイト——確認した。</p>
+
+<blockquote>「うん——バレないよ」</blockquote>
+
+<p>エリナ——頷いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Disguise Status Check
+class DisguiseSystem {
+    constructor(wearer) {
+        this.wearer = wearer;
+        this.elements = {
+            hoodedMantle: true,
+            faceConcealment: 80, // パーセント
+            postureModification: true,
+            magicSuppression: "Gaea's Heartを抑える"
+        };
+    }
+    
+    calculateDetectionRisk() {
+        return {
+            baseRisk: 15, // パーセント
+            withMantle: 5,
+            inCrowd: 2,
+            recommendation: "人混みを利用して移動"
+        };
+    }
+    
+    updateStatus(attention) {
+        if (attention > 50) {
+            return "警戒レベル上昇・即座移動推奨";
+        }
+        return "安全圏内";
+    }
+}
+
+const disguise = new DisguiseSystem("カイト");
+disguise.calculateDetectionRisk();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ギルドに行こう——裏道で」</blockquote>
+
+<p>カイト——提案した。</p>
+
+<blockquote>「セシリア——案内頼む」</blockquote>
+
+<blockquote>「任せて——こっちだ」</blockquote>
+
+<p>セシリア——路地を進んだ。</p>
+
+<p>一行——後に続いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>裏路地——狭いが清潔。</p>
+
+<p>時折——猫が通る。</p>
+
+<p>洗濯物——窓から干されている。</p>
+
+<blockquote>「普通の生活——ここでもあるんだな」</blockquote>
+
+<p>ミーナ——呟いた。</p>
+
+<blockquote>「世界のどこでも——変わらない」</blockquote>
+
+<p>リアム——静かに言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>数分後——広い通りに出た。</p>
+
+<p>目の前——大きな建物。</p>
+
+<p>冒険者ギルド——看板があった。</p>
+
+<blockquote>「着いた——中央大陸支部だ」</blockquote>
+
+<p>セシリア——建物を指差した。</p>
+
+<blockquote>「大きい——」</blockquote>
+
+<p>エリナ——感嘆した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>建物——三階建て。</p>
+
+<p>石造り——堅牢な作り。</p>
+
+<p>入り口——多くの冒険者が出入りしていた。</p>
+
+<blockquote>「カイト——フード深く被って」</blockquote>
+
+<p>エリナ——小声で言った。</p>
+
+<blockquote>「分かってる——」</blockquote>
+
+<p>カイト——フードを調整した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Guild Entry Protocol
+class GuildEntry {
+    constructor() {
+        this.branchName = "中央大陸・ウェストポート支部";
+        this.floors = {
+            first: "受付・依頼掲示板・食堂",
+            second: "会議室・資料室・宿泊施設",
+            third: "支部長室・機密エリア"
+        };
+        this.securityLevel = "高";
+        this.magicDetection = true;
+    }
+    
+    assessEntryRisk(party) {
+        return {
+            magicScanRequired: true,
+            identityCheck: "簡易",
+            wantedListAlert: true,
+            workaround: "セシリアの身分を利用"
+        };
+    }
+    
+    recommendApproach() {
+        return {
+            primary: "セシリアが代表で受付",
+            cover: "地方からの視察団",
+            purpose: "情報収集・依頼確認"
+        };
+    }
+}
+
+const entry = new GuildEntry();
+entry.assessEntryRisk("カイト一行");
+entry.recommendApproach();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「セシリア——頼める？」</blockquote>
+
+<p>カイト——小声で聞いた。</p>
+
+<blockquote>「了解——私の身分を使う」</blockquote>
+
+<p>セシリア——前に出た。</p>
+
+<blockquote>「みんなは——私の護衛ってことで」</blockquote>
+
+<blockquote>「ありがとう——」</blockquote>
+
+<p>カイト——安堵した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>一行——ギルドの中へ入った。</p>
+
+<p>広間——天井が高い。</p>
+
+<p>冒険者——多数たむろしていた。</p>
+
+<p>雰囲気——活気がある。</p>
+
+<blockquote>「すごい人数——」</blockquote>
+
+<p>ミーナ——圧倒された。</p>
+
+<blockquote>「静かに——目立たないで」</blockquote>
+
+<p>エリナ——注意した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>受付——空いていた。</p>
+
+<p>受付嬢——笑顔で迎えた。</p>
+
+<blockquote>「いらっしゃいませ——何かご用ですか？」</blockquote>
+
+<p>セシリア——受付に近づいた。</p>
+
+<blockquote>「アルヴァレス支部のセシリア・グレイヴズよ——支部長と話したいの」</blockquote>
+
+<p>受付嬢——目を見開いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「セシリア様——! お久しぶりです！</blockquote>
+
+<p>受付嬢——驚いた。</p>
+
+<blockquote>「おやじ様は——奥にいらっしゃいます」</blockquote>
+
+<blockquote>「ありがとう——案内して」</blockquote>
+
+<p>セシリア——頷いた。</p>
+
+<blockquote>「みんな——ついてきて」</blockquote>
+
+<p>カイトたち——セシリアの後に続いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>受付嬢——階段を上った。</p>
+
+<p>二階——廊下を進む。</p>
+
+<p>扉——「支部長室」の銘板。</p>
+
+<blockquote>「こちらです——おやじ様！</blockquote>
+
+<p>受付嬢——扉をノックした。</p>
+
+<blockquote>「何だ——忙しいぞ」</blockquote>
+
+<p>中——低い声。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「セシリア様が——お見えです！」</blockquote>
+
+<p>受付嬢——告げた。</p>
+
+<p>中——静かになった。</p>
+
+<blockquote>「セシリア——！？</blockquote>
+
+<p>扉——開いた。</p>
+
+<p>中年の男性——飛び出してきた。</p>
+
+<blockquote>「本当か——！</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テオドール——ウェストポート支部長。</p>
+
+<p>大柄——筋肉質の体格。</p>
+
+<p>顔——歓喜に輝いていた。</p>
+
+<blockquote>「セシリア——生きてたのか！</blockquote>
+
+<p>テオドール——セシリアを抱きしめた。</p>
+
+<blockquote>「おやじ様——苦しいです」</blockquote>
+
+<p>セシリア——苦笑した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Guild Branch Master Profile
+class BranchMaster {
+    constructor() {
+        this.name = "テオドール・ハートウェル";
+        this.title = "ウェストポート支部長";
+        this.age = 52;
+        this.relationship = "セシリアの元上司・育ての親的存在";
+        this.personality = {
+            traits: ["豪快", "情に厚い", "保護的"],
+            fightingStyle: "重剣術",
+            rank: "元・S級冒険者"
+        };
+        this.allegiance = "五大陸連合";
+        this.trustLevel = "極めて高";
+    }
+    
+    assessCredibility() {
+        return {
+            canBeTrusted: true,
+            willHelp: "確実",
+            resources: "支部の全機能を利用可能"
+        };
+    }
+}
+
+const teodor = new BranchMaster();
+teodor.assessCredibility();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「すまん——心配だったんだ」</blockquote>
+
+<p>テオドール——セシリアを離した。</p>
+
+<blockquote>「消息不明って聞いて——胃が痛くなった」</blockquote>
+
+<blockquote>「ご心配おかけして——すみません」</blockquote>
+
+<p>セシリア——頭を下げた。</p>
+
+<blockquote>「いい——無事ならいい」</blockquote>
+
+<p>テオドール——目を細めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「それで——こいつらは？」</blockquote>
+
+<p>テオドール——カイトたちを見た。</p>
+
+<blockquote>「私の——仲間です」</blockquote>
+
+<p>セシリア——紹介した。</p>
+
+<blockquote>「カイト——リアム——エリナ——ミーナ」</blockquote>
+
+<p>テオドール——一人ずつ見た。</p>
+
+<blockquote>「フードの彼は——？」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイト——顔を見せなさい」</blockquote>
+
+<p>セシリア——言った。</p>
+
+<p>カイト——躊躇した。</p>
+
+<blockquote>「大丈夫——おやじ様は信頼できる」</blockquote>
+
+<p>セシリア——断言した。</p>
+
+<p>カイト——フードを取った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイト——地の賢者を継承した者だ」</blockquote>
+
+<p>セシリア——説明した。</p>
+
+<p>テオドール——目を見開いた。</p>
+
+<blockquote>「あの——手配書の？」</blockquote>
+
+<blockquote>「偽です——虚無教団の罠」</blockquote>
+
+<p>セシリア——即答した。</p>
+
+<blockquote>「こいつらは——世界を救うために戦ってる」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「世界を——救う」</blockquote>
+
+<p>テオドール——繰り返した。</p>
+
+<blockquote>「信じられないかもしれないが——真実だ」</blockquote>
+
+<p>カイト——真剣に言った。</p>
+
+<blockquote>「俺たちは——アレクシス・ヴェイルの封印へ向かってる」</blockquote>
+
+<p>テオドール——沈黙した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テオドール——カイトを見た。</p>
+
+<p>目——真剣さを測っていた。</p>
+
+<p>数秒——静寂。</p>
+
+<blockquote>「分かった——セシリアが言うなら信じる」</blockquote>
+
+<p>テオドール——結論を出した。</p>
+
+<blockquote>「手配書の件は——俺が何とかする」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ありがとうございます——おやじ様」</blockquote>
+
+<p>セシリア——安堵した。</p>
+
+<blockquote>「だが——条件がある」</blockquote>
+
+<p>テオドール——真面目な顔になった。</p>
+
+<blockquote>「何？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「俺も——連れて行け」</blockquote>
+
+<p>テオドール——宣言した。</p>
+
+<blockquote>「え——？」</blockquote>
+
+<p>カイト——驚いた。</p>
+
+<blockquote>「支部長を——留守にする気か？」</blockquote>
+
+<blockquote>「副支部長に任せる——世話になった娘が命がけで戦ってるのに——黙って見てられるか」</blockquote>
+
+<p>テオドール——拳を握った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「おやじ様...」</blockquote>
+
+<p>セシリア——感動した。</p>
+
+<blockquote>「断るなら——無理やりついて行くぞ」</blockquote>
+
+<p>テオドール——笑った。</p>
+
+<blockquote>「分かりました——歓迎します」</blockquote>
+
+<p>カイト——手を差し出した。</p>
+
+<blockquote>「頼もしい——ありがとう」</blockquote>
+
+<p>テオドール——カイトの手を握った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Party Update - New Member
+class PartyUpdate {
+    constructor() {
+        this.members = [
+            { name: "カイト", role: "リーダー・地魔法", status: "active" },
+            { name: "エリナ", role: "炎魔法", status: "active" },
+            { name: "リアム", role: "水魔法・剣術", status: "active" },
+            { name: "セシリア", role: "雷魔法・情報収集", status: "active" },
+            { name: "ミーナ", role: "水魔法・治療", status: "active" },
+            { name: "テオドール", role: "重剣術・戦闘経験", status: "new" }
+        ];
+        this.totalCombatPower = "大幅増加";
+        this.experienceBonus = "テオドールの実戦経験";
+    }
+    
+    assessNewCapabilities() {
+        return {
+            frontlineStrength: "強化",
+            tacticalKnowledge: "向上",
+            localConnections: "利用可能",
+            overallRating: "S級パーティ相当"
+        };
+    }
+}
+
+const party = new PartyUpdate();
+party.assessNewCapabilities();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「さて——まずは腹ごしらえだ」</blockquote>
+
+<p>テオドール——言った。</p>
+
+<blockquote>「食堂で何か食おう——話はそこで」</blockquote>
+
+<blockquote>「いいですね——お腹空きました」</blockquote>
+
+<p>ミーナ——嬉しそうに言った。</p>
+
+<p>一行——支部長室を出た。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——仲間を見た。</p>
+
+<p>エリナ——微笑んだ。</p>
+
+<p>リアム——頷いた。</p>
+
+<p>セシリア——安心した表情。</p>
+
+<p>ミーナ——元気いっぱい。</p>
+
+<p>テオドール——頼もしい背中。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>新たな仲間——新たな力。</p>
+
+<p>中央大陸——封印への道が開かれた。</p>
+
+<p>カイト——前を向いた。</p>
+
+<p>物語——まだ続く。</p>
+
+<p>第500章——新たな始まりの章。</p>
+
+<p>世界の運命——彼らの手の中にあった。</p>
