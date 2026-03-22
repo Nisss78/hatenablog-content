@@ -1,0 +1,856 @@
+---
+Title: 第496章：地下道の脅威
+Date: 2026-03-23T07:10:00+09:00
+---
+
+<h3>第496章：地下道の脅威</h3>
+
+<p>大地の裂け目——地下湖のほとり。</p>
+
+<p>カイト——テラドンと向き合っていた。</p>
+
+<p>地の封印——危機に瀕している。</p>
+
+<p>虚無教団——地下からの攻撃。</p>
+
+<p>新たな戦い——始まろうとしていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テラドン——湖の方を指した。</p>
+
+<blockquote>「地下道の入り口——湖の底にある」</blockquote>
+
+<p>カイト——水面を見た。</p>
+
+<blockquote>「湖の底——潜るのか？」</blockquote>
+
+<blockquote>「水魔法があれば——問題ない」</blockquote>
+
+<p>テラドン——ミーナの方を見た。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ミーナ——水の呼吸ができるか？」</blockquote>
+
+<p>テラドン——尋ねた。</p>
+
+<blockquote>「うん——母に教わった」</blockquote>
+
+<p>ミーナ——頷いた。</p>
+
+<blockquote>「みんなにも——掛けられる」</blockquote>
+
+<blockquote>「頼もしいな——ミズリアの血筋だ」</blockquote>
+
+<p>テラドン——嬉しそうに笑った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Water Breathing Spell
+class WaterBreathing {
+    constructor(caster) {
+        this.caster = caster;
+        this.duration = 7200; // 2時間
+        this.targets = [];
+    }
+    
+    apply(target) {
+        target.status.underwaterBreathing = true;
+        target.status.duration = this.duration;
+        this.targets.push(target);
+        return {
+            status: "applied",
+            remainingTime: this.duration
+        };
+    }
+    
+    applyAll(party) {
+        party.members.forEach(member => {
+            this.apply(member);
+        });
+        return {
+            affectedCount: party.members.length,
+            duration: this.duration
+        };
+    }
+}
+
+const waterBreathing = new WaterBreathing(mina);
+waterBreathing.applyAll(party);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>ミーナ——魔法を唱えた。</p>
+
+<blockquote>「Water Breathing——みんな、準備して」</blockquote>
+
+<p>青い光——パーティを包んだ。</p>
+
+<blockquote>「これで——二時間は大丈夫」</blockquote>
+
+<p>ミーナ——説明した。</p>
+
+<blockquote>「湖の底——急いで行こう」</blockquote>
+
+<p>カイト——先頭で水に入った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>湖——冷たかった。</p>
+
+<p>でも——不思議と息ができる。</p>
+
+<p>ミーナの魔法——完璧に機能していた。</p>
+
+<blockquote>「深い——十メートル以上ある」</blockquote>
+
+<p>リアム——水中で声を出した。</p>
+
+<p>水魔法の効果——声も通るらしい。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>湖底——岩がごつごつとしていた。</p>
+
+<p>テラドン——先頭を泳いでいる。</p>
+
+<p>巨体——意外なほど軽やかだった。</p>
+
+<blockquote>「ここだ——地下道の入り口」</blockquote>
+
+<p>テラドン——大きな岩を指した。</p>
+
+<p>岩——封印のルーンで覆われていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「封印——俺が解除する」</blockquote>
+
+<p>テラドン——岩に手を置いた。</p>
+
+<blockquote>「だが——注意しろ。中から敵の気配がする」</blockquote>
+
+<p>カイト——武器を構えた。</p>
+
+<blockquote>「皆——警戒して」</blockquote>
+
+<p>パーティ——戦闘態勢に入った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>岩——音もなく動いた。</p>
+
+<p>暗い通路——口を開いた。</p>
+
+<p>中から——冷たい風が吹いてきた。</p>
+
+<blockquote>「虚空の気配——」</blockquote>
+
+<p>セシリア——分析した。</p>
+
+<blockquote>「敵——間違いなくいる」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Underground Tunnel Data
+class UndergroundTunnel {
+    constructor() {
+        this.structure = {
+            totalLength: 1500, // m
+            sections: [
+                { name: "入り口区画", length: 200, enemies: "shadow_spawn" },
+                { name: "分岐点", length: 100, enemies: "none" },
+                { name: "罠の区画", length: 300, enemies: "traps" },
+                { name: "虚無の広間", length: 400, enemies: "void_cultists" },
+                { name: "封印の間", length: 500, enemies: "boss" }
+            ],
+            environment: "暗闇・低酸素"
+        };
+        this.dangers = [
+            "崩落の危険",
+            "虚空の罠",
+            "敵の待ち伏せ",
+            "封印の弱体化"
+        ];
+    }
+    
+    getProgress(currentSection) {
+        return {
+            section: currentSection,
+            remainingDistance: this.calculateRemaining(currentSection),
+            estimatedEnemies: this.estimateEnemies(currentSection)
+        };
+    }
+}
+
+const tunnel = new UndergroundTunnel();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>地下道——進んでいく。</p>
+
+<p>壁——不気味なほど滑らかだった。</p>
+
+<blockquote>「人工的——誰かが掘ったのか？」</blockquote>
+
+<p>エリナ——壁を触った。</p>
+
+<blockquote>「虚無教団——以前から準備していた」</blockquote>
+
+<p>テラドン——答えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「何年も前から——この道を掘っていた」</blockquote>
+
+<p>テラドン——悔しそうに言った。</p>
+
+<blockquote>「俺は——気づかなかった。地下湖の底から——攻められるとは」</blockquote>
+
+<blockquote>「テラドン——責めるな。敵は狡猾だ」</blockquote>
+
+<p>カイト——テラドンの肩を叩いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>最初の区画——敵が現れた。</p>
+
+<p>影の使い魔——十体以上。</p>
+
+<p>暗闇から——次々と現れる。</p>
+
+<blockquote>「Shadow Legion——影の軍団だ」</blockquote>
+
+<p>カイト——識別した。</p>
+
+<blockquote>「通常の使い魔より強い」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「みんな——散開！」</blockquote>
+
+<p>カイト——指示した。</p>
+
+<blockquote>「リアム——前衛。エリナ——風で視界確保。ミーナ——補助。セシリア——分析」</blockquote>
+
+<blockquote>「了解！」</blockquote>
+
+<p>パーティ——動いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Shadow Legion戦闘
+class ShadowLegionBattle {
+    constructor() {
+        this.enemies = {
+            count: 15,
+            type: "Shadow Legion",
+            level: 25,
+            hp: 800,
+            weakness: "光・聖属性",
+            abilities: ["影潜り", "闇の刃", "恐怖の視線"]
+        };
+        this.strategy = {
+            phase1: "Light Burst で弱体化",
+            phase2: "リアムが個別撃破",
+            phase3: "エリナの風で残りを吹き飛ばす"
+        };
+    }
+    
+    executeStrategy(party) {
+        return {
+            actions: [
+                { caster: "カイト", spell: "Light Burst", damage: "全体400" },
+                { caster: "リアム", action: "剣撃", damage: "単体300" },
+                { caster: "エリナ", spell: "Wind Slash", damage: "全体200" }
+            ],
+            result: "全滅",
+            duration: "約5分"
+        };
+    }
+}
+
+const battle = new ShadowLegionBattle();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——魔法を唱えた。</p>
+
+<blockquote>「Light Burst——！」</blockquote>
+
+<p>地下道——光に満ちた。</p>
+
+<p>影——悲鳴を上げて弱体化した。</p>
+
+<blockquote>「今だ——リアム！」</blockquote>
+
+<p>カイト——叫んだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>リアム——剣を振るう。</p>
+
+<p>弱った影——次々と切り裂かれた。</p>
+
+<blockquote>「残り三体！」</blockquote>
+
+<p>リアム——報告した。</p>
+
+<blockquote>「Wind Slash——！」</blockquote>
+
+<p>エリナ——風魔法を放った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>風刃——影を切り裂いた。</p>
+
+<p>最後の一体——消滅した。</p>
+
+<blockquote>「クリア——進もう」</blockquote>
+
+<p>カイト——前を向いた。</p>
+
+<blockquote>「封印の間——まだ先だ」</blockquote>
+
+<p>テラドン——先導した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>分岐点——三つの道があった。</p>
+
+<blockquote>「どっちだ——？」</blockquote>
+
+<p>リアム——迷った。</p>
+
+<blockquote>「真ん中——封印の間へ続く」</blockquote>
+
+<p>テラドン——答えた。</p>
+
+<blockquote>「左右——敵の拠点だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「敵の拠点——無視する？」</blockquote>
+
+<p>エリナ——尋ねた。</p>
+
+<blockquote>「封印が優先だ——後で掃討できる」</blockquote>
+
+<p>カイト——決断した。</p>
+
+<blockquote>「真ん中——行くぞ」</blockquote>
+
+<p>パーティ——中央の通路へ進んだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>罠の区画——床に違和感があった。</p>
+
+<blockquote>「待て——罠だ」</blockquote>
+
+<p>セシリア——警告した。</p>
+
+<blockquote>「床のタイル——圧力感知式」</blockquote>
+
+<p>カイト——足を止めた。</p>
+
+<blockquote>「セシリア——安全ルートを」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 罠回避システム
+class TrapAvoidance {
+    scan(tiles) {
+        const safePath = [];
+        tiles.forEach((row, y) => {
+            row.forEach((tile, x) => {
+                if (tile.pressure === 0) {
+                    safePath.push({ x, y });
+                }
+            });
+        });
+        return {
+            safeTiles: safePath,
+            dangerTiles: tiles.length * tiles[0].length - safePath.length,
+            instructions: "安全なタイルのみ踏んで進む"
+        };
+    }
+    
+    guide(party, path) {
+        return {
+            steps: path.length,
+            warning: "足元を常に確認",
+            estimatedTime: "5分"
+        };
+    }
+}
+
+const trapAvoidance = new TrapAvoidance();
+const path = trapAvoidance.scan(floorTiles);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>セシリア——床を分析した。</p>
+
+<blockquote>「右側——安全。そこを通って」</blockquote>
+
+<p>カイト——指示に従った。</p>
+
+<p>一歩——慎重に。</p>
+
+<blockquote>「次——二歩前」</blockquote>
+
+<p>セシリア——ナビゲートした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>パーティ——罠の区画を抜けた。</p>
+
+<blockquote>「助かった——セシリア、いい仕事だ」</blockquote>
+
+<p>カイト——感謝した。</p>
+
+<blockquote>「分析は——得意ですから」</blockquote>
+
+<p>セシリア——淡々と答えた。</p>
+
+<blockquote>「先——敵の気配が強い」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>虚無の広間——開けた空間に出た。</p>
+
+<p>広い——教会くらいの大きさ。</p>
+
+<p>中央——祭壇があった。</p>
+
+<p>祭壇の上——黒い水晶が置かれている。</p>
+
+<blockquote>「虚空の増幅器——」</blockquote>
+
+<p>テラドン——忌々しそうに言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「教団——封印を弱めるために設置した」</blockquote>
+
+<p>テラドン——説明した。</p>
+
+<blockquote>「これを破壊すれば——封印の弱体化は止まる」</blockquote>
+
+<blockquote>「破壊しよう」</blockquote>
+
+<p>カイト——前に出た。</p>
+
+<blockquote>「待て——敵がいる」</blockquote>
+
+<p>リアム——制止した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>広間——影から人物が現れた。</p>
+
+<p>黒いローブ——虚無教団の幹部。</p>
+
+<p>顔——見えない。フードで隠されている。</p>
+
+<blockquote>「予言の者——ついに来たか」</blockquote>
+
+<p>幹部——不気味な声で言った。</p>
+
+<blockquote>「我が名は——ヴォイド・テンプラー。十三使徒の一人」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「十三使徒——！」</blockquote>
+
+<p>カイト——警戒を強めた。</p>
+
+<blockquote>「ヴォイド・テンプラー——虚空の騎士。近接戦闘のエキスパート」</blockquote>
+
+<p>セシリア——分析した。</p>
+
+<blockquote>「危険度——極めて高い」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Void Templar Data
+class VoidTemplar {
+    constructor() {
+        this.name = "ヴォイド・テンプラー";
+        this.rank = "十三使徒・第八席";
+        this.stats = {
+            hp: 15000,
+            mp: 8000,
+            attack: 450,
+            defense: 380,
+            speed: 200
+        };
+        this.abilities = [
+            { name: "Void Slash", type: "攻撃", damage: 800, effect: "虚空属性" },
+            { name: "Shadow Step", type: "移動", effect: "瞬間移動" },
+            { name: "Dark Barrier", type: "防御", effect: "ダメージ50%軽減" },
+            { name: "Abyss Call", type: "召喚", effect: "影の使い魔3体" }
+        ];
+        this.weakness = ["聖属性", "光属性"];
+        this.resistance = ["闇属性", "物理攻撃50%"];
+    }
+    
+    engage() {
+        return {
+            openingLine: "虚無の深淵へ——案内しよう",
+            threatLevel: "extreme",
+            recommendedStrategy: "聖・光魔法で攻撃、影の使い魔を優先排除"
+        };
+    }
+}
+
+const templar = new VoidTemplar();
+const enemyData = templar.engage();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「テラドン——水晶の破壊を頼む」</blockquote>
+
+<p>カイト——指示した。</p>
+
+<blockquote>「俺たちが——こいつを抑える」</blockquote>
+
+<blockquote>「分かった——急ぐぞ」</blockquote>
+
+<p>テラドン——祭壇へ走った。</p>
+
+<blockquote>「させると思うか——？」</blockquote>
+
+<p>ヴォイド・テンプラー——剣を抜いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>黒い刃——虚空の力を纏っていた。</p>
+
+<blockquote>「Earth Wall——！」</blockquote>
+
+<p>カイト——防御魔法を唱えた。</p>
+
+<p>岩の壁——テラドンとヴォイド・テンプラーの間に現れた。</p>
+
+<blockquote>「無駄だ——Void Slash！」</blockquote>
+
+<p>テンプラー——壁を切り裂いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「強い——！」</blockquote>
+
+<p>カイト——驚愕した。</p>
+
+<blockquote>「リアム——抑えてくれ！」</blockquote>
+
+<blockquote>「任せろ——！」</blockquote>
+
+<p>リアム——剣を構えて突進した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>剣と剣——激突した。</p>
+
+<p>火花——暗闇に散った。</p>
+
+<blockquote>「悪くない——だが、足りない」</blockquote>
+
+<p>ヴォイド・テンプラー——余裕だった。</p>
+
+<blockquote>「Shadow Step」</blockquote>
+
+<p>テンプラー——姿を消した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「消えた——！？」</blockquote>
+
+<p>リアム——周囲を見回した。</p>
+
+<blockquote>「後ろだ——！」</blockquote>
+
+<p>エリナ——叫んだ。</p>
+
+<p>ヴォイド・テンプラー——リアムの背後に現れた。</p>
+
+<blockquote>「Void Slash——！」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>リアム——間一髪で回避した。</p>
+
+<p>黒い刃——空を切った。</p>
+
+<blockquote>「危なかった——」</blockquote>
+
+<p>リアム——冷や汗を流した。</p>
+
+<blockquote>「みんな——囲んで！ 連携だ！」</blockquote>
+
+<p>カイト——指示した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// ヴォイド・テンプラー戦闘戦略
+class TemplarBattleStrategy {
+    constructor(party, enemy) {
+        this.party = party;
+        this.enemy = enemy;
+        this.phase = 1;
+    }
+    
+    phase1_control() {
+        return {
+            objective: "敵の行動を制限",
+            actions: [
+                "カイト: Gravity Field で移動阻害",
+                "エリナ: Wind Bind で拘束",
+                "リアム: 攻撃チャンスを作る",
+                "ミーナ: 回復・バフ維持"
+            ],
+            duration: "2-3分"
+        };
+    }
+    
+    phase2_damage() {
+        return {
+            objective: "最大ダメージ",
+            actions: [
+                "カイト: Holy Nova (聖属性大魔法)",
+                "リアム: 剣技・聖なる一撃",
+                "エリナ: 風・光複合魔法",
+                "ミーナ: 水聖魔法で弱点攻撃"
+            ],
+            estimatedDamage: "4000-5000"
+        };
+    }
+    
+    phase3_finish() {
+        return {
+            objective: "とどめ",
+            actions: [
+                "全員: 一斉攻撃",
+                "カイト: Code Breaker で敵の防御解除"
+            ],
+            condition: "敵HP30%以下"
+        };
+    }
+}
+
+const strategy = new TemplarBattleStrategy(party, templar);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「Gravity Field——！」</blockquote>
+
+<p>カイト——重力魔法を放った。</p>
+
+<p>ヴォイド・テンプラー——動きが鈍った。</p>
+
+<blockquote>「今だ——エリナ！」</blockquote>
+
+<blockquote>「Wind Bind——！」</blockquote>
+
+<p>エリナ——風で敵を拘束した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「リアム——聖なる一撃！」</blockquote>
+
+<p>カイト——叫んだ。</p>
+
+<p>リアム——剣に聖属性を纏った。</p>
+
+<blockquote>「聖剣技——ライトニング・ストライク！」</blockquote>
+
+<p>リアム——渾身の一撃を放った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>剣——ヴォイド・テンプラーの肩を切り裂いた。</p>
+
+<blockquote>「ぐっ——聖属性か」</blockquote>
+
+<p>テンプラー——苦痛に顔を歪めた。</p>
+
+<blockquote>「Dark Barrier——！」</blockquote>
+
+<p>黒い障壁——テンプラーを包んだ。</p>
+
+<blockquote>「ダメージ軽減——次はこっちだ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイト——大きいのいくよ！」</blockquote>
+
+<p>ミーナ——魔法を構築した。</p>
+
+<blockquote>「Holy Aqua——聖なる水！」</blockquote>
+
+<p>青白い水流——テンプラーを直撃した。</p>
+
+<blockquote>「ぐあああ——！」</blockquote>
+
+<p>テンプラー——悲鳴を上げた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>聖水——テンプラーの防御を削った。</p>
+
+<blockquote>「今——ダメージが通る！」</blockquote>
+
+<p>カイト——チャンスを見た。</p>
+
+<blockquote>「Code Breaker——敵の防御を解除！」</blockquote>
+
+<p>カイト——特殊魔法を発動した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// Code Breaker Spell
+class CodeBreaker {
+    constructor(target) {
+        this.target = target;
+        this.effect = "防御バフ解除";
+        this.duration = 10; // 秒
+    }
+    
+    execute() {
+        // 敵の防御システムをハッキング
+        this.target.buffs.forEach(buff => {
+            if (buff.type === "defense") {
+                buff.active = false;
+            }
+        });
+        return {
+            status: "success",
+            removedBuffs: ["Dark Barrier"],
+            vulnerabilityDuration: this.duration
+        };
+    }
+}
+
+const codeBreaker = new CodeBreaker(templar);
+codeBreaker.execute();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>ヴォイド・テンプラー——防御が消えた。</p>
+
+<blockquote>「な——何をした！？」</blockquote>
+
+<p>テンプラー——驚愕した。</p>
+
+<blockquote>「プログラミング魔法——敵の能力を無効化できる」</blockquote>
+
+<p>カイト——説明した。</p>
+
+<blockquote>「みんな——総攻撃！」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>パーティ——一斉に攻撃した。</p>
+
+<blockquote>「Holy Nova——！」</blockquote>
+
+<p>カイト——聖魔法を放った。</p>
+
+<blockquote>「聖剣技——ヘヴン・スラッシュ！」</blockquote>
+
+<p>リアム——剣を振り下ろした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「Wind Holy——聖風！」</blockquote>
+
+<p>エリナ——風と聖の複合魔法。</p>
+
+<blockquote>「Aqua Purify——浄化の水！」</blockquote>
+
+<p>ミーナ——癒やしの水流。</p>
+
+<p>四つの攻撃——ヴォイド・テンプラーに命中した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ぐあああああ——！」</blockquote>
+
+<p>テンプラー——悲鳴を上げて膝をついた。</p>
+
+<p>HP——残り僅か。</p>
+
+<blockquote>「まさか——この俺が——」</blockquote>
+
+<p>テンプラー——信じられないという表情。</p>
+
+<blockquote>「撤退する——覚えてろよ、予言の者」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テンプラー——黒い霧に包まれた。</p>
+
+<blockquote>「逃がすか——！」</blockquote>
+
+<p>リアム——追おうとした。</p>
+
+<blockquote>「待て——深追いは危険だ」</blockquote>
+
+<p>カイト——制止した。</p>
+
+<p>霧——消え、テンプラーも消えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「逃げられたな——」</blockquote>
+
+<p>エリナ——悔しそうに言った。</p>
+
+<blockquote>「でも——勝った。水晶も破壊できた」</blockquote>
+
+<p>カイト——祭壇の方を見た。</p>
+
+<p>テラドン——水晶を粉砕していた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「終わった——これで封印の弱体化は止まる」</blockquote>
+
+<p>テラドン——安堵した。</p>
+
+<blockquote>「十三使徒——第八席を退けたか。見事だ」</blockquote>
+
+<blockquote>「逃げられたのが——心残りですが」</blockquote>
+
+<p>カイト——言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「十三使徒——全員倒さないと、虚無は止まらない」</blockquote>
+
+<p>テラドン——真剣な顔で言った。</p>
+
+<blockquote>「第八席——中位だ。もっと強い奴もいる」</blockquote>
+
+<blockquote>「分かってます——覚悟はできてます」</blockquote>
+
+<p>カイト——決意を新たにした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトたち——虚無の広間で勝利した。</p>
+
+<p>地の封印——危機を脱した。</p>
+
+<p>だが——戦いは終わらない。</p>
+
+<p>十三使徒——まだ十二人残っている。</p>
+
+<p>ヴォイド・テンプラー——复仇を誓った。</p>
+
+<p>カイトの旅——続く。</p>
+
+<p>次なる封印——次なる戦いへ。</p>
