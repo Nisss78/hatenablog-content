@@ -1,0 +1,456 @@
+---
+Title: 第475章：霧中の追跡者
+Date: 2026-03-23T07:20:00+09:00
+---
+
+<h3>第475章：霧中の追跡者</h3>
+
+<p>虚無狼が消滅した後、カイトたちは息を整えた。</p>
+
+<p>霧の中は静かだ。でも、その静寂こそが不気味だった。何かが潜んでいる。いつ、どこから襲ってくるかわからない。</p>
+
+<blockquote>「カイト、道、どう？」</blockquote>
+
+<p>エリナが、カイトに聞いた。</p>
+
+<p>カイトは、目の前の霧を見つめていた。さっき開いた道は、すでに霧に覆われ始めている。この空間は、常に変化しているのだ。</p>
+
+<blockquote>「もう一度、解析する必要がある」</blockquote>
+
+<p>カイトは、目を閉じた。</p>
+
+<p>霧の中にある構造。それは、単なる迷路じゃない。生きているシステム。侵入者を迷わせ、飲み込むためのシステム。</p>
+
+<pre><code>
+class MistAnalysis {
+  private mist: MistBarrier;
+  private previousPath: Path;
+  
+  public detectChanges(): ChangeLog[] {
+    const currentStructure = this.mist.scanStructure();
+    const changes = this.previousPath.compareTo(currentStructure);
+    return changes;
+  }
+  
+  public identifyThreats(): Threat[] {
+    const entities = this.mist.detectEntities();
+    return entities.filter(e => e.hostility > 0.7);
+  }
+  
+  public findSafeRoute(): Path {
+    const changes = this.detectChanges();
+    const threats = this.identifyThreats();
+    
+    const path = new Path();
+    path.avoid(threats);
+    path.adaptTo(changes);
+    path.optimize();
+    
+    return path;
+  }
+}
+</code></pre>
+
+<p>カイトの脳内に、霧の構造が浮かび上がった。</p>
+
+<p>複雑な迷路。無数の分岐点。そして——複数の熱源反応。</p>
+
+<blockquote>「……まずい」</blockquote>
+
+<p>カイトが、目を開けた。</p>
+
+<blockquote>「虚無狼が、三体。それに、もっと大きな何かが奥にいる」</blockquote>
+
+<blockquote>「大きな何か？」</blockquote>
+
+<p>リアムが、剣を構えた。</p>
+
+<blockquote>「虚無狼のボス、みたいなやつか？」</blockquote>
+
+<blockquote>「わからない。でも、強力な魔力反応がある。気をつけて」</blockquote>
+
+<p>カイトは、新しい道を開いた。</p>
+
+<p>霧が晴れ、円形の視界が広がる。その先に、薄く光る道標のようなものが見えた。</p>
+
+<blockquote>「あれ、何？」</blockquote>
+
+<p>セシリアが、指差した。</p>
+
+<blockquote>「光ってる……霧の中なのに」</blockquote>
+
+<p>カイトは、目を細めた。</p>
+
+<p>光る道標。それは、自然のものではない。誰かが意図的に作ったものだ。</p>
+
+<blockquote>「陷阱（トラップ）かもしれない。でも、進むしかない」</blockquote>
+
+<p>カイトたちは、光る道標に向かって歩き始めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>道標に近づくにつれて、霧が薄くなっていった。</p>
+
+<p>まるで、その場所だけ特別に守られているかのように。カイトは、違和感を感じた。</p>
+
+<blockquote>「ここ、何か変だ」</blockquote>
+
+<p>カイトが、立ち止まった。</p>
+
+<blockquote>「霧が晴れてる。自然に晴れるわけない」</blockquote>
+
+<blockquote>「じゃあ、誰かが？」</blockquote>
+
+<p>エリナが、周囲を警戒した。</p>
+
+<p>その時——霧の奥から、声が聞こえた。</p>
+
+<blockquote>「ようやく来たか、外部の者よ」</blockquote>
+
+<p>カイトたちは、身構えた。</p>
+
+<p>霧の中から、一人の人物が現れた。白いローブを身に纏い、杖を持った老人。その目は、鋭くカイトたちを捉えていた。</p>
+
+<blockquote>「お前は……誰だ？」</blockquote>
+
+<p>カイトが、問いかける。</p>
+
+<blockquote>「我が名はエルドリッジ。霧の深淵を守る者、じゃ」</blockquote>
+
+<p>老人は、静かに言った。</p>
+
+<blockquote>「霧の深淵は、虚無の領域に近い場所。不用意に近づく者を、ここで食い止めておる」</blockquote>
+
+<blockquote>「食い止めているって、どういうこと？」</blockquote>
+
+<p>エリナが、聞いた。</p>
+
+<blockquote>「虚無の欠片への道を、守っているということじゃ。資なき者に、あれを触らせるわけにはいかん」</blockquote>
+
+<p>エルドリッジの目が、カイトをじっと見た。</p>
+
+<blockquote>「お前、コードを紡ぐ力を持っておるな。外部の世界から来た、特殊な才能の持ち主」</blockquote>
+
+<blockquote>「……どうしてそれを？」</blockquote>
+
+<p>カイトは、驚いた。</p>
+
+<blockquote>「霧の動きでわかる。お前がコードで道を開いた瞬間、霧が反応した。普通の魔法使いにはできん業じゃ」</blockquote>
+
+<p>エルドリッジは、杖を地面に突いた。</p>
+
+<blockquote>「だが、言葉だけでは信じられん。お前が真に資ある者か、見極めさせてもらう」</blockquote>
+
+<blockquote>「試すってこと？」</blockquote>
+
+<p>リアムが、身構えた。</p>
+
+<blockquote>「そうじゃ。私と戦え。勝てば、虚無の欠片への道を開こう」</blockquote>
+
+<p>エルドリッジの体から、魔力が溢れ出した。</p>
+
+<p>カイトは、その圧倒的な力に息を呑んだ。この老人、ただの守護者じゃない。強力な魔法使いだ。</p>
+
+<blockquote>「カイト、私がやる」</blockquote>
+
+<p>リアムが、前に出た。</p>
+
+<blockquote>「いや、リアム。彼が相手にしているのは、僕だ」</blockquote>
+
+<p>カイトは、リアムを制止した。</p>
+
+<blockquote>「コードの力を見たいって言ってる。なら、僕が応えるべきだ」</blockquote>
+
+<p>カイトは、エルドリッジと向き合った。</p>
+
+<blockquote>「わかりました。その勝負、受けます」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトとエルドリッジ、二人は向かい合った。</p>
+
+<p>エリナ、リアム、セシリアは、少し離れた場所で見守っている。</p>
+
+<blockquote>「ルールは簡単じゃ。私を一本でも倒せば、お前の勝ち。逆に、お前が倒されれば、引き返してもらう」</blockquote>
+
+<p>エルドリッジが、説明した。</p>
+
+<blockquote>「武器の使用は自由。魔法も自由。ただし——」</blockquote>
+
+<p>エルドリッジの目が、鋭くなった。</p>
+
+<blockquote>「仲間の介入は認めん。お前一人の力で、私を超えてみせよ」</blockquote>
+
+<blockquote>「わかりました」</blockquote>
+
+<p>カイトは、深呼吸をした。</p>
+
+<p>相手は、霧の深淵を守る強力な魔法使い。油断はできない。でも、コードの力がある。勝機はあるはずだ。</p>
+
+<blockquote>「始め！」</blockquote>
+
+<p>エルドリッジが叫ぶと同時に、杖を振った。</p>
+
+<p>霧が渦を巻き、カイトに襲いかかる。無数の霧の矢——物理的な実体はないが、魔力を帯びている。当たればただでは済まない。</p>
+
+<p>カイトは、素早くコードを紡いだ。</p>
+
+<pre><code>
+class MistArrowDefense {
+  private incomingArrows: MistArrow[];
+  
+  public defend(): void {
+    for (const arrow of this.incomingArrows) {
+      this.disperse(arrow);
+    }
+  }
+  
+  private disperse(arrow: MistArrow): void {
+    arrow.density = 0; // 霧の密度をゼロに
+    arrow.velocity = 0; // 速度もゼロに
+    arrow.dissolve(); // 消滅させる
+  }
+}
+</code></pre>
+
+<p>霧の矢が、カイトの目の前で消滅した。</p>
+
+<blockquote>「ほう、霧を操る力があるか」</blockquote>
+
+<p>エルドリッジが、感心したように言った。</p>
+
+<blockquote>「じゃが、これならどうじゃ！」</blockquote>
+
+<p>エルドリッジが、地面を叩いた。</p>
+
+<p>足元の大地が揺れ、亀裂が走る。岩が隆起し、カイトを押しつぶそうとする。</p>
+
+<p>カイトは、バックステップで回避した。でも、攻撃は止まらない。次々と岩が隆起し、カイトを追い詰めていく。</p>
+
+<blockquote>「くっ——」</blockquote>
+
+<p>カイトは、苦戦した。</p>
+
+<p>霧の攻撃は、コードで対処できた。でも、大地の攻撃は別だ。物理的な実体がある。コードで操作するには、より多くの魔力が必要だ。</p>
+
+<p>その時、カイトは気づいた。</p>
+
+<p>エルドリッジの攻撃パターン。彼は、杖を振るタイミングと、地面を叩くタイミングを交互に繰り返している。リズムがある。</p>
+
+<blockquote>「……プログラムで言えば、ループ処理だ」</blockquote>
+
+<p>カイトは、呟いた。</p>
+
+<p>ループには、必ず終了条件がある。あるいは、繰り返しのパターンがある。それを見抜けば——</p>
+
+<pre><code>
+class PatternRecognition {
+  private attackLog: Attack[];
+  
+  public analyzePattern(): AttackPattern {
+    const intervals = this.calculateIntervals();
+    const types = this.categorizeAttacks();
+    
+    return new AttackPattern(intervals, types);
+  }
+  
+  public predictNextAttack(): Attack {
+    const pattern = this.analyzePattern();
+    return pattern.predictNext();
+  }
+  
+  public findOpening(): Opening {
+    const pattern = this.analyzePattern();
+    return pattern.findWeakness();
+  }
+}
+</code></pre>
+
+<p>カイトの目に、エルドリッジの弱点が見えた。</p>
+
+<p>攻撃の合間。杖を振り上げる瞬間、ほんの一瞬の隙がある。そこを狙えば——</p>
+
+<blockquote>「もらった！」</blockquote>
+
+<p>カイトは、反撃のコードを紡いだ。</p>
+
+<pre><code>
+class CounterAttack {
+  private target: Eldridge;
+  private opening: Opening;
+  
+  public execute(): void {
+    const timing = this.opening.calculateTiming();
+    
+    // 杖を無力化
+    this.target.staff.nullify(timing);
+    
+    // 足元を固定
+    this.target.feet.root();
+    
+    // 風魔法で突進
+    WindMagic.accelerate(this, 3.0);
+  }
+}
+</code></pre>
+
+<p>カイトは、風に乗って加速した。</p>
+
+<p>エルドリッジの杖が、動きを止める。足元が固定される。老人は、驚いた表情をした。</p>
+
+<p>カイトは、エルドリッジの目の前まで迫った。</p>
+
+<p>そして——</p>
+
+<blockquote>「检查（チェック）！」</blockquote>
+
+<p>カイトは、エルドリッジの胸元に手刀を突き出した。</p>
+
+<p>老人は、後ろに吹き飛んだ。地面に倒れ、大きく息をする。</p>
+
+<blockquote>「……見事じゃ」</blockquote>
+
+<p>エルドリッジは、静かに言った。</p>
+
+<blockquote>「わしの攻撃パターンを読み、隙を突くとは。まさに、資ある者の戦い方じゃ」</blockquote>
+
+<p>エルドリッジは、ゆっくりと立ち上がった。</p>
+
+<blockquote>「約束通り、道を開こう。虚無の欠片への、な」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>エルドリッジは、カイトたちを霧の奥へと案内した。</p>
+
+<p>霧が晴れ、道が現れる。老人の魔法で、安全な通路が形成された。</p>
+
+<blockquote>「虚無の欠片は、この先の深淵の底にある」</blockquote>
+
+<p>エルドリッジが、説明した。</p>
+
+<blockquote>「じゃが、気をつけるのじゃ。深淵の底には、虚無そのものが眠っている。直接触れることは避けよ」</blockquote>
+
+<blockquote>「虚無そのもの？」</blockquote>
+
+<p>セシリアが、聞いた。</p>
+
+<blockquote>「世界に存在しないはずの無。それが、この場所には凝縮されておる。賢者たちが封印した、古の災いじゃ」</blockquote>
+
+<p>エルドリッジの言葉に、カイトたちは緊張した。</p>
+
+<blockquote>「虚無の欠片は、その凝縮された無の一部。触れるだけで精神を侵される。心して近づくのじゃ」</blockquote>
+
+<blockquote>「わかりました。ありがとうございます、エルドリッジさん」</blockquote>
+
+<p>カイトが、礼を言った。</p>
+
+<blockquote>「礼には及ばん。お前が世界を救う可能性があるなら、わしは道を開くのみじゃ」</blockquote>
+
+<p>エルドリッジは、微笑んだ。</p>
+
+<blockquote>「行け、若者よ。そして、この世界に希望をもたらせ」</blockquote>
+
+<p>カイトたちは、深淵の底へと向かった。</p>
+
+<p>階段が、霧の中に続いている。その先に、虚無の欠片が待っている。</p>
+
+<p>カイトは、心を決めて、一歩を踏み出した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>階段を降りると、視界が開けた。</p>
+
+<p>そこは、地下空洞だった。天井は見えないほど高く、壁は霧に覆われている。</p>
+
+<p>そして、空洞の中央に——黒い結晶が浮いていた。</p>
+
+<blockquote>「あれが……虚無の欠片」</blockquote>
+
+<p>カイトが、呟いた。</p>
+
+<p>黒い結晶。その周りだけ、空気が歪んでいる。近づくだけで、不安が押し寄せてくる。</p>
+
+<blockquote>「すごいプレッシャー……」</blockquote>
+
+<p>エリナが、震える声で言った。</p>
+
+<blockquote>「大丈夫？ 近づかない方がいい？」</blockquote>
+
+<p>カイトは、首を振った。</p>
+
+<blockquote>「いや、行かなきゃ。原初の座へ行くには、これが必要だ」</blockquote>
+
+<p>カイトは、一人で結晶に近づいた。</p>
+
+<p>一歩、また一歩。プレッシャーが強くなる。頭が痛い。何かが、カイトの中に侵入しようとしている。</p>
+
+<blockquote>「カイト！」</blockquote>
+
+<p>セシリアが、叫んだ。</p>
+
+<p>カイトは、結晶の前に立った。</p>
+
+<p>黒い輝き。その奥に、何かが見える。無限の闇。いや——無限の無。</p>
+
+<pre><code>
+class VoidFragmentExtraction {
+  private fragment: VoidFragment;
+  private container: MagicalContainer;
+  
+  public extract(): void {
+    // 直接触れず、コードで操作
+    this.fragment.isolate();
+    this.fragment.seal();
+    this.fragment.transferTo(this.container);
+    
+    // 精神への干渉を遮断
+    this.fragment.blockPsychicIntrusion();
+  }
+}
+</code></pre>
+
+<p>カイトは、結晶に手を伸ばした。</p>
+
+<p>直接触れない。コードで包み、隔離する。</p>
+
+<p>黒い結晶が、カイトの魔法に反応した。ゆっくりと、持ち上がる。</p>
+
+<blockquote>「成功……？」</blockquote>
+
+<p>カイトが、安堵した瞬間——</p>
+
+<p>結晶が、眩い黒光を放った。</p>
+
+<blockquote>「カイト、危ない！」</blockquote>
+
+<p>エリナの声。</p>
+
+<p>カイトは、意識が遠のいた。</p>
+
+<p>闇の中。無の中。そこで、カイトは見た。</p>
+
+<p>自分の中にある、もう一人の存在を。</p>
+
+<blockquote>「やあ、久しぶりだね。カイト」</blockquote>
+
+<p>闇の中から、カイトと同じ顔をした少年が現れた。</p>
+
+<p>カイトの分身。あるいは——カイトの中に眠る、もう一つの意識。</p>
+
+<blockquote>「お前は……」</blockquote>
+
+<blockquote>「僕？ 僕はお前の裏側。この世界に来る前から、お前の中にいた存在だよ」</blockquote>
+
+<p>少年は、楽しそうに笑った。</p>
+
+<blockquote>「虚無の欠片に触れたことで、目覚めさせられた。ありがとう、カイト。おかげで、やっと外に出られる」</blockquote>
+
+<p>カイトは、戦慄した。</p>
+
+<p>自分の中に、もう一人がいた。そして、そのもう一人が——外に出ようとしている。</p>
+
+<p>虚無の欠片。それは、カイトの運命を変えるものだった。</p>
+
+<p>そして——物語は、新たな局面を迎える。</p>
+
+<p style="text-align: right;">（つづく）</p>
