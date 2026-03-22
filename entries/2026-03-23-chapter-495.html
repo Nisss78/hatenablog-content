@@ -1,0 +1,856 @@
+---
+Title: 第495章：大地の裂け目へ
+Date: 2026-03-23T07:00:00+09:00
+---
+
+<h3>第495章：大地の裂け目へ</h3>
+
+<p>テラ港——到着した翌朝。</p>
+
+<p>カイトたちは——馬車を手配していた。</p>
+
+<p>目的地——大地の裂け目。</p>
+
+<p>地の封印——テラドンが守る場所。</p>
+
+<p>中央大陸の旅——始まったばかり。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テラ港の馬車宿——「大地の息吹亭」</p>
+
+<p>カイト——朝食を終え、準備を整えていた。</p>
+
+<blockquote>「馬車——手配できた？」</blockquote>
+
+<p>リアム——宿の主人と話していた。</p>
+
+<blockquote>「ああ——三日で裂け目まで行ける。名手の御者だ」</blockquote>
+
+<blockquote>「頼もしいな」</blockquote>
+
+<p>カイト——頷いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ねえ——裂け目って、どんな場所？」</blockquote>
+
+<p>ミーナ——地図を見ながら聞いた。</p>
+
+<blockquote>「中央大陸の北部——山脈の中にある巨大な亀裂だ」</blockquote>
+
+<p>セシリア——調べたことを説明した。</p>
+
+<blockquote>「深さ——千メートル以上。底には——地下湖があるらしい」</blockquote>
+
+<blockquote>「地下湖——？ 水があるんだ」</blockquote>
+
+<p>ミーナ——少し嬉しそうに言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 大地の裂け目データ
+class ChasmData {
+    constructor() {
+        this.name = "大地の裂け目";
+        this.location = "中央大陸北部・岩脈山脈";
+        this.dimensions = {
+            length: 50, // km
+            width: 2, // km
+            depth: 1500 // m
+        };
+        this.features = [
+            "地下湖",
+            "地脈の交差点",
+            "地の封印の座",
+            "古代の遺跡"
+        ];
+        this.guardian = "テラドン（地の賢者）";
+        this.sealedEntity = "原初の地の種";
+    }
+    
+    getRouteFromPort() {
+        return {
+            distance: 280, // km
+            estimatedTime: "3日",
+            terrain: ["平原", "丘陵", "山地", "峠"],
+            restPoints: ["石壁の村", "峠の茶屋"]
+        };
+    }
+}
+
+const chasm = new ChasmData();
+const route = chasm.getRouteFromPort();</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>馬車——準備が整った。</p>
+
+<p>御者——五〇代くらいの男性。白髪に日焼けした顔。</p>
+
+<blockquote>「俺はガロ——この道を二十年走ってる」</blockquote>
+
+<p>御者——自己紹介した。</p>
+
+<blockquote>「裂け目まで——三人乗せるんだろ？」</blockquote>
+
+<blockquote>「五人だ——俺も含めて」</blockquote>
+
+<p>カイト——訂正した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「五人——荷物は？」</blockquote>
+
+<p>ガロ——馬車を指した。</p>
+
+<blockquote>「各自の荷物だけ——食料は三日分持ってる」</blockquote>
+
+<p>セシリア——荷物を積み込んだ。</p>
+
+<blockquote>「出発しよう——時間が惜しい」</blockquote>
+
+<p>カイト——馬車に乗り込んだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>馬車——テラ港を出発した。</p>
+
+<p>平原——広がる大地。</p>
+
+<p>カイト——窓から景色を見た。</p>
+
+<blockquote>「中央大陸——広いな」</blockquote>
+
+<p>エリナ——隣で呟いた。</p>
+
+<blockquote>「東の大陸とは——地形が違う」</blockquote>
+
+<blockquote>「地脈——強く感じる」</blockquote>
+
+<p>ミーナ——目を閉じて感じていた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ミーナ——地脈が分かるの？」</blockquote>
+
+<p>カイト——驚いて聞いた。</p>
+
+<blockquote>「うん——水と地は関係が深いから」</blockquote>
+
+<p>ミーナ——説明した。</p>
+
+<blockquote>「地下水脈——地脈と繋がってる。だから——地の力も少し感じる」</blockquote>
+
+<blockquote>「水の賢者の娘——役に立つ能力だ」</blockquote>
+
+<p>リアム——感心した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>一日目——平原を進んだ。</p>
+
+<p>夕方——石壁の村に到着。</p>
+
+<p>石造りの家々——頑丈な壁に囲まれた村。</p>
+
+<blockquote>「ここで——一泊する」</blockquote>
+
+<p>ガロ——馬車を止めた。</p>
+
+<blockquote>「先は山道——夜は危険だ」</blockquote>
+
+<blockquote>「分かった」</blockquote>
+
+<p>カイト——頷いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>石壁の村——宿「岩の息吹」</p>
+
+<p>カイトたちは——夕食を摂っていた。</p>
+
+<blockquote>「裂け目——行くのか？」</blockquote>
+
+<p>宿の主人——興味深そうに聞いた。</p>
+
+<blockquote>「はい——用事があって」</blockquote>
+
+<p>カイト——曖昧に答えた。</p>
+
+<blockquote>「気をつけな——最近、妙な噂がある」</blockquote>
+
+<p>主人——声を潜めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「妙な噂——？」</blockquote>
+
+<p>リアム——身を乗り出した。</p>
+
+<blockquote>「裂け目の底から——変な音が聞こえるらしい」</blockquote>
+
+<p>主人——説明した。</p>
+
+<blockquote>「地響き——じゃない。もっと——不気味な音だ」</blockquote>
+
+<blockquote>「不気味——？」</blockquote>
+
+<p>セシリア——メモを取った。</p>
+
+<blockquote>「誰かが——呼んでるような——そんな音だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——情報を分析した。</p>
+
+<pre><code>// 噂の分析
+class RumorAnalysis {
+    analyze(soundDescription) {
+        return {
+            reportedSound: "呼ぶような音",
+            possibleSources: [
+                { type: "封印の弱体化", probability: 0.4 },
+                { type: "敵対勢力の活動", probability: 0.35 },
+                { type: "自然現象", probability: 0.15 },
+                { type: "未知の存在", probability: 0.1 }
+            ],
+            recommendation: "警戒を強化して調査"
+        };
+    }
+}
+
+const rumor = new RumorAnalysis();
+const analysis = rumor.analyze("calling_sound");</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「情報——ありがとう」</blockquote>
+
+<p>カイト——礼を言った。</p>
+
+<blockquote>「気をつけます」</blockquote>
+
+<blockquote>「あんたら——冒険者だろ。何かあったら——頼むよ」</blockquote>
+
+<p>主人——真剣な顔で言った。</p>
+
+<blockquote>「この村——裂け目が崩れたら真っ先に被害を受ける」</blockquote>
+
+<blockquote>「分かりました——最善を尽くします」</blockquote>
+
+<p>カイト——約束した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>夜——カイトは眠れなかった。</p>
+
+<p>窓の外——月が見えた。</p>
+
+<p>ミーナ——静かに部屋に入ってきた。</p>
+
+<blockquote>「カイト——寝てないの？」</blockquote>
+
+<blockquote>「考え事——」</blockquote>
+
+<p>カイト——窓の方を向いたまま答えた。</p>
+
+<blockquote>「虚無教団——裂け目を狙ってるかもしれない」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「カイト——頑張りすぎないで」</blockquote>
+
+<p>ミーナ——カイトの隣に座った。</p>
+
+<blockquote>「七つの封印——全部守るなんて、大変だよ」</blockquote>
+
+<blockquote>「でも——やらなきゃいけない」</blockquote>
+
+<p>カイト——静かに言った。</p>
+
+<blockquote>「僕がこの力を得たのは——何か意味があるはずだから」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「意味——？」</blockquote>
+
+<p>ミーナ——首を傾げた。</p>
+
+<blockquote>「この世界で——プログラミング魔法が使えるのは僕だけ」</blockquote>
+
+<p>カイト——説明した。</p>
+
+<blockquote>「元の世界から来た僕——異世界で魔法をコードで書ける。それは——何かの導きだと思う」</blockquote>
+
+<blockquote>「カイト——そういうの、好きだな」</blockquote>
+
+<p>ミーナ——微笑んだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ロマンチック——って言いたい？」</blockquote>
+
+<p>カイト——苦笑した。</p>
+
+<blockquote>「ううん——責任感が強いってこと」</blockquote>
+
+<p>ミーナ——カイトの手を握った。</p>
+
+<blockquote>「でも——一人で背負わないで。私たちがいるから」</blockquote>
+
+<blockquote>「ミーナ——」</blockquote>
+
+<p>カイト——ミーナを見た。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ありがとう——」</blockquote>
+
+<p>カイト——小さく言った。</p>
+
+<blockquote>「僕は——一人じゃない。そう——思い出させてくれて」</blockquote>
+
+<blockquote>「うん——いつでも言うよ」</blockquote>
+
+<p>ミーナ——優しく笑った。</p>
+
+<p>二人——静かな夜を過ごした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>二日目——山道に入った。</p>
+
+<p>馬車——徐々に登っていく。</p>
+
+<p>景色——変化した。木々が増え、空気が澄んだ。</p>
+
+<blockquote>「岩脈山脈——ここからが本番だ」</blockquote>
+
+<p>ガロ——手綱を握りしめた。</p>
+
+<blockquote>「道——狭くなる。気をつけてくれ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山道——険しくなった。</p>
+
+<p>カイト——窓から崖を見た。</p>
+
+<blockquote>「高いな——」</blockquote>
+
+<p>エリナ——少し青ざめた。</p>
+
+<blockquote>「高所——苦手なの？」</blockquote>
+
+<p>リアム——からかった。</p>
+
+<blockquote>「違う——風を読んでるだけ」</blockquote>
+
+<p>エリナ——誤魔化した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「おい——止まれ」</blockquote>
+
+<p>ガロ——突然、馬車を止めた。</p>
+
+<blockquote>「何か——ある」</blockquote>
+
+<p>前方——道が塞がれていた。</p>
+
+<p>岩——転がっている。自然の崩落ではない。</p>
+
+<blockquote>「人為的——だな」</blockquote>
+
+<p>リアム——剣に手をかけた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「出てこい——山賊だろう」</blockquote>
+
+<p>カイト——声を上げた。</p>
+
+<p>岩陰から——数人の男たちが現れた。</p>
+
+<p>粗末な服装——手には武器。</p>
+
+<blockquote>「鋭いな——冒険者か」</blockquote>
+
+<p>山賊のリーダー——ニヤリと笑った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「通したければ——通行料を払え」</blockquote>
+
+<p>リーダー——要求した。</p>
+
+<blockquote>「金貨——十枚。安いもんだろ」</blockquote>
+
+<blockquote>「断る」</blockquote>
+
+<p>カイト——即答した。</p>
+
+<blockquote>「そうか——なら力ずくで」</blockquote>
+
+<p>山賊たち——一斉に襲い掛かった。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 山賊戦闘
+class BanditEncounter {
+    constructor(enemyCount) {
+        this.enemies = enemyCount;
+        this.averageLevel = 15;
+        this.terrain = "narrow_mountain_road";
+        this.advantage = "defender"; // 狭い道は防御側有利
+    }
+    
+    engage(party) {
+        return {
+            strategy: "迎撃",
+            actions: [
+                "カイト: 足止め魔法",
+                "リアム: 前衛迎撃",
+                "エリナ: 風魔法支援",
+                "ミーナ: 回復・補助",
+                "セシリア: 分析・記録"
+            ],
+            estimatedDuration: "2-3分"
+        };
+    }
+}
+
+const bandits = new BanditEncounter(8);
+const plan = bandits.engage(party);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「Gravity Bind——！」</blockquote>
+
+<p>カイト——重力魔法を放った。</p>
+
+<p>山賊たち——足元が重くなった。</p>
+
+<blockquote>「動けない——！」</blockquote>
+
+<p>山賊——驚愕した。</p>
+
+<blockquote>「今だ——リアム！」</blockquote>
+
+<p>カイト——指示した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>リアム——剣を振るう。</p>
+
+<p>足止めされた山賊——為す術なく倒れた。</p>
+
+<blockquote>「終わったな」</blockquote>
+
+<p>リアム——剣を納めた。</p>
+
+<blockquote>「あっけない——」</blockquote>
+
+<p>エリナ——拍子抜けした。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>リーダー——最後まで残った。</p>
+
+<blockquote>「待て——命だけは」</blockquote>
+
+<p>リーダー——懇願した。</p>
+
+<blockquote>「なぜ——ここで襲う？」</blockquote>
+
+<p>カイト——尋問した。</p>
+
+<blockquote>「誰かに——依頼されたのか？」</blockquote>
+
+<blockquote>「いや——ただの商売だ」</blockquote>
+
+<p>リーダー——首を振った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ここ——裂け目に近いだろ？」</blockquote>
+
+<p>カイト——続けた。</p>
+
+<blockquote>「最近——変な奴らが通らなかったか？」</blockquote>
+
+<p>リーダー——考えた。</p>
+
+<blockquote>「黒いローブ——三人組が一週間前に通った」</blockquote>
+
+<blockquote>「黒いローブ——虚無教団か」</blockquote>
+
+<p>カイト——警戒を強めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「どっちへ？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<blockquote>「裂け目——の方へ」</blockquote>
+
+<p>リーダー——指差した。</p>
+
+<blockquote>「俺たちは——手を出さなかった。危ない匂いがしたから」</blockquote>
+
+<blockquote>「情報——ありがとう。命は助ける」</blockquote>
+
+<p>カイト——宣言した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>山賊たち——逃げ去った。</p>
+
+<blockquote>「虚無教団——先回りされてる」</blockquote>
+
+<p>セシリア——懸念を示した。</p>
+
+<blockquote>「一週間前——まだ間に合うかも」</blockquote>
+
+<p>カイト——前を向いた。</p>
+
+<blockquote>「急ごう——テラドンが無事か確認しないと」</blockquote>
+
+<blockquote>「分かった」</blockquote>
+
+<p>ガロ——馬を急がせた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>峠の茶屋——昼休憩。</p>
+
+<p>カイト——茶屋の主人と話した。</p>
+
+<blockquote>「裂け目——最近どうだ？」</blockquote>
+
+<p>主人——少し不安そうに答えた。</p>
+
+<blockquote>「地震——増えたな。小さなのが毎日」</blockquote>
+
+<blockquote>「テラドン——地の賢者は？」</blockquote>
+
+<blockquote>「時々——村に降りてくる。最後は三日前だ」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「三日前——まだ無事だ」</blockquote>
+
+<p>カイト——少し安心した。</p>
+
+<blockquote>「でも——元気なかったらしい」</blockquote>
+
+<p>主人——付け加えた。</p>
+
+<blockquote>「何か——悩みがあるみたいだった」</blockquote>
+
+<blockquote>「悩み——か」</blockquote>
+
+<p>カイト——考えた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>三日目——目的地が近づいた。</p>
+
+<p>山道——終わり、視界が開けた。</p>
+
+<p>目の前——巨大な裂け目が現れた。</p>
+
+<blockquote>「これが——大地の裂け目」</blockquote>
+
+<p>カイト——息を呑んだ。</p>
+
+<p>深く——広い。底が見えない。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>ミーナ——裂け目の縁に立った。</p>
+
+<blockquote>「地脈——強い。でも——何か変」</blockquote>
+
+<p>ミーナ——顔をしかめた。</p>
+
+<blockquote>「変——どういう？」</blockquote>
+
+<p>カイト——尋ねた。</p>
+
+<blockquote>「乱れてる——誰かが干渉してる」</blockquote>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 地脈分析
+class LeylineAnalysis {
+    scan(chasmArea) {
+        return {
+            normalFlow: 100,
+            currentFlow: 62,
+            disturbanceLevel: "high",
+            interferenceType: "外部からの干渉",
+            possibleSource: "裂け目の底部",
+            recommendation: "即座の調査が必要"
+        };
+    }
+}
+
+const leyline = new LeylineAnalysis();
+const scanResult = leyline.scan(chasm);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「底部——か」</blockquote>
+
+<p>カイト——裂け目を見下ろした。</p>
+
+<blockquote>「降りる道——あるのか？」</blockquote>
+
+<p>ガロ——答えた。</p>
+
+<blockquote>「東側に——階段がある。昔——賢者たちが作ったらしい」</blockquote>
+
+<blockquote>「ありがとう——ここで待っててくれ」</blockquote>
+
+<p>カイト——ガロに言った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイトたち——東側へ移動した。</p>
+
+<p>岩壁——削られて階段になっていた。</p>
+
+<p>長い——見えないほど続いている。</p>
+
+<blockquote>「降りる——行くぞ」</blockquote>
+
+<p>カイト——先頭を切った。</p>
+
+<blockquote>「みんな——気をつけて」</blockquote>
+
+<p>エリナ——続いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>階段——暗い。松明が必要だった。</p>
+
+<p>リアム——火を灯した。</p>
+
+<blockquote>「長いな——千メートル以上あるんだろ？」</blockquote>
+
+<blockquote>「半日——かかるかも」</blockquote>
+
+<p>セシリア——推測した。</p>
+
+<blockquote>「急ごう——テラドンが待ってる」</blockquote>
+
+<p>カイト——歩を進めた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>降りる——一時間。</p>
+
+<p>カイト——異変を感じた。</p>
+
+<blockquote>「待て——何かいる」</blockquote>
+
+<p>全員——足を止めた。</p>
+
+<p>暗闇——何かが蠢いた。</p>
+
+<blockquote>「Shadow Spawn——影の使い魔だ」</blockquote>
+
+<p>カイト——識別した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「虚無教団——やっぱりいる」</blockquote>
+
+<p>リアム——剣を構えた。</p>
+
+<p>影——複数現れた。</p>
+
+<p>人型——でも目が赤く光る。</p>
+
+<blockquote>「排除する——先へ進むために」</blockquote>
+
+<p>カイト——魔法を構築した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<pre><code>// 影の使い魔との戦闘
+class ShadowCombat {
+    engage(shadowCount) {
+        return {
+            enemies: shadowCount,
+            weakness: "光魔法",
+            resistance: "物理攻撃",
+            strategy: "Light Burst で一掃",
+            mpCost: 150
+        };
+    }
+    
+    lightBurst() {
+        return {
+            damage: 800,
+            areaOfEffect: "周囲20m",
+            effectiveness: "全滅"
+        };
+    }
+}
+
+const combat = new ShadowCombat();
+const plan = combat.engage(12);</code></pre>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「Light Burst——！」</blockquote>
+
+<p>カイト——光魔法を放った。</p>
+
+<p>階段——眩い光に包まれた。</p>
+
+<p>影——悲鳴を上げて消滅した。</p>
+
+<blockquote>「クリア——進もう」</blockquote>
+
+<p>カイト——先を急いだ。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>降りる——さらに二時間。</p>
+
+<p>底——近づいてきた。</p>
+
+<p>微かな光——地下湖が見えた。</p>
+
+<blockquote>「地下湖——きれい」</blockquote>
+
+<p>ミーナ——感嘆した。</p>
+
+<p>青く光る水——幻想的な光景。</p>
+
+<blockquote>「テラドン——どこだ？」</blockquote>
+
+<p>カイト——周囲を見渡した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>湖の対岸——洞窟があった。</p>
+
+<p>そこから——重い声が聞こえた。</p>
+
+<blockquote>「来たか——予言の者」</blockquote>
+
+<p>洞窟——大きな影が現れた。</p>
+
+<p>巨漢——二メートル以上の大男。</p>
+
+<p>髭——顔を覆うほど。岩のような肌。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「テラドン——地の賢者だな」</blockquote>
+
+<p>カイト——確認した。</p>
+
+<blockquote>「そうだ——お前がカイトか」</blockquote>
+
+<p>テラドン——重々しく言った。</p>
+
+<blockquote>「ルミナスから——話は聞いている」</blockquote>
+
+<blockquote>「封印——守れてますか？」</blockquote>
+
+<p>カイト——本題を切り出した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「守れている——だが、危うい」</blockquote>
+
+<p>テラドン——厳しい表情で言った。</p>
+
+<blockquote>「虚無教団——底部から攻撃を受けている」</blockquote>
+
+<blockquote>「底部——？」</blockquote>
+
+<p>カイト——驚いた。</p>
+
+<blockquote>「ここより——さらに下だ。地下道がある」</blockquote>
+
+<p>テラドン——湖の方を指した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「教団——地下から侵入しようとしてる」</blockquote>
+
+<p>テラドン——続けた。</p>
+
+<blockquote>「封印は——裂け目の最深部にある。そこへの道——封印しているが、徐々に削られている」</blockquote>
+
+<blockquote>「協力します——共に戦いましょう」</blockquote>
+
+<p>カイト——手を差し出した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>テラドン——カイトの手を見た。</p>
+
+<blockquote>「若いな——信頼できるか？」</blockquote>
+
+<blockquote>「水の賢者の娘——ミーナが一緒です」</blockquote>
+
+<p>カイト——ミーナを紹介した。</p>
+
+<blockquote>「ミズリアの娘——！？」</blockquote>
+
+<p>テラドン——驚いた。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「ミズリア——昔、一緒に戦った仲だ」</blockquote>
+
+<p>テラドン——懐かしそうに言った。</p>
+
+<blockquote>「娘さんが——ここに来るとは」</blockquote>
+
+<blockquote>「テラドン——母を知ってるの？」</blockquote>
+
+<p>ミーナ——驚いた。</p>
+
+<blockquote>「ああ——賢者として——共に封印を守った」</blockquote>
+
+<p>テラドン——優しく笑った。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<blockquote>「なら——信頼してくれる？」</blockquote>
+
+<p>カイト——再度、手を差し出した。</p>
+
+<blockquote>「ああ——信頼しよう」</blockquote>
+
+<p>テラドン——カイトの手を握った。</p>
+
+<p>岩のような手——でも温かかった。</p>
+
+<blockquote>「共に——地の封印を守ろう」</blockquote>
+
+<p>テラドン——宣言した。</p>
+
+<h4>◆ ◆ ◆</h4>
+
+<p>カイト——テラドンと同盟を結んだ。</p>
+
+<p>地の封印——守るための戦いが始まる。</p>
+
+<p>虚無教団——最深部で待っている。</p>
+
+<p>地下道——次なる戦場。</p>
+
+<p>カイトの旅——新たな局面に入った。</p>
+
+<p>仲間と共に——地の底へ。</p>
