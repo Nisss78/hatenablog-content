@@ -1,0 +1,678 @@
+---
+Title: 第605章：風偵察
+Date: 2026-03-23T22:10:00+09:00
+---
+
+<h3>第605章：風偵察</h3>
+
+<p>夜明け前——風の宮殿。</p>
+
+<p>静寂——深い。</p>
+
+<p>カイト——目を覚ます。</p>
+
+<p>窓——薄明かり。</p>
+
+<p>「今日——」</p>
+
+<p>カイト——呟く。</p>
+
+<blockquote>決戦の日</blockquote>
+
+<p>身体——軽い。</p>
+
+<p>昨夜——早めに寝た。</p>
+
+<p>万全——整えた。</p>
+
+<p>□ ■ □</p>
+
+<p>廊下——誰もいない。</p>
+
+<p>カイト——静かに歩く。</p>
+
+<p>目的地——中庭。</p>
+
+<p>ウィンディア——待っている。</p>
+
+<p>「早い——」</p>
+
+<p>中庭——声。</p>
+
+<p>テラドン——既にいた。</p>
+
+<blockquote>地の賢者——朝型</blockquote>
+
+<p>「テラドン先生——」</p>
+
+<p>カイト——挨拶。</p>
+
+<blockquote>おはようございます</blockquote>
+
+<p>「お前——早いな」</p>
+
+<p>テラドン——岩のような顔。</p>
+
+<blockquote>昨夜——眠れたか？</blockquote>
+
+<p>「はい——」</p>
+
+<p>カイト——答える。</p>
+
+<blockquote>緊張——あるけど。身体——休めた</blockquote>
+
+<p>「良い答えだ」</p>
+
+<p>テラドン——頷く。</p>
+
+<blockquote>戦い——冷静さが全て。感情——殺すな。制御しろ</blockquote>
+
+<p>「心得ました——」</p>
+
+<p>カイト——深く頷く。</p>
+
+<blockquote>プログラミング——同じ。焦り——バグの元</blockquote>
+
+<p>「プログラミング——」</p>
+
+<p>テラドン——興味を持つ。</p>
+
+<blockquote>お前の魔法——詳しく聞きたい。戦いの後——時間くれ</blockquote>
+
+<p>「もちろんです」</p>
+
+<p>カイト——答える。</p>
+
+<blockquote>共有——大切</blockquote>
+
+<p>□ ■ □</p>
+
+<p>風——吹く。</p>
+
+<p>ウィンディア——現れる。</p>
+
+<p>「集まった——」</p>
+
+<p>ウィンディア——二人を見る。</p>
+
+<blockquote>風偵察——開始する</blockquote>
+
+<p>「手順——」</p>
+
+<p>カイト——確認。</p>
+
+<blockquote>僕——風魔法で偵察。敵——探す。位置——報告</blockquote>
+
+<p>「一人——危険」</p>
+
+<p>テラドン——懸念。</p>
+
+<blockquote>敵——強い。察知——される</blockquote>
+
+<p>「距離——取る」</p>
+
+<p>カイト——説明。</p>
+
+<blockquote>風——届く範囲広い。接触——避ける</blockquote>
+
+<p>「支援——する」</p>
+
+<p>ウィンディア——言う。</p>
+
+<blockquote>私の風——お前に乗せる。範囲——拡大</blockquote>
+
+<p>「感謝——」</p>
+
+<p>カイト——頭を下げる。</p>
+
+<blockquote>頼みます</blockquote>
+
+<p>□ ■ □</p>
+
+<p>中庭——風が集まる。</p>
+
+<p>ウィンディア——詠唱。</p>
+
+<p><code>Wind_Amplification</code></p>
+
+<pre><code>
+function Wind_Amplification(target, range) {
+    // 風の拡大
+    const baseWind = target.getWindAffinity();
+    const boost = this.windPower * 1.5;
+    
+    return {
+        enhancedRange: range * boost,
+        duration: 3600, // 1時間
+        sensitivity: baseWind * 2
+    };
+}
+</code></pre>
+
+<p>「準備——できた」</p>
+
+<p>ウィンディア——カイトに触れる。</p>
+
+<blockquote>私の風——お前の中に</blockquote>
+
+<p>身体——風が満ちる。</p>
+
+<p>感覚——鋭敏になる。</p>
+
+<p>「すごい——」</p>
+
+<p>カイト——呟く。</p>
+
+<blockquote>風——全て感じる</blockquote>
+
+<p>「行け——」</p>
+
+<p>ウィンディア——促す。</p>
+
+<blockquote>時間——ない</blockquote>
+
+<p>□ ■ □</p>
+
+<p>カイト——目を閉じる。</p>
+
+<p>風魔法——展開。</p>
+
+<p><code>Wind_Reconnaissance</code></p>
+
+<pre><code>
+function Wind_Reconnaissance(radius) {
+    const windSense = this.getEnhancedWindSense();
+    const targets = [];
+    
+    // 風を通じて感知
+    for (let direction = 0; direction < 360; direction++) {
+        const scan = windSense.project(direction, radius);
+        
+        scan.forEach(point => {
+            if (point.hasHostilePresence()) {
+                targets.push({
+                    direction: direction,
+                    distance: point.distance,
+                    signature: point.energySignature,
+                    count: point.entityCount
+                });
+            }
+        });
+    }
+    
+    return {
+        scanTime: Date.now(),
+        radius: radius,
+        hostiles: targets
+    };
+}
+</code></pre>
+
+<p>風——広がる。</p>
+
+<p>北——山脈。</p>
+
+<p>南——湖。</p>
+
+<p>東——平原。</p>
+
+<p>西——森。</p>
+
+<p>「東——」</p>
+
+<p>カイト——感じる。</p>
+
+<blockquote>二つ——反応</blockquote>
+
+<p>距離——約五十キロ。</p>
+
+<p>進行方向——風の宮殿。</p>
+
+<p>速度——速い。</p>
+
+<p>「敵——」</p>
+
+<p>カイト——目を開ける。</p>
+
+<blockquote>来てる</blockquote>
+
+<p>□ ■ □</p>
+
+<p>「報告——」</p>
+
+<p>カイト——ウィンディアとテラドンに伝える。</p>
+
+<blockquote>東から二体。距離——五十キロ。進行速度——速い。数時間——到着</blockquote>
+
+<p>「水と火——」</p>
+
+<p>ウィンディア——確認。</p>
+
+<blockquote>属性——わかる？</blockquote>
+
+<p>「水——湿り気。火——熱気」</p>
+
+<p>カイト——答える。</p>
+
+<blockquote>間違いない。ヴォイドフィンサー——水。デストラクション——火</blockquote>
+
+<p>「予想通り——」</p>
+
+<p>テラドン——頷く。</p>
+
+<blockquote>作戦——変更なし。迎え撃つ</blockquote>
+
+<p>「賢者——起こす」</p>
+
+<p>ウィンディア——風を飛ばす。</p>
+
+<blockquote>全員——集合</blockquote>
+
+<p>□ ■ □</p>
+
+<p>広間——七人の賢者。</p>
+
+<p>カイトたち——作戦を説明。</p>
+
+<p>「敵——接近中」</p>
+
+<p>カイト——報告。</p>
+
+<blockquote>東から。到着——三時間後</blockquote>
+
+<p>「三時間——」</p>
+
+<p>イグニス——腕を鳴らす。</p>
+
+<blockquote>準備——十分</blockquote>
+
+<p>「配置——」</p>
+
+<p>ミズリア——冷静。</p>
+
+<blockquote>私は——ヴォイドフィンサー。エリナ——手伝って</blockquote>
+
+<p>「うん——」</p>
+
+<p>エリナ——母の横に立つ。</p>
+
+<blockquote>一緒に戦う</blockquote>
+
+<p>「デストラクション——私」</p>
+
+<p>フローズナ——宣言。</p>
+
+<blockquote>炎——氷で消す</blockquote>
+
+<p>「支援——各自位置」</p>
+
+<p>ルミナス——指示。</p>
+
+<blockquote>結界——宮殿周辺。民間人——避難</blockquote>
+
+<p>「避難——完了」</p>
+
+<p>ライラ——報告。</p>
+
+<blockquote>昨夜——指示出した。村——安全圏</blockquote>
+
+<p>「効率的——」</p>
+
+<p>アンブロス——呟く。</p>
+
+<blockquote>十三使徒——侮れない。警戒——必要</blockquote>
+
+<p>□ ■ □</p>
+
+<p>「カイト——」</p>
+
+<p>ウィンディア——呼ぶ。</p>
+
+<blockquote>お前——総括</blockquote>
+
+<p>「総括——？」</p>
+
+<p>カイト——首を傾げる。</p>
+
+<blockquote>僕が？</blockquote>
+
+<p>「作戦——お前のもの」</p>
+
+<p>ウィンディア——言う。</p>
+
+<blockquote>指揮——お前に任せる</blockquote>
+
+<p>「でも——」</p>
+
+<p>カイト——戸惑う。</p>
+
+<blockquote>僕——子供。経験——浅い</blockquote>
+
+<p>「実績——十分」</p>
+
+<p>テラドン——支援。</p>
+
+<blockquote>十三使徒——三人倒した。私——認める</blockquote>
+
+<p>「私も——」</p>
+
+<p>イグニス——笑う。</p>
+
+<blockquote>カイト——隊長。面白い</blockquote>
+
+<p>「異論——ない」</p>
+
+<p>ルミナス——冷静に。</p>
+
+<blockquote>論理——正しい。信頼——ある</blockquote>
+
+<p>「......わかった」</p>
+
+<p>カイト——覚悟を決める。</p>
+
+<blockquote>指揮——引き受けます</blockquote>
+
+<p>□ ■ □</p>
+
+<p>配置——決定。</p>
+
+<p>カイト——マップを展開。</p>
+
+<p><code>Battle_Formation</code></p>
+
+<pre><code>
+const battleFormation = {
+    location: "風の宮殿",
+    primary: [
+        {
+            team: "water_counter",
+            leader: "ミズリア",
+            members: ["エリナ"],
+            target: "ヴォイドフィンサー",
+            position: { x: 500, y: 0, zone: "東門" }
+        },
+        {
+            team: "fire_counter",
+            leader: "フローズナ",
+            members: [],
+            target: "デストラクション",
+            position: { x: -500, y: 0, zone: "西門" }
+        }
+    ],
+    support: [
+        { sage: "ウィンディア", role: "風偵察・機動", position: "空中" },
+        { sage: "ルミナス", role: "結界維持", position: "宮殿中心" },
+        { sage: "イグニス", role: "火力支援", position: "遊撃" },
+        { sage: "ライラ", role: "速攻・連絡", position: "全域" },
+        { sage: "アンブロス", role: "闇牽制", position: "潜伏" },
+        { sage: "テラドン", role: "守護・予備", position: "宮殿入口" }
+    ],
+    reserve: [
+        { unit: "カイト", role: "指揮・機動", position: "中央" },
+        { unit: "リアム", role: "近接支援", position: "カイト護衛" },
+        { unit: "セシリア", role: "情報分析", position: "司令室" },
+        { unit: "シオン", role: "七属性支援", position: "後方" }
+    ]
+};
+</code></pre>
+
+<p>「配置——完了」</p>
+
+<p>カイト——宣言。</p>
+
+<blockquote>各自——準備。三時間後——迎撃</blockquote>
+
+<p>「了解——」</p>
+
+<p>全員——散開。</p>
+
+<p>戦い——近い。</p>
+
+<p>□ ■ □</p>
+
+<p>準備時間——二時間経過。</p>
+
+<p>カイト——司令室。</p>
+
+<p>セシリア——隣にいる。</p>
+
+<p>「緊張——してる？」</p>
+
+<p>セシリア——聞く。</p>
+
+<blockquote>指揮——初めて？</blockquote>
+
+<p>「うん——」</p>
+
+<p>カイト——正直に答える。</p>
+
+<blockquote>責任——重い。皆の命——預かってる</blockquote>
+
+<p>「大丈夫——」</p>
+
+<p>セシリア——微笑む。</p>
+
+<blockquote>あなた——成長した。信じてる</blockquote>
+
+<p>「ありがとう——」</p>
+
+<p>カイト——深呼吸。</p>
+
+<blockquote>失敗——できない。絶対に</blockquote>
+
+<p>□ ■ □</p>
+
+<p>リアム——入ってくる。</p>
+
+<p>「準備——完了」</p>
+
+<p>リアム——報告。</p>
+
+<blockquote>武器——整えた。いつでも</blockquote>
+
+<p>「頼む——」</p>
+
+<p>カイト——頷く。</p>
+
+<blockquote>護衛——任せる</blockquote>
+
+<p>「シオン——」</p>
+
+<p>リアム——言う。</p>
+
+<blockquote>七属性——使える。戦力——なる</blockquote>
+
+<p>「後方——守る」</p>
+
+<p>カイト——決断。</p>
+
+<blockquote>シオン——危険な場所に立たせない</blockquote>
+
+<p>「わかった——」</p>
+
+<p>リアム——退出。</p>
+
+<p>□ ■ □</p>
+
+<p>シオン——廊下で待っていた。</p>
+
+<p>「カイト——」</p>
+
+<p>シオン——呼ぶ。</p>
+
+<blockquote>私——戦いたい</blockquote>
+
+<p>「シオン——」</p>
+
+<p>カイト——困る。</p>
+
+<blockquote>危険だ。まだ——未熟</blockquote>
+
+<p>「七属性——ある」</p>
+
+<p>シオン——訴える。</p>
+
+<blockquote>母さん——救いたい。役に立ちたい</blockquote>
+
+<p>「後方——支援」</p>
+
+<p>カイト——妥協案。</p>
+
+<blockquote>前線——無理。でも——後方で魔法支援。それなら——許可する</blockquote>
+
+<p>「......わかった」</p>
+
+<p>シオン——頷く。</p>
+
+<blockquote>感謝——します</blockquote>
+
+<p>「無茶——しないで」</p>
+
+<p>カイト——言う。</p>
+
+<blockquote>約束——して</blockquote>
+
+<p>「約束——」</p>
+
+<p>シオン——真剣に。</p>
+
+<blockquote>前線——出ない。支援——だけ</blockquote>
+
+<p>「信じる——」</p>
+
+<p>カイト——シオンを見る。</p>
+
+<blockquote>お前——大切。失いたくない</blockquote>
+
+<p>□ ■ □</p>
+
+<p>残り——一時間。</p>
+
+<p>カイト——全員の状態を確認。</p>
+
+<p>ミズリアとエリナ——東門。</p>
+
+<p>フローズナ——西門。</p>
+
+<p>ルミナス——結界展開中。</p>
+
+<p>イグニス——待機。</p>
+
+<p>ライラ——偵察中。</p>
+
+<p>アンブロス——姿消す。</p>
+
+<p>テラドン——宮殿入口。</p>
+
+<p>ウィンディア——上空。</p>
+
+<p>「全員——配置」</p>
+
+<p>カイト——司令室で確認。</p>
+
+<blockquote>準備——完了</blockquote>
+
+<p>「敵——接近」</p>
+
+<p>ウィンディア——通信。</p>
+
+<blockquote>距離——十キロ。速度——落としてない</blockquote>
+
+<p>「来る——」</p>
+
+<p>カイト——息を飲む。</p>
+
+<blockquote>開始</blockquote>
+
+<p>□ ■ □</p>
+
+<p>東の空——二つの影。</p>
+
+<p>水のオーラ——ヴォイドフィンサー。</p>
+
+<p>炎のオーラ——デストラクション。</p>
+
+<p>並んで——飛んでくる。</p>
+
+<p>「賢者ども——」</p>
+
+<p>ヴォイドフィンサー——笑う。</p>
+
+<blockquote>待ってるな</blockquote>
+
+<p>「テラドン——どこだ」</p>
+
+<p>デストラクション——炎を燃やす。</p>
+
+<blockquote>殺す——約束した</blockquote>
+
+<p>「カイト——」</p>
+
+<p>ヴォイドフィンサー——呟く。</p>
+
+<blockquote>子供——楽しみだ</blockquote>
+
+<p>□ ■ □</p>
+
+<p>風の宮殿——上空。</p>
+
+<p>カイト——見上げる。</p>
+
+<p>二つの影——迫る。</p>
+
+<p>「来た——」</p>
+
+<p>カイト——宣言。</p>
+
+<blockquote>全員——戦闘配置。迎撃開始</blockquote>
+
+<p>ルミナスの結界——光り輝く。</p>
+
+<p>ミズリアとエリナ——水魔法展開。</p>
+
+<p>フローズナ——氷魔法準備。</p>
+
+<p>テラドン——地魔法で守護。</p>
+
+<p>イグニス——炎を燃やす。</p>
+
+<p>ライラ——雷を帯びる。</p>
+
+<p>アンブロス——闇に潜む。</p>
+
+<p>ウィンディア——風を纏う。</p>
+
+<p>七人の賢者——覚悟完了。</p>
+
+<p>カイト——コードを走らせる。</p>
+
+<p><code>Battle_Start</code></p>
+
+<pre><code>
+function Battle_Start() {
+    const status = {
+        phase: "engagement",
+        morale: "high",
+        formation: "intact"
+    };
+    
+    console.log("=== 決戦開始 ===");
+    console.log("敵戦力: ヴォイドフィンサー(第十一席) + デストラクション(第五席)");
+    console.log("味方戦力: 七人の賢者 + カイト班");
+    console.log("勝利条件: 敵の撃退または撃破");
+    
+    return status;
+}
+
+Battle_Start();
+</code></pre>
+
+<p>「行くぞ——」</p>
+
+<p>カイト——魔法を展開。</p>
+
+<blockquote>コード・マジック——起動</blockquote>
+
+<p>風の宮殿——戦いの火蓋。</p>
+
+<p>——コード・マジック、第605章 終。</p>
