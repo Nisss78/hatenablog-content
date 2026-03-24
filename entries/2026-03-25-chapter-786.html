@@ -1,0 +1,1162 @@
+---
+Title: 第786章：塔の修復
+Date: 2026-03-25T06:18:00+09:00
+---
+
+<h3>第786章：塔の修復</h3>
+
+<p>朝の光が、塔の最上階に差し込んだ。</p>
+
+<p>カイトたちは、制御玉の前に立っていた。</p>
+
+<p>今日の任務は、この塔の物理的修復だった。</p>
+
+<hr>
+
+<pre><code>
+// 塔の修復計画
+const towerRestorationPlan = {
+  target: "風の塔",
+  
+  damages: {
+    sixthFloor: {
+      type: "壁と床の損傷",
+      cause: "闇魔法の侵食",
+      severity: "中程度"
+    },
+    
+    seventhFloor: {
+      type: "魔法陣の破壊",
+      cause: "テンペストの改造",
+      severity: "重度"
+    },
+    
+    controlOrb: {
+      type: "闇の侵食",
+      cause: "テンペストの改造",
+      severity: "完了（昨日浄化済み）"
+    }
+  },
+  
+  requiredWork: [
+    "魔法陣の再構築",
+    "壁と床の物理修復",
+    "風の結界の安定化"
+  ],
+  
+  estimatedTime: "半日"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、修復用の魔法を準備した。</p>
+
+<p>風魔法で結界を安定化させ、地魔法で物理的な損傷を修復する。</p>
+
+<p>二つの属性を同時に使う必要があった。</p>
+
+<hr>
+
+<pre><code>
+// 修復魔法の設計
+const restorationMagicDesign = {
+  caster: "カイト",
+  
+  spells: [
+    {
+      name: "地の再構築",
+      element: "地",
+      function: "壁と床の物理修復",
+      method: "石材を再結合させる"
+    },
+    {
+      name: "風の結界・安定化",
+      element: "風",
+      function: "塔の風の流れを正常化",
+      method: "制御玉と同期させる"
+    },
+    {
+      name: "光の浄化・残滓除去",
+      element: "光",
+      function: "闇の残留物を除去",
+      method: "微量な浄化魔法を継続的にかける"
+    }
+  ],
+  
+  execution: "三つの魔法を順番に、あるいは同時に展開"
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「僕が物理修復を担当します」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「ウィンディアさんは、風の結界を」</blockquote>
+
+<blockquote>「イグニスとライラは、周囲の警戒をお願いします」</blockquote>
+
+<hr>
+
+<p>三人が、頷いた。</p>
+
+<hr>
+
+<p>カイトは、六層目に降りた。</p>
+
+<p>壁の黒い染み、床の亀裂。</p>
+
+<p>これらを、修復する。</p>
+
+<hr>
+
+<pre><code>
+// 地魔法による物理修復
+const earthMagicRestoration = {
+  caster: "カイト",
+  
+  spell: {
+    name: "地の再構築",
+    element: "地",
+    target: "六層目の壁と床"
+  },
+  
+  code: `
+    function restorePhysicalDamage(floor) {
+      // 地の精霊を召喚
+      const earth = summonElemental("earth");
+      
+      // 損傷箇所を特定
+      const damages = scan(floor, "physical_damage");
+      
+      for (const damage of damages) {
+        // 元の状態を復元
+        const originalState = analyzeOriginal(damage);
+        
+        // 石材を再結合
+        earth.reconstruct({
+          target: damage,
+          blueprint: originalState,
+          speed: "moderate"
+        });
+      }
+      
+      return "修復完了";
+    }
+  `,
+  
+  process: "石材が少しずつ元の形に戻っていく"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトが魔法を唱えると、石材が震えた。</p>
+
+<p>亀裂が塞がり、黒い染みが薄くなっていった。</p>
+
+<p>地魔法は、物質の修復に適していた。</p>
+
+<hr>
+
+<p>一時間後。</p>
+
+<p>六層目の修復が完了した。</p>
+
+<p>壁も床も、元の美しい白い石材に戻っていた。</p>
+
+<hr>
+
+<pre><code>
+// 六層目の修復結果
+const sixthFloorResult = {
+  status: "完了",
+  
+  changes: {
+    walls: "黒い染みが消え、元の白い色に戻った",
+    floor: "亀裂が完全に塞がった",
+    atmosphere: "重苦しさが消えた"
+  },
+  
+  timeSpent: "一時間",
+  
+  notes: "地魔法は非常に効果的だった"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、最上階に戻った。</p>
+
+<p>ウィンディアが、制御玉の前で魔法を唱えていた。</p>
+
+<p>風の結界を、安定化させている。</p>
+
+<hr>
+
+<pre><code>
+// ウィンディアの結界作業
+const windiaBarrierWork = {
+  caster: "ウィンディア",
+  
+  spell: {
+    name: "風の結界・永続化",
+    element: "風",
+    target: "風の塔全体"
+  },
+  
+  code: `
+    function stabilizeWindBarrier(controlOrb) {
+      // 風の精霊と同調
+      const wind = summonElemental("wind");
+      
+      // 制御玉の設定を復元
+      const originalSettings = {
+        windSpeed: "floor_dependent",
+        windDirection: "spiral_upward",
+        hostility: "intruder_only"
+      };
+      
+      // 結界を再構築
+      wind.createBarrier({
+        source: controlOrb,
+        settings: originalSettings,
+        duration: "permanent"
+      });
+      
+      return "結界が安定化しました";
+    }
+  `,
+  
+  progress: "八十パーセント完了"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、ウィンディアの横に立った。</p>
+
+<hr>
+
+<blockquote>「手伝います」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<p>ウィンディアが、振り返った。</p>
+
+<hr>
+
+<blockquote>「ありがとう」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<p>二人は、協力して結界の安定化を進めた。</p>
+
+<p>風の賢者としての知識と、管理者としての権限。</p>
+
+<p>二つが組み合わさると、作業は早く進んだ。</p>
+
+<hr>
+
+<pre><code>
+// 協力による結界安定化
+const cooperativeStabilization = {
+  casters: ["カイト", "ウィンディア"],
+  
+  synergy: {
+    windiaRole: "風の知識と技術の提供",
+    kaitoRole: "管理者権限による制御玉の操作"
+  },
+  
+  result: {
+    speed: "単独の三倍の速度",
+    quality: "より安定した結界",
+    completeness: "完全修復"
+  },
+  
+  timeSpent: "追加で三十分"
+};
+</code></pre>
+
+<hr>
+
+<p>二時間後。</p>
+
+<p>風の塔の修復は、完了した。</p>
+
+<p>結界は正常に機能し、物理的な損傷も修復された。</p>
+
+<hr>
+
+<pre><code>
+// 修復完了の確認
+const restorationComplete = {
+  tower: "風の塔",
+  
+  status: {
+    physicalCondition: "完全修復",
+    magicalCondition: "正常化",
+    controlOrb: "浄化済み",
+    windBarrier: "安定化済み"
+  },
+  
+  team: {
+    kaito: "地魔法による物理修復完了",
+    windia: "風の結界安定化完了",
+    ignis: "異常なし",
+    lyra: "異常なし"
+  },
+  
+  nextStep: "他の賢者への連絡"
+};
+</code></pre>
+
+<hr>
+
+<p>四人は、塔の入り口に集まった。</p>
+
+<p>イグニスとライラが、報告した。</p>
+
+<hr>
+
+<blockquote>「周囲に敵の気配はない」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<hr>
+
+<blockquote>「テンペストの部下も、散ったようだ」</blockquote>
+
+<hr>
+
+<p>ライラが、頷いた。</p>
+
+<hr>
+
+<blockquote>「少なくとも、この周辺は安全よ」</blockquote>
+
+<p>ライラが言った。</p>
+
+<hr>
+
+<p>カイトは、塔を見上げた。</p>
+
+<p>美しい白い塔が、空に向かって聳え立っていた。</p>
+
+<p>風が、優しく吹いていた。</p>
+
+<hr>
+
+<blockquote>「この塔を、管理します」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「管理者として、風の知識を守る場所にします」</blockquote>
+
+<hr>
+
+<p>ウィンディアが、微笑んだ。</p>
+
+<hr>
+
+<blockquote>「期待しているわ」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<p>カイトは、制御玉に手を置いた。</p>
+
+<p>塔の管理を、正式に引き継ぐ。</p>
+
+<hr>
+
+<pre><code>
+// 塔の管理権限の移行
+const towerManagementTransfer = {
+  from: "無所属（テンペストの管理放棄後）",
+  to: "カイト（管理者）",
+  
+  process: {
+    step1: "制御玉に管理者権限を登録",
+    step2: "風の結界にカイトを認識させる",
+    step3: "塔の知識へのアクセス権を確立"
+  },
+  
+  code: `
+    function registerAdministrator(controlOrb, administrator) {
+      // 管理者情報を登録
+      controlOrb.registerAdmin({
+        name: administrator.name,
+        authority: "full_access",
+        elements: administrator.elements
+      });
+      
+      // 結界に認識させる
+      const barrier = controlOrb.getBarrier();
+      barrier.addAlly(administrator);
+      
+      // 知識へのアクセスを許可
+      controlOrb.grantKnowledgeAccess(administrator);
+      
+      return "登録完了";
+    }
+  `,
+  
+  result: "カイトが風の塔の管理者となった"
+};
+</code></pre>
+
+<hr>
+
+<p>制御玉が、青く光った。</p>
+
+<p>認証完了の合図。</p>
+
+<p>カイトは、風の塔の管理者となった。</p>
+
+<hr>
+
+<p>カイトは、塔の知識の中から重要な情報を探した。</p>
+
+<p>十三使徒についての記録がないか。</p>
+
+<hr>
+
+<pre><code>
+// 塔の記録を検索
+const towerRecordSearch = {
+  source: "風の塔の制御玉",
+  
+  query: "十三使徒に関する情報",
+  
+  results: [
+    {
+      type: "テンペストの手記",
+      content: "十三使徒の計画について断片的な記述"
+    },
+    {
+      type: "古代の予言",
+      content: "十三人の使徒が世界を変えるという記述"
+    },
+    {
+      type: "風の賢者の記録",
+      content: "最初の管理者による十三使徒への言及"
+    }
+  ],
+  
+  note: "詳細な情報は限られている"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、テンペストの手記を再度読んだ。</p>
+
+<p>十三使徒の計画について、もう少し詳しく知る必要があった。</p>
+
+<hr>
+
+<pre><code>
+// テンペストの手記から十三使徒に関する部分を抜粋
+const tempestJournalExcerpt = {
+  source: "テンペストの手記",
+  
+  excerpts: [
+    {
+      date: "二年前",
+      content: "十三使徒に招待された。彼らは世界を変えることを目指している。"
+    },
+    {
+      date: "一年半前",
+      content: "十三使徒のリーダーは、最高位管理者と呼ばれている。三人いるらしい。"
+    },
+    {
+      date: "一年前",
+      content: "ダークハルト、ミラージュ、アルタイル。この三人が、世界を変える鍵だ。"
+    },
+    {
+      date: "半年前",
+      content: "管理者制度を破壊すれば、世界は生まれ変わる。そのためには、全ての管理者を排除する必要がある。"
+    }
+  ],
+  
+  keyInformation: {
+    leaders: ["ダークハルト", "ミラージュ", "アルタイル"],
+    goal: "管理者制度の破壊と世界の変革",
+    method: "全管理者の排除"
+  }
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「三人のリーダーがいる」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「ダークハルト、ミラージュ、アルタイル」</blockquote>
+
+<hr>
+
+<p>ウィンディアが、眉をひそめた。</p>
+
+<hr>
+
+<blockquote>「アルタイルという名前」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<blockquote>「どこかで聞いたことがあるわ」</blockquote>
+
+<hr>
+
+<p>カイトは、制御玉の記録をさらに調べた。</p>
+
+<p>アルタイルについての情報を探した。</p>
+
+<hr>
+
+<pre><code>
+// アルタイルについての検索
+const altairSearch = {
+  source: "風の塔の制御玉",
+  
+  query: "アルタイル",
+  
+  results: [
+    {
+      type: "古代の星の記録",
+      content: "アルタイルは、鷲座の星。導きの星と呼ばれる。"
+    },
+    {
+      type: "管理者の記録",
+      content: "かつて、アルタイルという名の管理者がいた。"
+    },
+    {
+      type: "予言",
+      content: "アルタイルの導きは、光と闇の両方を照らす。"
+    }
+  ],
+  
+  discovery: "アルタイルは、かつて管理者だった可能性がある"
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「アルタイルは、元管理者か」</blockquote>
+
+<p>カイトが呟いた。</p>
+
+<hr>
+
+<blockquote>「管理者制度を破壊しようとしているのは、元管理者」</blockquote>
+
+<hr>
+
+<p>イグニスが、腕を組んだ。</p>
+
+<hr>
+
+<blockquote>「裏切り者か」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<hr>
+
+<p>カイトは、頷いた。</p>
+
+<hr>
+
+<blockquote>「可能性が高い」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「元管理者が、十三使徒を率いている」</blockquote>
+
+<hr>
+
+<pre><code>
+// 十三使徒のリーダーに関する推測
+const apostleLeadersHypothesis = {
+  leaders: ["ダークハルト", "ミラージュ", "アルタイル"],
+  
+  background: {
+    altair: "元管理者の可能性が高い",
+    darkhalt: "闇と虚無の融合魔法の使い手",
+    mirage: "鏡像と虚無の融合魔法の使い手"
+  },
+  
+  commonality: "三人とも、虚無に関連する魔法を使う",
+  
+  hypothesis: "虚無魔法を使える元管理者たちが、十三使徒を結成した"
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、この情報を記録した。</p>
+
+<p>他の賢者と共有する必要があった。</p>
+
+<hr>
+
+<pre><code>
+// 情報の記録と共有準備
+const informationRecordAndShare = {
+  recorder: "カイト",
+  
+  summary: {
+    title: "十三使徒に関する情報",
+    date: "2026年3月25日",
+    location: "風の塔"
+  },
+  
+  contents: [
+    "十三使徒のリーダーは三人：ダークハルト、ミラージュ、アルタイル",
+    "アルタイルは元管理者の可能性が高い",
+    "三人とも虚無に関連する魔法を使う",
+    "目的は管理者制度の破壊と世界の変革"
+  ],
+  
+  nextSteps: [
+    "他の賢者への連絡",
+    "虚無魔法についての調査",
+    "元管理者のリストの作成"
+  ]
+};
+</code></pre>
+
+<hr>
+
+<p>カイトは、仲間たちに向き直った。</p>
+
+<hr>
+
+<blockquote>「他の賢者に連絡を取りましょう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「この情報を共有する必要があります」</blockquote>
+
+<hr>
+
+<p>ウィンディアが、頷いた。</p>
+
+<hr>
+
+<blockquote>「賢者たちには、私から連絡できるわ」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<blockquote>「風魔法で、遠隔通信ができる」</blockquote>
+
+<hr>
+
+<p>カイトは、ウィンディアを見た。</p>
+
+<hr>
+
+<blockquote>「お願いします」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<pre><code>
+// 賢者たちへの連絡
+const sageCommunication = {
+  sender: "ウィンディア（風の賢者）",
+  
+  method: {
+    name: "風の伝言",
+    type: "遠隔通信魔法",
+    range: "世界中の賢者に届く"
+  },
+  
+  recipients: [
+    "フローズナ（氷の賢者）",
+    "イグニス（火の賢者）※現場にいる",
+    "ライラ（雷の賢者）※現場にいる",
+    "ミズリア（水の賢者）",
+    "テラドン（地の賢者）",
+    "ルミナス（光の賢者）",
+    "アンブロス（闇の賢者）"
+  ],
+  
+  message: {
+    urgency: "高",
+    topic: "十三使徒に関する重要情報",
+    location: "風の塔",
+    request: "可能な限り早く集まってほしい"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>ウィンディアが、目を閉じた。</p>
+
+<p>風魔法を唱える。</p>
+
+<p>風が、言葉を乗せて世界中の賢者たちに届いた。</p>
+
+<hr>
+
+<p>十分後。</p>
+
+<p>最初の返信が来た。</p>
+
+<hr>
+
+<pre><code>
+// 賢者たちからの返信
+const sageResponses = {
+  frozenna: {
+    status: "受信確認",
+    response: "了解。三日以内に到着する",
+    location: "北の氷の領域"
+  },
+  
+  mizria: {
+    status: "受信確認",
+    response: "すぐに出発する。二日で着く",
+    location: "中央大陸の湖"
+  },
+  
+  teradon: {
+    status: "受信確認",
+    response: "了解。準備して出発する",
+    location: "地の聖域"
+  },
+  
+  luminous: {
+    status: "受信確認",
+    response: "明日には着ける",
+    location: "光の塔"
+  },
+  
+  ambrose: {
+    status: "受信確認",
+    response: "...了解",
+    location: "闇の深淵"
+  },
+  
+  note: "アンブロスの返信は短かった"
+};
+</code></pre>
+
+<hr>
+
+<p>ウィンディアが、目を開けた。</p>
+
+<hr>
+
+<blockquote>「全員、了解したわ」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<blockquote> "二、三日で集まるみたい」</blockquote>
+
+<hr>
+
+<p>カイトは、頷いた。</p>
+
+<hr>
+
+<blockquote>「それまで、ここで待ちましょう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「塔の警備も兼ねて」</blockquote>
+
+<hr>
+
+<p>四人は、風の塔に滞在することにした。</p>
+
+<p>賢者たちが集まるまで、情報を整理し、次の行動を計画する。</p>
+
+<hr>
+
+<p>夕方。</p>
+
+<p>カイトは、塔の最上階で一人、海を見ていた。</p>
+
+<p>テンペストが落ちた海。</p>
+
+<p>波は、穏やかだった。</p>
+
+<hr>
+
+<pre><code>
+// カイトの夕暮れの思考
+const kaitoEveningThoughts = {
+  time: "夕暮れ",
+  
+  location: "風の塔の最上階",
+  
+  view: {
+    sky: "オレンジと紫のグラデーション",
+    sea: "鏡のように静か",
+    sun: "水平線に沈みかけている"
+  },
+  
+  thoughts: [
+    "テンペストは、何を求めていたのか",
+    "アルタイルは、なぜ管理者を裏切ったのか",
+    "私は、正しい道を歩んでいるのか"
+  ],
+  
+  feelings: {
+    sorrow: "テンペストの死に対して",
+    anxiety: "これからの戦いに対して",
+    determination: "仲間と共に進む意志"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>背後で、足音がした。</p>
+
+<p>ライラだった。</p>
+
+<hr>
+
+<blockquote>「カイト」</blockquote>
+
+<p>ライラが言った。</p>
+
+<hr>
+
+<p>カイトは、振り返った。</p>
+
+<hr>
+
+<blockquote>「どうした？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<p>ライラは、カイトの横に立った。</p>
+
+<p>海を見た。</p>
+
+<hr>
+
+<blockquote>「考えていたの」</blockquote>
+
+<p>ライラが言った。</p>
+
+<hr>
+
+<blockquote>「私たち、結構遠くまで来たなって」</blockquote>
+
+<hr>
+
+<p>カイトは、海を見た。</p>
+
+<p>確かに、遠かった。</p>
+
+<p>中央大陸から、風の聖域まで。</p>
+
+<p>そして、暁の崖から、この風の塔まで。</p>
+
+<hr>
+
+<blockquote>「そうだな」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「でも、まだ終わっていない」</blockquote>
+
+<hr>
+
+<p>ライラが、頷いた。</p>
+
+<hr>
+
+<blockquote>「うん」</blockquote>
+
+<p>ライラが言った。</p>
+
+<hr>
+
+<blockquote>「でも、一歩ずつ進んでる」</blockquote>
+
+<blockquote>「それが大事だと思う」</blockquote>
+
+<hr>
+
+<p>カイトは、ライラを見た。</p>
+
+<p>ライラは、夕日を浴びて微笑んでいた。</p>
+
+<hr>
+
+<blockquote>「ありがとう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「言ってもらうと、少し気が楽になる」</blockquote>
+
+<hr>
+
+<p>ライラは、カイトの肩を叩いた。</p>
+
+<hr>
+
+<blockquote>「仲間だからね」</blockquote>
+
+<p>ライラが言った。</p>
+
+<hr>
+
+<blockquote>「困った時は、頼って」</blockquote>
+
+<hr>
+
+<p>カイトは、少し笑った。</p>
+
+<hr>
+
+<blockquote>「うん」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<p>二人は、夕日を見続けた。</p>
+
+<p>穏やかな時間だった。</p>
+
+<hr>
+
+<pre><code>
+// 夜の準備
+const nightPreparation = {
+  time: "日没後",
+  
+  team: {
+    kaito: "少し回復、精神的に安定",
+    windia: "良好",
+    ignis: "良好",
+    lyra: "良好"
+  },
+  
+  plan: {
+    tonight: "塔で休息",
+    tomorrow: "最初の賢者の到着予定",
+    dayAfterTomorrow: "全賢者の集結"
+  },
+  
+  nextPhase: "賢者会議による戦略決定"
+};
+</code></pre>
+
+<hr>
+
+<p>夜が来た。</p>
+
+<p>四人は、塔の五層目で焚き火を囲んだ。</p>
+
+<p>昨日と同じ場所。</p>
+
+<p>でも、雰囲気は少し明るかった。</p>
+
+<hr>
+
+<p>塔が修復され、知識が守られた。</p>
+
+<p>賢者たちが集まる予定。</p>
+
+<p>未来に向けて、一歩進んだ。</p>
+
+<hr>
+
+<blockquote>「明日は」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<hr>
+
+<blockquote>「誰が最初に来るんだ？」</blockquote>
+
+<hr>
+
+<p>ウィンディアが、考えた。</p>
+
+<hr>
+
+<blockquote>「ルミナスが一番近いわ」</blockquote>
+
+<p>ウィンディアが言った。</p>
+
+<hr>
+
+<blockquote>「明日の昼には着くはず」</blockquote>
+
+<hr>
+
+<p>カイトは、頷いた。</p>
+
+<hr>
+
+<blockquote>「歓迎の準備をしておきましょう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「この塔を案内するのもいいかもしれない」</blockquote>
+
+<hr>
+
+<p>四人は、明日の計画を話し合った。</p>
+
+<p>賢者たちをどう迎えるか。</p>
+
+<p>何を報告するか。</p>
+
+<p>どう協力を求めるか。</p>
+
+<hr>
+
+<pre><code>
+// 明日の予定
+const tomorrowPlan = {
+  morning: {
+    activity: "塔の最終確認",
+    person: "カイト"
+  },
+  
+  noon: {
+    activity: "ルミナスの到着",
+    person: "全員で出迎え"
+  },
+  
+  afternoon: {
+    activity: "情報の共有",
+    person: "カイト、ウィンディア"
+  },
+  
+  evening: {
+    activity: "他の賢者の到着待ち",
+    person: "全員"
+  },
+  
+  topics: [
+    "十三使徒のリーダーについて",
+    "虚無魔法の脅威",
+    "管理者制度の防衛",
+    "次の行動指針"
+  ]
+};
+</code></pre>
+
+<hr>
+
+<p>夜が更けた。</p>
+
+<p>四人は、眠りについた。</p>
+
+<hr>
+
+<p>カイトは、また夢を見た。</p>
+
+<p>でも、今回は悪夢ではなかった。</p>
+
+<p>風の塔が、空に浮かぶ夢。</p>
+
+<p>世界中の風が、塔に集まってくる夢。</p>
+
+<p>そして、風が世界中に希望を運ぶ夢。</p>
+
+<hr>
+
+<pre><code>
+// カイトの夢
+const kaitoDream = {
+  type: "希望の夢",
+  
+  imagery: {
+    tower: "空に浮かぶ風の塔",
+    wind: "世界中から集まる風",
+    purpose: "希望を運ぶ"
+  },
+  
+  meaning: "この塔は、世界を守る希望の象徴になるかもしれない",
+  
+  feeling: "温かい、安心感"
+};
+</code></pre>
+
+<hr>
+
+<p>朝が来た。</p>
+
+<p>新しい一日が始まる。</p>
+
+<p>ルミナスが、光の賢者がやってくる日。</p>
+
+<hr>
+
+<p>カイトは、塔の入り口に立った。</p>
+
+<p>空を見た。</p>
+
+<p>青い空。白い雲。</p>
+
+<p>風が、優しく吹いていた。</p>
+
+<hr>
+
+<blockquote>「待ってるよ」</blockquote>
+
+<p>カイトが呟いた。</p>
+
+<hr>
+
+<blockquote>「みんなを」</blockquote>
+
+<hr>
+
+<p>風の塔の修復は完了した。</p>
+
+<p>次は、賢者たちの会議。</p>
+
+<p>そして、十三使徒との戦いへ。</p>
+
+<hr>
+
+<p>第786章、了。</p>
