@@ -1,0 +1,1582 @@
+---
+Title: 第777章：東洋への道標
+Date: 2026-03-25T04:48:00+09:00
+---
+
+<h3>第777章：東洋への道標</h3>
+
+<p>五日目の夜。</p>
+
+<p>カイトたちは、アルヴァレス支部の食堂に集まっていた。</p>
+
+<p>長い一日だった。</p>
+
+<p>西の砂漠での戦い、封印の強化。</p>
+
+<p>心身ともに疲れ果てていた。</p>
+
+<hr>
+
+<p>でも、誰もが充実した表情をしていた。</p>
+
+<p>一つの封印を、守り抜いたのだ。</p>
+
+<hr>
+
+<blockquote>「お疲れ様」</blockquote>
+
+<p>エリナが、温かいスープを運んできた。</p>
+
+<hr>
+
+<blockquote>「ありがとう、エリナ」</blockquote>
+
+<p>カイトが受け取った。</p>
+
+<hr>
+
+<blockquote>「シオンも、よくやったな」</blockquote>
+
+<p>リアムがシオンの頭を撫でた。</p>
+
+<hr>
+
+<p>シオンは、少し恥ずかしそうにしていた。</p>
+
+<p>でも、嬉しそうでもあった。</p>
+
+<hr>
+
+<pre><code>
+// 五日目の夜の状況
+const nightOfFifthDay = {
+  location: "アルヴァレス支部・食堂",
+  time: "午後七時",
+  
+  teamStatus: {
+    kaito: {
+      condition: "魔力枯渇から回復中",
+      mood: "達成感"
+    },
+    ignis: {
+      condition: "軽傷・治療済み",
+      mood: "満足"
+    },
+    ambros: {
+      condition: "軽傷・治療済み",
+      mood: "安堵"
+    },
+    shion: {
+      condition: "疲労・軽微",
+      mood: "自信"
+    },
+    elina: {
+      condition: "健康",
+      mood: "心配と安堵"
+    },
+    liam: {
+      condition: "健康",
+      mood: "誇らしい"
+    }
+  },
+  
+  achievement: "西の封印強化完了"
+};
+</code></pre>
+
+<hr>
+
+<p>食事を終えた後、テオドール支部長が現れた。</p>
+
+<hr>
+
+<blockquote>「皆さん、本当によくやってくれました」</blockquote>
+
+<p>テオドールが深く頭を下げた。</p>
+
+<hr>
+
+<blockquote>「西の封印が強化されたことで、十個の封印のうち三個が安定しました」</blockquote>
+
+<p>テオドールが報告した。</p>
+
+<hr>
+
+<blockquote>「残りは七個ですか」</blockquote>
+
+<p>カイトが確認した。</p>
+
+<hr>
+
+<blockquote>「そうです」</blockquote>
+
+<p>テオドールが頷いた。</p>
+
+<blockquote>「でも、最も重要な中央の封印を除けば、あと六個」</blockquote>
+
+<hr>
+
+<pre><code>
+// 封印の現状
+const sealStatus = {
+  completed: [
+    { location: "北の氷原", elements: ["氷", "風"], status: "強化済み" },
+    { location: "南の森", elements: ["水", "雷"], status: "強化済み" },
+    { location: "西の砂漠", elements: ["炎", "地"], status: "強化済み" }
+  ],
+  
+  pending: [
+    { location: "東の海", elements: ["水", "風"], priority: "次" },
+    { location: "中央山地", elements: ["地", "雷"], priority: "中程度" },
+    { location: "南西の湖", elements: ["水", "闇"], priority: "中程度" },
+    { location: "北東の霧の森", elements: ["風", "光"], priority: "低" },
+    { location: "南東の熱帯林", elements: ["炎", "水"], priority: "低" },
+    { location: "北西の高原", elements: ["光", "闇"], priority: "低" }
+  ],
+  
+  central: {
+    location: "世界の中心",
+    elements: "七属性融合",
+    status: "未着手",
+    priority: "最重要",
+    note: "最後に強化"
+  },
+  
+  totalCompleted: 3,
+  totalPending: 7,
+  percentage: "三十パーセント"
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「次は、どこに行けばいい？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<blockquote>「東の海です」</blockquote>
+
+<p>テオドールが地図を広げた。</p>
+
+<hr>
+
+<blockquote>「アルヴァレス支部から東へ、船で半日の距離」</blockquote>
+
+<blockquote>「水と風の封印があります」</blockquote>
+
+<hr>
+
+<p>地図には、青い点があった。</p>
+
+<p>海上に、封印の位置が示されている。</p>
+
+<hr>
+
+<blockquote>「海の上に、封印があるんですね」</blockquote>
+
+<p>シオンが興味深そうに見た。</p>
+
+<hr>
+
+<blockquote>「そうです」</blockquote>
+
+<p>テオドールが説明した。</p>
+
+<blockquote>「水の精霊が守る、海底の神殿です」</blockquote>
+
+<hr>
+
+<pre><code>
+// 東の海の封印
+const easternSeal = {
+  location: {
+    name: "東の海",
+    distance: "アルヴァレスから半日",
+    coordinates: "東経三十度、北緯十五度"
+  },
+  
+  sealSite: {
+    name: "海底の神殿",
+    depth: "二百メートル",
+    structure: "古代の石造建造物"
+  },
+  
+  elements: {
+    primary: "水",
+    secondary: "風"
+  },
+  
+  guardian: {
+    name: "ミズリア",
+    title: "水の賢者",
+    note: "シオンの母ミーナの祖母にあたる"
+  },
+  
+  challenges: [
+    "水中での活動",
+    "水圧への対処",
+    "海獣の脅威",
+    "十三使徒の妨害"
+  ],
+  
+  requiredMagic: [
+    "水呼吸",
+    "水圧無効化",
+    "水魔法制御",
+    "風魔法補助"
+  ]
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「水の賢者……ミズリア」</blockquote>
+
+<p>シオンが呟いた。</p>
+
+<hr>
+
+<p>カイトは、シオンを見た。</p>
+
+<p>シオンの表情は、複雑だった。</p>
+
+<p>母ミーナについて、何かを知っているのかもしれない。</p>
+
+<hr>
+
+<blockquote>「シオン、何か知ってる？」</blockquote>
+
+<p>カイトが優しく聞いた。</p>
+
+<hr>
+
+<p>シオンは、少し躊躇った後、口を開いた。</p>
+
+<hr>
+
+<blockquote>「母さんが、言ってた」</blockquote>
+
+<p>シオンが言った。</p>
+
+<hr>
+
+<blockquote>「『東の海に、お祖母様がいる』って」</blockquote>
+
+<blockquote>「『会ったら、よろしく伝えて』って」</blockquote>
+
+<hr>
+
+<p>食堂が、静かになった。</p>
+
+<p>シオンの言葉が、重く響いた。</p>
+
+<hr>
+
+<blockquote>「シオンの、お婆ちゃんか」</blockquote>
+
+<p>エリナが優しく言った。</p>
+
+<hr>
+
+<blockquote>「うん」</blockquote>
+
+<p>シオンが頷いた。</p>
+
+<blockquote>「会ったことないけど、会ってみたい」</blockquote>
+
+<hr>
+
+<pre><code>
+// シオンの家族関係
+const shionsFamily = {
+  mother: {
+    name: "ミーナ",
+    title: "リンド大陸の少女",
+    currentStatus: "行方不明",
+    lastKnownLocation: "不明"
+  },
+  
+  grandmother: {
+    name: "ミズリア",
+    title: "水の賢者",
+    currentStatus: "東の海の封印を守護中",
+    relationship: "ミーナの母"
+  },
+  
+  greatGrandmother: {
+    name: "不明",
+    title: "初代水の賢者の可能性",
+    currentStatus: "不明"
+  },
+  
+  otherRelatives: {
+    father: "不明",
+    siblings: "なし（一人娘）"
+  },
+  
+  shionsMemory: {
+    grandmother: "母から話を聞いたのみ",
+    desire: "会ってみたい"
+  }
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「シオンのお婆ちゃんに会えるかもしれないな」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「うん」</blockquote>
+
+<p>シオンの瞳が、輝いた。</p>
+
+<blockquote>「楽しみ」</blockquote>
+
+<hr>
+
+<p>イグニスが、テーブルに手を置いた。</p>
+
+<hr>
+
+<blockquote>「東の海の封印じゃが」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<blockquote>「水と風の複合封印じゃ」</blockquote>
+
+<blockquote>「水魔法が得意な者が必要じゃ」</blockquote>
+
+<hr>
+
+<blockquote>「僕が行く」</blockquote>
+
+<p>カイトが即座に言った。</p>
+
+<hr>
+
+<blockquote>「当然じゃ」</blockquote>
+
+<p>イグニスが笑った。</p>
+
+<blockquote>「七属性が使えるからな」</blockquote>
+
+<hr>
+
+<p>アンブロスが、口を開いた。</p>
+
+<hr>
+
+<blockquote>「シオンも連れて行くべきじゃ」</blockquote>
+
+<p>アンブロスが言った。</p>
+
+<blockquote>「水魔法の血筋じゃ」</blockquote>
+
+<blockquote>「それに、お婆様に会うのも大事じゃ」</blockquote>
+
+<hr>
+
+<blockquote>「はい」</blockquote>
+
+<p>シオンが力強く頷いた。</p>
+
+<hr>
+
+<pre><code>
+// 東へのチーム編成
+const easternTeam = {
+  confirmed: [
+    {
+      name: "カイト",
+      role: "リーダー・封印強化担当",
+      relevantMagic: ["水", "風"]
+    },
+    {
+      name: "シオン",
+      role: "サポート・家族との対面",
+      relevantMagic: ["水（血筋）", "七属性（潜在）"]
+    }
+  ],
+  
+  candidates: [
+    {
+      name: "イグニス",
+      availability: "可能",
+      note: "炎魔法メインだが、経験豊富"
+    },
+    {
+      name: "アンブロス",
+      availability: "可能",
+      note: "闇魔法メインだが、アドバイス役として有効"
+    },
+    {
+      name: "エリナ",
+      availability: "支部に残る可能性",
+      note: "支部の管理が必要"
+    },
+    {
+      name: "リアム",
+      availability: "同行可能",
+      note: "物理戦力として有効"
+    }
+  ],
+  
+  recommended: {
+    teamSize: "四人",
+    mustHave: ["カイト", "シオン"],
+    niceToHave: ["水魔法経験者", "水中戦闘可能者"]
+  }
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「リアム、どうする？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<p>リアムは、少し考えた。</p>
+
+<hr>
+
+<blockquote>「俺も行きたいけど」</blockquote>
+
+<p>リアムが言った。</p>
+
+<blockquote>「水中戦闘は、得意じゃないんだ」</blockquote>
+
+<hr>
+
+<blockquote>「そうか」</blockquote>
+
+<p>カイトが理解した。</p>
+
+<hr>
+
+<blockquote>「それに、エリナ一人に支部を任せるのも悪いし」</blockquote>
+
+<p>リアムがエリナを見た。</p>
+
+<hr>
+
+<blockquote>「私は、大丈夫よ」</blockquote>
+
+<p>エリナが言った。</p>
+
+<blockquote>「でも、誰か残ってくれたら心強い」</blockquote>
+
+<hr>
+
+<blockquote>「じゃあ、リアムは支部に残ろう」</blockquote>
+
+<p>カイトが決めた。</p>
+
+<hr>
+
+<blockquote>「わかった」</blockquote>
+
+<p>リアムが頷いた。</p>
+
+<blockquote>「代わりに、水中戦闘が得意な人を探そう」</blockquote>
+
+<hr>
+
+<p>テオドールが、手を挙げた。</p>
+
+<hr>
+
+<blockquote>「実は、適任者がいます」</blockquote>
+
+<p>テオドールが言った。</p>
+
+<hr>
+
+<blockquote>「誰？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<blockquote>「ライラです」</blockquote>
+
+<p>テオドールが答えた。</p>
+
+<blockquote>「雷の賢者ですが、水魔法も使えます」</blockquote>
+
+<hr>
+
+<pre><code>
+// ライラの情報
+const lyra = {
+  name: "ライラ",
+  title: "雷の賢者",
+  primaryElement: "雷",
+  secondaryElements: ["水", "風"],
+  
+  abilities: {
+    lightning: "極めて高い",
+    water: "中程度",
+    wind: "中程度",
+    underwaterCombat: "得意"
+  },
+  
+  experience: {
+    yearsAsSage: "約百年",
+    sealGuardian: "雷の封印担当",
+    underwaterMissions: "多数"
+  },
+  
+  personality: {
+    traits: ["冷静", "分析的", "面倒見が良い"],
+    teachingStyle: "厳しいが親切"
+  },
+  
+  currentLocation: "雷鳴の峰",
+  availability: "連絡すれば来る可能性が高い"
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「ライラか」</blockquote>
+
+<p>イグニスが頷いた。</p>
+
+<blockquote>「確かに、適任じゃな」</blockquote>
+
+<hr>
+
+<blockquote>「彼女に会ったことありますか？」</blockquote>
+
+<p>シオンが聞いた。</p>
+
+<hr>
+
+<blockquote>「あるぞ」</blockquote>
+
+<p>イグニスが笑った。</p>
+
+<blockquote>「七賢者は、たまに会議をするからの」</blockquote>
+
+<blockquote>「厳しいが、良い奴じゃ」</blockquote>
+
+<hr>
+
+<blockquote>「じゃあ、ライラに連絡しよう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「私がやります」</blockquote>
+
+<p>テオドールが言った。</p>
+
+<blockquote>「明日の朝には、返事が来るでしょう」</blockquote>
+
+<hr>
+
+<p>カイトは、夜の作戦会議を終えた。</p>
+
+<p>明日は、東への準備の日だ。</p>
+
+<hr>
+
+<pre><code>
+// 六日目の予定
+const sixthDayPlan = {
+  morning: {
+    activity: "ライラからの返事待ち",
+    backup: "返事がなければ別のメンバーを探す"
+  },
+  
+  afternoon: {
+    activity: "水中活動の準備",
+    items: [
+      "水呼吸魔法の確認",
+      "水圧対策の準備",
+      "船の手配"
+    ]
+  },
+  
+  evening: {
+    activity: "最終確認",
+    items: [
+      "チーム編成の確定",
+      "出発時刻の決定",
+      "連絡方法の確認"
+    ]
+  },
+  
+  possibleDeparture: "七日目の朝"
+};
+</code></pre>
+
+<hr>
+
+<p>夜が更けた。</p>
+
+<p>カイトは、自室で窓の外を見ていた。</p>
+
+<p>東の空には、月が輝いている。</p>
+
+<p>その向こうに、海がある。</p>
+
+<p>そして、水の賢者ミズリアがいる。</p>
+
+<hr>
+
+<p>シオンのお婆ちゃんだ。</p>
+
+<p>会ったら、何を話そうか。</p>
+
+<p>カイトは、考えた。</p>
+
+<hr>
+
+<p>コンコン。</p>
+
+<p>ドアを叩く音がした。</p>
+
+<hr>
+
+<blockquote>「どうぞ」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<p>ドアが開いた。</p>
+
+<p>シオンが、立っていた。</p>
+
+<hr>
+
+<blockquote>「シオン、どうした？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<p>シオンは、少し躊躇った後、部屋に入った。</p>
+
+<hr>
+
+<blockquote>「カイト、お話したいことがあって」</blockquote>
+
+<p>シオンが言った。</p>
+
+<hr>
+
+<blockquote>「いいよ、座って」</blockquote>
+
+<p>カイトが椅子を勧めた。</p>
+
+<hr>
+
+<pre><code>
+// シオンの夜の訪問
+const shionsVisit = {
+  time: "午後十時",
+  location: "カイトの部屋",
+  
+  shionsState: {
+    emotional: "少し不安",
+    purpose: "話したいこと",
+    topic: "母について"
+  },
+  
+  kaitosState: {
+    emotional: "安らぎ",
+    availability: "話を聞く準備あり"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>シオンは、椅子に座った。</p>
+
+<p>銀髪が、月光に照らされて輝いている。</p>
+
+<hr>
+
+<blockquote>「あのね、カイト」</blockquote>
+
+<p>シオンが口を開いた。</p>
+
+<hr>
+
+<blockquote>「今日、ルシフェインが言ったでしょ」</blockquote>
+
+<blockquote>「『母さんをよく知っている』って」</blockquote>
+
+<hr>
+
+<p>カイトは、頷いた。</p>
+
+<hr>
+
+<blockquote>「その言葉が、頭から離れないの」</blockquote>
+
+<p>シオンが言った。</p>
+
+<hr>
+
+<blockquote>「母さんは、どこにいるんだろう」</blockquote>
+
+<blockquote>「どうして、私を残していったんだろう」</blockquote>
+
+<hr>
+
+<p>シオンの瞳に、涙が浮かんだ。</p>
+
+<hr>
+
+<p>カイトは、何と言えばいいか迷った。</p>
+
+<p>でも、嘘はつきたくなかった。</p>
+
+<hr>
+
+<blockquote>「シオン」</blockquote>
+
+<p>カイトが優しく言った。</p>
+
+<hr>
+
+<blockquote>「俺には、答えられない」</blockquote>
+
+<p>カイトが正直に言った。</p>
+
+<hr>
+
+<blockquote>「でも、きっと理由があるはずだ」</blockquote>
+
+<blockquote>「悪い理由じゃないと思う」</blockquote>
+
+<hr>
+
+<p>シオンが、カイトを見た。</p>
+
+<hr>
+
+<blockquote>「どうして、そう思うの？」</blockquote>
+
+<p>シオンが聞いた。</p>
+
+<hr>
+
+<blockquote>「シオンのお母さんが、シオンを愛していないはずがないから」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<p>シオンが、目を大きく見開いた。</p>
+
+<hr>
+
+<blockquote>「シオンは、優しいし、強いし、美しい」</blockquote>
+
+<p>カイトが続けた。</p>
+
+<hr>
+
+<blockquote>「そんな子を育てたお母さんは、きっと素晴らしい人だ」</blockquote>
+
+<blockquote>「だから、理由はきっと、シオンを守るためだと思う」</blockquote>
+
+<hr>
+
+<p>シオンの目から、涙が溢れた。</p>
+
+<p>でも、悲しみの涙ではない。</p>
+
+<p>温かい涙だ。</p>
+
+<hr>
+
+<pre><code>
+// カイトの言葉の影響
+const kaitosWords = {
+  message: "母はシオンを愛している",
+  reasoning: "シオンの素晴らしさ",
+  conclusion: "理由は守るため",
+  
+  shionsResponse: {
+    emotional: "感動",
+    interpretation: "希望",
+    outcome: "安心感"
+  },
+  
+  bonding: {
+    relationship: "強化",
+    trust: "増加"
+  }
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「ありがとう、カイト」</blockquote>
+
+<p>シオンが涙を拭った。</p>
+
+<hr>
+
+<blockquote>「カイトと話せて、よかった」</blockquote>
+
+<hr>
+
+<blockquote>「いつでも話していいから」</blockquote>
+
+<p>カイトが言った。</p>
+
+<blockquote>「俺たちは、仲間だから」</blockquote>
+
+<hr>
+
+<p>シオンが、微笑んだ。</p>
+
+<p>その笑顔は、月光よりも美しかった。</p>
+
+<hr>
+
+<blockquote>「おやすみ、カイト」</blockquote>
+
+<p>シオンが立ち上がった。</p>
+
+<hr>
+
+<blockquote>「おやすみ、シオン」</blockquote>
+
+<p>カイトが見送った。</p>
+
+<hr>
+
+<p>シオンが部屋を出ていった後、カイトは再び窓の外を見た。</p>
+
+<p>月が、雲の間から顔を出していた。</p>
+
+<hr>
+
+<p>シオンのお母さん。</p>
+
+<p>きっと、どこかで見守っている。</p>
+
+<p>そう、信じたかった。</p>
+
+<hr>
+
+<pre><code>
+// カイトの内面
+const kaitosThoughts = {
+  aboutShion: {
+    impression: "強くて優しい子",
+    concern: "記憶と母のこと",
+    determination: "守りたい"
+  },
+  
+  aboutMission: {
+    easternSeal: "必ず強化する",
+    luciferin: "また現れるかもしれない",
+    shionsGrandmother: "会わせてあげたい"
+  },
+  
+  selfReflection: {
+    growth: "リーダーとして成長中",
+    worry: "皆を守れるか",
+    hope: "世界を救えるか"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>翌朝。</p>
+
+<p>六日目が始まった。</p>
+
+<p>カイトは、朝早く目が覚めた。</p>
+
+<hr>
+
+<p>食堂に降りると、テオドールが待っていた。</p>
+
+<hr>
+
+<blockquote>「カイト、いい知らせです」</blockquote>
+
+<p>テオドールが言った。</p>
+
+<hr>
+
+<blockquote>「ライラから返事が来ました」</blockquote>
+
+<blockquote>「明日の朝、ここに来ると」</blockquote>
+
+<hr>
+
+<p>カイトは、安堵した。</p>
+
+<hr>
+
+<blockquote>「よかった」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「それと、船の手配も完了しました」</blockquote>
+
+<p>テオドールが続けた。</p>
+
+<blockquote>「ヴィクトル船長が、快く引き受けてくれました」</blockquote>
+
+<hr>
+
+<p>ヴィクトル船長。</p>
+
+<p>以前、北の氷原へ行く時に世話になった船長だ。</p>
+
+<hr>
+
+<blockquote>「ヴィクトル船長、覚えてる？」</blockquote>
+
+<p>シオンが食堂に入ってきた。</p>
+
+<hr>
+
+<blockquote>「ああ、いい船長だ」</blockquote>
+
+<p>カイトが頷いた。</p>
+
+<hr>
+
+<pre><code>
+// 東への準備完了
+const preparationComplete = {
+  team: {
+    confirmed: ["カイト", "シオン", "ライラ", "イグニス"],
+    role: {
+      kaito: "リーダー",
+      shion: "サポート",
+      lyra: "水中戦闘・水魔法",
+      ignis: "総合アドバイス"
+    }
+  },
+  
+  ship: {
+    captain: "ヴィクトル",
+    shipName: "青の翼号",
+    capacity: "十人以上",
+    speed: "高速船"
+  },
+  
+  schedule: {
+    lyraArrival: "七日目の朝",
+    departure: "七日目の昼",
+    estimatedArrival: "七日目の夕方"
+  },
+  
+  equipment: {
+    waterBreathing: "魔法で対応",
+    pressureResistance: "魔法で対応",
+    communication: "水中でも可能"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>イグニスが、食堂に入ってきた。</p>
+
+<hr>
+
+<blockquote>「聞いたぞ」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<blockquote>「ライラが来るとな」</blockquote>
+
+<hr>
+
+<blockquote>「はい」</blockquote>
+
+<p>カイトが頷いた。</p>
+
+<hr>
+
+<blockquote>「ライラとは、百年以上の付き合いじゃ」</blockquote>
+
+<p>イグニスが懐かしそうに言った。</p>
+
+<blockquote>「楽しみじゃな」</blockquote>
+
+<hr>
+
+<p>アンブロスも、食堂に現れた。</p>
+
+<hr>
+
+<blockquote>「私は、支部に残ろう」</blockquote>
+
+<p>アンブロスが言った。</p>
+
+<hr>
+
+<blockquote>「えっ？」</blockquote>
+
+<p>カイトが驚いた。</p>
+
+<hr>
+
+<blockquote>「水中は、苦手でな」</blockquote>
+
+<p>アンブロスが苦笑した。</p>
+
+<blockquote>「闇魔法は、水中では威力が落ちる」</blockquote>
+
+<hr>
+
+<blockquote>「わかりました」</blockquote>
+
+<p>カイトが頷いた。</p>
+
+<hr>
+
+<blockquote>「それに、エリナとリアムの手伝いもできる」</blockquote>
+
+<p>アンブロスが言った。</p>
+
+<blockquote>「支部の守りを固めておく」</blockquote>
+
+<hr>
+
+<pre><code>
+// 最終チーム編成
+const finalTeam = {
+  eastern: {
+    members: [
+      { name: "カイト", role: "リーダー" },
+      { name: "シオン", role: "サポート" },
+      { name: "ライラ", role: "水中戦闘" },
+      { name: "イグニス", role: "アドバイザー" }
+    ],
+    departure: "七日目の昼"
+  },
+  
+  remaining: {
+    members: [
+      { name: "アンブロス", role: "支部防衛" },
+      { name: "エリナ", role: "支部管理" },
+      { name: "リアム", role: "支部防衛" },
+      { name: "テオドール", role: "支部長" }
+    ],
+    mission: "アルヴァレス支部の守護"
+  },
+  
+  communication: {
+    method: "通信魔法",
+    frequency: "毎日一度",
+    emergency: "即座に連絡"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>その日、カイトとシオンは、水中活動の準備をした。</p>
+
+<hr>
+
+<blockquote>「水呼吸の魔法、覚えてる？」</blockquote>
+
+<p>カイトがシオンに聞いた。</p>
+
+<hr>
+
+<blockquote>「うん、ミーナお母さんが教えてくれた」</blockquote>
+
+<p>シオンが言った。</p>
+
+<hr>
+
+<blockquote>「じゃあ、復習しよう」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<p>二人は、支部の訓練場へ向かった。</p>
+
+<p>そこには、大きな水槽がある。</p>
+
+<hr>
+
+<pre><code>
+// 水呼吸魔法の訓練
+const waterBreathingTraining = {
+  location: "支部の訓練場",
+  facility: "大型水槽",
+  depth: "五メートル",
+  
+  spell: {
+    name: "水呼吸（アクア・ブレス）",
+    type: "水魔法",
+    difficulty: "中程度",
+    duration: "魔力に応じて変動"
+  },
+  
+  training: {
+    step1: "魔法の構築",
+    step2: "酸素の生成",
+    step3: "水中での維持",
+    step4: "長時間の持続"
+  },
+  
+  shionsProgress: {
+    initialAbility: "既に習得済み",
+    currentLevel: "中級",
+    targetLevel: "上級"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>シオンは、水槽に飛び込んだ。</p>
+
+<p>銀髪が、水中で揺れる。</p>
+
+<p>魔法の泡が、口元を包んでいる。</p>
+
+<hr>
+
+<p>カイトも、続いて飛び込んだ。</p>
+
+<p>水の中は、静寂に包まれている。</p>
+
+<hr>
+
+<p>二人は、水槽の中で向き合った。</p>
+
+<hr>
+
+<blockquote>「大丈夫？」</blockquote>
+
+<p>カイトが水中で話しかけた。</p>
+
+<p>水魔法のおかげで、会話ができる。</p>
+
+<hr>
+
+<blockquote>「うん、大丈夫」</blockquote>
+
+<p>シオンが笑った。</p>
+
+<hr>
+
+<p>二人は、水槽の中を泳いだ。</p>
+
+<p>水の抵抗、浮力、視界の歪み。</p>
+
+<p>全てを体感した。</p>
+
+<hr>
+
+<pre><code>
+// 水中訓練の成果
+const underwaterTrainingResults = {
+  duration: "一時間",
+  
+  shion: {
+    waterBreathing: "安定",
+    underwaterMovement: "良好",
+    magicControl: "向上中",
+    stamina: "十分"
+  },
+  
+  kaito: {
+    waterBreathing: "完璧",
+    underwaterMovement: "熟練",
+    magicControl: "七属性統合",
+    stamina: "十分"
+  },
+  
+  teamCoordination: {
+    communication: "良好",
+    formation: "確認済み",
+    emergencyProcedure: "了解"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>訓練を終えた二人は、水槽から出た。</p>
+
+<hr>
+
+<blockquote>「いい感じだ」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「うん、明日が楽しみ」</blockquote>
+
+<p>シオンが微笑んだ。</p>
+
+<hr>
+
+<p>その時、エリナが駆け寄ってきた。</p>
+
+<hr>
+
+<blockquote>「カイト、シオン」</blockquote>
+
+<p>エリナが少し息を切らしていた。</p>
+
+<hr>
+
+<blockquote>「どうした？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<blockquote>「セレナ調査官から、連絡が」</blockquote>
+
+<p>エリナが言った。</p>
+
+<hr>
+
+<p>セレナ・クロフォード。</p>
+
+<p>中央ギルドの調査官だ。</p>
+
+<hr>
+
+<blockquote>「何て？」</blockquote>
+
+<p>カイトが聞いた。</p>
+
+<hr>
+
+<blockquote>「十三使徒の動きが、活発になっていると」</blockquote>
+
+<p>エリナが深刻な表情で言った。</p>
+
+<hr>
+
+<blockquote>「特に、第十一席のヴォイドフィンサーが」</blockquote>
+
+<blockquote>「東の海方面で目撃されたと」</blockquote>
+
+<hr>
+
+<p>カイトとシオンは、顔を見合わせた。</p>
+
+<hr>
+
+<pre><code>
+// 緊急情報
+const emergencyInfo = {
+  source: "セレナ・クロフォード（中央ギルド調査官）",
+  
+  enemyMovement: {
+    name: "ヴォイドフィンサー",
+    rank: "十三使徒・第十一席",
+    element: "水（歪んだ）",
+    
+    lastSighting: {
+      location: "東の海周辺",
+      time: "昨日の夜",
+      activity: "海上を移動中"
+    },
+    
+    threat: {
+      level: "高い",
+      specialty: "水魔法の極み",
+      weakness: "雷魔法"
+    }
+  },
+  
+  implications: {
+    forEasternSeal: "妨害の可能性が高い",
+    forTeam: "水中戦闘の専門家が相手",
+    countermeasure: "ライラの雷魔法が有効"
+  }
+};
+</code></pre>
+
+<hr>
+
+<blockquote>「ヴォイドフィンサー」</blockquote>
+
+<p>カイトが名前を呟いた。</p>
+
+<hr>
+
+<blockquote>「水属性の、十三使徒」</blockquote>
+
+<p>シオンが言った。</p>
+
+<hr>
+
+<blockquote>「海の上で戦うことになるかもしれない」</blockquote>
+
+<p>カイトが覚悟を決めた。</p>
+
+<hr>
+
+<blockquote>「でも、行くしかない」</blockquote>
+
+<p>カイトが言った。</p>
+
+<hr>
+
+<blockquote>「うん」</blockquote>
+
+<p>シオンも頷いた。</p>
+
+<blockquote>「私は、カイトと一緒に行く」</blockquote>
+
+<hr>
+
+<p>カイトは、シオンの決意を感じた。</p>
+
+<p>銀髪の少女は、弱くない。</p>
+
+<p>むしろ、誰よりも強いかもしれない。</p>
+
+<hr>
+
+<pre><code>
+// 決意の確認
+const determinationConfirmed = {
+  kaito: {
+    decision: "明日、東へ出発",
+    resolve: "ヴォイドフィンサーと戦う準備",
+    confidence: "仲間を信じる"
+  },
+  
+  shion: {
+    decision: "カイトに同行",
+    resolve: "お婆様に会う",
+    confidence: "自分の力を信じる"
+  },
+  
+  team: {
+    cohesion: "強固",
+    morale: "高い",
+    readiness: "準備完了"
+  },
+  
+  risks: {
+    enemy: "ヴォイドフィンサー",
+    environment: "水中戦闘",
+    unknown: "十三使徒の他の動き"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>夕暮れ。</p>
+
+<p>カイトは、支部の屋上にいた。</p>
+
+<p>東の空を見ている。</p>
+
+<hr>
+
+<p>イグニスが、隣に来た。</p>
+
+<hr>
+
+<blockquote>「緊張しているか？」</blockquote>
+
+<p>イグニスが聞いた。</p>
+
+<hr>
+
+<blockquote>「少し」</blockquote>
+
+<p>カイトが正直に言った。</p>
+
+<hr>
+
+<blockquote>「水の中で戦うのは、初めてだから」</blockquote>
+
+<hr>
+
+<blockquote>「心配するな」</blockquote>
+
+<p>イグニスが言った。</p>
+
+<hr>
+
+<blockquote>「ライラがいれば、大丈夫じゃ」</blockquote>
+
+<blockquote>「彼女は、水中戦闘の専門家じゃからな」</blockquote>
+
+<hr>
+
+<p>カイトは、頷いた。</p>
+
+<p>仲間を信じる。</p>
+
+<p>それが、一番大事だ。</p>
+
+<hr>
+
+<blockquote>「カイト」</blockquote>
+
+<p>イグニスが真剣な声で言った。</p>
+
+<hr>
+
+<blockquote>「お前は、成長している」</blockquote>
+
+<p>イグニスがカイトを見た。</p>
+
+<hr>
+
+<blockquote>「最初に出会った時より、ずっと強くなった」</blockquote>
+
+<blockquote>「リーダーとしての風格も出てきた」</blockquote>
+
+<hr>
+
+<p>カイトは、少し照れた。</p>
+
+<hr>
+
+<blockquote>「まだまだ、足りないです」</blockquote>
+
+<p>カイトが謙遜した。</p>
+
+<hr>
+
+<blockquote>「謙虚さも、大事な資質じゃ」</blockquote>
+
+<p>イグニスが笑った。</p>
+
+<hr>
+
+<pre><code>
+// イグニスの評価
+const ignisAssessment = {
+  aboutKaito: {
+    growth: "顕著",
+    leadership: "向上中",
+    humility: "保っている",
+    potential: "計り知れない"
+  },
+  
+  advice: {
+    forTomorrow: "仲間を信じる",
+    forBattle: "冷静さを保つ",
+    forLeadership: "自分を信じる"
+  },
+  
+  expectation: {
+    easternSeal: "成功する",
+    luciferin: "また現れる",
+    kaitosFuture: "世界を救う"
+  }
+};
+</code></pre>
+
+<hr>
+
+<p>夜が更けた。</p>
+
+<p>カイトは、部屋に戻った。</p>
+
+<p>ベッドに横たわり、天井を見た。</p>
+
+<hr>
+
+<p>明日は、東へ向かう。</p>
+
+<p>海の上で、水の賢者に会う。</p>
+
+<p>そして、十三使徒と戦うかもしれない。</p>
+
+<hr>
+
+<p>カイトは、深呼吸をした。</p>
+
+<p>準備はできている。</p>
+
+<p>仲間もいる。</p>
+
+<p>大丈夫だ。</p>
+
+<hr>
+
+<p>カイトは、目を閉じた。</p>
+
+<p>翌日の朝を迎えるために。</p>
+
+<hr>
+
+<pre><code>
+// 七日目への準備完了
+const readyForSeventhDay = {
+  time: "午後十一時",
+  location: "カイトの部屋",
+  
+  kaitosState: {
+    physical: "回復完了",
+    mental: "集中",
+    determination: "最高"
+  },
+  
+  tomorrowPlan: {
+    morning: "ライラ到着",
+    noon: "出発",
+    evening: "東の海到着予定"
+  },
+  
+  expectations: {
+    seal: "強化する",
+    grandmother: "シオンに会わせる",
+    enemy: "撃退する"
+  },
+  
+  mindset: "準備完了"
+};
+
+// 東への旅立ち
+next.chapter = "第778章：東洋の大海原";
+</code></pre>
+
+<hr>
+
+<p>月が、窓から見えた。</p>
+
+<p>東の空に、明るい星が輝いている。</p>
+
+<p>それは、明日の希望のようだった。</p>
+
+<hr>
+
+<p>カイトは、静かに眠りについた。</p>
+
+<p>明日は、新しい冒険が始まる。</p>
+
+<hr>
+
+<p>第777章、了。</p>
